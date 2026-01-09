@@ -2,208 +2,193 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>Analyse NL – 3 phases</title>
+<title>Révision NL – Générateur 3 phases</title>
+
 <style>
 body { font-family: Arial, sans-serif; margin: 20px; }
-textarea { width: 100%; height: 120px; }
-input[type="text"] { width: 100%; padding: 8px; margin-bottom: 10px; }
-button { padding: 10px 20px; margin: 10px 0; cursor: pointer; }
+h2 { margin-top: 30px; }
+textarea, input { width: 100%; padding: 8px; margin-top: 5px; }
+button { padding: 12px 20px; margin-top: 20px; cursor: pointer; }
 .hidden { display: none; }
-.word { padding: 4px; margin: 3px; display: inline-block; background: #eef; cursor: pointer; }
-.word:hover { background: #cce; }
-.quiz-question { font-weight: bold; margin-top: 20px; }
-.quiz-answer { margin-top: 10px; }
-.article-box { background: #f7f7f7; padding: 10px; border-left: 4px solid #888; margin-bottom: 20px; }
+.box { background: #f7f7f7; padding: 15px; border-left: 4px solid #888; margin-bottom: 20px; }
+.word { background: #eef; padding: 3px 6px; margin: 2px; display: inline-block; }
 </style>
 </head>
+
 <body>
 
-<h1>Analyse d’un extrait néerlandais – 3 phases</h1>
+<h1>Générateur de révision néerlandais – 3 phases</h1>
 
-<!-- Phase 0 : Import -->
+<!-- ============================
+     PHASE 0 : FORMULAIRE
+=============================== -->
 <div id="phase0">
-    <h2>Colle ton extrait</h2>
 
-    <label>Lien de l’article :</label>
-    <input type="text" id="articleLink" placeholder="https://www.ad.nl/...">
+    <div class="box">
+        <h2>1. Région</h2>
+        <input type="text" id="region" placeholder="Ex : Nijmegen, Zuid-Holland…">
+    </div>
 
-    <label>Extrait :</label>
-    <textarea id="inputText"></textarea>
+    <div class="box">
+        <h2>2. Titre de l’article</h2>
+        <input type="text" id="titre" placeholder="Titre de l’article">
+    </div>
 
-    <button onclick="startAnalysis()">Analyser</button>
+    <div class="box">
+        <h2>3. Corps de l’article</h2>
+        <textarea id="article" placeholder="Colle ici l’extrait de l’article"></textarea>
+
+        <h3>Image (URL facultative)</h3>
+        <input type="text" id="imageURL" placeholder="https://...">
+    </div>
+
+    <div class="box">
+        <h2>4. Vocabulaire / Grammaire</h2>
+        <textarea id="vocab" placeholder="Liste de vocabulaire, règles, remarques…"></textarea>
+    </div>
+
+    <div class="box">
+        <h2>5. Conjugaison</h2>
+        <textarea id="conjug" placeholder="Verbes + temps + remarques…"></textarea>
+    </div>
+
+    <button onclick="genererRevision()">Générer ma révision</button>
 </div>
 
-<!-- Bloc aperçu article -->
-<div id="articlePreview" class="hidden article-box">
-    <h3>Aperçu de l’article</h3>
-    <p><strong>Lien :</strong> <a id="previewLink" href="#" target="_blank">Ouvrir l’article original</a></p>
-</div>
-
-<!-- Phase 1 : Analyse -->
+<!-- ============================
+     PHASE 1 : VOCABULAIRE
+=============================== -->
 <div id="phase1" class="hidden">
-    <h2>Phase 1 : Analyse des mots</h2>
+    <h2>Phase 1 : Vocabulaire / Grammaire / Conjugaison</h2>
 
-    <div id="wordList"></div>
-    <div id="wordInfo"></div>
+    <div class="box">
+        <h3>Vocabulaire & Grammaire</h3>
+        <div id="affVocab"></div>
+    </div>
 
-    <button onclick="goToQuiz()">Passer au quiz</button>
+    <div class="box">
+        <h3>Conjugaison</h3>
+        <div id="affConjug"></div>
+    </div>
+
+    <button onclick="goToQuiz()">Passer au test</button>
 </div>
 
-<!-- Phase 2 : Quiz -->
+<!-- ============================
+     PHASE 2 : QUIZ
+=============================== -->
 <div id="phase2" class="hidden">
-    <h2>Phase 2 : Quiz</h2>
+    <h2>Phase 2 : Test (10 questions)</h2>
 
-    <div id="quizArea"></div>
+    <div id="quizZone"></div>
 
-    <button onclick="goToReading()">Passer à la lecture</button>
+    <button onclick="goToLecture()">Passer à la lecture</button>
 </div>
 
-<!-- Phase 3 : Lecture -->
+<!-- ============================
+     PHASE 3 : LECTURE
+=============================== -->
 <div id="phase3" class="hidden">
-    <h2>Phase 3 : Lecture assistée</h2>
+    <h2>Phase 3 : Lecture de l’article</h2>
 
-    <div id="readingArea"></div>
+    <h3 id="affTitre"></h3>
+    <p><em id="affRegion"></em></p>
+
+    <img id="affImage" style="max-width:300px; display:none; margin:10px 0;">
+
+    <p id="affArticle"></p>
 </div>
 
 <script>
-// --- Petit dictionnaire local ---
-const dictionnaire = {
-    "buurtbewoner": { type: "nom", genre: "de", traduction: "habitant du quartier" },
-    "ernstig": { type: "adjectif", traduction: "grave, sérieux" },
-    "gewond": { type: "adjectif", traduction: "blessé" },
-    "zwaar": { type: "adjectif", traduction: "lourd" },
-    "vuurwerk": { type: "nom", genre: "het", traduction: "feu d’artifice" },
-    "tieners": { type: "nom", genre: "de", traduction: "adolescents" },
-    "brand": { type: "nom", genre: "de", traduction: "incendie" },
-    "sneeuw": { type: "nom", genre: "de", traduction: "neige" },
-    "ontplofte": { type: "verbe", temps: "passé", infinitif: "ontploffen", traduction: "exploser" }
-};
+let vocabulaire = [];
+let questions = [];
+let indexQuestion = 0;
 
-// Variables globales
-let motsUniques = [];
-let texteOriginal = "";
-let lienArticle = "";
+// ============================
+//  GÉNÉRATION DE LA RÉVISION
+// ============================
+function genererRevision() {
+    const region = document.getElementById("region").value.trim();
+    const titre = document.getElementById("titre").value.trim();
+    const article = document.getElementById("article").value.trim();
+    const imageURL = document.getElementById("imageURL").value.trim();
+    const vocab = document.getElementById("vocab").value.trim();
+    const conjug = document.getElementById("conjug").value.trim();
 
-// --- Phase 0 : Analyse initiale ---
-function startAnalysis() {
-    texteOriginal = document.getElementById("inputText").value.trim();
-    lienArticle = document.getElementById("articleLink").value.trim();
-
-    if (!texteOriginal) return alert("Merci de coller un extrait.");
-
-    // Stockage local
-    localStorage.setItem("articleText", texteOriginal);
-    localStorage.setItem("articleURL", lienArticle);
-
-    // Affichage du lien
-    if (lienArticle) {
-        document.getElementById("previewLink").href = lienArticle;
-        document.getElementById("articlePreview").classList.remove("hidden");
-    }
-
-    // Extraction des mots
-    const mots = texteOriginal
-        .toLowerCase()
-        .replace(/[^a-zàâäéèêëïîôöùûüç\s]/gi, "")
-        .split(/\s+/);
-
-    motsUniques = [...new Set(mots)];
-
-    document.getElementById("phase0").classList.add("hidden");
-    document.getElementById("phase1").classList.remove("hidden");
-
-    afficherListeMots();
-}
-
-// --- Phase 1 : Affichage des mots ---
-function afficherListeMots() {
-    const container = document.getElementById("wordList");
-    container.innerHTML = "";
-
-    motsUniques.forEach(mot => {
-        const span = document.createElement("span");
-        span.className = "word";
-        span.textContent = mot;
-        span.onclick = () => afficherInfosMot(mot);
-        container.appendChild(span);
-    });
-}
-
-function afficherInfosMot(mot) {
-    const info = dictionnaire[mot];
-    const div = document.getElementById("wordInfo");
-
-    if (!info) {
-        div.innerHTML = `<p><strong>${mot}</strong> : mot inconnu (à ajouter au dictionnaire)</p>`;
+    if (!article || !titre) {
+        alert("Merci de remplir au minimum le titre et l’article.");
         return;
     }
 
-    div.innerHTML = `
-        <h3>${mot}</h3>
-        <p>Type : ${info.type}</p>
-        ${info.genre ? `<p>Genre : ${info.genre}</p>` : ""}
-        ${info.infinitif ? `<p>Infinitif : ${info.infinitif}</p>` : ""}
-        ${info.temps ? `<p>Temps : ${info.temps}</p>` : ""}
-        <p>Traduction : ${info.traduction}</p>
-    `;
+    // Stockage pour les phases suivantes
+    document.getElementById("affVocab").innerText = vocab;
+    document.getElementById("affConjug").innerText = conjug;
+
+    document.getElementById("affTitre").innerText = titre;
+    document.getElementById("affRegion").innerText = region;
+    document.getElementById("affArticle").innerText = article;
+
+    if (imageURL) {
+        const img = document.getElementById("affImage");
+        img.src = imageURL;
+        img.style.display = "block";
+    }
+
+    // Préparation du quiz
+    vocabulaire = vocab.split("\n").filter(l => l.trim().length > 0);
+    questions = melanger(vocabulaire).slice(0, 10);
+
+    // Passage à la phase 1
+    document.getElementById("phase0").classList.add("hidden");
+    document.getElementById("phase1").classList.remove("hidden");
 }
 
-// --- Phase 2 : Quiz ---
+// ============================
+//  PHASE 2 : QUIZ
+// ============================
 function goToQuiz() {
     document.getElementById("phase1").classList.add("hidden");
     document.getElementById("phase2").classList.remove("hidden");
-    genererQuiz();
+    indexQuestion = 0;
+    afficherQuestion();
 }
 
-function genererQuiz() {
-    const quizDiv = document.getElementById("quizArea");
-    quizDiv.innerHTML = "";
+function afficherQuestion() {
+    const zone = document.getElementById("quizZone");
 
-    const motsConnus = motsUniques.filter(m => dictionnaire[m]);
-    if (motsConnus.length === 0) {
-        quizDiv.innerHTML = "<p>Aucun mot connu dans le dictionnaire.</p>";
+    if (indexQuestion >= questions.length) {
+        zone.innerHTML = "<p>Test terminé !</p>";
         return;
     }
 
-    const mot = motsConnus[Math.floor(Math.random() * motsConnus.length)];
+    const q = questions[indexQuestion];
 
-    quizDiv.innerHTML = `
-        <div class="quiz-question">Que signifie : <strong>${mot}</strong> ?</div>
-        <input id="quizInput" type="text" placeholder="Ta réponse">
-        <button onclick="verifierQuiz('${mot}')">Valider</button>
-        <div id="quizResult"></div>
+    zone.innerHTML = `
+        <p><strong>Question ${indexQuestion + 1} :</strong></p>
+        <p>${q}</p>
+        <input id="rep" placeholder="Ta réponse">
+        <button onclick="suivante()">Valider</button>
     `;
 }
 
-function verifierQuiz(mot) {
-    const rep = document.getElementById("quizInput").value.trim().toLowerCase();
-    const bonne = dictionnaire[mot].traduction.toLowerCase();
-    const result = document.getElementById("quizResult");
-
-    if (rep === bonne) {
-        result.innerHTML = "<p style='color:green'>Correct !</p>";
-    } else {
-        result.innerHTML = `<p style='color:red'>Incorrect. Réponse : ${bonne}</p>`;
-    }
-
-    setTimeout(genererQuiz, 1500);
+function suivante() {
+    indexQuestion++;
+    afficherQuestion();
 }
 
-// --- Phase 3 : Lecture ---
-function goToReading() {
+// ============================
+//  PHASE 3 : LECTURE
+// ============================
+function goToLecture() {
     document.getElementById("phase2").classList.add("hidden");
     document.getElementById("phase3").classList.remove("hidden");
+}
 
-    const area = document.getElementById("readingArea");
-    area.innerHTML = "";
-
-    texteOriginal.split(/\s+/).forEach(mot => {
-        const span = document.createElement("span");
-        span.className = "word";
-        span.textContent = mot + " ";
-        span.title = dictionnaire[mot.toLowerCase()]?.traduction || "Mot inconnu";
-        area.appendChild(span);
-    });
+// ============================
+//  OUTIL : Mélanger un tableau
+// ============================
+function melanger(arr) {
+    return arr.sort(() => Math.random() - 0.5);
 }
 </script>
 
