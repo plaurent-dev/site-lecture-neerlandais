@@ -6,13 +6,14 @@
 <style>
 body { font-family: Arial, sans-serif; margin: 20px; }
 textarea { width: 100%; height: 120px; }
+input[type="text"] { width: 100%; padding: 8px; margin-bottom: 10px; }
 button { padding: 10px 20px; margin: 10px 0; cursor: pointer; }
 .hidden { display: none; }
 .word { padding: 4px; margin: 3px; display: inline-block; background: #eef; cursor: pointer; }
 .word:hover { background: #cce; }
 .quiz-question { font-weight: bold; margin-top: 20px; }
 .quiz-answer { margin-top: 10px; }
-.tooltip { background: #333; color: #fff; padding: 3px 6px; border-radius: 4px; position: absolute; display: none; }
+.article-box { background: #f7f7f7; padding: 10px; border-left: 4px solid #888; margin-bottom: 20px; }
 </style>
 </head>
 <body>
@@ -22,33 +23,50 @@ button { padding: 10px 20px; margin: 10px 0; cursor: pointer; }
 <!-- Phase 0 : Import -->
 <div id="phase0">
     <h2>Colle ton extrait</h2>
+
+    <label>Lien de l’article :</label>
+    <input type="text" id="articleLink" placeholder="https://www.ad.nl/...">
+
+    <label>Extrait :</label>
     <textarea id="inputText"></textarea>
+
     <button onclick="startAnalysis()">Analyser</button>
+</div>
+
+<!-- Bloc aperçu article -->
+<div id="articlePreview" class="hidden article-box">
+    <h3>Aperçu de l’article</h3>
+    <p><strong>Lien :</strong> <a id="previewLink" href="#" target="_blank">Ouvrir l’article original</a></p>
 </div>
 
 <!-- Phase 1 : Analyse -->
 <div id="phase1" class="hidden">
     <h2>Phase 1 : Analyse des mots</h2>
+
     <div id="wordList"></div>
     <div id="wordInfo"></div>
+
     <button onclick="goToQuiz()">Passer au quiz</button>
 </div>
 
 <!-- Phase 2 : Quiz -->
 <div id="phase2" class="hidden">
     <h2>Phase 2 : Quiz</h2>
+
     <div id="quizArea"></div>
+
     <button onclick="goToReading()">Passer à la lecture</button>
 </div>
 
 <!-- Phase 3 : Lecture -->
 <div id="phase3" class="hidden">
     <h2>Phase 3 : Lecture assistée</h2>
+
     <div id="readingArea"></div>
 </div>
 
 <script>
-// --- Petit dictionnaire local (à enrichir avec moi ensuite) ---
+// --- Petit dictionnaire local ---
 const dictionnaire = {
     "buurtbewoner": { type: "nom", genre: "de", traduction: "habitant du quartier" },
     "ernstig": { type: "adjectif", traduction: "grave, sérieux" },
@@ -64,12 +82,26 @@ const dictionnaire = {
 // Variables globales
 let motsUniques = [];
 let texteOriginal = "";
+let lienArticle = "";
 
 // --- Phase 0 : Analyse initiale ---
 function startAnalysis() {
     texteOriginal = document.getElementById("inputText").value.trim();
+    lienArticle = document.getElementById("articleLink").value.trim();
+
     if (!texteOriginal) return alert("Merci de coller un extrait.");
 
+    // Stockage local
+    localStorage.setItem("articleText", texteOriginal);
+    localStorage.setItem("articleURL", lienArticle);
+
+    // Affichage du lien
+    if (lienArticle) {
+        document.getElementById("previewLink").href = lienArticle;
+        document.getElementById("articlePreview").classList.remove("hidden");
+    }
+
+    // Extraction des mots
     const mots = texteOriginal
         .toLowerCase()
         .replace(/[^a-zàâäéèêëïîôöùûüç\s]/gi, "")
@@ -134,7 +166,6 @@ function genererQuiz() {
     }
 
     const mot = motsConnus[Math.floor(Math.random() * motsConnus.length)];
-    const info = dictionnaire[mot];
 
     quizDiv.innerHTML = `
         <div class="quiz-question">Que signifie : <strong>${mot}</strong> ?</div>
@@ -175,7 +206,6 @@ function goToReading() {
     });
 }
 </script>
-<iframe src="https://www.ad.nl/..."></iframe>
 
 </body>
 </html>
