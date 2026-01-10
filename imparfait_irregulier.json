@@ -8,11 +8,60 @@
       "imparfait_pluriel": "gingen"
     },
     {
-      "infinitif": "slaan",
-      "radical_brut": "slaa",
-      "radical_travaille": "sla",
-      "imparfait_singulier": "sloeg",
-      "imparfait_pluriel": "sloegen"
+      "infinitif": "komen",
+      "radical_brut": "kom",
+      "radical_travaille": "kom",
+      "imparfait_singulier": "kwam",
+      "imparfait_pluriel": "kwamen"
+    },
+    {
+      "infinitif": "zien",
+      "radical_brut": "zie",
+      "radical_travaille": "zie",
+      "imparfait_singulier": "zag",
+      "imparfait_pluriel": "zagen"
+    },
+    {
+      "infinitif": "zijn",
+      "radical_brut": "zij",
+      "radical_travaille": "ben",
+      "imparfait_singulier": "was",
+      "imparfait_pluriel": "waren"
+    },
+    {
+      "infinitif": "hebben",
+      "radical_brut": "hebb",
+      "radical_travaille": "heb",
+      "imparfait_singulier": "had",
+      "imparfait_pluriel": "hadden"
+    },
+    {
+      "infinitif": "kunnen",
+      "radical_brut": "kunn",
+      "radical_travaille": "kan",
+      "imparfait_singulier": "kon",
+      "imparfait_pluriel": "konden"
+    },
+    {
+      "infinitif": "willen",
+      "radical_brut": "will",
+      "radical_travaille": "wil",
+      "imparfait_singulier": "wilde",
+      "imparfait_pluriel": "wilden"
+    },
+    {
+      "infinitif": "moeten",
+      "radical_brut": "moet",
+      "radical_travaille": "moet",
+      "imparfait_singulier": "moest",
+      "imparfait_pluriel": "moesten"
+    },
+    {
+      "infinitif": "mogen",
+      "radical_brut": "mog",
+      "radical_travaille": "mag",
+      "imparfait_singulier": "mocht",
+      "imparfait_pluriel": "mochten"
     },
     {
       "infinitif": "denken",
@@ -27,6 +76,34 @@
       "radical_travaille": "neem",
       "imparfait_singulier": "nam",
       "imparfait_pluriel": "namen"
+    },
+    {
+      "infinitif": "geven",
+      "radical_brut": "gev",
+      "radical_travaille": "geef",
+      "imparfait_singulier": "gaf",
+      "imparfait_pluriel": "gaven"
+    },
+    {
+      "infinitif": "houden",
+      "radical_brut": "houd",
+      "radical_travaille": "houd",
+      "imparfait_singulier": "hield",
+      "imparfait_pluriel": "hielden"
+    },
+    {
+      "infinitif": "blijven",
+      "radical_brut": "blijf",
+      "radical_travaille": "blijf",
+      "imparfait_singulier": "bleef",
+      "imparfait_pluriel": "bleven"
+    },
+    {
+      "infinitif": "rijden",
+      "radical_brut": "rijd",
+      "radical_travaille": "rijd",
+      "imparfait_singulier": "reed",
+      "imparfait_pluriel": "reden"
     }
   ]
 }

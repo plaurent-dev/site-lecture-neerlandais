@@ -1,11 +1,18 @@
 {
   "verbes_reguliers": [
     {
-      "infinitif": "horen",
-      "radical_brut": "hor",
-      "radical_travaille": "hoor",
-      "imparfait_singulier": "hoorde",
-      "imparfait_pluriel": "hoorden"
+      "infinitif": "werken",
+      "radical_brut": "werk",
+      "radical_travaille": "werk",
+      "imparfait_singulier": "werkte",
+      "imparfait_pluriel": "werkten"
+    },
+    {
+      "infinitif": "leren",
+      "radical_brut": "ler",
+      "radical_travaille": "leer",
+      "imparfait_singulier": "leerde",
+      "imparfait_pluriel": "leerden"
     },
     {
       "infinitif": "maken",
@@ -22,6 +29,13 @@
       "imparfait_pluriel": "praatten"
     },
     {
+      "infinitif": "wonen",
+      "radical_brut": "won",
+      "radical_travaille": "woon",
+      "imparfait_singulier": "woonde",
+      "imparfait_pluriel": "woonden"
+    },
+    {
       "infinitif": "reizen",
       "radical_brut": "reiz",
       "radical_travaille": "reis",
@@ -29,32 +43,102 @@
       "imparfait_pluriel": "reisden"
     },
     {
-      "infinitif": "wensen",
-      "radical_brut": "wens",
-      "radical_travaille": "wens",
-      "imparfait_singulier": "wenste",
-      "imparfait_pluriel": "wensten"
+      "infinitif": "koken",
+      "radical_brut": "kok",
+      "radical_travaille": "kook",
+      "imparfait_singulier": "kookte",
+      "imparfait_pluriel": "kookten"
     },
     {
-      "infinitif": "leven",
-      "radical_brut": "lev",
-      "radical_travaille": "leef",
-      "imparfait_singulier": "leefde",
-      "imparfait_pluriel": "leefden"
+      "infinitif": "spelen",
+      "radical_brut": "spel",
+      "radical_travaille": "speel",
+      "imparfait_singulier": "speelde",
+      "imparfait_pluriel": "speelden"
     },
     {
-      "infinitif": "glimlachen",
-      "radical_brut": "glimlach",
-      "radical_travaille": "glimlach",
-      "imparfait_singulier": "glimlachte",
-      "imparfait_pluriel": "glimlachten"
+      "infinitif": "luisteren",
+      "radical_brut": "luister",
+      "radical_travaille": "luister",
+      "imparfait_singulier": "luisterde",
+      "imparfait_pluriel": "luisterden"
     },
     {
-      "infinitif": "mixen",
-      "radical_brut": "mix",
-      "radical_travaille": "mix",
-      "imparfait_singulier": "mixte",
-      "imparfait_pluriel": "mixten"
+      "infinitif": "openen",
+      "radical_brut": "open",
+      "radical_travaille": "open",
+      "imparfait_singulier": "opende",
+      "imparfait_pluriel": "openden"
+    },
+    {
+      "infinitif": "werken",
+      "radical_brut": "werk",
+      "radical_travaille": "werk",
+      "imparfait_singulier": "werkte",
+      "imparfait_pluriel": "werkten"
+    },
+    {
+      "infinitif": "rekenen",
+      "radical_brut": "reken",
+      "radical_travaille": "reken",
+      "imparfait_singulier": "rekende",
+      "imparfait_pluriel": "rekenden"
+    },
+    {
+      "infinitif": "wandelen",
+      "radical_brut": "wandel",
+      "radical_travaille": "wandel",
+      "imparfait_singulier": "wandelde",
+      "imparfait_pluriel": "wandelden"
+    },
+    {
+      "infinitif": "tellen",
+      "radical_brut": "tel",
+      "radical_travaille": "tel",
+      "imparfait_singulier": "telde",
+      "imparfait_pluriel": "telden"
+    },
+    {
+      "infinitif": "werken",
+      "radical_brut": "werk",
+      "radical_travaille": "werk",
+      "imparfait_singulier": "werkte",
+      "imparfait_pluriel": "werkten"
+    },
+    {
+      "infinitif": "vragen",
+      "radical_brut": "vra",
+      "radical_travaille": "vraag",
+      "imparfait_singulier": "vraagde",
+      "imparfait_pluriel": "vraagden"
+    },
+    {
+      "infinitif": "antwoorden",
+      "radical_brut": "antwoord",
+      "radical_travaille": "antwoord",
+      "imparfait_singulier": "antwoordde",
+      "imparfait_pluriel": "antwoordden"
+    },
+    {
+      "infinitif": "halen",
+      "radical_brut": "haal",
+      "radical_travaille": "haal",
+      "imparfait_singulier": "haalde",
+      "imparfait_pluriel": "haalden"
+    },
+    {
+      "infinitif": "zetten",
+      "radical_brut": "zet",
+      "radical_travaille": "zet",
+      "imparfait_singulier": "zette",
+      "imparfait_pluriel": "zetten"
+    },
+    {
+      "infinitif": "werken",
+      "radical_brut": "werk",
+      "radical_travaille": "werk",
+      "imparfait_singulier": "werkte",
+      "imparfait_pluriel": "werkten"
     }
   ]
 }
