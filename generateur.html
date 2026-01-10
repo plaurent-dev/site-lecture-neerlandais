@@ -492,8 +492,8 @@ function genererFiche() {
 
   // Génération HTML
   const vocabRows_html = vocabData.map(v => 
-    '<tr><td>' + v.nl + '</td><td>' + v.genre + '</td><td>' + v.fr + '</td><td>' + v.exemple + '</td></tr>'
-  ).join('');
+  '<tr><td><button onclick="pronounce(\'' + v.nl.replace(/'/g, "\\'") + '\')" style="background: none; border: none; cursor: pointer; font-size: 1.2em; padding: 0; color: #4ecdc4;">🔊</button> ' + v.nl + '</td><td>' + v.genre + '</td><td>' + v.fr + '</td><td>' + v.exemple + '</td></tr>'
+).join('');
 
   const verbRows_html = verbData.map(v => 
     '<tr><td>' + v.verbe + '</td><td>' + v.type + '</td><td>' + v.forme + '</td><td>' + v.sens + '</td><td>' + v.exemple + '</td></tr>'
@@ -645,6 +645,13 @@ function telechargerFiche() {
   URL.revokeObjectURL(link.href);
   
   alert("Fiche téléchargée : " + nomFichier);
+}
+
+function pronounce(word) {
+  const utterance = new SpeechSynthesisUtterance(word);
+  utterance.lang = 'nl-NL'; // Néerlandais
+  utterance.rate = 0.8; // Un peu plus lent pour bien entendre
+  window.speechSynthesis.speak(utterance);
 }
 </script>
 
