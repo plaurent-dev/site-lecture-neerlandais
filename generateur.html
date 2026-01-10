@@ -611,10 +611,8 @@ verbRows_html + '\n' +
 '  zone.innerHTML = `\n' +
 '    <p><strong>Question ${indexQ + 1} / ${questions.length}</strong></p>\n' +
 '    <p style="font-size: 1.1em; margin: 15px 0;">${questions[indexQ].question}</p>\n' +
-'    <input id="rep" placeholder="Ta réponse" autofocus>\n' +
-'    <button onclick="suivante()">➡️ Valider</button>\n' +
+'    <button onclick="suivante()">➡️ Voir la réponse</button>\n' +
 '  `;\n' +
-'  setTimeout(() => document.getElementById("rep").focus(), 0);\n' +
 '}\n' +
 'function suivante() {\n' +
 '  const zone = document.getElementById("quizZone");\n' +

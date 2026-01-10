@@ -589,7 +589,6 @@
 
         container.innerHTML = fichesRecentes.map(fiche => `
             <div class="fiche-card" data-fiche="${fiche.href}">
-                <button class="btn-delete" onclick="supprimerFiche('${fiche.href}')">✕ Supprimer</button>
                 <h3>${fiche.region}</h3>
                 <p class="date">📅 ${formaterDate(fiche.date)}</p>
                 <button onclick="lancerFiche('${fiche.href}')">🚀 Ouvrir</button>
@@ -652,7 +651,6 @@
             <div class="fiches-grid" style="margin-top: 20px;">
                 ${fiches.map(fiche => `
                     <div class="fiche-card" data-fiche="${fiche.href}">
-                        <button class="btn-delete" onclick="supprimerFiche('${fiche.href}')">✕ Supprimer</button>
                         <h3>${fiche.region}</h3>
                         <p class="date">📅 ${formaterDate(fiche.date)}</p>
                         <button onclick="lancerFiche('${fiche.href}')">🚀 Ouvrir</button>

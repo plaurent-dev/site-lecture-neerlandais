@@ -107,10 +107,8 @@ function afficherQuestion() {
   zone.innerHTML = `
     <p><strong>Question ${indexQ + 1} / ${questions.length}</strong></p>
     <p style="font-size: 1.1em; margin: 15px 0;">${questions[indexQ].question}</p>
-    <input id="rep" placeholder="Ta réponse" autofocus>
-    <button onclick="suivante()">➡️ Valider</button>
-  `;
-  setTimeout(() => document.getElementById("rep").focus(), 0);
+    <button onclick="suivante()">➡️ Voir la réponse</button>
+`;
 }
 function suivante() {
   const zone = document.getElementById("quizZone");
