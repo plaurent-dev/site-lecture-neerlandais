@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Générateur de fiche NL</title>
+<meta name="google-signin-client_id" content="639970630190-dbtusqa5kb93jdthsr3413ms7t235anl.apps.googleusercontent.com">
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #ff6b6b 0%, #4ecdc4 100%);
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  padding: 40px;
+}
+
+h1 {
+  color: #c41e3a;
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 2.5em;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.subtitle {
+  text-align: center;
+  color: #666;
+  margin-bottom: 40px;
+  font-size: 1.1em;
+}
+
+.login-container {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.login-box {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding: 40px;
+  border-radius: 12px;
+  border-left: 5px solid #c41e3a;
+}
+
+.login-box h2 {
+  color: #c41e3a;
+  margin-bottom: 20px;
+  font-size: 1.5em;
+}
+
+.login-box p {
+  color: #666;
+  margin-bottom: 30px;
+  font-size: 0.95em;
+}
+
+.error-message {
+  background: #ffebee;
+  border: 2px solid #ff6b6b;
+  color: #c41e3a;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  display: none;
+}
+
+.show-error {
+  display: block !important;
+}
+
+.google-signin-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.box {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding: 25px;
+  border-radius: 12px;
+  margin-bottom: 25px;
+  border-left: 5px solid #c41e3a;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.box:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 20px rgba(196, 30, 58, 0.15);
+}
+
+.box h2 {
+  color: #c41e3a;
+  margin-bottom: 15px;
+  font-size: 1.3em;
+}
+
+textarea, input[type="text"], input[type="file"], input[type="date"] {
+  width: 100%;
+  padding: 12px;
+  margin-top: 8px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 1em;
+  transition: border-color 0.3s ease;
+}
+
+textarea:focus, input[type="text"]:focus, input[type="file"]:focus, input[type="date"]:focus {
+  outline: none;
+  border-color: #c41e3a;
+  box-shadow: 0 0 0 3px rgba(196, 30, 58, 0.1);
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+h3 {
+  color: #333;
+  margin-top: 15px;
+  margin-bottom: 8px;
+  font-size: 1em;
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+button {
+  background: linear-gradient(135deg, #c41e3a 0%, #a01830 100%);
+  color: white;
+  padding: 14px 30px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.1em;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(196, 30, 58, 0.3);
+  flex: 1;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(196, 30, 58, 0.4);
+  background: linear-gradient(135deg, #a01830 0%, #8a1629 100%);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+button.secondary {
+  background: linear-gradient(135deg, #4ecdc4 0%, #44a9a0 100%);
+  box-shadow: 0 4px 15px rgba(78, 205, 196, 0.3);
+}
+
+button.secondary:hover {
+  background: linear-gradient(135deg, #44a9a0 0%, #3a8a80 100%);
+  box-shadow: 0 6px 20px rgba(78, 205, 196, 0.4);
+}
+
+h2.output-title {
+  color: #c41e3a;
+  margin-top: 40px;
+  margin-bottom: 15px;
+  font-size: 1.5em;
+  padding-bottom: 10px;
+  border-bottom: 3px solid #c41e3a;
+}
+
+#output {
+  width: 100%;
+  height: 350px;
+  padding: 15px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-family: 'Courier New', monospace;
+  font-size: 0.9em;
+  background: #f8f9fa;
+  color: #333;
+  resize: vertical;
+}
+
+#output:focus {
+  outline: none;
+  border-color: #c41e3a;
+  box-shadow: 0 0 0 3px rgba(196, 30, 58, 0.1);
+}
+
+#loginContainer {
+  display: block;
+}
+
+#formContainer {
+  display: none;
+}
+
+.user-info {
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 15px;
+  background: #fff;
+  border-radius: 8px;
+  display: none;
+}
+
+.user-info p {
+  color: #333;
+  margin: 5px 0;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+  <h1>🇳🇱 Générateur de fiche NL</h1>
+  <p class="subtitle">Créez des fiches de révision en néerlandais en quelques clics</p>
+
+  <!-- Login Container -->
+  <div id="loginContainer" class="login-container">
+    <div class="login-box">
+      <h2>🔐 Accès sécurisé</h2>
+      <p>Connectez-vous avec votre compte Google</p>
+      <div class="error-message" id="errorMessage">
+        ❌ Accès refusé. Veuillez vérifier votre email.
+      </div>
+      <div class="google-signin-container">
+        <div id="g_id_onload"
+             data-client_id="639970630190-dbtusqa5kb93jdthsr3413ms7t235anl.apps.googleusercontent.com"
+             data-callback="handleCredentialResponse">
+        </div>
+        <div class="g_id_signin" data-type="standard"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- User Info (affiché après connexion) -->
+  <div class="user-info" id="userInfo">
+    <p>Connecté en tant que : <strong id="userEmail"></strong></p>
+  </div>
+
+  <!-- Form Container -->
+  <div id="formContainer">
+    <div class="box">
+      <h2>1. Région</h2>
+      <input type="text" id="region" placeholder="Ex : Nijmegen">
+    </div>
+
+    <div class="box">
+      <h2>2. Date</h2>
+      <input type="date" id="date">
+    </div>
+
+    <div class="box">
+      <h2>3. Titre</h2>
+      <input type="text" id="titre" placeholder="Titre de l'article">
+    </div>
+
+    <div class="box">
+      <h2>4. Article</h2>
+      <textarea id="article" placeholder="Colle ici l'article"></textarea>
+      <h3>Image (upload)</h3>
+      <input type="file" id="imageInput" accept="image/*">
+    </div>
+
+    <div class="box">
+      <h2>5. Vocabulaire (CSV)</h2>
+      <textarea id="csvVocab" placeholder="Colle ici ton CSV vocabulaire"></textarea>
+    </div>
+
+    <div class="box">
+      <h2>6. Verbes (CSV)</h2>
+      <textarea id="csvVerbes" placeholder="Colle ici ton CSV verbes"></textarea>
+    </div>
+
+    <div class="button-group">
+      <button onclick="genererFiche()">✨ Générer la fiche HTML</button>
+      <button class="secondary" onclick="seDeconnecter()">🔒 Déconnexion</button>
+    </div>
+
+    <h2 class="output-title">Code généré :</h2>
+    <textarea id="output"></textarea>
+
+    <div class="button-group" style="margin-top: 20px;">
+      <button id="btnTelecharger" class="secondary" onclick="telechargerFiche()" style="display:none;">⬇️ Télécharger</button>
+    </div>
+  </div>
+</div>
+
+<script src="https://accounts.google.com/gsi/client" async defer></script>
+<script>
+// ===== CONFIGURATION GOOGLE SIGN-IN =====
+// À remplacer par votre CLIENT_ID depuis Google Cloud Console
+const AUTHORIZED_EMAILS = [
+  "darkmoulasse@gmail.com" // Ajoutez vos emails autorisés ici
+];
+
+function handleCredentialResponse(response) {
+  // Décoder le JWT token
+  const base64Url = response.credential.split('.')[1];
+  const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+  const jsonPayload = decodeURIComponent(
+    atob(base64).split('').map(function(c) {
+      return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+    }).join('')
+  );
+  
+  const data = JSON.parse(jsonPayload);
+  const userEmail = data.email;
+  
+  // Vérifier si l'email est autorisé
+  if (AUTHORIZED_EMAILS.includes(userEmail)) {
+    // Connexion réussie
+    document.getElementById('loginContainer').style.display = 'none';
+    document.getElementById('userInfo').style.display = 'block';
+    document.getElementById('userEmail').textContent = userEmail;
+    document.getElementById('formContainer').style.display = 'block';
+    initialiserFormulaire();
+    sessionStorage.setItem('userEmail', userEmail);
+  } else {
+    // Email non autorisé
+    document.getElementById('errorMessage').classList.add('show-error');
+    setTimeout(() => {
+      location.reload();
+    }, 2000);
+  }
+}
+
+window.onload = function() {
+  // Vérifier si déjà connecté
+  if (sessionStorage.getItem('userEmail')) {
+    const email = sessionStorage.getItem('userEmail');
+    document.getElementById('loginContainer').style.display = 'none';
+    document.getElementById('userInfo').style.display = 'block';
+    document.getElementById('userEmail').textContent = email;
+    document.getElementById('formContainer').style.display = 'block';
+  }
+};
+
+// Déconnexion Google
+function seDeconnecter() {
+  if (confirm('Êtes-vous sûr de vouloir vous déconnecter ?')) {
+    google.accounts.id.disableAutoSelect();
+    sessionStorage.removeItem('userEmail');
+    document.getElementById('formContainer').style.display = 'none';
+    document.getElementById('userInfo').style.display = 'none';
+    document.getElementById('loginContainer').style.display = 'block';
+    resetFormulaire();
+    location.reload();
+  }
+}
+
+// Initialiser le formulaire
+function initialiserFormulaire() {
+  document.getElementById("output").value = "";
+  const today = new Date().toISOString().split('T')[0];
+  document.getElementById("date").value = today;
+}
+
+// Réinitialiser le formulaire
+function resetFormulaire() {
+  document.getElementById("region").value = '';
+  document.getElementById("date").value = '';
+  document.getElementById("titre").value = '';
+  document.getElementById("article").value = '';
+  document.getElementById("csvVocab").value = '';
+  document.getElementById("csvVerbes").value = '';
+  document.getElementById("output").value = '';
+  document.getElementById('btnTelecharger').style.display = 'none';
+  imageBase64 = '';
+  htmlGenere = '';
+}
+
+let imageBase64 = "";
+let htmlGenere = "";
+
+// Convertir l'image uploadée en Base64
+document.getElementById("imageInput").addEventListener("change", function() {
+  const file = this.files[0];
+  const reader = new FileReader();
+  reader.onload = e => imageBase64 = e.target.result;
+  reader.readAsDataURL(file);
+});
+
+// ===============================
+//  PARSEUR CSV ROBUSTE
+// ===============================
+function parseCSV(text) {
+  const rows = [];
+  let current = "";
+  let row = [];
+  let insideQuotes = false;
+
+  for (let i = 0; i < text.length; i++) {
+    const c = text[i];
+    const next = text[i + 1];
+
+    if (c === '"' && insideQuotes && next === '"') {
+      current += '"';
+      i++;
+    }
+    else if (c === '"') {
+      insideQuotes = !insideQuotes;
+    }
+    else if (c === ',' && !insideQuotes) {
+      row.push(current.trim());
+      current = "";
+    }
+    else if ((c === '\n' || c === '\r') && !insideQuotes) {
+      if (current.length > 0 || row.length > 0) {
+        row.push(current.trim());
+        rows.push(row);
+      }
+      row = [];
+      current = "";
+    }
+    else {
+      current += c;
+    }
+  }
+
+  if (current.length > 0 || row.length > 0) {
+    row.push(current.trim());
+    rows.push(row);
+  }
+
+  return rows;
+}
+
+// Empêcher les caractères dangereux
+function escapeHTML(str = "") {
+  return str
+    .replace(/`/g, "\\`")
+    .replace(/\${/g, "\\${");
+}
+
+function genererFiche() {
+  const region = escapeHTML(document.getElementById("region").value.trim());
+  const date = document.getElementById("date").value;
+  const titre = escapeHTML(document.getElementById("titre").value.trim());
+  const article = escapeHTML(document.getElementById("article").value.trim());
+  const csvVocab = document.getElementById("csvVocab").value.trim();
+  const csvVerbes = document.getElementById("csvVerbes").value.trim();
+
+  if (!titre || !article || !date) {
+    alert("Merci de remplir au minimum la région, la date, le titre et l'article.");
+    return;
+  }
+
+  // Parsing CSV
+  const vocabRows = parseCSV(csvVocab).slice(1);
+  const verbRows = parseCSV(csvVerbes).slice(1);
+
+  const vocabData = vocabRows.map(r => ({
+    nl: escapeHTML(r[0] || ""),
+    genre: escapeHTML(r[1] || ""),
+    fr: escapeHTML(r[2] || ""),
+    exemple: escapeHTML(r[3] || "")
+  }));
+
+  const verbData = verbRows.map(r => ({
+    verbe: escapeHTML(r[0] || ""),
+    type: escapeHTML(r[1] || ""),
+    forme: escapeHTML(r[2] || ""),
+    sens: escapeHTML(r[3] || ""),
+    exemple: escapeHTML(r[4] || "")
+  }));
+
+  const questions = vocabData
+    .map(v => ({ question: `Que signifie "${v.nl}" ?`, reponse: v.fr }))
+    .sort(() => Math.random() - 0.5)
+    .slice(0, 10);
+
+  // Génération HTML
+  const vocabRows_html = vocabData.map(v => 
+    '<tr><td>' + v.nl + '</td><td>' + v.genre + '</td><td>' + v.fr + '</td><td>' + v.exemple + '</td></tr>'
+  ).join('');
+
+  const verbRows_html = verbData.map(v => 
+    '<tr><td>' + v.verbe + '</td><td>' + v.type + '</td><td>' + v.forme + '</td><td>' + v.sens + '</td><td>' + v.exemple + '</td></tr>'
+  ).join('');
+
+  const questionsJSON = JSON.stringify(questions);
+  const imageTag = imageBase64 ? '<img src="' + imageBase64 + '" style="max-width:300px; border-radius: 8px; margin: 15px 0;">' : '';
+
+  htmlGenere = '<!DOCTYPE html>\n' +
+'<html lang="fr">\n' +
+'<head>\n' +
+'<meta charset="UTF-8">\n' +
+'<meta name="viewport" content="width=device-width, initial-scale=1.0">\n' +
+'<title>' + titre + '</title>\n' +
+'<style>\n' +
+'* { margin: 0; padding: 0; box-sizing: border-box; }\n' +
+'body { font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; background: linear-gradient(135deg, #ff6b6b 0%, #4ecdc4 100%); min-height: 100vh; padding: 20px; }\n' +
+'.container { max-width: 1000px; margin: 0 auto; background: white; border-radius: 15px; padding: 40px; box-shadow: 0 10px 40px rgba(0,0,0,0.2); }\n' +
+'h1 { color: #c41e3a; text-align: center; margin-bottom: 10px; font-size: 2em; }\n' +
+'.region-date { text-align: center; color: #666; margin-bottom: 30px; font-size: 1.1em; font-weight: bold; }\n' +
+'.article { color: #333; line-height: 1.8; margin: 30px 0; padding: 20px; background: #f8f9fa; border-left: 4px solid #c41e3a; border-radius: 8px; }\n' +
+'h2 { color: #c41e3a; margin-top: 40px; margin-bottom: 20px; border-bottom: 3px solid #c41e3a; padding-bottom: 10px; }\n' +
+'table { border-collapse: collapse; width: 100%; margin-bottom: 30px; font-size: 15px; background-color: #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden; }\n' +
+'th { background: linear-gradient(135deg, #c41e3a 0%, #a01830 100%); color: white; padding: 15px; text-align: left; font-weight: bold; }\n' +
+'td { padding: 12px 15px; border-bottom: 1px solid #eee; }\n' +
+'tr:hover { background-color: #f5f7fa; }\n' +
+'button { background: linear-gradient(135deg, #c41e3a 0%, #a01830 100%); color: white; padding: 14px 30px; margin-top: 30px; cursor: pointer; border: none; border-radius: 8px; font-size: 1.05em; font-weight: bold; width: 100%; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(196,30,58,0.3); }\n' +
+'button:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(196,30,58,0.4); }\n' +
+'.hidden { display: none; }\n' +
+'#quizZone { background: #f8f9fa; padding: 25px; border-radius: 8px; border: 2px solid #c41e3a; margin-top: 20px; }\n' +
+'#quizZone p { margin-bottom: 15px; font-size: 1.05em; }\n' +
+'#quizZone input { width: 100%; padding: 10px; margin: 15px 0; border: 2px solid #ddd; border-radius: 6px; font-size: 1em; }\n' +
+'#quizZone input:focus { outline: none; border-color: #c41e3a; }\n' +
+'.progress-container { margin-bottom: 20px; }\n' +
+'.progress-bar { width: 100%; height: 10px; background: #ddd; border-radius: 10px; overflow: hidden; margin-bottom: 8px; }\n' +
+'.progress-fill { height: 100%; background: linear-gradient(90deg, #c41e3a 0%, #ff6b6b 100%); transition: width 0.3s ease; }\n' +
+'.progress-text { text-align: center; font-weight: bold; color: #666; font-size: 0.9em; }\n' +
+'.encouragement { text-align: center; margin: 15px 0; font-size: 1.15em; font-weight: bold; color: #c41e3a; animation: fadeIn 0.5s ease; }\n' +
+'.answer-display { background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); border: 2px solid #4caf50; border-radius: 8px; padding: 15px; margin: 15px 0; font-size: 1.05em; font-weight: bold; color: #2e7d32; }\n' +
+'.answer-display strong { color: #1b5e20; }\n' +
+'@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }\n' +
+'.completion-message { text-align: center; padding: 30px; background: linear-gradient(135deg, #fff5f5 0%, #ffe6e6 100%); border-radius: 10px; border: 2px solid #c41e3a; }\n' +
+'.completion-message p { font-size: 1.2em; margin: 10px 0; color: #333; }\n' +
+'</style>\n' +
+'</head>\n' +
+'<body>\n' +
+'<div class="container">\n' +
+'<h1>' + titre + '</h1>\n' +
+'<p class="region-date">📍 ' + region + ' | 📅 ' + date + '</p>\n' +
+imageTag + '\n' +
+'<div class="article">' + article + '</div>\n' +
+'<div id="phase1">\n' +
+'  <h2>📚 Phase 1 : Vocabulaire</h2>\n' +
+'  <table>\n' +
+'    <thead><tr><th>Néerlandais</th><th>DE/HET</th><th>Français</th><th>Exemple</th></tr></thead>\n' +
+'    <tbody>\n' +
+vocabRows_html + '\n' +
+'    </tbody>\n' +
+'  </table>\n' +
+'  <h2>🔤 Verbes</h2>\n' +
+'  <table>\n' +
+'    <thead><tr><th>Verbe</th><th>Type</th><th>Forme</th><th>Sens</th><th>Exemple</th></tr></thead>\n' +
+'    <tbody>\n' +
+verbRows_html + '\n' +
+'    </tbody>\n' +
+'  </table>\n' +
+'  <button onclick="goToQuiz()">➡️ Passer au quiz</button>\n' +
+'</div>\n' +
+'<div id="phase2" class="hidden">\n' +
+'  <h2>✏️ Phase 2 : Quiz</h2>\n' +
+'  <div class="progress-container">\n' +
+'    <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>\n' +
+'    <div class="progress-text" id="progressText">Question 0 / 0</div>\n' +
+'  </div>\n' +
+'  <div id="quizZone"></div>\n' +
+'</div>\n' +
+'<script>\n' +
+'const encouragements = [\n' +
+'  "Goed bezig! 💪",\n' +
+'  "Je doet het prima! 🌟",\n' +
+'  "Fantastisch! 🎉",\n' +
+'  "Super werk! ⭐",\n' +
+'  "Heel goed! 🚀",\n' +
+'  "Geweldig! 🏆",\n' +
+'  "Meesterlijk! 👏"\n' +
+'];\n' +
+'let questions = ' + questionsJSON + ';\n' +
+'let indexQ = 0;\n' +
+'function getRandomEncouragement() {\n' +
+'  return encouragements[Math.floor(Math.random() * encouragements.length)];\n' +
+'}\n' +
+'function updateProgress() {\n' +
+'  const percent = (indexQ / questions.length) * 100;\n' +
+'  document.getElementById("progressFill").style.width = percent + "%";\n' +
+'  document.getElementById("progressText").textContent = "Question " + indexQ + " / " + questions.length;\n' +
+'}\n' +
+'function goToQuiz() {\n' +
+'  document.getElementById("phase1").classList.add("hidden");\n' +
+'  document.getElementById("phase2").classList.remove("hidden");\n' +
+'  afficherQuestion();\n' +
+'}\n' +
+'function afficherQuestion() {\n' +
+'  const zone = document.getElementById("quizZone");\n' +
+'  updateProgress();\n' +
+'  if (indexQ >= questions.length) {\n' +
+'    zone.innerHTML = "<div class=\\"completion-message\\"><p>✅ Quiz terminé ! Bravo !</p><p style=\\"font-size: 1.1em; color: #c41e3a;\\">Goed gedaan! 🎊</p><button onclick=\\"location.reload()\\">🔄 Recommencer</button></div>";\n' +
+'    return;\n' +
+'  }\n' +
+'  zone.innerHTML = `\n' +
+'    <p><strong>Question ${indexQ + 1} / ${questions.length}</strong></p>\n' +
+'    <p style="font-size: 1.1em; margin: 15px 0;">${questions[indexQ].question}</p>\n' +
+'    <input id="rep" placeholder="Ta réponse" autofocus>\n' +
+'    <button onclick="suivante()">➡️ Valider</button>\n' +
+'  `;\n' +
+'  setTimeout(() => document.getElementById("rep").focus(), 0);\n' +
+'}\n' +
+'function suivante() {\n' +
+'  const zone = document.getElementById("quizZone");\n' +
+'  const reponseCorrecte = questions[indexQ].reponse;\n' +
+'  zone.innerHTML += "<div class=\\"answer-display\\">✅ Réponse : <strong>" + reponseCorrecte + "</strong></div>";\n' +
+'  zone.innerHTML += "<div class=\\"encouragement\\">"+ getRandomEncouragement() + "</div>";\n' +
+'  indexQ++;\n' +
+'  setTimeout(() => afficherQuestion(), 2000);\n' +
+'}\n' +
+'<\/script>\n' +
+'</div>\n' +
+'</body>\n' +
+'</html>\n';
+
+  document.getElementById("output").value = htmlGenere;
+  document.getElementById("btnTelecharger").style.display = "flex";
+}
+
+function telechargerFiche() {
+  const region = document.getElementById("region").value.trim();
+  const date = document.getElementById("date").value;
+  
+  if (!region || !date) {
+    alert("Merci de remplir la région et la date pour le nom du fichier.");
+    return;
+  }
+
+  const nomFichier = region + "_" + date + ".html";
+  const blob = new Blob([htmlGenere], { type: "text/html;charset=utf-8;" });
+  const link = document.createElement("a");
+  link.href = URL.createObjectURL(blob);
+  link.download = nomFichier;
+  link.click();
+  URL.revokeObjectURL(link.href);
+  
+  alert("Fiche téléchargée : " + nomFichier);
+}
+</script>
+
+</body>
+</html>
