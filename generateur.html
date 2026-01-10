@@ -571,6 +571,12 @@ verbRows_html + '\n' +
 '  <div id="quizZone"></div>\n' +
 '</div>\n' +
 '<script>\n' +
+'function pronounce(word) {\n' +
+'  const utterance = new SpeechSynthesisUtterance(word);\n' +
+'  utterance.lang = "nl-NL";\n' +
+'  utterance.rate = 0.8;\n' +
+'  window.speechSynthesis.speak(utterance);\n' +
+'}\n' +
 'const encouragements = [\n' +
 '  "Goed bezig! 💪",\n' +
 '  "Je doet het prima! 🌟",\n' +
@@ -649,8 +655,8 @@ function telechargerFiche() {
 
 function pronounce(word) {
   const utterance = new SpeechSynthesisUtterance(word);
-  utterance.lang = 'nl-NL'; // Néerlandais
-  utterance.rate = 0.8; // Un peu plus lent pour bien entendre
+  utterance.lang = "nl-NL";
+  utterance.rate = 0.8;
   window.speechSynthesis.speak(utterance);
 }
 </script>
