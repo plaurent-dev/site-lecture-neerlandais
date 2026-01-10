@@ -32,6 +32,17 @@
             margin-bottom: 30px;
             font-size: 1.1em;
         }
+        .aide-memoire {
+            background: #e3f2fd;
+            border-left: 4px solid #2196f3;
+            padding: 14px 18px;
+            border-radius: 8px;
+            margin: 18px auto 30px auto;
+            color: #1976d2;
+            font-size: 1.05em;
+            max-width: 500px;
+            box-shadow: 0 2px 8px #2196f322;
+        }
         form label {
             color: #c41e3a;
             font-weight: bold;
@@ -76,9 +87,11 @@
             font-size: 1.2em;
             margin-bottom: 10px;
         }
-        .question strong {
+        .verbe {
             color: #c41e3a;
-            font-size: 1.1em;
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-bottom: 18px;
         }
         .answer {
             background: #e3f2fd;
@@ -90,6 +103,7 @@
             font-size: 1.1em;
             max-width: 350px;
             box-shadow: 0 2px 8px #2196f322;
+            text-align: left;
         }
         .end-message {
             text-align: center;
@@ -106,6 +120,13 @@
 <div class="container">
     <h1>Révision de l’imparfait néerlandais</h1>
     <p class="subtitle">Entraîne-toi à retrouver le radical et l’imparfait des verbes néerlandais</p>
+    <div class="aide_memoire">
+        <strong>Aide-mémoire :</strong><br>
+        Pour choisir entre <b>te(n)</b> et <b>de(n)</b> à l’imparfait, regarde la dernière lettre du radical travaillé.<br>
+        Si elle est dans <b>’t Kofschip + X</b> (ou <b>SoFT KeTCHuP + X</b>), c’est <b>te(n)</b>.<br>
+        Sinon, c’est <b>de(n)</b>.<br>
+        <span style="color:#888;">(Exemples : werken → werkte, leven → leefde)</span>
+    </div>
     <form id="setupForm">
         <label>Nombre de verbes à réviser :
             <input type="number" id="nbVerbes" min="1" max="20" value="5">
@@ -121,14 +142,6 @@
 <script>
 let verbes = [];
 let current = 0;
-let etape = 0;
-const questions = [
-    { label: "Infinitif", key: "infinitif" },
-    { label: "Radical brut", key: "radical_brut" },
-    { label: "Radical travaillé", key: "radical_travaille" },
-    { label: "Imparfait singulier", key: "imparfait_singulier" },
-    { label: "Imparfait pluriel", key: "imparfait_pluriel" }
-];
 
 document.getElementById('setupForm').onsubmit = async function(e) {
     e.preventDefault();
@@ -148,7 +161,6 @@ document.getElementById('setupForm').onsubmit = async function(e) {
     all = all.sort(()=>Math.random()-0.5).slice(0, nb);
     verbes = all;
     current = 0;
-    etape = 0;
     document.getElementById('setupForm').style.display = 'none';
     document.getElementById('quiz').style.display = '';
     showQuestion();
@@ -163,32 +175,32 @@ function showQuestion() {
         return;
     }
     const v = verbes[current];
-    const q = questions[etape];
     document.getElementById('quiz').innerHTML = `
         <div class="question">
-            <h2>Verbe ${current+1} / ${verbes.length}</h2>
-            <strong>${q.label} ?</strong>
-            <br>
-            <button class="btn" onclick="showAnswer()">Afficher la réponse</button>
+            <div class="verbe">${v.infinitif}</div>
+            <div style="margin-bottom:18px;">
+                Pouvez-vous donner le radical brut, le radical travaillé (forme "ik" du présent), choisir <b>te(n)</b> ou <b>de(n)</b> et deviner l’imparfait ?
+            </div>
+            <button class="btn" onclick="showAnswer()">Afficher la solution</button>
         </div>
     `;
 }
 
 function showAnswer() {
     const v = verbes[current];
-    const q = questions[etape];
     document.getElementById('quiz').innerHTML += `
-        <div class="answer">${v[q.key]}</div>
+        <div class="answer">
+            <b>Radical brut :</b> ${v.radical_brut}<br>
+            <b>Radical travaillé :</b> ${v.radical_travaille}<br>
+            <b>Imparfait singulier :</b> ${v.imparfait_singulier}<br>
+            <b>Imparfait pluriel :</b> ${v.imparfait_pluriel}
+        </div>
         <button class="btn" onclick="nextStep()">Suivant</button>
     `;
 }
 
 function nextStep() {
-    etape++;
-    if (etape >= questions.length) {
-        etape = 0;
-        current++;
-    }
+    current++;
     showQuestion();
 }
 </script>
