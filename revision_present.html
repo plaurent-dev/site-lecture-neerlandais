@@ -227,27 +227,45 @@
         async function chargerVerbes() {
             try {
                 const [resReg, resIrreg] = await Promise.all([
-                    fetch('present_regulier.json'),
-                    fetch('present_irregulier.json')
+                    fetch('present_regulier.json?t=' + Date.now()),
+                    fetch('present_irregulier.json?t=' + Date.now())
                 ]);
 
-                if (!resReg.ok || !resIrreg.ok) throw new Error('Erreur de chargement');
+                if (!resReg.ok) {
+                    console.error('Erreur chargement présent régulier:', resReg.status);
+                    throw new Error('Impossible de charger present_regulier.json');
+                }
+                if (!resIrreg.ok) {
+                    console.error('Erreur chargement présent irrégulier:', resIrreg.status);
+                    throw new Error('Impossible de charger present_irregulier.json');
+                }
 
                 const reg = await resReg.json();
                 const irreg = await resIrreg.json();
 
+                console.log('Réguliers chargés:', reg);
+                console.log('Irréguliers chargés:', irreg);
+
                 verbesReguliers = reg.verbes_reguliers_present || [];
                 verbesIrreguliers = irreg.verbes_irreguliers_present || [];
 
+                console.log('Nombre réguliers:', verbesReguliers.length);
+                console.log('Nombre irréguliers:', verbesIrreguliers.length);
+
                 if (verbesReguliers.length === 0 || verbesIrreguliers.length === 0) {
-                    document.getElementById('quizBox').textContent = 'Erreur : Les fichiers JSON ne sont pas correctement formatés.';
+                    document.getElementById('quizBox').innerHTML = `
+                        <div style="color: red;">
+                            <strong>Erreur :</strong> Les fichiers JSON ne sont pas correctement chargés.<br>
+                            Réguliers: ${verbesReguliers.length} | Irréguliers: ${verbesIrreguliers.length}
+                        </div>
+                    `;
                     return;
                 }
 
                 nouvelleQuestion();
             } catch (e) {
                 console.error('Erreur:', e);
-                document.getElementById('quizBox').textContent = 'Erreur de chargement des données.';
+                document.getElementById('quizBox').innerHTML = `<div style="color: red;"><strong>Erreur:</strong> ${e.message}</div>`;
             }
         }
 

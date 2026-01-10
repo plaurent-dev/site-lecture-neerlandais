@@ -1,0 +1,106 @@
+{
+  "verbes_reguliers_present": [
+    {
+      "infinitif": "werken",
+      "present_ik": "werk",
+      "present_jij_hij_ze": "werkt",
+      "present_wij_jullie_ze": "werken"
+    },
+    {
+      "infinitif": "leren",
+      "present_ik": "leer",
+      "present_jij_hij_ze": "leert",
+      "present_wij_jullie_ze": "leren"
+    },
+    {
+      "infinitif": "maken",
+      "present_ik": "maak",
+      "present_jij_hij_ze": "maakt",
+      "present_wij_jullie_ze": "maken"
+    },
+    {
+      "infinitif": "praten",
+      "present_ik": "praat",
+      "present_jij_hij_ze": "praat",
+      "present_wij_jullie_ze": "praten"
+    },
+    {
+      "infinitif": "wonen",
+      "present_ik": "woon",
+      "present_jij_hij_ze": "woont",
+      "present_wij_jullie_ze": "wonen"
+    },
+    {
+      "infinitif": "reizen",
+      "present_ik": "reis",
+      "present_jij_hij_ze": "reist",
+      "present_wij_jullie_ze": "reizen"
+    },
+    {
+      "infinitif": "koken",
+      "present_ik": "kook",
+      "present_jij_hij_ze": "kookt",
+      "present_wij_jullie_ze": "koken"
+    },
+    {
+      "infinitif": "spelen",
+      "present_ik": "speel",
+      "present_jij_hij_ze": "speelt",
+      "present_wij_jullie_ze": "spelen"
+    },
+    {
+      "infinitif": "luisteren",
+      "present_ik": "luister",
+      "present_jij_hij_ze": "luistert",
+      "present_wij_jullie_ze": "luisteren"
+    },
+    {
+      "infinitif": "openen",
+      "present_ik": "open",
+      "present_jij_hij_ze": "opent",
+      "present_wij_jullie_ze": "openen"
+    },
+    {
+      "infinitif": "rekenen",
+      "present_ik": "reken",
+      "present_jij_hij_ze": "rekent",
+      "present_wij_jullie_ze": "rekenen"
+    },
+    {
+      "infinitif": "wandelen",
+      "present_ik": "wandel",
+      "present_jij_hij_ze": "wandelt",
+      "present_wij_jullie_ze": "wandelen"
+    },
+    {
+      "infinitif": "tellen",
+      "present_ik": "tel",
+      "present_jij_hij_ze": "telt",
+      "present_wij_jullie_ze": "tellen"
+    },
+    {
+      "infinitif": "vragen",
+      "present_ik": "vraag",
+      "present_jij_hij_ze": "vraagt",
+      "present_wij_jullie_ze": "vragen"
+    },
+    {
+      "infinitif": "antwoorden",
+      "present_ik": "antwoord",
+      "present_jij_hij_ze": "antwoordt",
+      "present_wij_jullie_ze": "antwoorden"
+    },
+    {
+      "infinitif": "halen",
+      "present_ik": "haal",
+      "present_jij_hij_ze": "haalt",
+      "present_wij_jullie_ze": "halen"
+    },
+    {
+      "infinitif": "zetten",
+      "present_ik": "zet",
+      "present_jij_hij_ze": "zet",
+      "present_wij_jullie_ze": "zetten"
+    }
+  ]
+}
