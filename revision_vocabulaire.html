@@ -354,19 +354,20 @@
 
         async function chargerVocabulaire() {
             try {
-                const response = await fetch('vocabulaire.json');
+                const response = await fetch('vocabulaire.json?t=' + Date.now());
                 if (!response.ok) {
                     throw new Error(`Erreur HTTP: ${response.status}`);
                 }
                 const data = await response.json();
                 if (!data.vocabulaire_A1_A2 || data.vocabulaire_A1_A2.length === 0) {
-                    throw new Error('Aucun vocabulaire trouvé dans le JSON');
+                    throw new Error('Aucun vocabulaire trouvé');
                 }
                 vocabulaire = data.vocabulaire_A1_A2;
                 nouvelMot();
             } catch (error) {
-                console.error('Erreur complète:', error);
-                document.getElementById('wordDisplay').textContent = '❌ Erreur: ' + error.message;
+                console.error('Erreur de chargement:', error);
+                document.getElementById('wordDisplay').textContent = '❌ Erreur: Impossible de charger vocabulaire.json';
+                console.log('Vérifiez que vocabulaire.json existe dans le même dossier que revision_vocabulaire.html');
             }
         }
 
