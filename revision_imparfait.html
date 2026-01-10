@@ -12,18 +12,18 @@
             padding: 0;
         }
         .container {
-            max-width: 600px;
+            max-width: 1000px;      /* élargi */
             margin: 40px auto;
             background: white;
             border-radius: 15px;
             box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
-            padding: 40px 30px 30px 30px;
+            padding: 50px 60px 40px 60px; /* plus d'espace */
         }
         h1 {
             color: #c41e3a;
             text-align: center;
             margin-bottom: 10px;
-            font-size: 2em;
+            font-size: 2.5em;       /* plus grand */
             text-shadow: 2px 2px 4px rgba(0,0,0,0.08);
         }
         .subtitle {
@@ -39,8 +39,8 @@
             border-radius: 8px;
             margin: 18px auto 30px auto;
             color: #1976d2;
-            font-size: 1.05em;
-            max-width: 500px;
+            font-size: 1.15em;      /* un peu plus grand */
+            max-width: 900px;       /* plus large */
             box-shadow: 0 2px 8px #2196f322;
         }
         form label {
@@ -111,8 +111,9 @@
             font-size: 1.3em;
             margin: 30px 0 20px 0;
         }
-        @media (max-width: 700px) {
-            .container { padding: 20px 5vw; }
+        @media (max-width: 1100px) {
+            .container { padding: 30px 3vw; }
+            .aide-memoire { max-width: 98vw; }
         }
     </style>
 </head>
