@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestion du vocabulaire</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #ff6b6b 0%, #4ecdc4 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .navbar {
+            background: linear-gradient(135deg, #c41e3a 0%, #a01830 100%);
+            padding: 0 40px;
+            box-shadow: 0 4px 15px rgba(196, 30, 58, 0.3);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+
+        .navbar-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .navbar h1 {
+            color: white;
+            font-size: 1.5em;
+            margin: 0;
+        }
+
+        .navbar-buttons {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .navbar-link {
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+            background: rgba(255, 255, 255, 0.2);
+            font-size: 1em;
+        }
+
+        .navbar-link:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .navbar-link.admin {
+            background: #4ecdc4;
+            color: white;
+        }
+
+        .navbar-link.admin:hover {
+            background: #44a9a0;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            padding: 40px;
+        }
+
+        h1 {
+            color: #c41e3a;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+        }
+
+        .form-section {
+            background: #f5f7fa;
+            padding: 30px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            border-left: 4px solid #c41e3a;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            color: #c41e3a;
+            margin-bottom: 8px;
+        }
+
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 1em;
+            transition: border-color 0.3s ease;
+            font-family: monospace;
+            min-height: 150px;
+        }
+
+        textarea:focus {
+            outline: none;
+            border-color: #c41e3a;
+            box-shadow: 0 0 0 3px rgba(196, 30, 58, 0.1);
+        }
+
+        .button-group {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .btn {
+            padding: 12px 30px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-add {
+            background: linear-gradient(135deg, #4ecdc4 0%, #44a9a0 100%);
+            color: white;
+            box-shadow: 0 4px 15px rgba(78, 205, 196, 0.3);
+        }
+
+        .btn-add:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(78, 205, 196, 0.4);
+        }
+
+        .btn-download {
+            background: linear-gradient(135deg, #2196f3 0%, #1976d2 100%);
+            color: white;
+            box-shadow: 0 4px 15px rgba(33, 150, 243, 0.3);
+        }
+
+        .btn-download:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(33, 150, 243, 0.4);
+        }
+
+        .btn-download:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            box-shadow: none;
+        }
+
+        .message {
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .message.success {
+            background: #c8e6c9;
+            color: #2e7d32;
+            border-left: 4px solid #2e7d32;
+        }
+
+        .message.error {
+            background: #ffcdd2;
+            color: #c62828;
+            border-left: 4px solid #c62828;
+        }
+
+        .vocabulary-list {
+            margin-top: 40px;
+        }
+
+        .vocabulary-list h2 {
+            color: #c41e3a;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+
+        .vocab-item {
+            background: #f9f9f9;
+            border-left: 4px solid #4ecdc4;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+        }
+
+        .vocab-nl {
+            font-weight: bold;
+            color: #c41e3a;
+            font-size: 1.1em;
+        }
+
+        .vocab-fr {
+            color: #666;
+            font-style: italic;
+            margin-top: 5px;
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 40px;
+            color: #999;
+            font-style: italic;
+        }
+
+        .info-box {
+            background: #e3f2fd;
+            border-left: 4px solid #2196f3;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            color: #1976d2;
+            font-size: 0.95em;
+        }
+
+        .auth-guard {
+            display: none;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .auth-guard h2 {
+            color: #c41e3a;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+
+        .auth-guard p {
+            color: #666;
+            font-size: 1.1em;
+            margin-bottom: 20px;
+        }
+
+        .login-message {
+            background: #fff3cd;
+            border: 2px solid #ffc107;
+            border-radius: 8px;
+            padding: 20px;
+            color: #856404;
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 600px) {
+            .button-group {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-content">
+            <h1>📚 FR/NL</h1>
+            <div class="navbar-buttons">
+                <a href="index.html" class="navbar-link">🏠 Accueil</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>📖 Gestion du vocabulaire</h1>
+
+        <div class="auth-guard" id="authGuard">
+            <h2>🔒 Accès restreint</h2>
+            <p>Cette page est réservée aux administrateurs.</p>
+            <div class="login-message">
+                ℹ️ Connectez-vous depuis la page d'accueil pour accéder à cette interface.
+            </div>
+            <a href="index.html" class="btn btn-add">← Retour à l'accueil</a>
+        </div>
+
+        <div id="adminContent" style="display: none;">
+            <div class="form-section">
+                <h2 style="color: #c41e3a; margin-bottom: 20px;">Ajouter des mots</h2>
+                
+                <div id="message"></div>
+
+                <div class="info-box">
+                    📝 Format : Une ligne = un mot<br>
+                    <strong>francais | neerlandais_singulier | neerlandais_pluriel | article</strong><br>
+                    Exemple : le crayon | de potlood | de potloden | de
+                </div>
+
+                <div class="form-group">
+                    <label for="motsEnMasse">Entrez vos mots :</label>
+                    <textarea id="motsEnMasse" placeholder="le crayon | de potlood | de potloden | de&#10;la chaise | de stoel | de stoelen | de"></textarea>
+                </div>
+
+                <div class="button-group">
+                    <button class="btn btn-add" onclick="ajouterMots()">➕ Ajouter les mots</button>
+                    <button class="btn btn-download" id="btnTelechargement" onclick="telechargerJSON()" disabled>⬇️ Télécharger le JSON</button>
+                </div>
+            </div>
+
+            <div class="vocabulary-list">
+                <h2>Vocabulaire actuel (total : <span id="compteurMots">0</span> mots)</h2>
+                <div id="vocabularyContainer"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let vocabulaire = [];
+
+        // Vérifier l'authentification au chargement
+        function verifierAuthentification() {
+            const userEmail = sessionStorage.getItem('userEmail');
+            const authGuard = document.getElementById('authGuard');
+            const adminContent = document.getElementById('adminContent');
+
+            if (userEmail) {
+                authGuard.style.display = 'none';
+                adminContent.style.display = 'block';
+                chargerVocabulaire();
+            } else {
+                authGuard.style.display = 'block';
+                adminContent.style.display = 'none';
+            }
+        }
+
+        async function chargerVocabulaire() {
+            try {
+                const response = await fetch('vocabulaire.json?t=' + Date.now());
+                if (!response.ok) throw new Error('Erreur de chargement');
+                const data = await response.json();
+                vocabulaire = data.vocabulaire_A1_A2 || [];
+                afficherVocabulaire();
+                mettreAJourCompteur();
+            } catch (error) {
+                console.error('Erreur:', error);
+                afficherMessage('Erreur de chargement du vocabulaire', 'error');
+            }
+        }
+
+        function afficherVocabulaire() {
+            const container = document.getElementById('vocabularyContainer');
+            
+            if (vocabulaire.length === 0) {
+                container.innerHTML = '<div class="empty-state">Aucun mot dans la liste</div>';
+                return;
+            }
+
+            container.innerHTML = vocabulaire.map((mot, index) => `
+                <div class="vocab-item">
+                    <div class="vocab-nl">${mot.neerlandais_singulier}</div>
+                    <div class="vocab-fr">${mot.francais}</div>
+                    ${mot.neerlandais_pluriel !== '—' ? `<div class="vocab-fr">Pluriel: ${mot.neerlandais_pluriel}</div>` : ''}
+                </div>
+            `).join('');
+        }
+
+        function mettreAJourCompteur() {
+            document.getElementById('compteurMots').textContent = vocabulaire.length;
+        }
+
+        function afficherMessage(texte, type) {
+            const messageDiv = document.getElementById('message');
+            messageDiv.innerHTML = `<div class="message ${type}">${texte}</div>`;
+            setTimeout(() => {
+                messageDiv.innerHTML = '';
+            }, 4000);
+        }
+
+        function ajouterMots() {
+            const texte = document.getElementById('motsEnMasse').value.trim();
+            if (!texte) {
+                afficherMessage('⚠️ Veuillez entrer des mots', 'error');
+                return;
+            }
+
+            const lignes = texte.split('\n').filter(l => l.trim());
+            let compteur = 0;
+            let erreurs = 0;
+
+            lignes.forEach((ligne, index) => {
+                const parties = ligne.split('|').map(p => p.trim());
+                if (parties.length === 4 && parties.every(p => p)) {
+                    const [francais, neerlandais_singulier, neerlandais_pluriel, article] = parties;
+                    vocabulaire.push({
+                        francais,
+                        neerlandais_singulier,
+                        neerlandais_pluriel: neerlandais_pluriel || '—',
+                        de_of_het: article
+                    });
+                    compteur++;
+                } else {
+                    erreurs++;
+                }
+            });
+
+            if (erreurs > 0) {
+                afficherMessage(`⚠️ ${compteur} mot(s) ajouté(s), ${erreurs} ligne(s) invalide(s)`, 'error');
+            } else {
+                afficherMessage(`✓ ${compteur} mot(s) ajouté(s) ! Cliquez sur "Télécharger le JSON" pour sauvegarder`, 'success');
+            }
+
+            document.getElementById('motsEnMasse').value = '';
+            document.getElementById('btnTelechargement').disabled = false;
+            afficherVocabulaire();
+            mettreAJourCompteur();
+        }
+
+        function telechargerJSON() {
+            const data = { vocabulaire_A1_A2: vocabulaire };
+            const json = JSON.stringify(data, null, 2);
+            
+            const blob = new Blob([json], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'vocabulaire.json';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+            
+            afficherMessage('✓ Fichier téléchargé ! Remplacez vocabulaire.json avec ce fichier', 'success');
+        }
+
+        window.addEventListener('load', () => {
+            verifierAuthentification();
+        });
+    </script>
+</body>
+</html>
