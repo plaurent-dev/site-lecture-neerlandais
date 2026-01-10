@@ -435,6 +435,61 @@
             border-radius: 8px 8px 0 0;
             margin: -25px -25px 15px -25px;
         }
+
+        /* Dropdown */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-toggle {
+            background: rgba(255,255,255,0.2);
+            border: none;
+            color: white;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: all 0.3s;
+        }
+
+        .dropdown-toggle:hover,
+        .dropdown-toggle:focus {
+            background: rgba(255,255,255,0.3);
+        }
+
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            left: 0;
+            top: 110%;
+            background: white;
+            min-width: 180px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+            border-radius: 8px;
+            z-index: 1000;
+            padding: 8px 0;
+        }
+
+        .dropdown:hover .dropdown-menu,
+        .dropdown:focus-within .dropdown-menu {
+            display: block;
+        }
+
+        .dropdown-item {
+            color: #c41e3a;
+            padding: 10px 20px;
+            text-decoration: none;
+            display: block;
+            font-weight: bold;
+            border-radius: 6px;
+            transition: background 0.2s;
+        }
+
+        .dropdown-item:hover {
+            background: #f5f7fa;
+        }
     </style>
 </head>
 
@@ -446,6 +501,13 @@
         <h1>📚 FR/NL</h1>
         <div class="navbar-buttons">
             <a href="index.html" class="navbar-link">🏠 Accueil</a>
+            <div class="dropdown">
+                <button class="navbar-link dropdown-toggle">📖 Exercices ▼</button>
+                <div class="dropdown-menu">
+                    <a href="revision_imparfait.html" class="dropdown-item">Révision imparfait</a>
+                    <!-- Tu pourras ajouter d'autres liens ici plus tard -->
+                </div>
+            </div>
             <a href="admin.html" class="navbar-link admin" id="adminLink" style="display: none;">⚙️ Admin</a>
             <a href="generateur.html" class="navbar-link">✏️ Créer</a>
             <div class="navbar-right">
