@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Révision du vocabulaire (NL)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #ff6b6b 0%, #4ecdc4 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .navbar {
+            background: linear-gradient(135deg, #c41e3a 0%, #a01830 100%);
+            padding: 0 40px;
+            box-shadow: 0 4px 15px rgba(196, 30, 58, 0.3);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+
+        .navbar-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .navbar h1 {
+            color: white;
+            font-size: 1.5em;
+            margin: 0;
+        }
+
+        .navbar-buttons {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .navbar-link {
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+            background: rgba(255, 255, 255, 0.2);
+            font-size: 1em;
+        }
+
+        .navbar-link:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            padding: 40px;
+        }
+
+        h1 {
+            color: #c41e3a;
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 1.1em;
+        }
+
+        .quiz-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .card-vocabulary {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c7ecee 100%);
+            border-radius: 15px;
+            padding: 40px;
+            width: 100%;
+            max-width: 500px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            min-height: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .word-label {
+            font-size: 0.9em;
+            color: #666;
+            margin-bottom: 15px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .word-display {
+            font-size: 2.2em;
+            color: #c41e3a;
+            margin-bottom: 15px;
+            font-weight: bold;
+            line-height: 1.4;
+        }
+
+        .article {
+            font-size: 1.2em;
+            color: #4ecdc4;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .pluriel {
+            font-size: 0.95em;
+            color: #666;
+            margin-top: 15px;
+            font-style: italic;
+            padding-top: 15px;
+            border-top: 1px solid rgba(196, 30, 58, 0.2);
+        }
+
+        .controls {
+            background: #e3f2fd;
+            border-left: 4px solid #2196f3;
+            padding: 25px;
+            border-radius: 10px;
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .control-group {
+            margin-bottom: 20px;
+        }
+
+        .control-group label {
+            display: block;
+            font-weight: bold;
+            color: #c41e3a;
+            margin-bottom: 8px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 1.1em;
+            font-family: 'Segoe UI', sans-serif;
+            transition: border-color 0.3s ease;
+        }
+
+        input[type="text"]:focus {
+            outline: none;
+            border-color: #c41e3a;
+            box-shadow: 0 0 0 3px rgba(196, 30, 58, 0.1);
+        }
+
+        .buttons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .btn {
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-validate {
+            background: linear-gradient(135deg, #4ecdc4 0%, #44a9a0 100%);
+            color: white;
+            box-shadow: 0 4px 15px rgba(78, 205, 196, 0.3);
+        }
+
+        .btn-validate:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(78, 205, 196, 0.4);
+        }
+
+        .btn-next {
+            background: linear-gradient(135deg, #c41e3a 0%, #a01830 100%);
+            color: white;
+            box-shadow: 0 4px 15px rgba(196, 30, 58, 0.3);
+            grid-column: 1 / -1;
+        }
+
+        .btn-next:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(196, 30, 58, 0.4);
+        }
+
+        .result {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: bold;
+            min-height: 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .result.correct {
+            background: #c8e6c9;
+            color: #2e7d32;
+            border-left: 4px solid #2e7d32;
+        }
+
+        .result.incorrect {
+            background: #ffcdd2;
+            color: #c62828;
+            border-left: 4px solid #c62828;
+        }
+
+        .result-text {
+            font-size: 1.1em;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        .hint {
+            background: #fff9c4;
+            border-left: 4px solid #fbc02d;
+            padding: 12px;
+            border-radius: 8px;
+            margin-top: 15px;
+            color: #f57f17;
+            font-size: 0.95em;
+        }
+
+        .mode-selector {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 30px;
+            justify-content: center;
+        }
+
+        .mode-btn {
+            padding: 10px 20px;
+            border: 2px solid #c41e3a;
+            background: white;
+            color: #c41e3a;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .mode-btn.active {
+            background: #c41e3a;
+            color: white;
+        }
+
+        .mode-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+            h1 {
+                font-size: 1.8em;
+            }
+            .word-display {
+                font-size: 1.6em;
+            }
+            .mode-selector {
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-content">
+            <h1>📚 FR/NL</h1>
+            <div class="navbar-buttons">
+                <a href="index.html" class="navbar-link">🏠 Accueil</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1 style="margin-top: 0;">Révision du vocabulaire (NL)</h1>
+        <p class="subtitle">Apprends et révise le vocabulaire néerlandais A1-A2</p>
+
+        <div class="mode-selector">
+            <button class="mode-btn active" onclick="changerMode('fr-to-nl')">🇫🇷 → 🇳🇱</button>
+            <button class="mode-btn" onclick="changerMode('nl-to-fr')">🇳🇱 → 🇫🇷</button>
+        </div>
+
+        <div class="quiz-section">
+            <div class="card-vocabulary" id="vocabularyCard">
+                <div class="word-label" id="questionLabel">Traduis en néerlandais :</div>
+                <div class="word-display" id="wordDisplay"></div>
+                <div class="pluriel" id="plurielDisplay"></div>
+            </div>
+
+            <div class="controls">
+                <div class="control-group">
+                    <label for="reponseInput" id="inputLabel">Tape ta réponse :</label>
+                    <input type="text" id="reponseInput" placeholder="..." onkeypress="if(event.key==='Enter') validerReponse()">
+                </div>
+
+                <div class="buttons">
+                    <button class="btn btn-validate" onclick="validerReponse()">✓ Valider</button>
+                    <button class="btn btn-next" onclick="nouvelMot()" style="grid-column: 1 / -1;">🔄 Nouveau mot</button>
+                </div>
+
+                <div class="result" id="result"></div>
+                <div class="hint" id="hint" style="display: none;"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let mode = 'fr-to-nl';
+        let vocabulaire = [];
+        let motActuel = null;
+
+        async function chargerVocabulaire() {
+            try {
+                const response = await fetch('vocabulaire.json');
+                if (!response.ok) {
+                    throw new Error(`Erreur HTTP: ${response.status}`);
+                }
+                const data = await response.json();
+                if (!data.vocabulaire_A1_A2 || data.vocabulaire_A1_A2.length === 0) {
+                    throw new Error('Aucun vocabulaire trouvé dans le JSON');
+                }
+                vocabulaire = data.vocabulaire_A1_A2;
+                nouvelMot();
+            } catch (error) {
+                console.error('Erreur complète:', error);
+                document.getElementById('wordDisplay').textContent = '❌ Erreur: ' + error.message;
+            }
+        }
+
+        function changerMode(nouveauMode) {
+            mode = nouveauMode;
+            
+            document.querySelectorAll('.mode-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            if (mode === 'fr-to-nl') {
+                document.getElementById('questionLabel').textContent = 'Traduis en néerlandais :';
+                document.getElementById('inputLabel').textContent = 'Tape ta réponse en néerlandais :';
+            } else {
+                document.getElementById('questionLabel').textContent = 'Traduis en français :';
+                document.getElementById('inputLabel').textContent = 'Tape ta réponse en français :';
+            }
+
+            nouvelMot();
+        }
+
+        function nouvelMot() {
+            document.getElementById('result').textContent = '';
+            document.getElementById('hint').style.display = 'none';
+            document.getElementById('reponseInput').value = '';
+            document.getElementById('reponseInput').focus();
+            document.getElementById('reponseInput').style.borderColor = '#ddd';
+
+            const randomIndex = Math.floor(Math.random() * vocabulaire.length);
+            motActuel = vocabulaire[randomIndex];
+
+            afficherMot();
+        }
+
+        function afficherMot() {
+            if (mode === 'fr-to-nl') {
+                document.getElementById('wordDisplay').textContent = motActuel.francais;
+                document.getElementById('plurielDisplay').textContent = '';
+            } else {
+                const singulier = motActuel.neerlandais_singulier;
+                document.getElementById('wordDisplay').textContent = singulier;
+                
+                if (motActuel.neerlandais_pluriel !== '—') {
+                    document.getElementById('plurielDisplay').textContent = `Pluriel : ${motActuel.neerlandais_pluriel}`;
+                } else {
+                    document.getElementById('plurielDisplay').textContent = '';
+                }
+            }
+        }
+
+        function normaliserTexte(texte) {
+            return texte.toLowerCase().trim().replace(/\s+/g, ' ');
+        }
+
+        function validerReponse() {
+            const input = document.getElementById('reponseInput');
+            const reponse = normaliserTexte(input.value);
+            const resultDiv = document.getElementById('result');
+            const hintDiv = document.getElementById('hint');
+
+            if (reponse === '') {
+                resultDiv.textContent = '⚠️ Tape une réponse !';
+                resultDiv.className = 'result incorrect';
+                hintDiv.style.display = 'none';
+                return;
+            }
+
+            let reponseCorrect = false;
+            let bonneReponse = '';
+
+            if (mode === 'fr-to-nl') {
+                bonneReponse = motActuel.neerlandais_singulier;
+                const bonneReponsePluriel = motActuel.neerlandais_pluriel;
+                
+                reponseCorrect = reponse === normaliserTexte(bonneReponse) || 
+                                 reponse === normaliserTexte(bonneReponsePluriel);
+
+                if (!reponseCorrect) {
+                    const sansArticle = bonneReponse.replace(/^(de|het) /, '');
+                    const sansArticlePluriel = bonneReponsePluriel.replace(/^(de|het) /, '');
+                    reponseCorrect = reponse === normaliserTexte(sansArticle) ||
+                                     reponse === normaliserTexte(sansArticlePluriel);
+                }
+            } else {
+                bonneReponse = motActuel.francais;
+                reponseCorrect = reponse === normaliserTexte(bonneReponse);
+            }
+
+            if (reponseCorrect) {
+                resultDiv.innerHTML = `
+                    <div class="result correct">
+                        ✓ Correct !
+                        <div class="result-text">${mode === 'fr-to-nl' ? motActuel.neerlandais_singulier : motActuel.francais}</div>
+                    </div>
+                `;
+                hintDiv.style.display = 'none';
+                input.style.borderColor = '#2e7d32';
+            } else {
+                resultDiv.innerHTML = `
+                    <div class="result incorrect">
+                        ✗ Incorrect.
+                        <div class="result-text">La bonne réponse : ${bonneReponse}</div>
+                    </div>
+                `;
+                input.style.borderColor = '#c62828';
+
+                if (mode === 'fr-to-nl') {
+                    const firstWord = normaliserTexte(bonneReponse).split(' ')[0];
+                    hintDiv.textContent = `💡 Indice : Commence par "${firstWord}"`;
+                } else {
+                    const firstLetter = bonneReponse[0];
+                    hintDiv.textContent = `💡 Indice : Commence par "${firstLetter}"`;
+                }
+                hintDiv.style.display = 'block';
+            }
+        }
+
+        window.addEventListener('load', () => {
+            chargerVocabulaire();
+        });
+    </script>
+</body>
+</html>
