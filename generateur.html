@@ -330,12 +330,9 @@ function handleCredentialResponse(response) {
   // Vérifier si l'email est autorisé
   if (AUTHORIZED_EMAILS.includes(userEmail)) {
     // Connexion réussie
-    document.getElementById('loginContainer').style.display = 'none';
-    document.getElementById('userInfo').style.display = 'block';
-    document.getElementById('userEmail').textContent = userEmail;
-    document.getElementById('formContainer').style.display = 'block';
-    initialiserFormulaire();
     sessionStorage.setItem('userEmail', userEmail);
+    // Redirection vers admin.html
+    window.location.href = 'admin.html';
   } else {
     // Email non autorisé
     document.getElementById('errorMessage').classList.add('show-error');
