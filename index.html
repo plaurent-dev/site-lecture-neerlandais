@@ -520,13 +520,34 @@
         const fichesRecentes = fiches.slice(0, 6);
 
         container.innerHTML = fichesRecentes.map(fiche => `
-            <div class="fiche-card">
+            <div class="fiche-card" data-fiche="${fiche.href}">
                 <button class="btn-delete" onclick="supprimerFiche('${fiche.href}')">✕ Supprimer</button>
                 <h3>${fiche.region}</h3>
                 <p class="date">📅 ${formaterDate(fiche.date)}</p>
                 <button onclick="lancerFiche('${fiche.href}')">🚀 Ouvrir</button>
             </div>
         `).join('');
+
+        // Charger les images après le rendu
+        fichesRecentes.forEach(fiche => {
+            fetch(fiche.href)
+                .then(response => response.text())
+                .then(html => {
+                    const parser = new DOMParser();
+                    const doc = parser.parseFromString(html, 'text/html');
+                    const img = doc.querySelector('img');
+                    if (img && img.src) {
+                        const card = document.querySelector(`[data-fiche="${fiche.href}"]`);
+                        if (card && !card.querySelector('.fiche-image')) {
+                            const imgElement = document.createElement('img');
+                            imgElement.src = img.src;
+                            imgElement.className = 'fiche-image';
+                            card.insertBefore(imgElement, card.firstChild);
+                        }
+                    }
+                })
+                .catch(e => console.log('Impossible de charger l\'image'));
+        });
     }
 
     // Rechercher des fiches
@@ -562,7 +583,7 @@
             <h3>Résultats (${fiches.length} fiche${fiches.length > 1 ? 's' : ''})</h3>
             <div class="fiches-grid" style="margin-top: 20px;">
                 ${fiches.map(fiche => `
-                    <div class="fiche-card">
+                    <div class="fiche-card" data-fiche="${fiche.href}">
                         <button class="btn-delete" onclick="supprimerFiche('${fiche.href}')">✕ Supprimer</button>
                         <h3>${fiche.region}</h3>
                         <p class="date">📅 ${formaterDate(fiche.date)}</p>
@@ -571,6 +592,27 @@
                 `).join('')}
             </div>
         `;
+
+        // Charger les images après le rendu
+        fiches.forEach(fiche => {
+            fetch(fiche.href)
+                .then(response => response.text())
+                .then(html => {
+                    const parser = new DOMParser();
+                    const doc = parser.parseFromString(html, 'text/html');
+                    const img = doc.querySelector('img');
+                    if (img && img.src) {
+                        const card = document.querySelector(`[data-fiche="${fiche.href}"]`);
+                        if (card && !card.querySelector('.fiche-image')) {
+                            const imgElement = document.createElement('img');
+                            imgElement.src = img.src;
+                            imgElement.className = 'fiche-image';
+                            card.insertBefore(imgElement, card.firstChild);
+                        }
+                    }
+                })
+                .catch(e => console.log('Impossible de charger l\'image'));
+        });
     }
 
     // Réinitialiser la recherche
