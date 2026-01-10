@@ -751,16 +751,38 @@
             mapTypeId: 'roadmap'
         });
 
+        // Regrouper les articles par ville
+        const articlesParVille = {};
         articles.forEach(article => {
-            const ville = article.region;
+            if (!articlesParVille[article.region]) {
+                articlesParVille[article.region] = [];
+            }
+            articlesParVille[article.region].push(article);
+        });
+
+        Object.keys(articlesParVille).forEach(ville => {
             const coords = villesNL[ville];
             if (coords) {
+                const articlesVille = articlesParVille[ville];
                 const marker = new google.maps.Marker({
                     position: coords,
                     map: map,
-                    title: `${article.region} (${article.date})`
+                    title: `${ville} (${articlesVille.length} article${articlesVille.length > 1 ? 's' : ''})`
                 });
-                marker.addListener('click', () => window.open(article.href, '_blank'));
+
+                const content = `
+                    <div>
+                        <strong>${ville}</strong><br>
+                        ${articlesVille.map(a => 
+                            `<a href="${a.href}" target="_blank">${a.date} : ${a.titre ? a.titre : 'Voir l\'article'}</a>`
+                        ).join('<br>')}
+                    </div>
+                `;
+                const infowindow = new google.maps.InfoWindow({ content });
+
+                marker.addListener('click', () => {
+                    infowindow.open(map, marker);
+                });
             }
         });
     }
