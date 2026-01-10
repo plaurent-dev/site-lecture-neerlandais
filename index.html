@@ -438,7 +438,7 @@
         <div class="navbar-buttons">
             <a href="index.html" class="navbar-link">🏠 Accueil</a>
             <a href="admin.html" class="navbar-link admin" id="adminLink" style="display: none;">⚙️ Admin</a>
-            <a href="generateur.html" class="navbar-link" id="genLink" style="display: none;">✏️ Créer</a>
+            <a href="generateur.html" class="navbar-link">✏️ Créer</a>
             <div class="navbar-right">
                 <span class="user-info" id="userDisplay" style="display: none;">
                     <span id="userEmail"></span>
@@ -597,20 +597,17 @@
     function updateNavbar() {
         const userEmail = sessionStorage.getItem('userEmail');
         const adminLink = document.getElementById('adminLink');
-        const genLink = document.getElementById('genLink');
         const userDisplay = document.getElementById('userDisplay');
         const logoutBtn = document.getElementById('logoutBtn');
         const userEmailSpan = document.getElementById('userEmail');
 
         if (userEmail) {
             adminLink.style.display = 'inline-block';
-            genLink.style.display = 'inline-block';
             userDisplay.style.display = 'block';
             logoutBtn.style.display = 'inline-block';
             userEmailSpan.textContent = userEmail;
         } else {
             adminLink.style.display = 'none';
-            genLink.style.display = 'none';
             userDisplay.style.display = 'none';
             logoutBtn.style.display = 'none';
         }
