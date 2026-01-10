@@ -490,6 +490,15 @@
         .dropdown-item:hover {
             background: #f5f7fa;
         }
+
+        .dropdown-item.admin-item {
+            color: #4ecdc4;
+            font-weight: bold;
+        }
+
+        .dropdown-item.admin-item:hover {
+            background: #e0f7f6;
+        }
     </style>
 </head>
 
@@ -508,8 +517,11 @@
                     <a href="revision_present.html" class="dropdown-item">Révision présent</a>
                     <a href="revision_heures.html" class="dropdown-item">Révision heures</a>
                     <a href="revision_vocabulaire.html" class="dropdown-item">Révision vocabulaire</a>
+                    <hr style="margin: 8px 0; border: none; border-top: 1px solid #ddd;">
+                    <a href="admin_vocabulaire.html" class="dropdown-item admin-item" id="adminVocabLink" style="display: none; color: #4ecdc4; font-weight: bold;">📖 Gestion vocabulaire</a>
                 </div>
             </div>
+            <a href="admin.html" class="navbar-link" id="loginBtn" style="background: #ffc107; color: #333;">🔐 Connexion</a>
             <a href="admin.html" class="navbar-link admin" id="adminLink" style="display: none;">⚙️ Admin</a>
             <a href="generateur.html" class="navbar-link">✏️ Créer</a>
             <div class="navbar-right">
@@ -711,17 +723,23 @@
     function updateNavbar() {
         const userEmail = sessionStorage.getItem('userEmail');
         const adminLink = document.getElementById('adminLink');
+        const loginBtn = document.getElementById('loginBtn');
         const userDisplay = document.getElementById('userDisplay');
         const logoutBtn = document.getElementById('logoutBtn');
         const userEmailSpan = document.getElementById('userEmail');
+        const adminVocabLink = document.getElementById('adminVocabLink');
 
         if (userEmail) {
+            loginBtn.style.display = 'none';
             adminLink.style.display = 'inline-block';
+            adminVocabLink.style.display = 'block';
             userDisplay.style.display = 'block';
             logoutBtn.style.display = 'inline-block';
             userEmailSpan.textContent = userEmail;
         } else {
+            loginBtn.style.display = 'inline-block';
             adminLink.style.display = 'none';
+            adminVocabLink.style.display = 'none';
             userDisplay.style.display = 'none';
             logoutBtn.style.display = 'none';
         }
