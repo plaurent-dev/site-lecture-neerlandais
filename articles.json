@@ -2,5 +2,6 @@
   { "href": "Nijmegen_2026-01-08.html", "region": "Nijmegen", "date": "2026-01-08" },
   { "href": "Rotterdam_2026-01-08.html", "region": "Rotterdam", "date": "2026-01-08" },
   { "href": "Den Haag_2026-01-10.html", "region": "Den Haag", "date": "2026-01-10" },
-  { "href": "Amsterdam_2026-01-10.html", "region": "Amsterdam", "date": "2026-01-10"}
+  { "href": "Amsterdam_2026-01-10.html", "region": "Amsterdam", "date": "2026-01-10"},
+    { "href": "Leeuwarden_2026-01-07.html", "region": "Leeuwarden", "date": "2026-01-07" }
 ]
