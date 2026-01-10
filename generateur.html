@@ -496,8 +496,8 @@ function genererFiche() {
 ).join('');
 
   const verbRows_html = verbData.map(v => 
-    '<tr><td>' + v.verbe + '</td><td>' + v.type + '</td><td>' + v.forme + '</td><td>' + v.sens + '</td><td>' + v.exemple + '</td></tr>'
-  ).join('');
+  '<tr><td><button onclick="pronounce(\'' + v.verbe.replace(/'/g, "\\'") + '\')" style="background: none; border: none; cursor: pointer; font-size: 1.2em; padding: 0; color: #4ecdc4;">🔊</button> ' + v.verbe + '</td><td>' + v.type + '</td><td>' + v.forme + '</td><td>' + v.sens + '</td><td>' + v.exemple + '</td></tr>'
+).join('');
 
   const questionsJSON = JSON.stringify(questions);
   const imageTag = imageBase64 ? '<img src="' + imageBase64 + '" style="max-width:300px; border-radius: 8px; margin: 15px 0;">' : '';
