@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kortes nieuwsartikelen</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lexend:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
     <style>
         * {
             margin: 0;
@@ -13,17 +18,19 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #ff6b6b 0%, #4ecdc4 100%);
+            font-family: 'Inter', 'Lexend', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #F9FAFB;
             min-height: 100vh;
             padding: 0;
+            color: #1F2937;
+            line-height: 1.6;
         }
 
         /* Navbar */
         .navbar {
-            background: linear-gradient(135deg, #c41e3a 0%, #a01830 100%);
+            background: #3B82F6;
             padding: 0 40px;
-            box-shadow: 0 4px 15px rgba(196, 30, 58, 0.3);
+            box-shadow: 0 2px 8px rgba(59, 130, 246, 0.15);
             position: sticky;
             top: 0;
             z-index: 100;
@@ -42,6 +49,7 @@
             color: white;
             font-size: 1.5em;
             margin: 0;
+            font-weight: 700;
         }
 
         .navbar-buttons {
@@ -56,11 +64,11 @@
             text-decoration: none;
             border-radius: 8px;
             transition: all 0.3s ease;
-            font-weight: bold;
+            font-weight: 600;
             cursor: pointer;
             border: none;
             background: rgba(255, 255, 255, 0.2);
-            font-size: 1em;
+            font-size: 0.95em;
         }
 
         .navbar-link:hover {
@@ -69,37 +77,38 @@
         }
 
         .navbar-link.admin {
-            background: #4ecdc4;
+            background: #0D9488;
             color: white;
         }
 
         .navbar-link.admin:hover {
-            background: #44a9a0;
+            background: #0F766E;
         }
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
             background: white;
-            border-radius: 15px;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            border-radius: 12px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
             padding: 40px;
             margin: 40px 20px;
         }
 
         h1 {
-            color: #c41e3a;
+            color: #3B82F6;
             text-align: center;
             margin-bottom: 10px;
             font-size: 2.5em;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            font-weight: 700;
         }
 
         .subtitle {
             text-align: center;
-            color: #666;
+            color: #6B7280;
             margin-bottom: 40px;
             font-size: 1.1em;
+            font-weight: 500;
         }
 
         /* Section Récentes */
@@ -108,11 +117,12 @@
         }
 
         .section h2 {
-            color: #c41e3a;
+            color: #3B82F6;
             margin-bottom: 25px;
             font-size: 1.8em;
             padding-bottom: 10px;
-            border-bottom: 3px solid #c41e3a;
+            border-bottom: 3px solid #DBEAFE;
+            font-weight: 700;
         }
 
         .fiches-grid {
@@ -123,67 +133,69 @@
         }
 
         .fiche-card {
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            background: white;
             border-radius: 12px;
             padding: 25px;
             cursor: pointer;
             transition: all 0.3s ease;
-            border-left: 5px solid #c41e3a;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            border: 2px solid #E5E7EB;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
             position: relative;
-            font-size: 0.85em; /* Ajouté pour réduire la taille globale du texte */
+            font-size: 0.85em;
         }
 
         .fiche-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(196, 30, 58, 0.2);
+            box-shadow: 0 10px 25px rgba(59, 130, 246, 0.1);
+            border-color: #3B82F6;
         }
 
         .fiche-card h3 {
-            color: #c41e3a;
-            font-size: 1em; /* Réduit depuis 1.2em */
+            color: #1F2937;
+            font-size: 1em;
             margin-bottom: 10px;
             word-break: break-word;
+            font-weight: 600;
         }
 
         .fiche-card p {
-            color: #666;
-            font-size: 0.85em; /* Réduit depuis 0.95em */
+            color: #6B7280;
+            font-size: 0.85em;
             margin: 8px 0;
         }
 
         .fiche-card .region {
-            font-weight: bold;
-            color: #333;
+            font-weight: 600;
+            color: #1F2937;
         }
 
         .fiche-card .date {
-            font-size: 0.8em; /* Réduit depuis 0.9em */
-            color: #888;
+            font-size: 0.8em;
+            color: #9CA3AF;
         }
 
         .fiche-card button {
             width: 100%;
-            background: linear-gradient(135deg, #c41e3a 0%, #a01830 100%);
+            background: #EF4444;
             color: white;
             padding: 10px 20px;
             border: none;
             border-radius: 8px;
             cursor: pointer;
             margin-top: 15px;
-            font-weight: bold;
+            font-weight: 600;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(196, 30, 58, 0.3);
+            box-shadow: 0 2px 8px rgba(239, 68, 68, 0.2);
         }
 
         .fiche-card button:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(196, 30, 58, 0.4);
-            background: linear-gradient(135deg, #a01830 0%, #8a1629 100%);
+            box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
+            background: #DC2626;
         }
 
         .btn-delete {
-            background: #ff6b6b;
+            background: #EF4444;
             color: white;
             border: none;
             padding: 5px 10px;
@@ -202,23 +214,24 @@
         }
 
         .btn-delete:hover {
-            background: #ff5252;
+            background: #DC2626;
         }
 
         .empty-state {
             text-align: center;
             padding: 40px;
-            color: #999;
+            color: #9CA3AF;
             font-style: italic;
             grid-column: 1 / -1;
         }
 
         /* Section Recherche */
         .search-section {
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            background: #F3F4F6;
             border-radius: 12px;
             padding: 30px;
             margin-top: 30px;
+            border: 1px solid #E5E7EB;
         }
 
         .search-filters {
@@ -234,8 +247,8 @@
         }
 
         .filter-group label {
-            color: #c41e3a;
-            font-weight: bold;
+            color: #1F2937;
+            font-weight: 600;
             margin-bottom: 8px;
             font-size: 0.95em;
         }
@@ -243,18 +256,20 @@
         .filter-group input,
         .filter-group select {
             padding: 12px;
-            border: 2px solid #ddd;
+            border: 2px solid #D1D5DB;
             border-radius: 8px;
-            font-family: 'Segoe UI', sans-serif;
+            font-family: 'Inter', 'Lexend', sans-serif;
             font-size: 1em;
             transition: border-color 0.3s ease;
+            background: white;
+            color: #1F2937;
         }
 
         .filter-group input:focus,
         .filter-group select:focus {
             outline: none;
-            border-color: #c41e3a;
-            box-shadow: 0 0 0 3px rgba(196, 30, 58, 0.1);
+            border-color: #3B82F6;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
         }
 
         .search-buttons {
@@ -264,74 +279,75 @@
         }
 
         .btn-search {
-            background: linear-gradient(135deg, #c41e3a 0%, #a01830 100%);
+            background: #EF4444;
             color: white;
             padding: 14px 30px;
             border: none;
             border-radius: 8px;
             cursor: pointer;
             font-size: 1.05em;
-            font-weight: bold;
+            font-weight: 600;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(196, 30, 58, 0.3);
+            box-shadow: 0 2px 8px rgba(239, 68, 68, 0.2);
         }
 
         .btn-search:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(196, 30, 58, 0.4);
-            background: linear-gradient(135deg, #a01830 0%, #8a1629 100%);
+            box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
+            background: #DC2626;
         }
 
         .btn-reset {
-            background: linear-gradient(135deg, #4ecdc4 0%, #44a9a0 100%);
+            background: #0D9488;
             color: white;
             padding: 14px 30px;
             border: none;
             border-radius: 8px;
             cursor: pointer;
             font-size: 1.05em;
-            font-weight: bold;
+            font-weight: 600;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(78, 205, 196, 0.3);
+            box-shadow: 0 2px 8px rgba(13, 148, 136, 0.2);
         }
 
         .btn-reset:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(78, 205, 196, 0.4);
-            background: linear-gradient(135deg, #44a9a0 0%, #3a8a80 100%);
+            box-shadow: 0 4px 12px rgba(13, 148, 136, 0.3);
+            background: #0F766E;
         }
 
         .search-results h3 {
-            color: #c41e3a;
+            color: #3B82F6;
             margin-top: 30px;
             margin-bottom: 15px;
             font-size: 1.2em;
+            font-weight: 600;
         }
 
         .back-button {
             display: inline-block;
             margin-bottom: 20px;
             padding: 10px 20px;
-            background: #4ecdc4;
+            background: #0D9488;
             color: white;
             text-decoration: none;
             border-radius: 8px;
-            font-weight: bold;
+            font-weight: 600;
             transition: all 0.3s ease;
         }
 
         .back-button:hover {
-            background: #44a9a0;
+            background: #0F766E;
             transform: translateY(-2px);
         }
 
         .info-box {
-            background: #e3f2fd;
-            border-left: 4px solid #2196f3;
+            background: #DBEAFE;
+            border-left: 4px solid #3B82F6;
             padding: 15px;
             border-radius: 8px;
             margin: 20px 0;
-            color: #1976d2;
+            color: #1E40AF;
         }
 
         .modal {
@@ -350,31 +366,33 @@
             background-color: white;
             margin: 10% auto;
             padding: 30px;
-            border-radius: 15px;
+            border-radius: 12px;
             width: 90%;
             max-width: 400px;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
         }
 
         .modal h2 {
-            color: #c41e3a;
+            color: #3B82F6;
             margin-bottom: 20px;
+            font-weight: 700;
         }
 
         .modal input {
             width: 100%;
             padding: 12px;
-            border: 2px solid #ddd;
+            border: 2px solid #D1D5DB;
             border-radius: 8px;
             margin-bottom: 15px;
             font-size: 1em;
-            font-family: 'Segoe UI', sans-serif;
+            font-family: 'Inter', 'Lexend', sans-serif;
+            color: #1F2937;
         }
 
         .modal input:focus {
             outline: none;
-            border-color: #c41e3a;
-            box-shadow: 0 0 0 3px rgba(196, 30, 58, 0.1);
+            border-color: #3B82F6;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
         }
 
         .modal-buttons {
@@ -388,27 +406,27 @@
             border: none;
             border-radius: 8px;
             cursor: pointer;
-            font-weight: bold;
+            font-weight: 600;
             transition: all 0.3s ease;
         }
 
         .modal-btn-add {
-            background: linear-gradient(135deg, #c41e3a 0%, #a01830 100%);
+            background: #EF4444;
             color: white;
-            box-shadow: 0 4px 15px rgba(196, 30, 58, 0.3);
+            box-shadow: 0 2px 8px rgba(239, 68, 68, 0.2);
         }
 
         .modal-btn-add:hover {
-            background: linear-gradient(135deg, #a01830 0%, #8a1629 100%);
+            background: #DC2626;
         }
 
         .modal-btn-cancel {
-            background: #ddd;
-            color: #333;
+            background: #E5E7EB;
+            color: #1F2937;
         }
 
         .modal-btn-cancel:hover {
-            background: #ccc;
+            background: #D1D5DB;
         }
 
         .navbar-right {
@@ -421,11 +439,12 @@
             color: white;
             font-size: 0.9em;
             padding: 0 15px;
+            font-weight: 500;
         }
 
         #userEmail {
-            color: #4ecdc4;
-            font-weight: bold;
+            color: #FACC15;
+            font-weight: 600;
         }
 
         .fiche-image {
@@ -446,11 +465,11 @@
             background: rgba(255,255,255,0.2);
             border: none;
             color: white;
-            font-weight: bold;
+            font-weight: 600;
             padding: 10px 20px;
             border-radius: 8px;
             cursor: pointer;
-            font-size: 1em;
+            font-size: 0.95em;
             transition: all 0.3s;
         }
 
@@ -478,26 +497,26 @@
         }
 
         .dropdown-item {
-            color: #c41e3a;
+            color: #1F2937;
             padding: 10px 20px;
             text-decoration: none;
             display: block;
-            font-weight: bold;
+            font-weight: 600;
             border-radius: 6px;
             transition: background 0.2s;
         }
 
         .dropdown-item:hover {
-            background: #f5f7fa;
+            background: #F3F4F6;
         }
 
         .dropdown-item.admin-item {
-            color: #4ecdc4;
-            font-weight: bold;
+            color: #0D9488;
+            font-weight: 700;
         }
 
         .dropdown-item.admin-item:hover {
-            background: #e0f7f6;
+            background: #D1F9F3;
         }
     </style>
 </head>
