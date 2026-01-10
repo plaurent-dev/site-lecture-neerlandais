@@ -322,9 +322,23 @@ verbRows_html + '\n' +
 '</div>\n' +
 '<script>\n' +
 'function pronounce(word) {\n' +
+'  if (!window.speechSynthesis) {\n' +
+'    console.error("Web Speech API non disponible");\n' +
+'    return;\n' +
+'  }\n' +
+'  \n' +
+'  window.speechSynthesis.cancel();\n' +
+'  \n' +
 '  const utterance = new SpeechSynthesisUtterance(word);\n' +
 '  utterance.lang = "nl-NL";\n' +
 '  utterance.rate = 0.8;\n' +
+'  utterance.volume = 1;\n' +
+'  utterance.pitch = 1;\n' +
+'  \n' +
+'  utterance.onerror = (event) => {\n' +
+'    console.error("Erreur prononciation:", event.error);\n' +
+'  };\n' +
+'  \n' +
 '  window.speechSynthesis.speak(utterance);\n' +
 '}\n' +
 'const encouragements = [\n' +
@@ -355,7 +369,7 @@ verbRows_html + '\n' +
 '  const zone = document.getElementById("quizZone");\n' +
 '  updateProgress();\n' +
 '  if (indexQ >= questions.length) {\n' +
-'    zone.innerHTML = "<div class=\\"completion-message\\"><p>✅ Quiz terminé ! Bravo !</p><p style=\\"font-size: 1.1em; color: #c41e3a;\\">Goed gedaan! 🎊</p><button onclick=\\"location.reload()\\">🔄 Recommencer</button></div>";\n' +
+'    zone.innerHTML = \'<div class="completion-message"><p>✅ Quiz terminé ! Bravo !</p><p style="font-size: 1.1em; color: #c41e3a;">Goed gedaan! 🎊</p><button class="btn btn-primary" onclick="location.reload()">🔄 Recommencer</button></div>\';\n' +
 '    return;\n' +
 '  }\n' +
 '  zone.innerHTML = `\n' +

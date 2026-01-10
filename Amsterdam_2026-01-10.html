@@ -42,9 +42,23 @@ Midden op het bekende Rembrandtplein staat hij, nonchalant met palet en penseel 
 </div>
 <script>
 function pronounce(word) {
+  if (!window.speechSynthesis) {
+    console.error('Web Speech API non disponible');
+    return;
+  }
+  
+  window.speechSynthesis.cancel();
+  
   const utterance = new SpeechSynthesisUtterance(word);
   utterance.lang = "nl-NL";
   utterance.rate = 0.8;
+  utterance.volume = 1;
+  utterance.pitch = 1;
+  
+  utterance.onerror = (event) => {
+    console.error('Erreur prononciation:', event.error);
+  };
+  
   window.speechSynthesis.speak(utterance);
 }
 const encouragements = [
@@ -75,7 +89,7 @@ function afficherQuestion() {
   const zone = document.getElementById("quizZone");
   updateProgress();
   if (indexQ >= questions.length) {
-    zone.innerHTML = "<div class=\"completion-message\"><p>✅ Quiz terminé ! Bravo !</p><p style=\"font-size: 1.1em; color: #c41e3a;\">Goed gedaan! 🎊</p><button class="btn btn-primary" onclick=\"location.reload()\">🔄 Recommencer</button></div>";
+    zone.innerHTML = '<div class="completion-message"><p>✅ Quiz terminé ! Bravo !</p><p style="font-size: 1.1em; color: #c41e3a;">Goed gedaan! 🎊</p><button class="btn btn-primary" onclick="location.reload()">🔄 Recommencer</button></div>';
     return;
   }
   zone.innerHTML = `
