@@ -1,0 +1,60 @@
+{
+  "verbes_reguliers": [
+    {
+      "infinitif": "horen",
+      "radical_brut": "hor",
+      "radical_travaille": "hoor",
+      "imparfait_singulier": "hoorde",
+      "imparfait_pluriel": "hoorden"
+    },
+    {
+      "infinitif": "maken",
+      "radical_brut": "mak",
+      "radical_travaille": "maak",
+      "imparfait_singulier": "maakte",
+      "imparfait_pluriel": "maakten"
+    },
+    {
+      "infinitif": "praten",
+      "radical_brut": "prat",
+      "radical_travaille": "praat",
+      "imparfait_singulier": "praatte",
+      "imparfait_pluriel": "praatten"
+    },
+    {
+      "infinitif": "reizen",
+      "radical_brut": "reiz",
+      "radical_travaille": "reis",
+      "imparfait_singulier": "reisde",
+      "imparfait_pluriel": "reisden"
+    },
+    {
+      "infinitif": "wensen",
+      "radical_brut": "wens",
+      "radical_travaille": "wens",
+      "imparfait_singulier": "wenste",
+      "imparfait_pluriel": "wensten"
+    },
+    {
+      "infinitif": "leven",
+      "radical_brut": "lev",
+      "radical_travaille": "leef",
+      "imparfait_singulier": "leefde",
+      "imparfait_pluriel": "leefden"
+    },
+    {
+      "infinitif": "glimlachen",
+      "radical_brut": "glimlach",
+      "radical_travaille": "glimlach",
+      "imparfait_singulier": "glimlachte",
+      "imparfait_pluriel": "glimlachten"
+    },
+    {
+      "infinitif": "mixen",
+      "radical_brut": "mix",
+      "radical_travaille": "mix",
+      "imparfait_singulier": "mixte",
+      "imparfait_pluriel": "mixten"
+    }
+  ]
+}

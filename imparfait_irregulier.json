@@ -1,0 +1,32 @@
+{
+  "verbes_irreguliers": [
+    {
+      "infinitif": "gaan",
+      "radical_brut": "gaa",
+      "radical_travaille": "ga",
+      "imparfait_singulier": "ging",
+      "imparfait_pluriel": "gingen"
+    },
+    {
+      "infinitif": "slaan",
+      "radical_brut": "slaa",
+      "radical_travaille": "sla",
+      "imparfait_singulier": "sloeg",
+      "imparfait_pluriel": "sloegen"
+    },
+    {
+      "infinitif": "denken",
+      "radical_brut": "denk",
+      "radical_travaille": "denk",
+      "imparfait_singulier": "dacht",
+      "imparfait_pluriel": "dachten"
+    },
+    {
+      "infinitif": "nemen",
+      "radical_brut": "nem",
+      "radical_travaille": "neem",
+      "imparfait_singulier": "nam",
+      "imparfait_pluriel": "namen"
+    }
+  ]
+}
