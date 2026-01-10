@@ -5,35 +5,218 @@
     <title>Révision du présent (NL)</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f5f7fa; margin: 0; }
-        .container { max-width: 900px; margin: 40px auto; background: white; border-radius: 15px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); padding: 40px; }
-        h1 { color: #c41e3a; text-align: center; }
-        .subtitle { text-align: center; color: #666; margin-bottom: 30px; }
-        .quiz-box { background: #e3f2fd; border-left: 4px solid #2196f3; padding: 25px; border-radius: 10px; margin-bottom: 30px; }
-        .memory { background: #fffbe7; border-left: 4px solid #ffd600; padding: 15px; border-radius: 8px; margin-bottom: 25px; color: #bfa100; }
-        .btn { background: #4ecdc4; color: white; border: none; border-radius: 8px; padding: 12px 30px; font-size: 1.1em; font-weight: bold; cursor: pointer; margin-top: 20px; }
-        .btn:hover { background: #44a9a0; }
-        .result { font-size: 1.2em; margin-top: 20px; }
-        .advice { color: #c41e3a; margin-top: 10px; }
-        .type-label { font-weight: bold; color: #2196f3; }
-        @media (max-width: 600px) { .container { padding: 10px; } }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #ff6b6b 0%, #4ecdc4 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .navbar {
+            background: linear-gradient(135deg, #c41e3a 0%, #a01830 100%);
+            padding: 0 40px;
+            box-shadow: 0 4px 15px rgba(196, 30, 58, 0.3);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+
+        .navbar-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .navbar h1 {
+            color: white;
+            font-size: 1.5em;
+            margin: 0;
+        }
+
+        .navbar-buttons {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .navbar-link {
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+            background: rgba(255, 255, 255, 0.2);
+            font-size: 1em;
+        }
+
+        .navbar-link:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            padding: 40px;
+        }
+
+        h1 {
+            color: #c41e3a;
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 1.1em;
+        }
+
+        .memory {
+            background: #fffbe7;
+            border-left: 4px solid #ffd600;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            color: #bfa100;
+            font-weight: 500;
+        }
+
+        .memory strong { color: #f57f17; }
+        .memory u { text-decoration: underline; }
+
+        .quiz-box {
+            background: #e3f2fd;
+            border-left: 4px solid #2196f3;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            min-height: 150px;
+        }
+
+        .quiz-box div {
+            font-size: 1.1em;
+            margin-bottom: 15px;
+        }
+
+        .type-label {
+            font-weight: bold;
+            color: #2196f3;
+            background: rgba(33, 150, 243, 0.1);
+            padding: 5px 10px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+
+        .quiz-box ul {
+            margin-left: 20px;
+            margin-top: 15px;
+            line-height: 2;
+        }
+
+        .quiz-box li {
+            font-size: 1em;
+        }
+
+        .quiz-box span {
+            font-weight: bold;
+            color: #c41e3a;
+        }
+
+        .btn {
+            background: linear-gradient(135deg, #4ecdc4 0%, #44a9a0 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 12px 30px;
+            font-size: 1.1em;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(78, 205, 196, 0.3);
+        }
+
+        .btn:hover {
+            background: linear-gradient(135deg, #44a9a0 0%, #3a8a80 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(78, 205, 196, 0.4);
+        }
+
+        .result {
+            font-size: 1.1em;
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .advice {
+            color: #c41e3a;
+            font-weight: bold;
+            background: #ffebee;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #c41e3a;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+            h1 {
+                font-size: 1.8em;
+            }
+        }
     </style>
 </head>
 <body>
+    <nav class="navbar">
+        <div class="navbar-content">
+            <h1>📚 FR/NL</h1>
+            <div class="navbar-buttons">
+                <a href="index.html" class="navbar-link">🏠 Accueil</a>
+            </div>
+        </div>
+    </nav>
+
     <div class="container">
-        <h1>Révision du présent (NL)</h1>
+        <h1 style="margin-top: 0;">Révision du présent (NL)</h1>
         <p class="subtitle">Exerce-toi à conjuguer les verbes néerlandais au présent. Indique la bonne forme pour chaque pronom.</p>
+        
         <div class="memory">
             <strong>Astuce :</strong> <br>
             <u>Régulier</u> : <b>ik</b> = radical travaillé, <b>jij/hij/ze</b> = radical travaillé + t, <b>wij/jullie/ze</b> = infinitif.<br>
             <u>Irrégulier</u> : Attention, la racine ou la terminaison peut changer. Apprends-les par cœur !
         </div>
+
         <div class="quiz-box" id="quizBox">
             Chargement...
         </div>
+
         <button class="btn" id="nextBtn" onclick="voirReponse()">Voir la réponse</button>
         <div class="result" id="result"></div>
     </div>
+
     <script>
         let verbesReguliers = [];
         let verbesIrreguliers = [];
@@ -42,30 +225,50 @@
         let reponseMontree = false;
 
         async function chargerVerbes() {
-            const [reg, irreg] = await Promise.all([
-                fetch('present_regulier.json').then(r => r.json()),
-                fetch('present_irregulier.json').then(r => r.json())
-            ]);
-            verbesReguliers = reg.verbes_reguliers_present || reg;
-            verbesIrreguliers = irreg.verbes_irreguliers_present || irreg;
-            nouvelleQuestion();
+            try {
+                const [resReg, resIrreg] = await Promise.all([
+                    fetch('present_regulier.json'),
+                    fetch('present_irregulier.json')
+                ]);
+
+                if (!resReg.ok || !resIrreg.ok) throw new Error('Erreur de chargement');
+
+                const reg = await resReg.json();
+                const irreg = await resIrreg.json();
+
+                verbesReguliers = reg.verbes_reguliers_present || [];
+                verbesIrreguliers = irreg.verbes_irreguliers_present || [];
+
+                if (verbesReguliers.length === 0 || verbesIrreguliers.length === 0) {
+                    document.getElementById('quizBox').textContent = 'Erreur : Les fichiers JSON ne sont pas correctement formatés.';
+                    return;
+                }
+
+                nouvelleQuestion();
+            } catch (e) {
+                console.error('Erreur:', e);
+                document.getElementById('quizBox').textContent = 'Erreur de chargement des données.';
+            }
         }
 
         function nouvelleQuestion() {
             reponseMontree = false;
             document.getElementById('result').textContent = '';
+            
             let isIrregulier = Math.random() < 0.5;
             let verbe;
-            if (isIrregulier && verbesIrreguliers.length) {
+
+            if (isIrregulier && verbesIrreguliers.length > 0) {
                 verbe = verbesIrreguliers[Math.floor(Math.random() * verbesIrreguliers.length)];
                 typeCourant = 'irrégulier';
-            } else if (verbesReguliers.length) {
+            } else if (verbesReguliers.length > 0) {
                 verbe = verbesReguliers[Math.floor(Math.random() * verbesReguliers.length)];
                 typeCourant = 'régulier';
             } else {
                 document.getElementById('quizBox').textContent = 'Aucun verbe trouvé.';
                 return;
             }
+
             courant = verbe;
             afficherQuestion();
             document.getElementById('nextBtn').textContent = "Voir la réponse";
@@ -74,10 +277,12 @@
         function afficherQuestion() {
             document.getElementById('quizBox').innerHTML = `
                 <div>
-                    <span class="type-label">${typeCourant.toUpperCase()}</span> <br>
+                    <span class="type-label">${typeCourant.toUpperCase()}</span>
+                </div>
+                <div>
                     <b>Infinitif :</b> ${courant.infinitif}
                 </div>
-                <ul style="margin-top:15px;">
+                <ul>
                     <li><b>ik</b> : <span id="rep_ik">______</span></li>
                     <li><b>jij/hij/ze</b> : <span id="rep_jij">______</span></li>
                     <li><b>wij/jullie/ze</b> : <span id="rep_wij">______</span></li>
@@ -90,13 +295,15 @@
                 document.getElementById('rep_ik').textContent = courant.present_ik;
                 document.getElementById('rep_jij').textContent = courant.present_jij_hij_ze;
                 document.getElementById('rep_wij').textContent = courant.present_wij_jullie_ze;
+
                 let conseil = '';
                 if (typeCourant === 'régulier') {
-                    conseil = "Rappel : ik = radical travaillé, jij/hij/ze = radical travaillé + t, wij/jullie/ze = infinitif.";
+                    conseil = "✓ Rappel régulier : ik = radical travaillé, jij/hij/ze = radical travaillé + t, wij/jullie/ze = infinitif.";
                 } else {
-                    conseil = "Attention, ce verbe est irrégulier : il faut apprendre ses formes par cœur.";
+                    conseil = "⚠️ Verbe irrégulier : il faut apprendre ses formes par cœur.";
                 }
-                document.getElementById('result').innerHTML = `<span class="advice">${conseil}</span>`;
+
+                document.getElementById('result').innerHTML = `<div class="advice">${conseil}</div>`;
                 document.getElementById('nextBtn').textContent = "Nouvelle question";
                 reponseMontree = true;
             } else {
@@ -104,7 +311,7 @@
             }
         }
 
-        window.onload = chargerVerbes;
+        window.addEventListener('load', chargerVerbes);
     </script>
 </body>
 </html>
