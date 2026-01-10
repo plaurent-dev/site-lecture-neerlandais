@@ -200,10 +200,38 @@ function showQuestion() {
         return;
     }
     const v = verbes[current];
+    // Détection du type de verbe
+    let type = '';
+    let conseil = '';
+    if ('imparfait_singulier' in v && 'imparfait_pluriel' in v) {
+        // Heuristique : si le verbe est dans la liste réguliers, il a la propriété "verbes_reguliers"
+        if (
+            v.imparfait_singulier.endsWith('te') || v.imparfait_singulier.endsWith('de') ||
+            v.imparfait_pluriel.endsWith('ten') || v.imparfait_pluriel.endsWith('den')
+        ) {
+            type = '<span style="color:#4ecdc4;font-weight:bold;">(régulier)</span>';
+            conseil = `
+                <div style="margin:10px 0 18px 0;color:#1976d2;">
+                    <b>Conseil :</b> Pour ce verbe régulier, choisis <b>-te(n)</b> ou <b>-de(n)</b> selon la dernière lettre du radical travaillé.<br>
+                    Si elle est dans <b>T K F S CH P + X</b> (<b>’t Kofschip + X</b>), c’est <b>-te(n)</b>.<br>
+                    Sinon, c’est <b>-de(n)</b>.
+                </div>
+            `;
+        } else {
+            type = '<span style="color:#c41e3a;font-weight:bold;">(irrégulier)</span>';
+            conseil = `
+                <div style="margin:10px 0 18px 0;color:#c41e3a;">
+                    <b>Conseil :</b> Verbe irrégulier : il faut apprendre ses formes par cœur.<br>
+                    (Changement de voyelle du radical à l’imparfait)
+                </div>
+            `;
+        }
+    }
     document.getElementById('quiz').innerHTML = `
         <div class="question">
-            <div class="verbe">${v.infinitif}</div>
-            <div style="margin-bottom:18px;">
+            <div class="verbe">${v.infinitif} ${type}</div>
+            ${conseil}
+            <div>
                 Pouvez-vous donner le radical brut, le radical travaillé (forme "ik" du présent), choisir <b>te(n)</b> ou <b>de(n)</b> et deviner l’imparfait ?
             </div>
             <button class="btn" onclick="showAnswer()">Afficher la solution</button>
