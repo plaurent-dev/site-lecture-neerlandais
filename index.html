@@ -496,20 +496,20 @@
 </div>
 
 <script>
-    // Récupérer les fiches du localStorage
-    function chargerFichesFromStorage() {
-        const fichesStockees = localStorage.getItem('fiches_nl');
-        return fichesStockees ? JSON.parse(fichesStockees) : [];
+    // Charger les fiches depuis le fichier JSON central
+    async function chargerFichesFromJSON() {
+        try {
+            const response = await fetch('articles.json');
+            if (!response.ok) throw new Error('Erreur de chargement');
+            return await response.json();
+        } catch (e) {
+            return [];
+        }
     }
 
-    // Sauvegarder les fiches dans localStorage
-    function sauvegarderFiches(fiches) {
-        localStorage.setItem('fiches_nl', JSON.stringify(fiches));
-    }
-
-    // Afficher les fiches récentes
-    function afficherFichesRecentes() {
-        const fiches = chargerFichesFromStorage();
+    // Afficher les fiches récentes (modifié pour async)
+    async function afficherFichesRecentes() {
+        const fiches = await chargerFichesFromJSON();
         const container = document.getElementById('fichesRecentes');
 
         if (fiches.length === 0) {
@@ -517,7 +517,6 @@
             return;
         }
 
-        // Afficher les 6 premières fiches
         const fichesRecentes = fiches.slice(0, 6);
 
         container.innerHTML = fichesRecentes.map(fiche => `
@@ -551,12 +550,12 @@
         });
     }
 
-    // Rechercher des fiches
-    function rechercherFiches() {
+    // Rechercher des fiches (modifié pour async)
+    async function rechercherFiches() {
         const region = document.getElementById('searchRegion').value.trim().toLowerCase();
         const date = document.getElementById('searchDate').value;
 
-        const fiches = chargerFichesFromStorage();
+        const fiches = await chargerFichesFromJSON();
 
         let resultats = fiches;
 
@@ -625,12 +624,8 @@
 
     // Supprimer une fiche
     function supprimerFiche(nomFichier) {
-        if (confirm('Êtes-vous sûr de vouloir supprimer cette fiche de la liste ?')) {
-            let fiches = chargerFichesFromStorage();
-            fiches = fiches.filter(f => f.href !== nomFichier);
-            sauvegarderFiches(fiches);
-            afficherFichesRecentes();
-        }
+        alert("La suppression doit maintenant être faite manuellement dans le fichier articles.json.");
+        // Pour automatiser, il faudrait un backend (PHP, Node, etc.)
     }
 
     // Lancer une fiche
