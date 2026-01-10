@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Révision du présent (NL)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f5f7fa; margin: 0; }
+        .container { max-width: 900px; margin: 40px auto; background: white; border-radius: 15px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); padding: 40px; }
+        h1 { color: #c41e3a; text-align: center; }
+        .subtitle { text-align: center; color: #666; margin-bottom: 30px; }
+        .quiz-box { background: #e3f2fd; border-left: 4px solid #2196f3; padding: 25px; border-radius: 10px; margin-bottom: 30px; }
+        .memory { background: #fffbe7; border-left: 4px solid #ffd600; padding: 15px; border-radius: 8px; margin-bottom: 25px; color: #bfa100; }
+        .btn { background: #4ecdc4; color: white; border: none; border-radius: 8px; padding: 12px 30px; font-size: 1.1em; font-weight: bold; cursor: pointer; margin-top: 20px; }
+        .btn:hover { background: #44a9a0; }
+        .result { font-size: 1.2em; margin-top: 20px; }
+        .advice { color: #c41e3a; margin-top: 10px; }
+        .type-label { font-weight: bold; color: #2196f3; }
+        @media (max-width: 600px) { .container { padding: 10px; } }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Révision du présent (NL)</h1>
+        <p class="subtitle">Exerce-toi à conjuguer les verbes néerlandais au présent. Indique la bonne forme pour chaque pronom.</p>
+        <div class="memory">
+            <strong>Astuce :</strong> <br>
+            <u>Régulier</u> : <b>ik</b> = radical travaillé, <b>jij/hij/ze</b> = radical travaillé + t, <b>wij/jullie/ze</b> = infinitif.<br>
+            <u>Irrégulier</u> : Attention, la racine ou la terminaison peut changer. Apprends-les par cœur !
+        </div>
+        <div class="quiz-box" id="quizBox">
+            Chargement...
+        </div>
+        <button class="btn" id="nextBtn" onclick="voirReponse()">Voir la réponse</button>
+        <div class="result" id="result"></div>
+    </div>
+    <script>
+        let verbesReguliers = [];
+        let verbesIrreguliers = [];
+        let courant = null;
+        let typeCourant = '';
+        let reponseMontree = false;
+
+        async function chargerVerbes() {
+            const [reg, irreg] = await Promise.all([
+                fetch('present_regulier.json').then(r => r.json()),
+                fetch('present_irregulier.json').then(r => r.json())
+            ]);
+            verbesReguliers = reg.verbes_reguliers_present || reg;
+            verbesIrreguliers = irreg.verbes_irreguliers_present || irreg;
+            nouvelleQuestion();
+        }
+
+        function nouvelleQuestion() {
+            reponseMontree = false;
+            document.getElementById('result').textContent = '';
+            let isIrregulier = Math.random() < 0.5;
+            let verbe;
+            if (isIrregulier && verbesIrreguliers.length) {
+                verbe = verbesIrreguliers[Math.floor(Math.random() * verbesIrreguliers.length)];
+                typeCourant = 'irrégulier';
+            } else if (verbesReguliers.length) {
+                verbe = verbesReguliers[Math.floor(Math.random() * verbesReguliers.length)];
+                typeCourant = 'régulier';
+            } else {
+                document.getElementById('quizBox').textContent = 'Aucun verbe trouvé.';
+                return;
+            }
+            courant = verbe;
+            afficherQuestion();
+            document.getElementById('nextBtn').textContent = "Voir la réponse";
+        }
+
+        function afficherQuestion() {
+            document.getElementById('quizBox').innerHTML = `
+                <div>
+                    <span class="type-label">${typeCourant.toUpperCase()}</span> <br>
+                    <b>Infinitif :</b> ${courant.infinitif}
+                </div>
+                <ul style="margin-top:15px;">
+                    <li><b>ik</b> : <span id="rep_ik">______</span></li>
+                    <li><b>jij/hij/ze</b> : <span id="rep_jij">______</span></li>
+                    <li><b>wij/jullie/ze</b> : <span id="rep_wij">______</span></li>
+                </ul>
+            `;
+        }
+
+        function voirReponse() {
+            if (!reponseMontree) {
+                document.getElementById('rep_ik').textContent = courant.present_ik;
+                document.getElementById('rep_jij').textContent = courant.present_jij_hij_ze;
+                document.getElementById('rep_wij').textContent = courant.present_wij_jullie_ze;
+                let conseil = '';
+                if (typeCourant === 'régulier') {
+                    conseil = "Rappel : ik = radical travaillé, jij/hij/ze = radical travaillé + t, wij/jullie/ze = infinitif.";
+                } else {
+                    conseil = "Attention, ce verbe est irrégulier : il faut apprendre ses formes par cœur.";
+                }
+                document.getElementById('result').innerHTML = `<span class="advice">${conseil}</span>`;
+                document.getElementById('nextBtn').textContent = "Nouvelle question";
+                reponseMontree = true;
+            } else {
+                nouvelleQuestion();
+            }
+        }
+
+        window.onload = chargerVerbes;
+    </script>
+</body>
+</html>

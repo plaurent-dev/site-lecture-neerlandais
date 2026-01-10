@@ -1,0 +1,124 @@
+{
+  "verbes_irreguliers_present": [
+    {
+      "infinitif": "gaan",
+      "radical_brut": "gaa",
+      "radical_travaille": "ga",
+      "present_ik": "ga",
+      "present_jij_hij_ze": "gaat",
+      "present_wij_jullie_ze": "gaan"
+    },
+    {
+      "infinitif": "komen",
+      "radical_brut": "kom",
+      "radical_travaille": "kom",
+      "present_ik": "kom",
+      "present_jij_hij_ze": "komt",
+      "present_wij_jullie_ze": "komen"
+    },
+    {
+      "infinitif": "zien",
+      "radical_brut": "zie",
+      "radical_travaille": "zie",
+      "present_ik": "zie",
+      "present_jij_hij_ze": "ziet",
+      "present_wij_jullie_ze": "zien"
+    },
+    {
+      "infinitif": "zijn",
+      "radical_brut": "zij",
+      "radical_travaille": "ben",
+      "present_ik": "ben",
+      "present_jij_hij_ze": "is",
+      "present_wij_jullie_ze": "zijn"
+    },
+    {
+      "infinitif": "hebben",
+      "radical_brut": "hebb",
+      "radical_travaille": "heb",
+      "present_ik": "heb",
+      "present_jij_hij_ze": "hebt",
+      "present_wij_jullie_ze": "hebben"
+    },
+    {
+      "infinitif": "kunnen",
+      "radical_brut": "kunn",
+      "radical_travaille": "kan",
+      "present_ik": "kan",
+      "present_jij_hij_ze": "kan",
+      "present_wij_jullie_ze": "kunnen"
+    },
+    {
+      "infinitif": "willen",
+      "radical_brut": "will",
+      "radical_travaille": "wil",
+      "present_ik": "wil",
+      "present_jij_hij_ze": "wil",
+      "present_wij_jullie_ze": "willen"
+    },
+    {
+      "infinitif": "moeten",
+      "radical_brut": "moet",
+      "radical_travaille": "moet",
+      "present_ik": "moet",
+      "present_jij_hij_ze": "moet",
+      "present_wij_jullie_ze": "moeten"
+    },
+    {
+      "infinitif": "mogen",
+      "radical_brut": "mog",
+      "radical_travaille": "mag",
+      "present_ik": "mag",
+      "present_jij_hij_ze": "mag",
+      "present_wij_jullie_ze": "mogen"
+    },
+    {
+      "infinitif": "denken",
+      "radical_brut": "denk",
+      "radical_travaille": "denk",
+      "present_ik": "denk",
+      "present_jij_hij_ze": "denkt",
+      "present_wij_jullie_ze": "denken"
+    },
+    {
+      "infinitif": "nemen",
+      "radical_brut": "nem",
+      "radical_travaille": "neem",
+      "present_ik": "neem",
+      "present_jij_hij_ze": "neemt",
+      "present_wij_jullie_ze": "nemen"
+    },
+    {
+      "infinitif": "geven",
+      "radical_brut": "gev",
+      "radical_travaille": "geef",
+      "present_ik": "geef",
+      "present_jij_hij_ze": "geeft",
+      "present_wij_jullie_ze": "geven"
+    },
+    {
+      "infinitif": "houden",
+      "radical_brut": "houd",
+      "radical_travaille": "houd",
+      "present_ik": "houd",
+      "present_jij_hij_ze": "houdt",
+      "present_wij_jullie_ze": "houden"
+    },
+    {
+      "infinitif": "blijven",
+      "radical_brut": "blijf",
+      "radical_travaille": "blijf",
+      "present_ik": "blijf",
+      "present_jij_hij_ze": "blijft",
+      "present_wij_jullie_ze": "blijven"
+    },
+    {
+      "infinitif": "rijden",
+      "radical_brut": "rijd",
+      "radical_travaille": "rijd",
+      "present_ik": "rijd",
+      "present_jij_hij_ze": "rijdt",
+      "present_wij_jullie_ze": "rijden"
+    }
+  ]
+}
