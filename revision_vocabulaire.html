@@ -163,23 +163,30 @@
         }
 
         .card-vocabulary .word-label {
-            font-size: 1.1em;
-            margin-bottom: 20px;
-            opacity: 0.95;
-            font-weight: 500;
+            font-size: 1.2em;
+            margin-bottom: 25px;
+            opacity: 1;
+            font-weight: 700;
+            letter-spacing: 0.5px;
         }
 
         .card-vocabulary .word-display {
             color: white;
-            margin: 25px 0;
-            font-size: 2.5em;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            margin: 30px 0;
+            font-size: 3em;
+            font-weight: 700;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+            word-break: break-word;
         }
 
         .card-vocabulary .pluriel {
-            font-size: 1em;
-            opacity: 0.9;
-            margin-top: 15px;
+            font-size: 1.1em;
+            opacity: 1;
+            margin-top: 20px;
+            font-weight: 600;
+            padding: 15px;
+            background-color: rgba(255, 255, 255, 0.15);
+            border-radius: 6px;
         }
 
         .result {
@@ -226,21 +233,23 @@
         }
 
         .speak-btn {
-            background-color: rgba(255, 255, 255, 0.3);
-            border: 2px solid white;
+            background-color: rgba(255, 255, 255, 0.35);
+            border: 3px solid white;
             color: white;
-            padding: 12px 25px;
-            border-radius: 8px;
+            padding: 14px 30px;
+            border-radius: 10px;
             cursor: pointer;
-            font-size: 1em;
-            font-weight: 600;
-            margin-top: 15px;
+            font-size: 1.1em;
+            font-weight: 700;
+            margin-top: 20px;
             transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
         }
 
         .speak-btn:hover {
-            background-color: rgba(255, 255, 255, 0.5);
-            transform: scale(1.05);
+            background-color: rgba(255, 255, 255, 0.6);
+            transform: scale(1.08);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
         }
 
         .speak-btn:active {
@@ -252,6 +261,9 @@
     <nav class="navbar">
         <div class="navbar-content">
             <h1>📚 FR/NL</h1>
+            <div style="flex: 1; text-align: center;">
+                <span id="navTitle" style="font-size: 1.1em; font-weight: 600; color: white;">Révision du vocabulaire (NL → FR)</span>
+            </div>
             <div class="navbar-buttons">
                 <a href="index.html" class="navbar-link">🏠 Accueil</a>
             </div>
@@ -334,6 +346,9 @@
 
         async function chargerVocabulaire() {
             try {
+                // Mettre à jour le titre de la navbar au chargement
+                document.getElementById('navTitle').textContent = 'Révision du vocabulaire (NL → FR)';
+                
                 const response = await fetch('vocabulaire.json?t=' + Date.now());
                 if (!response.ok) {
                     throw new Error(`Erreur HTTP: ${response.status}`);
@@ -362,14 +377,12 @@
             document.querySelectorAll('.mode-btn').forEach(btn => btn.classList.remove('active'));
             event.target.classList.add('active');
 
-            const modeText = mode === 'fr-to-nl' ? '🇫🇷 → 🇳🇱' : '🇳🇱 → 🇫🇷';
-            document.getElementById('modeDisplay').textContent = modeText;
+            // Mettre à jour la navbar
+            const modeText = mode === 'fr-to-nl' ? 'Révision du vocabulaire (NL → FR)' : 'Révision du vocabulaire (FR → NL)';
+            document.getElementById('navTitle').textContent = modeText;
 
-            if (mode === 'fr-to-nl') {
-                document.getElementById('questionLabel').textContent = 'Traduis en néerlandais :';
-            } else {
-                document.getElementById('questionLabel').textContent = 'Traduis en français :';
-            }
+            const modeDisplay = mode === 'fr-to-nl' ? '🇫🇷 → 🇳🇱' : '🇳🇱 → 🇫🇷';
+            document.getElementById('modeDisplay').textContent = modeDisplay;
 
             reinitialiserQuiz();
         }
@@ -404,25 +417,26 @@
 
         function afficherMot() {
             const speakBtn = document.getElementById('speakBtn');
-            speakBtn.style.display = 'block'; // Afficher le bouton
+            speakBtn.style.display = 'block';
+            speakBtn.textContent = '🔊 Écouter en néerlandais'; // Toujours la même étiquette
 
             if (mode === 'fr-to-nl') {
                 document.getElementById('wordDisplay').textContent = motActuel.francais;
-                speakBtn.textContent = '🔊 Écouter (FR)';
+                document.getElementById('questionLabel').textContent = 'Traduis en néerlandais :';
                 
                 if (motActuel.de_of_het && motActuel.de_of_het !== 'geen') {
-                    document.getElementById('plurielDisplay').textContent = `Article : ${motActuel.de_of_het}`;
+                    document.getElementById('plurielDisplay').innerHTML = `<strong>En néerlandais :</strong> ${motActuel.neerlandais_singulier} (article: ${motActuel.de_of_het})`;
                 } else if (motActuel.de_of_het === 'geen') {
-                    document.getElementById('plurielDisplay').textContent = '(verbe/adjectif/autre)';
+                    document.getElementById('plurielDisplay').innerHTML = `<strong>En néerlandais :</strong> ${motActuel.neerlandais_singulier} (pas d'article)`;
                 } else {
                     document.getElementById('plurielDisplay').textContent = '';
                 }
             } else {
                 document.getElementById('wordDisplay').textContent = motActuel.neerlandais_singulier;
-                speakBtn.textContent = '🔊 Écouter (NL)';
+                document.getElementById('questionLabel').textContent = 'Traduis en français :';
                 
                 if (motActuel.neerlandais_pluriel !== '—') {
-                    document.getElementById('plurielDisplay').textContent = `Pluriel : ${motActuel.neerlandais_pluriel}`;
+                    document.getElementById('plurielDisplay').innerHTML = `<strong>Pluriel :</strong> ${motActuel.neerlandais_pluriel}`;
                 } else {
                     document.getElementById('plurielDisplay').textContent = '';
                 }
@@ -520,27 +534,16 @@
         function prononcer() {
             if (!motActuel) return;
             
-            // Déterminer le mot à prononcer
-            const wordToPronounce = mode === 'fr-to-nl' ? 
-                motActuel.neerlandais_singulier : 
-                motActuel.francais;
+            // Toujours prononcer le mot en néerlandais
+            const wordToPronounce = motActuel.neerlandais_singulier;
 
-            // Créer une utterance
             const utterance = new SpeechSynthesisUtterance(wordToPronounce);
-            
-            // Définir la langue
-            if (mode === 'fr-to-nl') {
-                utterance.lang = 'nl-NL'; // Néerlandais
-            } else {
-                utterance.lang = 'fr-FR'; // Français
-            }
-            
-            utterance.rate = 0.9;
+            utterance.lang = 'nl-NL'; // Toujours néerlandais
+            utterance.rate = 0.85;
             utterance.pitch = 1;
             utterance.volume = 1;
             
-            // Parler
-            window.speechSynthesis.cancel(); // Arrêter tout discours en cours
+            window.speechSynthesis.cancel();
             window.speechSynthesis.speak(utterance);
         }
 
