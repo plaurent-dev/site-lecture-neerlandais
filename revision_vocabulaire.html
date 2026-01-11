@@ -5,6 +5,78 @@
     <title>Révision du vocabulaire (NL)</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .quiz-options {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin: 30px 0;
+        }
+
+        .option-btn {
+            padding: 20px;
+            border: 2px solid var(--secondary);
+            border-radius: 8px;
+            background: white;
+            cursor: pointer;
+            font-size: 1.1em;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .option-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(13, 148, 136, 0.2);
+            background-color: var(--bg-light);
+        }
+
+        .option-btn.selected {
+            border-color: var(--primary);
+            background-color: var(--primary);
+            color: white;
+        }
+
+        .option-btn.correct {
+            border-color: #2e7d32;
+            background-color: #2e7d32;
+            color: white;
+        }
+
+        .option-btn.incorrect {
+            border-color: #c62828;
+            background-color: #c62828;
+            color: white;
+        }
+
+        .option-btn:disabled {
+            cursor: not-allowed;
+            opacity: 0.7;
+        }
+
+        .score-display {
+            text-align: center;
+            font-size: 1.3em;
+            font-weight: bold;
+            color: var(--primary);
+            margin: 20px 0;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background-color: #e0e0e0;
+            border-radius: 4px;
+            margin: 20px 0;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background-color: var(--secondary);
+            transition: width 0.3s ease;
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar">
@@ -18,14 +90,21 @@
 
     <div class="container">
         <h1 style="margin-top: 0;">Révision du vocabulaire (NL)</h1>
-        <p class="subtitle">Apprends et révise le vocabulaire néerlandais A1-A2</p>
+        <p class="subtitle">Choisis la bonne traduction parmi les 4 propositions</p>
+        <p id="wordCount" style="text-align: center; color: var(--secondary); font-weight: bold; margin-bottom: 20px;">Chargement...</p>
+
+        <div class="score-display">
+            Score: <span id="scoreValue">0</span>/<span id="totalValue">0</span>
+        </div>
+
+        <div class="progress-bar">
+            <div class="progress-fill" id="progressFill" style="width: 0%;"></div>
+        </div>
 
         <div class="mode-selector">
             <button class="mode-btn active" onclick="changerMode('fr-to-nl')">🇫🇷 → 🇳🇱</button>
             <button class="mode-btn" onclick="changerMode('nl-to-fr')">🇳🇱 → 🇫🇷</button>
         </div>
-
-        <p id="wordCount" style="text-align: center; color: var(--secondary); font-weight: bold; margin-bottom: 20px;">Chargement...</p>
 
         <div class="quiz-section">
             <div class="card-vocabulary" id="vocabularyCard">
@@ -34,20 +113,13 @@
                 <div class="pluriel" id="plurielDisplay"></div>
             </div>
 
+            <div class="quiz-options" id="quizOptions"></div>
+
             <div class="controls">
-                <div class="control-group">
-                    <label for="reponseInput" id="inputLabel">Tape ta réponse :</label>
-                    <input type="text" id="reponseInput" placeholder="..." onkeypress="if(event.key==='Enter') validerReponse()">
-                </div>
-
-                <div class="buttons">
-                    <button class="btn btn-validate" onclick="validerReponse()">✓ Valider</button>
-                    <button class="btn btn-next" onclick="nouvelMot()" style="grid-column: 1 / -1;">🔄 Nouveau mot</button>
-                </div>
-
-                <div class="result" id="result"></div>
-                <div class="hint" id="hint" style="display: none;"></div>
+                <button class="btn btn-primary" id="nextBtn" onclick="nouvelMot()" style="grid-column: 1 / -1; display: none;">🔄 Nouvelle question</button>
             </div>
+
+            <div class="result" id="result"></div>
         </div>
     </div>
 
@@ -55,6 +127,10 @@
         let mode = 'fr-to-nl';
         let vocabulaire = [];
         let motActuel = null;
+        let reponseSelectionnee = null;
+        let reponseRevealed = false;
+        let score = 0;
+        let totalQuestions = 0;
 
         async function chargerVocabulaire() {
             try {
@@ -68,49 +144,50 @@
                 }
                 vocabulaire = data.vocabulaire_A1_A2;
                 document.getElementById('wordCount').textContent = `📊 ${vocabulaire.length} mots dans la liste`;
+                document.getElementById('totalValue').textContent = vocabulaire.length;
                 nouvelMot();
             } catch (error) {
                 console.error('Erreur de chargement:', error);
                 document.getElementById('wordDisplay').textContent = '❌ Erreur: Impossible de charger vocabulaire.json';
-                console.log('Vérifiez que vocabulaire.json existe dans le même dossier que revision_vocabulaire.html');
             }
         }
 
         function changerMode(nouveauMode) {
             mode = nouveauMode;
+            score = 0;
+            totalQuestions = 0;
+            document.getElementById('scoreValue').textContent = '0';
+            updateProgressBar();
             
             document.querySelectorAll('.mode-btn').forEach(btn => btn.classList.remove('active'));
             event.target.classList.add('active');
 
             if (mode === 'fr-to-nl') {
                 document.getElementById('questionLabel').textContent = 'Traduis en néerlandais :';
-                document.getElementById('inputLabel').textContent = 'Tape ta réponse en néerlandais :';
             } else {
                 document.getElementById('questionLabel').textContent = 'Traduis en français :';
-                document.getElementById('inputLabel').textContent = 'Tape ta réponse en français :';
             }
 
             nouvelMot();
         }
 
         function nouvelMot() {
+            reponseSelectionnee = null;
+            reponseRevealed = false;
             document.getElementById('result').textContent = '';
-            document.getElementById('hint').style.display = 'none';
-            document.getElementById('reponseInput').value = '';
-            document.getElementById('reponseInput').focus();
-            document.getElementById('reponseInput').style.borderColor = '#ddd';
+            document.getElementById('nextBtn').style.display = 'none';
 
             const randomIndex = Math.floor(Math.random() * vocabulaire.length);
             motActuel = vocabulaire[randomIndex];
 
             afficherMot();
+            genererOptionsReponse();
         }
 
         function afficherMot() {
             if (mode === 'fr-to-nl') {
                 document.getElementById('wordDisplay').textContent = motActuel.francais;
                 
-                // Afficher l'article attendu si ce n'est pas "geen"
                 if (motActuel.de_of_het && motActuel.de_of_het !== 'geen') {
                     document.getElementById('plurielDisplay').textContent = `Article : ${motActuel.de_of_het}`;
                 } else if (motActuel.de_of_het === 'geen') {
@@ -130,73 +207,83 @@
             }
         }
 
-        function normaliserTexte(texte) {
-            return texte.toLowerCase().trim().replace(/\s+/g, ' ');
+        function genererOptionsReponse() {
+            // Déterminer la bonne réponse
+            let bonneReponse = mode === 'fr-to-nl' ? 
+                motActuel.neerlandais_singulier : 
+                motActuel.francais;
+
+            // Créer un array avec 4 options différentes
+            let options = [bonneReponse];
+
+            // Ajouter 3 fausses réponses
+            while (options.length < 4) {
+                const randomIndex = Math.floor(Math.random() * vocabulaire.length);
+                const candidat = mode === 'fr-to-nl' ? 
+                    vocabulaire[randomIndex].neerlandais_singulier : 
+                    vocabulaire[randomIndex].francais;
+
+                if (!options.includes(candidat) && candidat !== bonneReponse) {
+                    options.push(candidat);
+                }
+            }
+
+            // Mélanger les options
+            options = options.sort(() => Math.random() - 0.5);
+
+            // Afficher les boutons
+            const quizOptions = document.getElementById('quizOptions');
+            quizOptions.innerHTML = '';
+
+            options.forEach((option, index) => {
+                const btn = document.createElement('button');
+                btn.className = 'option-btn';
+                btn.textContent = option;
+                btn.onclick = () => validerOption(option, bonneReponse, btn);
+                quizOptions.appendChild(btn);
+            });
         }
 
-        function validerReponse() {
-            const input = document.getElementById('reponseInput');
-            const reponse = normaliserTexte(input.value);
+        function validerOption(option, bonneReponse, btnElement) {
+            if (reponseRevealed) return;
+
+            reponseSelectionnee = option;
+            reponseRevealed = true;
+            totalQuestions++;
+
             const resultDiv = document.getElementById('result');
-            const hintDiv = document.getElementById('hint');
+            const isCorrect = option === bonneReponse;
 
-            if (reponse === '') {
-                resultDiv.textContent = '⚠️ Tape une réponse !';
-                resultDiv.className = 'result incorrect';
-                hintDiv.style.display = 'none';
-                return;
-            }
-
-            let reponseCorrect = false;
-            let bonneReponse = '';
-
-            if (mode === 'fr-to-nl') {
-                bonneReponse = motActuel.neerlandais_singulier;
-                const bonneReponsePluriel = motActuel.neerlandais_pluriel;
-                
-                // Vérifier avec article complet
-                reponseCorrect = reponse === normaliserTexte(bonneReponse) || 
-                                 reponse === normaliserTexte(bonneReponsePluriel);
-
-                // Si pas correct avec article, essayer sans article (sauf pour "geen")
-                if (!reponseCorrect && motActuel.de_of_het !== 'geen') {
-                    const sansArticle = bonneReponse.replace(/^(de|het) /, '');
-                    const sansArticlePluriel = bonneReponsePluriel.replace(/^(de|het) /, '');
-                    reponseCorrect = reponse === normaliserTexte(sansArticle) ||
-                                     reponse === normaliserTexte(sansArticlePluriel);
-                }
+            if (isCorrect) {
+                score++;
+                document.getElementById('scoreValue').textContent = score;
+                btnElement.classList.add('correct');
+                resultDiv.innerHTML = `<div class="result correct">✓ Correct !</div>`;
             } else {
-                bonneReponse = motActuel.francais;
-                reponseCorrect = reponse === normaliserTexte(bonneReponse);
-            }
-
-            if (reponseCorrect) {
-                resultDiv.innerHTML = `
-                    <div class="result correct">
-                        ✓ Correct !
-                        <div class="result-text">${mode === 'fr-to-nl' ? motActuel.neerlandais_singulier : motActuel.francais}</div>
-                    </div>
-                `;
-                hintDiv.style.display = 'none';
-                input.style.borderColor = '#2e7d32';
-            } else {
+                btnElement.classList.add('incorrect');
                 resultDiv.innerHTML = `
                     <div class="result incorrect">
                         ✗ Incorrect.
                         <div class="result-text">La bonne réponse : ${bonneReponse}</div>
                     </div>
                 `;
-                input.style.borderColor = '#c62828';
-
-                if (mode === 'fr-to-nl') {
-                    const firstWord = normaliserTexte(bonneReponse).split(' ')[0];
-                    hintDiv.textContent = `💡 Indice : Commence par "${firstWord}"`;
-                } else {
-                    const firstLetter = bonneReponse[0];
-                    hintDiv.textContent = `💡 Indice : Commence par "${firstLetter}"`;
-                }
-                hintDiv.style.display = 'block';
             }
+
+            // Désactiver tous les boutons
+            document.querySelectorAll('.option-btn').forEach(btn => {
+                btn.disabled = true;
+                if (btn.textContent === bonneReponse) {
+                    btn.classList.add('correct');
+                }
+            });
+
+            updateProgressBar();
+            document.getElementById('nextBtn').style.display = 'block';
+        }
+
+        function updateProgressBar() {
+            const progress = (totalQuestions / vocabulaire.length) * 100;
+            document.getElementById('progressFill').style.width = progress + '%';
         }
 
         window.addEventListener('load', () => {
