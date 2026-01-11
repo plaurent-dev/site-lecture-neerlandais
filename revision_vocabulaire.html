@@ -356,7 +356,7 @@
                 <button class="speak-btn" id="speakBtn" onclick="prononcer()" style="display: none;">
                     🔊 Écouter
                 </button>
-                <div class="pluriel" id="plurielDisplay"></div>
+                <div class="pluriel" id="plurielDisplay" style="display: none;"></div>
             </div>
 
             <div class="quiz-options" id="quizOptions"></div>
@@ -533,6 +533,20 @@
             const headerResult = document.getElementById('headerResult');
             const isCorrect = option === bonneReponse;
 
+            // Construire le texte d'information additionnelle
+            let infoTexte = '';
+            if (mode === 'fr-to-nl') {
+                if (motActuel.de_of_het && motActuel.de_of_het !== 'geen') {
+                    infoTexte = `<div style="margin-top: 12px; font-size: 0.95em; opacity: 0.9;">En néerlandais : <strong>${motActuel.neerlandais_singulier}</strong> (article: <strong>${motActuel.de_of_het}</strong>)</div>`;
+                } else if (motActuel.de_of_het === 'geen') {
+                    infoTexte = `<div style="margin-top: 12px; font-size: 0.95em; opacity: 0.9;">En néerlandais : <strong>${motActuel.neerlandais_singulier}</strong> (pas d'article)</div>`;
+                }
+            } else {
+                if (motActuel.neerlandais_pluriel !== '—') {
+                    infoTexte = `<div style="margin-top: 12px; font-size: 0.95em; opacity: 0.9;">Pluriel : <strong>${motActuel.neerlandais_pluriel}</strong></div>`;
+                }
+            }
+
             if (isCorrect) {
                 score++;
                 document.getElementById('scoreValue').textContent = score;
@@ -540,7 +554,7 @@
                 document.getElementById('headerResultText').className = 'header-result-text correct';
                 document.getElementById('headerResultText').innerHTML = '✓ Correct !';
                 headerResult.style.display = 'flex';
-                resultDiv.innerHTML = `<div class="result correct" style="margin-top: 10px;">La bonne réponse : <strong>${bonneReponse}</strong></div>`;
+                resultDiv.innerHTML = `<div class="result correct" style="margin-top: 10px;">La bonne réponse : <strong>${bonneReponse}</strong>${infoTexte}</div>`;
             } else {
                 btnElement.classList.add('incorrect');
                 document.getElementById('headerResultText').className = 'header-result-text incorrect';
@@ -548,7 +562,7 @@
                 headerResult.style.display = 'flex';
                 resultDiv.innerHTML = `
                     <div class="result incorrect">
-                        <div style="margin-top: 10px;">La bonne réponse : <strong>${bonneReponse}</strong></div>
+                        <div style="margin-top: 10px;">La bonne réponse : <strong>${bonneReponse}</strong>${infoTexte}</div>
                     </div>
                 `;
             }
