@@ -6,35 +6,126 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <style>
+        .header-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .header-left {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .score-display {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: var(--primary);
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .mode-display {
+            font-size: 1em;
+            font-weight: 500;
+            color: var(--secondary);
+            padding: 8px 15px;
+            background-color: var(--bg-light);
+            border-radius: 6px;
+        }
+
+        .settings-section {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .settings-section label {
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        .settings-section select {
+            padding: 8px 12px;
+            border: 2px solid var(--secondary);
+            border-radius: 6px;
+            font-size: 1em;
+            cursor: pointer;
+            background-color: white;
+        }
+
+        .mode-selector-inline {
+            display: flex;
+            gap: 10px;
+        }
+
+        .mode-btn {
+            padding: 8px 15px;
+            border: 2px solid var(--secondary);
+            border-radius: 6px;
+            background: white;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .mode-btn:hover {
+            background-color: var(--bg-light);
+        }
+
+        .mode-btn.active {
+            background-color: var(--secondary);
+            color: white;
+            border-color: var(--secondary);
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 10px;
+            background-color: #e0e0e0;
+            border-radius: 4px;
+            margin: 15px 0;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background-color: var(--secondary);
+            transition: width 0.3s ease;
+        }
+
         .quiz-options {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 15px;
-            margin: 30px 0;
+            margin: 20px 0;
         }
 
         .option-btn {
-            padding: 20px;
+            padding: 18px;
             border: 2px solid var(--secondary);
             border-radius: 8px;
             background: white;
             cursor: pointer;
-            font-size: 1.1em;
+            font-size: 1em;
             font-weight: 500;
             transition: all 0.3s ease;
             text-align: center;
+            min-height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
-        .option-btn:hover {
+        .option-btn:hover:not(:disabled) {
             transform: translateY(-2px);
             box-shadow: 0 4px 12px rgba(13, 148, 136, 0.2);
             background-color: var(--bg-light);
-        }
-
-        .option-btn.selected {
-            border-color: var(--primary);
-            background-color: var(--primary);
-            color: white;
         }
 
         .option-btn.correct {
@@ -51,30 +142,82 @@
 
         .option-btn:disabled {
             cursor: not-allowed;
-            opacity: 0.7;
         }
 
-        .score-display {
-            text-align: center;
-            font-size: 1.3em;
+        .word-display {
+            font-size: 2em;
             font-weight: bold;
             color: var(--primary);
             margin: 20px 0;
+            text-align: center;
         }
 
-        .progress-bar {
-            width: 100%;
-            height: 8px;
-            background-color: #e0e0e0;
-            border-radius: 4px;
+        .card-vocabulary {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .card-vocabulary .word-label {
+            font-size: 1em;
+            margin-bottom: 15px;
+            opacity: 0.9;
+        }
+
+        .card-vocabulary .word-display {
+            color: white;
+            margin: 15px 0;
+        }
+
+        .card-vocabulary .pluriel {
+            font-size: 0.95em;
+            opacity: 0.85;
+        }
+
+        .result {
+            text-align: center;
+            font-size: 1.1em;
+            font-weight: bold;
+            margin: 15px 0;
+            padding: 15px;
+            border-radius: 6px;
+        }
+
+        .result.correct {
+            background-color: #c8e6c9;
+            color: #2e7d32;
+        }
+
+        .result.incorrect {
+            background-color: #ffcdd2;
+            color: #c62828;
+        }
+
+        .game-over {
+            text-align: center;
+            padding: 30px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            border-radius: 8px;
             margin: 20px 0;
-            overflow: hidden;
         }
 
-        .progress-fill {
-            height: 100%;
-            background-color: var(--secondary);
-            transition: width 0.3s ease;
+        .game-over h2 {
+            font-size: 2em;
+            margin: 20px 0;
+        }
+
+        .game-over .final-score {
+            font-size: 1.5em;
+            margin: 15px 0;
+        }
+
+        .game-over .percentage {
+            font-size: 1.2em;
+            opacity: 0.9;
         }
     </style>
 </head>
@@ -90,36 +233,62 @@
 
     <div class="container">
         <h1 style="margin-top: 0;">Révision du vocabulaire (NL)</h1>
-        <p class="subtitle">Choisis la bonne traduction parmi les 4 propositions</p>
-        <p id="wordCount" style="text-align: center; color: var(--secondary); font-weight: bold; margin-bottom: 20px;">Chargement...</p>
 
-        <div class="score-display">
-            Score: <span id="scoreValue">0</span>/<span id="totalValue">0</span>
+        <div class="header-section">
+            <div class="header-left">
+                <div class="score-display">
+                    📊 <span id="scoreValue">0</span>/<span id="maxQuestions">10</span>
+                </div>
+                <div class="mode-display" id="modeDisplay">🇫🇷 → 🇳🇱</div>
+            </div>
+
+            <div class="settings-section">
+                <label for="numQuestions">Questions :</label>
+                <select id="numQuestions" onchange="changerNombreQuestions()">
+                    <option value="10" selected>10</option>
+                    <option value="20">20</option>
+                    <option value="30">30</option>
+                </select>
+
+                <label for="modeSelect" style="margin-left: 20px;">Mode :</label>
+                <div class="mode-selector-inline">
+                    <button class="mode-btn active" onclick="changerMode('fr-to-nl')">🇫🇷 → 🇳🇱</button>
+                    <button class="mode-btn" onclick="changerMode('nl-to-fr')">🇳🇱 → 🇫🇷</button>
+                </div>
+            </div>
         </div>
 
         <div class="progress-bar">
             <div class="progress-fill" id="progressFill" style="width: 0%;"></div>
         </div>
 
-        <div class="mode-selector">
-            <button class="mode-btn active" onclick="changerMode('fr-to-nl')">🇫🇷 → 🇳🇱</button>
-            <button class="mode-btn" onclick="changerMode('nl-to-fr')">🇳🇱 → 🇫🇷</button>
-        </div>
-
-        <div class="quiz-section">
+        <div id="gameContainer">
             <div class="card-vocabulary" id="vocabularyCard">
                 <div class="word-label" id="questionLabel">Traduis en néerlandais :</div>
-                <div class="word-display" id="wordDisplay"></div>
+                <div class="word-display" id="wordDisplay">Chargement...</div>
                 <div class="pluriel" id="plurielDisplay"></div>
             </div>
 
             <div class="quiz-options" id="quizOptions"></div>
 
-            <div class="controls">
-                <button class="btn btn-primary" id="nextBtn" onclick="nouvelMot()" style="grid-column: 1 / -1; display: none;">🔄 Nouvelle question</button>
-            </div>
-
             <div class="result" id="result"></div>
+
+            <div class="controls" style="text-align: center; margin-top: 20px;">
+                <button class="btn btn-primary" id="nextBtn" onclick="nouvelMot()" style="display: none;">🔄 Question suivante</button>
+            </div>
+        </div>
+
+        <div id="gameOverContainer" style="display: none;">
+            <div class="game-over">
+                <h2>🎉 Quiz terminé !</h2>
+                <div class="final-score">
+                    Ton score : <span id="finalScore">0</span>/<span id="finalMax">10</span>
+                </div>
+                <div class="percentage">
+                    <span id="percentageValue">0</span>% de bonnes réponses
+                </div>
+                <button class="btn btn-primary" onclick="recommencer()" style="margin-top: 20px;">Recommencer</button>
+            </div>
         </div>
     </div>
 
@@ -127,10 +296,11 @@
         let mode = 'fr-to-nl';
         let vocabulaire = [];
         let motActuel = null;
-        let reponseSelectionnee = null;
         let reponseRevealed = false;
         let score = 0;
         let totalQuestions = 0;
+        let maxQuestions = 10;
+        let quizTermine = false;
 
         async function chargerVocabulaire() {
             try {
@@ -143,8 +313,6 @@
                     throw new Error('Aucun vocabulaire trouvé');
                 }
                 vocabulaire = data.vocabulaire_A1_A2;
-                document.getElementById('wordCount').textContent = `📊 ${vocabulaire.length} mots dans la liste`;
-                document.getElementById('totalValue').textContent = vocabulaire.length;
                 nouvelMot();
             } catch (error) {
                 console.error('Erreur de chargement:', error);
@@ -152,15 +320,20 @@
             }
         }
 
+        function changerNombreQuestions() {
+            maxQuestions = parseInt(document.getElementById('numQuestions').value);
+            document.getElementById('maxQuestions').textContent = maxQuestions;
+            reinitialiserQuiz();
+        }
+
         function changerMode(nouveauMode) {
             mode = nouveauMode;
-            score = 0;
-            totalQuestions = 0;
-            document.getElementById('scoreValue').textContent = '0';
-            updateProgressBar();
             
             document.querySelectorAll('.mode-btn').forEach(btn => btn.classList.remove('active'));
             event.target.classList.add('active');
+
+            const modeText = mode === 'fr-to-nl' ? '🇫🇷 → 🇳🇱' : '🇳🇱 → 🇫🇷';
+            document.getElementById('modeDisplay').textContent = modeText;
 
             if (mode === 'fr-to-nl') {
                 document.getElementById('questionLabel').textContent = 'Traduis en néerlandais :';
@@ -168,11 +341,26 @@
                 document.getElementById('questionLabel').textContent = 'Traduis en français :';
             }
 
+            reinitialiserQuiz();
+        }
+
+        function reinitialiserQuiz() {
+            score = 0;
+            totalQuestions = 0;
+            quizTermine = false;
+            document.getElementById('scoreValue').textContent = '0';
+            document.getElementById('gameContainer').style.display = 'block';
+            document.getElementById('gameOverContainer').style.display = 'none';
+            updateProgressBar();
             nouvelMot();
         }
 
         function nouvelMot() {
-            reponseSelectionnee = null;
+            if (totalQuestions >= maxQuestions) {
+                afficherFinQuiz();
+                return;
+            }
+
             reponseRevealed = false;
             document.getElementById('result').textContent = '';
             document.getElementById('nextBtn').style.display = 'none';
@@ -191,7 +379,7 @@
                 if (motActuel.de_of_het && motActuel.de_of_het !== 'geen') {
                     document.getElementById('plurielDisplay').textContent = `Article : ${motActuel.de_of_het}`;
                 } else if (motActuel.de_of_het === 'geen') {
-                    document.getElementById('plurielDisplay').textContent = '(verbe/adjectif/autre - pas d\'article)';
+                    document.getElementById('plurielDisplay').textContent = '(verbe/adjectif/autre)';
                 } else {
                     document.getElementById('plurielDisplay').textContent = '';
                 }
@@ -208,15 +396,12 @@
         }
 
         function genererOptionsReponse() {
-            // Déterminer la bonne réponse
             let bonneReponse = mode === 'fr-to-nl' ? 
                 motActuel.neerlandais_singulier : 
                 motActuel.francais;
 
-            // Créer un array avec 4 options différentes
             let options = [bonneReponse];
 
-            // Ajouter 3 fausses réponses
             while (options.length < 4) {
                 const randomIndex = Math.floor(Math.random() * vocabulaire.length);
                 const candidat = mode === 'fr-to-nl' ? 
@@ -228,14 +413,12 @@
                 }
             }
 
-            // Mélanger les options
             options = options.sort(() => Math.random() - 0.5);
 
-            // Afficher les boutons
             const quizOptions = document.getElementById('quizOptions');
             quizOptions.innerHTML = '';
 
-            options.forEach((option, index) => {
+            options.forEach((option) => {
                 const btn = document.createElement('button');
                 btn.className = 'option-btn';
                 btn.textContent = option;
@@ -247,7 +430,6 @@
         function validerOption(option, bonneReponse, btnElement) {
             if (reponseRevealed) return;
 
-            reponseSelectionnee = option;
             reponseRevealed = true;
             totalQuestions++;
 
@@ -264,12 +446,11 @@
                 resultDiv.innerHTML = `
                     <div class="result incorrect">
                         ✗ Incorrect.
-                        <div class="result-text">La bonne réponse : ${bonneReponse}</div>
+                        <div style="margin-top: 10px;">La bonne réponse : <strong>${bonneReponse}</strong></div>
                     </div>
                 `;
             }
 
-            // Désactiver tous les boutons
             document.querySelectorAll('.option-btn').forEach(btn => {
                 btn.disabled = true;
                 if (btn.textContent === bonneReponse) {
@@ -282,8 +463,24 @@
         }
 
         function updateProgressBar() {
-            const progress = (totalQuestions / vocabulaire.length) * 100;
+            const progress = (totalQuestions / maxQuestions) * 100;
             document.getElementById('progressFill').style.width = progress + '%';
+        }
+
+        function afficherFinQuiz() {
+            quizTermine = true;
+            const percentage = Math.round((score / maxQuestions) * 100);
+            
+            document.getElementById('finalScore').textContent = score;
+            document.getElementById('finalMax').textContent = maxQuestions;
+            document.getElementById('percentageValue').textContent = percentage;
+
+            document.getElementById('gameContainer').style.display = 'none';
+            document.getElementById('gameOverContainer').style.display = 'block';
+        }
+
+        function recommencer() {
+            reinitialiserQuiz();
         }
 
         window.addEventListener('load', () => {
