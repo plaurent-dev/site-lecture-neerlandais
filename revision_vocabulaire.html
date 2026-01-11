@@ -257,6 +257,12 @@
         }
 
         .header-result {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .header-result-text {
             font-size: 1.1em;
             font-weight: bold;
             padding: 10px 20px;
@@ -265,14 +271,35 @@
             text-align: center;
         }
 
-        .header-result.correct {
+        .header-result-text.correct {
             background-color: #c8e6c9;
             color: #2e7d32;
         }
 
-        .header-result.incorrect {
+        .header-result-text.incorrect {
             background-color: #ffcdd2;
             color: #c62828;
+        }
+
+        .header-next-btn {
+            padding: 10px 20px;
+            background-color: var(--secondary);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1em;
+            transition: all 0.3s ease;
+        }
+
+        .header-next-btn:hover {
+            background-color: var(--secondary-dark);
+            transform: translateY(-2px);
+        }
+
+        .header-next-btn:active {
+            transform: scale(0.95);
         }
     </style>
 </head>
@@ -296,7 +323,10 @@
                     📊 <span id="scoreValue">0</span>/<span id="maxQuestions">10</span>
                 </div>
                 <div class="mode-display" id="modeDisplay">🇫🇷 → 🇳🇱</div>
-                <div class="header-result" id="headerResult" style="display: none;"></div>
+                <div class="header-result" id="headerResult" style="display: none;">
+                    <div class="header-result-text" id="headerResultText"></div>
+                    <button class="header-next-btn" onclick="nouvelMot()">🔄 Suivant</button>
+                </div>
             </div>
 
             <div class="settings-section">
@@ -507,15 +537,15 @@
                 score++;
                 document.getElementById('scoreValue').textContent = score;
                 btnElement.classList.add('correct');
-                headerResult.className = 'header-result correct';
-                headerResult.innerHTML = '✓ Correct !';
-                headerResult.style.display = 'block';
+                document.getElementById('headerResultText').className = 'header-result-text correct';
+                document.getElementById('headerResultText').innerHTML = '✓ Correct !';
+                headerResult.style.display = 'flex';
                 resultDiv.innerHTML = `<div class="result correct" style="margin-top: 10px;">La bonne réponse : <strong>${bonneReponse}</strong></div>`;
             } else {
                 btnElement.classList.add('incorrect');
-                headerResult.className = 'header-result incorrect';
-                headerResult.innerHTML = '✗ Incorrect';
-                headerResult.style.display = 'block';
+                document.getElementById('headerResultText').className = 'header-result-text incorrect';
+                document.getElementById('headerResultText').innerHTML = '✗ Incorrect';
+                headerResult.style.display = 'flex';
                 resultDiv.innerHTML = `
                     <div class="result incorrect">
                         <div style="margin-top: 10px;">La bonne réponse : <strong>${bonneReponse}</strong></div>
