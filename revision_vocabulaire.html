@@ -255,6 +255,25 @@
         .speak-btn:active {
             transform: scale(0.95);
         }
+
+        .header-result {
+            font-size: 1.1em;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 8px;
+            min-width: 150px;
+            text-align: center;
+        }
+
+        .header-result.correct {
+            background-color: #c8e6c9;
+            color: #2e7d32;
+        }
+
+        .header-result.incorrect {
+            background-color: #ffcdd2;
+            color: #c62828;
+        }
     </style>
 </head>
 <body>
@@ -277,6 +296,7 @@
                     📊 <span id="scoreValue">0</span>/<span id="maxQuestions">10</span>
                 </div>
                 <div class="mode-display" id="modeDisplay">🇫🇷 → 🇳🇱</div>
+                <div class="header-result" id="headerResult" style="display: none;"></div>
             </div>
 
             <div class="settings-section">
@@ -480,18 +500,24 @@
             totalQuestions++;
 
             const resultDiv = document.getElementById('result');
+            const headerResult = document.getElementById('headerResult');
             const isCorrect = option === bonneReponse;
 
             if (isCorrect) {
                 score++;
                 document.getElementById('scoreValue').textContent = score;
                 btnElement.classList.add('correct');
-                resultDiv.innerHTML = `<div class="result correct">✓ Correct !</div>`;
+                headerResult.className = 'header-result correct';
+                headerResult.innerHTML = '✓ Correct !';
+                headerResult.style.display = 'block';
+                resultDiv.innerHTML = `<div class="result correct" style="margin-top: 10px;">La bonne réponse : <strong>${bonneReponse}</strong></div>`;
             } else {
                 btnElement.classList.add('incorrect');
+                headerResult.className = 'header-result incorrect';
+                headerResult.innerHTML = '✗ Incorrect';
+                headerResult.style.display = 'block';
                 resultDiv.innerHTML = `
                     <div class="result incorrect">
-                        ✗ Incorrect.
                         <div style="margin-top: 10px;">La bonne réponse : <strong>${bonneReponse}</strong></div>
                     </div>
                 `;
