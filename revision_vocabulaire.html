@@ -155,26 +155,31 @@
         .card-vocabulary {
             background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
             color: white;
-            padding: 30px;
-            border-radius: 8px;
+            padding: 40px;
+            border-radius: 12px;
             margin-bottom: 20px;
             text-align: center;
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
         }
 
         .card-vocabulary .word-label {
-            font-size: 1em;
-            margin-bottom: 15px;
-            opacity: 0.9;
+            font-size: 1.1em;
+            margin-bottom: 20px;
+            opacity: 0.95;
+            font-weight: 500;
         }
 
         .card-vocabulary .word-display {
             color: white;
-            margin: 15px 0;
+            margin: 25px 0;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
         }
 
         .card-vocabulary .pluriel {
-            font-size: 0.95em;
-            opacity: 0.85;
+            font-size: 1em;
+            opacity: 0.9;
+            margin-top: 15px;
         }
 
         .result {
@@ -218,6 +223,28 @@
         .game-over .percentage {
             font-size: 1.2em;
             opacity: 0.9;
+        }
+
+        .speak-btn {
+            background-color: rgba(255, 255, 255, 0.3);
+            border: 2px solid white;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1em;
+            font-weight: 600;
+            margin-top: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .speak-btn:hover {
+            background-color: rgba(255, 255, 255, 0.5);
+            transform: scale(1.05);
+        }
+
+        .speak-btn:active {
+            transform: scale(0.95);
         }
     </style>
 </head>
@@ -266,6 +293,9 @@
             <div class="card-vocabulary" id="vocabularyCard">
                 <div class="word-label" id="questionLabel">Traduis en néerlandais :</div>
                 <div class="word-display" id="wordDisplay">Chargement...</div>
+                <button class="speak-btn" id="speakBtn" onclick="prononcer()" style="display: none;">
+                    🔊 Écouter
+                </button>
                 <div class="pluriel" id="plurielDisplay"></div>
             </div>
 
@@ -373,8 +403,12 @@
         }
 
         function afficherMot() {
+            const speakBtn = document.getElementById('speakBtn');
+            speakBtn.style.display = 'block'; // Afficher le bouton
+
             if (mode === 'fr-to-nl') {
                 document.getElementById('wordDisplay').textContent = motActuel.francais;
+                speakBtn.textContent = '🔊 Écouter (FR)';
                 
                 if (motActuel.de_of_het && motActuel.de_of_het !== 'geen') {
                     document.getElementById('plurielDisplay').textContent = `Article : ${motActuel.de_of_het}`;
@@ -384,8 +418,8 @@
                     document.getElementById('plurielDisplay').textContent = '';
                 }
             } else {
-                const singulier = motActuel.neerlandais_singulier;
-                document.getElementById('wordDisplay').textContent = singulier;
+                document.getElementById('wordDisplay').textContent = motActuel.neerlandais_singulier;
+                speakBtn.textContent = '🔊 Écouter (NL)';
                 
                 if (motActuel.neerlandais_pluriel !== '—') {
                     document.getElementById('plurielDisplay').textContent = `Pluriel : ${motActuel.neerlandais_pluriel}`;
@@ -481,6 +515,33 @@
 
         function recommencer() {
             reinitialiserQuiz();
+        }
+
+        function prononcer() {
+            if (!motActuel) return;
+            
+            // Déterminer le mot à prononcer
+            const wordToPronounce = mode === 'fr-to-nl' ? 
+                motActuel.neerlandais_singulier : 
+                motActuel.francais;
+
+            // Créer une utterance
+            const utterance = new SpeechSynthesisUtterance(wordToPronounce);
+            
+            // Définir la langue
+            if (mode === 'fr-to-nl') {
+                utterance.lang = 'nl-NL'; // Néerlandais
+            } else {
+                utterance.lang = 'fr-FR'; // Français
+            }
+            
+            utterance.rate = 0.9;
+            utterance.pitch = 1;
+            utterance.volume = 1;
+            
+            // Parler
+            window.speechSynthesis.cancel(); // Arrêter tout discours en cours
+            window.speechSynthesis.speak(utterance);
         }
 
         window.addEventListener('load', () => {
