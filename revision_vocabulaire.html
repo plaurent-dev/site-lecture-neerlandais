@@ -25,6 +25,8 @@
             <button class="mode-btn" onclick="changerMode('nl-to-fr')">🇳🇱 → 🇫🇷</button>
         </div>
 
+        <p id="wordCount" style="text-align: center; color: var(--secondary); font-weight: bold; margin-bottom: 20px;">Chargement...</p>
+
         <div class="quiz-section">
             <div class="card-vocabulary" id="vocabularyCard">
                 <div class="word-label" id="questionLabel">Traduis en néerlandais :</div>
@@ -65,6 +67,7 @@
                     throw new Error('Aucun vocabulaire trouvé');
                 }
                 vocabulaire = data.vocabulaire_A1_A2;
+                document.getElementById('wordCount').textContent = `📊 ${vocabulaire.length} mots dans la liste`;
                 nouvelMot();
             } catch (error) {
                 console.error('Erreur de chargement:', error);
