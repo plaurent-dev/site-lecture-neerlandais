@@ -622,7 +622,7 @@
             <div class="fiche-card" data-fiche="${fiche.href}">
                 <h3>${fiche.region}</h3>
                 <p class="date">📅 ${formaterDate(fiche.date)}</p>
-                <button onclick="lancerFiche('${fiche.href}')">🚀 Ouvrir</button>
+                <button onclick="lancerFiche('articles/${fiche.href}')">🚀 Ouvrir</button>
             </div>
         `).join('');
 
