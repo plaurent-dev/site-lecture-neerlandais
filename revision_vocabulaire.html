@@ -106,7 +106,15 @@
         function afficherMot() {
             if (mode === 'fr-to-nl') {
                 document.getElementById('wordDisplay').textContent = motActuel.francais;
-                document.getElementById('plurielDisplay').textContent = '';
+                
+                // Afficher l'article attendu si ce n'est pas "geen"
+                if (motActuel.de_of_het && motActuel.de_of_het !== 'geen') {
+                    document.getElementById('plurielDisplay').textContent = `Article : ${motActuel.de_of_het}`;
+                } else if (motActuel.de_of_het === 'geen') {
+                    document.getElementById('plurielDisplay').textContent = '(verbe/adjectif/autre - pas d\'article)';
+                } else {
+                    document.getElementById('plurielDisplay').textContent = '';
+                }
             } else {
                 const singulier = motActuel.neerlandais_singulier;
                 document.getElementById('wordDisplay').textContent = singulier;
@@ -143,10 +151,12 @@
                 bonneReponse = motActuel.neerlandais_singulier;
                 const bonneReponsePluriel = motActuel.neerlandais_pluriel;
                 
+                // Vérifier avec article complet
                 reponseCorrect = reponse === normaliserTexte(bonneReponse) || 
                                  reponse === normaliserTexte(bonneReponsePluriel);
 
-                if (!reponseCorrect) {
+                // Si pas correct avec article, essayer sans article (sauf pour "geen")
+                if (!reponseCorrect && motActuel.de_of_het !== 'geen') {
                     const sansArticle = bonneReponse.replace(/^(de|het) /, '');
                     const sansArticlePluriel = bonneReponsePluriel.replace(/^(de|het) /, '');
                     reponseCorrect = reponse === normaliserTexte(sansArticle) ||

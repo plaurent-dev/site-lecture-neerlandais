@@ -1,91 +1,580 @@
 {
   "vocabulaire_A1_A2": [
-    {"neerlandais_singulier":"de man","neerlandais_pluriel":"de mannen","de_of_het":"de","francais":"l'homme"},
-    {"neerlandais_singulier":"de vrouw","neerlandais_pluriel":"de vrouwen","de_of_het":"de","francais":"la femme"},
-    {"neerlandais_singulier":"het kind","neerlandais_pluriel":"de kinderen","de_of_het":"het","francais":"l'enfant"},
-    {"neerlandais_singulier":"de jongen","neerlandais_pluriel":"de jongens","de_of_het":"de","francais":"le garçon"},
-    {"neerlandais_singulier":"het meisje","neerlandais_pluriel":"de meisjes","de_of_het":"het","francais":"la fille"},
-    {"neerlandais_singulier":"de vriend","neerlandais_pluriel":"de vrienden","de_of_het":"de","francais":"l'ami"},
-    {"neerlandais_singulier":"de vriendin","neerlandais_pluriel":"de vriendinnen","de_of_het":"de","francais":"l'amie"},
-    {"neerlandais_singulier":"de familie","neerlandais_pluriel":"de families","de_of_het":"de","francais":"la famille"},
-    {"neerlandais_singulier":"de vader","neerlandais_pluriel":"de vaders","de_of_het":"de","francais":"le père"},
-    {"neerlandais_singulier":"de moeder","neerlandais_pluriel":"de moeders","de_of_het":"de","francais":"la mère"},
-    {"neerlandais_singulier":"de broer","neerlandais_pluriel":"de broers","de_of_het":"de","francais":"le frère"},
-    {"neerlandais_singulier":"de zus","neerlandais_pluriel":"de zussen","de_of_het":"de","francais":"la sœur"},
-    {"neerlandais_singulier":"de oma","neerlandais_pluriel":"de oma's","de_of_het":"de","francais":"la grand-mère"},
-    {"neerlandais_singulier":"de opa","neerlandais_pluriel":"de opa's","de_of_het":"de","francais":"le grand-père"},
-
-    {"neerlandais_singulier":"het huis","neerlandais_pluriel":"de huizen","de_of_het":"het","francais":"la maison"},
-    {"neerlandais_singulier":"de kamer","neerlandais_pluriel":"de kamers","de_of_het":"de","francais":"la pièce"},
-    {"neerlandais_singulier":"de keuken","neerlandais_pluriel":"de keukens","de_of_het":"de","francais":"la cuisine"},
-    {"neerlandais_singulier":"de badkamer","neerlandais_pluriel":"de badkamers","de_of_het":"de","francais":"la salle de bain"},
-    {"neerlandais_singulier":"de tuin","neerlandais_pluriel":"de tuinen","de_of_het":"de","francais":"le jardin"},
-    {"neerlandais_singulier":"het raam","neerlandais_pluriel":"de ramen","de_of_het":"het","francais":"la fenêtre"},
-    {"neerlandais_singulier":"de deur","neerlandais_pluriel":"de deuren","de_of_het":"de","francais":"la porte"},
-    {"neerlandais_singulier":"de tafel","neerlandais_pluriel":"de tafels","de_of_het":"de","francais":"la table"},
-    {"neerlandais_singulier":"de stoel","neerlandais_pluriel":"de stoelen","de_of_het":"de","francais":"la chaise"},
-    {"neerlandais_singulier":"het bed","neerlandais_pluriel":"de bedden","de_of_het":"het","francais":"le lit"},
-
-    {"neerlandais_singulier":"de stad","neerlandais_pluriel":"de steden","de_of_het":"de","francais":"la ville"},
-    {"neerlandais_singulier":"het dorp","neerlandais_pluriel":"de dorpen","de_of_het":"het","francais":"le village"},
-    {"neerlandais_singulier":"de straat","neerlandais_pluriel":"de straten","de_of_het":"de","francais":"la rue"},
-    {"neerlandais_singulier":"de weg","neerlandais_pluriel":"de wegen","de_of_het":"de","francais":"la route"},
-    {"neerlandais_singulier":"de winkel","neerlandais_pluriel":"de winkels","de_of_het":"de","francais":"le magasin"},
-    {"neerlandais_singulier":"het ziekenhuis","neerlandais_pluriel":"de ziekenhuizen","de_of_het":"het","francais":"l'hôpital"},
-    {"neerlandais_singulier":"de school","neerlandais_pluriel":"de scholen","de_of_het":"de","francais":"l'école"},
-    {"neerlandais_singulier":"het park","neerlandais_pluriel":"de parken","de_of_het":"het","francais":"le parc"},
-    {"neerlandais_singulier":"de markt","neerlandais_pluriel":"de markten","de_of_het":"de","francais":"le marché"},
-
-    {"neerlandais_singulier":"de auto","neerlandais_pluriel":"de auto's","de_of_het":"de","francais":"la voiture"},
-    {"neerlandais_singulier":"de bus","neerlandais_pluriel":"de bussen","de_of_het":"de","francais":"le bus"},
-    {"neerlandais_singulier":"de trein","neerlandais_pluriel":"de treinen","de_of_het":"de","francais":"le train"},
-    {"neerlandais_singulier":"de fiets","neerlandais_pluriel":"de fietsen","de_of_het":"de","francais":"le vélo"},
-    {"neerlandais_singulier":"het vliegtuig","neerlandais_pluriel":"de vliegtuigen","de_of_het":"het","francais":"l'avion"},
-
-    {"neerlandais_singulier":"het water","neerlandais_pluriel":"—","de_of_het":"het","francais":"l'eau"},
-    {"neerlandais_singulier":"het brood","neerlandais_pluriel":"de broden","de_of_het":"het","francais":"le pain"},
-    {"neerlandais_singulier":"de kaas","neerlandais_pluriel":"de kazen","de_of_het":"de","francais":"le fromage"},
-    {"neerlandais_singulier":"de appel","neerlandais_pluriel":"de appels","de_of_het":"de","francais":"la pomme"},
-    {"neerlandais_singulier":"de banaan","neerlandais_pluriel":"de bananen","de_of_het":"de","francais":"la banane"},
-    {"neerlandais_singulier":"het vlees","neerlandais_pluriel":"—","de_of_het":"het","francais":"la viande"},
-    {"neerlandais_singulier":"de vis","neerlandais_pluriel":"de vissen","de_of_het":"de","francais":"le poisson"},
-    {"neerlandais_singulier":"de soep","neerlandais_pluriel":"de soepen","de_of_het":"de","francais":"la soupe"},
-    {"neerlandais_singulier":"de koffie","neerlandais_pluriel":"—","de_of_het":"de","francais":"le café"},
-    {"neerlandais_singulier":"de thee","neerlandais_pluriel":"—","de_of_het":"de","francais":"le thé"},
-
-    {"neerlandais_singulier":"de dag","neerlandais_pluriel":"de dagen","de_of_het":"de","francais":"le jour"},
-    {"neerlandais_singulier":"de week","neerlandais_pluriel":"de weken","de_of_het":"de","francais":"la semaine"},
-    {"neerlandais_singulier":"de maand","neerlandais_pluriel":"de maanden","de_of_het":"de","francais":"le mois"},
-    {"neerlandais_singulier":"het jaar","neerlandais_pluriel":"de jaren","de_of_het":"het","francais":"l'année"},
-    {"neerlandais_singulier":"de ochtend","neerlandais_pluriel":"de ochtenden","de_of_het":"de","francais":"le matin"},
-    {"neerlandais_singulier":"de middag","neerlandais_pluriel":"de middagen","de_of_het":"de","francais":"l'après-midi"},
-    {"neerlandais_singulier":"de avond","neerlandais_pluriel":"de avonden","de_of_het":"de","francais":"le soir"},
-    {"neerlandais_singulier":"de nacht","neerlandais_pluriel":"de nachten","de_of_het":"de","francais":"la nuit"},
-
-    {"neerlandais_singulier":"de hand","neerlandais_pluriel":"de handen","de_of_het":"de","francais":"la main"},
-    {"neerlandais_singulier":"de voet","neerlandais_pluriel":"de voeten","de_of_het":"de","francais":"le pied"},
-    {"neerlandais_singulier":"het hoofd","neerlandais_pluriel":"de hoofden","de_of_het":"het","francais":"la tête"},
-    {"neerlandais_singulier":"de arm","neerlandais_pluriel":"de armen","de_of_het":"de","francais":"le bras"},
-    {"neerlandais_singulier":"de rug","neerlandais_pluriel":"de ruggen","de_of_het":"de","francais":"le dos"},
-
-    {"neerlandais_singulier":"de jas","neerlandais_pluriel":"de jassen","de_of_het":"de","francais":"le manteau"},
-    {"neerlandais_singulier":"de broek","neerlandais_pluriel":"de broeken","de_of_het":"de","francais":"le pantalon"},
-    {"neerlandais_singulier":"het shirt","neerlandais_pluriel":"de shirts","de_of_het":"het","francais":"le t-shirt"},
-    {"neerlandais_singulier":"de schoen","neerlandais_pluriel":"de schoenen","de_of_het":"de","francais":"la chaussure"},
-
-    {"neerlandais_singulier":"de regen","neerlandais_pluriel":"—","de_of_het":"de","francais":"la pluie"},
-    {"neerlandais_singulier":"de zon","neerlandais_pluriel":"—","de_of_het":"de","francais":"le soleil"},
-    {"neerlandais_singulier":"de wind","neerlandais_pluriel":"—","de_of_het":"de","francais":"le vent"},
-    {"neerlandais_singulier":"de sneeuw","neerlandais_pluriel":"—","de_of_het":"de","francais":"la neige"},
-
-    {"neerlandais_singulier":"het werk","neerlandais_pluriel":"de werken","de_of_het":"het","francais":"le travail"},
-    {"neerlandais_singulier":"de baan","neerlandais_pluriel":"de banen","de_of_het":"de","francais":"l'emploi"},
-    {"neerlandais_singulier":"de collega","neerlandais_pluriel":"de collega's","de_of_het":"de","francais":"le collègue"},
-
-    {"neerlandais_singulier":"de vraag","neerlandais_pluriel":"de vragen","de_of_het":"de","francais":"la question"},
-    {"neerlandais_singulier":"het antwoord","neerlandais_pluriel":"de antwoorden","de_of_het":"het","francais":"la réponse"},
-    {"neerlandais_singulier":"de naam","neerlandais_pluriel":"de namen","de_of_het":"de","francais":"le nom"},
-    {"neerlandais_singulier":"het woord","neerlandais_pluriel":"de woorden","de_of_het":"het","francais":"le mot"},
-    {"neerlandais_singulier":"de taal","neerlandais_pluriel":"de talen","de_of_het":"de","francais":"la langue"}
+    {
+      "neerlandais_singulier": "de man",
+      "neerlandais_pluriel": "de mannen",
+      "de_of_het": "de",
+      "francais": "l'homme"
+    },
+    {
+      "neerlandais_singulier": "de vrouw",
+      "neerlandais_pluriel": "de vrouwen",
+      "de_of_het": "de",
+      "francais": "la femme"
+    },
+    {
+      "neerlandais_singulier": "het kind",
+      "neerlandais_pluriel": "de kinderen",
+      "de_of_het": "het",
+      "francais": "l'enfant"
+    },
+    {
+      "neerlandais_singulier": "de jongen",
+      "neerlandais_pluriel": "de jongens",
+      "de_of_het": "de",
+      "francais": "le garçon"
+    },
+    {
+      "neerlandais_singulier": "het meisje",
+      "neerlandais_pluriel": "de meisjes",
+      "de_of_het": "het",
+      "francais": "la fille"
+    },
+    {
+      "neerlandais_singulier": "de vriend",
+      "neerlandais_pluriel": "de vrienden",
+      "de_of_het": "de",
+      "francais": "l'ami"
+    },
+    {
+      "neerlandais_singulier": "de vriendin",
+      "neerlandais_pluriel": "de vriendinnen",
+      "de_of_het": "de",
+      "francais": "l'amie"
+    },
+    {
+      "neerlandais_singulier": "de familie",
+      "neerlandais_pluriel": "de families",
+      "de_of_het": "de",
+      "francais": "la famille"
+    },
+    {
+      "neerlandais_singulier": "de vader",
+      "neerlandais_pluriel": "de vaders",
+      "de_of_het": "de",
+      "francais": "le père"
+    },
+    {
+      "neerlandais_singulier": "de moeder",
+      "neerlandais_pluriel": "de moeders",
+      "de_of_het": "de",
+      "francais": "la mère"
+    },
+    {
+      "neerlandais_singulier": "de broer",
+      "neerlandais_pluriel": "de broers",
+      "de_of_het": "de",
+      "francais": "le frère"
+    },
+    {
+      "neerlandais_singulier": "de zus",
+      "neerlandais_pluriel": "de zussen",
+      "de_of_het": "de",
+      "francais": "la sœur"
+    },
+    {
+      "neerlandais_singulier": "de oma",
+      "neerlandais_pluriel": "de oma's",
+      "de_of_het": "de",
+      "francais": "la grand-mère"
+    },
+    {
+      "neerlandais_singulier": "de opa",
+      "neerlandais_pluriel": "de opa's",
+      "de_of_het": "de",
+      "francais": "le grand-père"
+    },
+    {
+      "neerlandais_singulier": "het huis",
+      "neerlandais_pluriel": "de huizen",
+      "de_of_het": "het",
+      "francais": "la maison"
+    },
+    {
+      "neerlandais_singulier": "de kamer",
+      "neerlandais_pluriel": "de kamers",
+      "de_of_het": "de",
+      "francais": "la pièce"
+    },
+    {
+      "neerlandais_singulier": "de keuken",
+      "neerlandais_pluriel": "de keukens",
+      "de_of_het": "de",
+      "francais": "la cuisine"
+    },
+    {
+      "neerlandais_singulier": "de badkamer",
+      "neerlandais_pluriel": "de badkamers",
+      "de_of_het": "de",
+      "francais": "la salle de bain"
+    },
+    {
+      "neerlandais_singulier": "de tuin",
+      "neerlandais_pluriel": "de tuinen",
+      "de_of_het": "de",
+      "francais": "le jardin"
+    },
+    {
+      "neerlandais_singulier": "het raam",
+      "neerlandais_pluriel": "de ramen",
+      "de_of_het": "het",
+      "francais": "la fenêtre"
+    },
+    {
+      "neerlandais_singulier": "de deur",
+      "neerlandais_pluriel": "de deuren",
+      "de_of_het": "de",
+      "francais": "la porte"
+    },
+    {
+      "neerlandais_singulier": "de tafel",
+      "neerlandais_pluriel": "de tafels",
+      "de_of_het": "de",
+      "francais": "la table"
+    },
+    {
+      "neerlandais_singulier": "de stoel",
+      "neerlandais_pluriel": "de stoelen",
+      "de_of_het": "de",
+      "francais": "la chaise"
+    },
+    {
+      "neerlandais_singulier": "het bed",
+      "neerlandais_pluriel": "de bedden",
+      "de_of_het": "het",
+      "francais": "le lit"
+    },
+    {
+      "neerlandais_singulier": "de stad",
+      "neerlandais_pluriel": "de steden",
+      "de_of_het": "de",
+      "francais": "la ville"
+    },
+    {
+      "neerlandais_singulier": "het dorp",
+      "neerlandais_pluriel": "de dorpen",
+      "de_of_het": "het",
+      "francais": "le village"
+    },
+    {
+      "neerlandais_singulier": "de straat",
+      "neerlandais_pluriel": "de straten",
+      "de_of_het": "de",
+      "francais": "la rue"
+    },
+    {
+      "neerlandais_singulier": "de weg",
+      "neerlandais_pluriel": "de wegen",
+      "de_of_het": "de",
+      "francais": "la route"
+    },
+    {
+      "neerlandais_singulier": "de winkel",
+      "neerlandais_pluriel": "de winkels",
+      "de_of_het": "de",
+      "francais": "le magasin"
+    },
+    {
+      "neerlandais_singulier": "het ziekenhuis",
+      "neerlandais_pluriel": "de ziekenhuizen",
+      "de_of_het": "het",
+      "francais": "l'hôpital"
+    },
+    {
+      "neerlandais_singulier": "de school",
+      "neerlandais_pluriel": "de scholen",
+      "de_of_het": "de",
+      "francais": "l'école"
+    },
+    {
+      "neerlandais_singulier": "het park",
+      "neerlandais_pluriel": "de parken",
+      "de_of_het": "het",
+      "francais": "le parc"
+    },
+    {
+      "neerlandais_singulier": "de markt",
+      "neerlandais_pluriel": "de markten",
+      "de_of_het": "de",
+      "francais": "le marché"
+    },
+    {
+      "neerlandais_singulier": "de auto",
+      "neerlandais_pluriel": "de auto's",
+      "de_of_het": "de",
+      "francais": "la voiture"
+    },
+    {
+      "neerlandais_singulier": "de bus",
+      "neerlandais_pluriel": "de bussen",
+      "de_of_het": "de",
+      "francais": "le bus"
+    },
+    {
+      "neerlandais_singulier": "de trein",
+      "neerlandais_pluriel": "de treinen",
+      "de_of_het": "de",
+      "francais": "le train"
+    },
+    {
+      "neerlandais_singulier": "de fiets",
+      "neerlandais_pluriel": "de fietsen",
+      "de_of_het": "de",
+      "francais": "le vélo"
+    },
+    {
+      "neerlandais_singulier": "het vliegtuig",
+      "neerlandais_pluriel": "de vliegtuigen",
+      "de_of_het": "het",
+      "francais": "l'avion"
+    },
+    {
+      "neerlandais_singulier": "het water",
+      "neerlandais_pluriel": "—",
+      "de_of_het": "het",
+      "francais": "l'eau"
+    },
+    {
+      "neerlandais_singulier": "het brood",
+      "neerlandais_pluriel": "de broden",
+      "de_of_het": "het",
+      "francais": "le pain"
+    },
+    {
+      "neerlandais_singulier": "de kaas",
+      "neerlandais_pluriel": "de kazen",
+      "de_of_het": "de",
+      "francais": "le fromage"
+    },
+    {
+      "neerlandais_singulier": "de appel",
+      "neerlandais_pluriel": "de appels",
+      "de_of_het": "de",
+      "francais": "la pomme"
+    },
+    {
+      "neerlandais_singulier": "de banaan",
+      "neerlandais_pluriel": "de bananen",
+      "de_of_het": "de",
+      "francais": "la banane"
+    },
+    {
+      "neerlandais_singulier": "het vlees",
+      "neerlandais_pluriel": "—",
+      "de_of_het": "het",
+      "francais": "la viande"
+    },
+    {
+      "neerlandais_singulier": "de vis",
+      "neerlandais_pluriel": "de vissen",
+      "de_of_het": "de",
+      "francais": "le poisson"
+    },
+    {
+      "neerlandais_singulier": "de soep",
+      "neerlandais_pluriel": "de soepen",
+      "de_of_het": "de",
+      "francais": "la soupe"
+    },
+    {
+      "neerlandais_singulier": "de koffie",
+      "neerlandais_pluriel": "—",
+      "de_of_het": "de",
+      "francais": "le café"
+    },
+    {
+      "neerlandais_singulier": "de thee",
+      "neerlandais_pluriel": "—",
+      "de_of_het": "de",
+      "francais": "le thé"
+    },
+    {
+      "neerlandais_singulier": "de dag",
+      "neerlandais_pluriel": "de dagen",
+      "de_of_het": "de",
+      "francais": "le jour"
+    },
+    {
+      "neerlandais_singulier": "de week",
+      "neerlandais_pluriel": "de weken",
+      "de_of_het": "de",
+      "francais": "la semaine"
+    },
+    {
+      "neerlandais_singulier": "de maand",
+      "neerlandais_pluriel": "de maanden",
+      "de_of_het": "de",
+      "francais": "le mois"
+    },
+    {
+      "neerlandais_singulier": "het jaar",
+      "neerlandais_pluriel": "de jaren",
+      "de_of_het": "het",
+      "francais": "l'année"
+    },
+    {
+      "neerlandais_singulier": "de ochtend",
+      "neerlandais_pluriel": "de ochtenden",
+      "de_of_het": "de",
+      "francais": "le matin"
+    },
+    {
+      "neerlandais_singulier": "de middag",
+      "neerlandais_pluriel": "de middagen",
+      "de_of_het": "de",
+      "francais": "l'après-midi"
+    },
+    {
+      "neerlandais_singulier": "de avond",
+      "neerlandais_pluriel": "de avonden",
+      "de_of_het": "de",
+      "francais": "le soir"
+    },
+    {
+      "neerlandais_singulier": "de nacht",
+      "neerlandais_pluriel": "de nachten",
+      "de_of_het": "de",
+      "francais": "la nuit"
+    },
+    {
+      "neerlandais_singulier": "de hand",
+      "neerlandais_pluriel": "de handen",
+      "de_of_het": "de",
+      "francais": "la main"
+    },
+    {
+      "neerlandais_singulier": "de voet",
+      "neerlandais_pluriel": "de voeten",
+      "de_of_het": "de",
+      "francais": "le pied"
+    },
+    {
+      "neerlandais_singulier": "het hoofd",
+      "neerlandais_pluriel": "de hoofden",
+      "de_of_het": "het",
+      "francais": "la tête"
+    },
+    {
+      "neerlandais_singulier": "de arm",
+      "neerlandais_pluriel": "de armen",
+      "de_of_het": "de",
+      "francais": "le bras"
+    },
+    {
+      "neerlandais_singulier": "de rug",
+      "neerlandais_pluriel": "de ruggen",
+      "de_of_het": "de",
+      "francais": "le dos"
+    },
+    {
+      "neerlandais_singulier": "de jas",
+      "neerlandais_pluriel": "de jassen",
+      "de_of_het": "de",
+      "francais": "le manteau"
+    },
+    {
+      "neerlandais_singulier": "de broek",
+      "neerlandais_pluriel": "de broeken",
+      "de_of_het": "de",
+      "francais": "le pantalon"
+    },
+    {
+      "neerlandais_singulier": "het shirt",
+      "neerlandais_pluriel": "de shirts",
+      "de_of_het": "het",
+      "francais": "le t-shirt"
+    },
+    {
+      "neerlandais_singulier": "de schoen",
+      "neerlandais_pluriel": "de schoenen",
+      "de_of_het": "de",
+      "francais": "la chaussure"
+    },
+    {
+      "neerlandais_singulier": "de regen",
+      "neerlandais_pluriel": "—",
+      "de_of_het": "de",
+      "francais": "la pluie"
+    },
+    {
+      "neerlandais_singulier": "de zon",
+      "neerlandais_pluriel": "—",
+      "de_of_het": "de",
+      "francais": "le soleil"
+    },
+    {
+      "neerlandais_singulier": "de wind",
+      "neerlandais_pluriel": "—",
+      "de_of_het": "de",
+      "francais": "le vent"
+    },
+    {
+      "neerlandais_singulier": "de sneeuw",
+      "neerlandais_pluriel": "—",
+      "de_of_het": "de",
+      "francais": "la neige"
+    },
+    {
+      "neerlandais_singulier": "het werk",
+      "neerlandais_pluriel": "de werken",
+      "de_of_het": "het",
+      "francais": "le travail"
+    },
+    {
+      "neerlandais_singulier": "de baan",
+      "neerlandais_pluriel": "de banen",
+      "de_of_het": "de",
+      "francais": "l'emploi"
+    },
+    {
+      "neerlandais_singulier": "de collega",
+      "neerlandais_pluriel": "de collega's",
+      "de_of_het": "de",
+      "francais": "le collègue"
+    },
+    {
+      "neerlandais_singulier": "de vraag",
+      "neerlandais_pluriel": "de vragen",
+      "de_of_het": "de",
+      "francais": "la question"
+    },
+    {
+      "neerlandais_singulier": "het antwoord",
+      "neerlandais_pluriel": "de antwoorden",
+      "de_of_het": "het",
+      "francais": "la réponse"
+    },
+    {
+      "neerlandais_singulier": "de naam",
+      "neerlandais_pluriel": "de namen",
+      "de_of_het": "de",
+      "francais": "le nom"
+    },
+    {
+      "neerlandais_singulier": "het woord",
+      "neerlandais_pluriel": "de woorden",
+      "de_of_het": "het",
+      "francais": "le mot"
+    },
+    {
+      "neerlandais_singulier": "de taal",
+      "neerlandais_pluriel": "de talen",
+      "de_of_het": "de",
+      "francais": "la langue"
+    },
+    {
+      "francais": "francais",
+      "neerlandais_singulier": "neerlandais_singulier",
+      "neerlandais_pluriel": "neerlandais_pluriel",
+      "de_of_het": "article"
+    },
+    {
+      "francais": "merci",
+      "neerlandais_singulier": "dank",
+      "neerlandais_pluriel": "danken",
+      "de_of_het": "geen"
+    },
+    {
+      "francais": "espagnol",
+      "neerlandais_singulier": "Spaans",
+      "neerlandais_pluriel": "Spaanse",
+      "de_of_het": "geen"
+    },
+    {
+      "francais": "italien",
+      "neerlandais_singulier": "Italiaans",
+      "neerlandais_pluriel": "Italiaanse",
+      "de_of_het": "geen"
+    },
+    {
+      "francais": "français",
+      "neerlandais_singulier": "Frans",
+      "neerlandais_pluriel": "Franse",
+      "de_of_het": "geen"
+    },
+    {
+      "francais": "anglais",
+      "neerlandais_singulier": "Engels",
+      "neerlandais_pluriel": "Engelse",
+      "de_of_het": "geen"
+    },
+    {
+      "francais": "allemand",
+      "neerlandais_singulier": "Duits",
+      "neerlandais_pluriel": "Duitse",
+      "de_of_het": "geen"
+    },
+    {
+      "francais": "agréable",
+      "neerlandais_singulier": "aangenaam",
+      "neerlandais_pluriel": "aangename",
+      "de_of_het": "geen"
+    },
+    {
+      "francais": "parler",
+      "neerlandais_singulier": "spreken",
+      "neerlandais_pluriel": "spreken",
+      "de_of_het": "geen"
+    },
+    {
+      "francais": "habiter",
+      "neerlandais_singulier": "wonen",
+      "neerlandais_pluriel": "wonen",
+      "de_of_het": "geen"
+    },
+    {
+      "francais": "café",
+      "neerlandais_singulier": "de koffie",
+      "neerlandais_pluriel": "de koffies",
+      "de_of_het": "de"
+    },
+    {
+      "francais": "vacances",
+      "neerlandais_singulier": "de vakantie",
+      "neerlandais_pluriel": "de vakanties",
+      "de_of_het": "de"
+    },
+    {
+      "francais": "noir",
+      "neerlandais_singulier": "zwart",
+      "neerlandais_pluriel": "zwarte",
+      "de_of_het": "geen"
+    },
+    {
+      "francais": "pourquoi",
+      "neerlandais_singulier": "waarom",
+      "neerlandais_pluriel": "waarom",
+      "de_of_het": "geen"
+    },
+    {
+      "francais": "lequel/laquelle",
+      "neerlandais_singulier": "welke",
+      "neerlandais_pluriel": "welke",
+      "de_of_het": "geen"
+    },
+    {
+      "francais": "quand",
+      "neerlandais_singulier": "wanneer",
+      "neerlandais_pluriel": "wanneer",
+      "de_of_het": "geen"
+    },
+    {
+      "francais": "où",
+      "neerlandais_singulier": "waar",
+      "neerlandais_pluriel": "waar",
+      "de_of_het": "geen"
+    },
+    {
+      "francais": "quoi",
+      "neerlandais_singulier": "wat",
+      "neerlandais_pluriel": "wat",
+      "de_of_het": "geen"
+    },
+    {
+      "francais": "qui",
+      "neerlandais_singulier": "wie",
+      "neerlandais_pluriel": "wie",
+      "de_of_het": "geen"
+    }
   ]
 }
