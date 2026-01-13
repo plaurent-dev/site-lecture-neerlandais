@@ -435,12 +435,11 @@
             <h1>🇳🇱 Verbes Irréguliers Kahoot</h1>
 
             <div class="config-section">
-                <label>Filtre par Auxiliaire</label>
+                <label>Filtre par Fréquence</label>
                 <div class="filter-group">
-                    <button class="filter-btn active" data-filter="all">Tous</button>
-                    <button class="filter-btn" data-filter="hebben">hebben (🔵)</button>
-                    <button class="filter-btn" data-filter="zijn">zijn (🟢)</button>
-                    <button class="filter-btn" data-filter="both">hebben ou zijn (🟡)</button>
+                    <button class="filter-btn active" data-frequency="all">Tous les verbes</button>
+                    <button class="filter-btn" data-frequency="very_frequent">⭐ Très fréquent</button>
+                    <button class="filter-btn" data-frequency="frequent">⭐⭐ Fréquent</button>
                 </div>
             </div>
 
@@ -507,7 +506,7 @@
     <script>
         let verbes = [];
         let filteredVerbes = [];
-        let selectedAuxiliary = 'all';
+        let selectedFrequency = 'all';
         let selectedTime = 'all';
         let verbCount = 10;
         let currentQuestionIndex = 0;
@@ -530,9 +529,13 @@
         // Appliquer les filtres
         function applyFilters() {
             filteredVerbes = verbes.filter(v => {
-                // Filtre auxiliaire
-                if (selectedAuxiliary !== 'all' && v.auxiliary !== selectedAuxiliary) {
-                    return false;
+                // Filtre fréquence
+                if (selectedFrequency === 'all') {
+                    return true;
+                } else if (selectedFrequency === 'very_frequent') {
+                    return v.frequency === 'very_frequent';
+                } else if (selectedFrequency === 'frequent') {
+                    return v.frequency === 'very_frequent' || v.frequency === 'frequent';
                 }
                 return true;
             });
@@ -540,12 +543,12 @@
             console.log(`${filteredVerbes.length} verbes après filtrage`);
         }
 
-        // Événements des filtres
-        document.querySelectorAll('[data-filter]').forEach(btn => {
+        // Événements des filtres fréquence
+        document.querySelectorAll('[data-frequency]').forEach(btn => {
             btn.addEventListener('click', function() {
-                document.querySelectorAll('[data-filter]').forEach(b => b.classList.remove('active'));
+                document.querySelectorAll('[data-frequency]').forEach(b => b.classList.remove('active'));
                 this.classList.add('active');
-                selectedAuxiliary = this.dataset.filter;
+                selectedFrequency = this.dataset.frequency;
             });
         });
 
