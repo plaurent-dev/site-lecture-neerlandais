@@ -655,6 +655,9 @@
 
                 // Générer la question et les options
                 generateQuestion(currentVerb, timeToUse, randomPerson);
+
+                // Mettre à jour le header
+                updateQuizHeader();
             } catch (error) {
                 console.error('Erreur dans nextQuestion:', error);
             }
