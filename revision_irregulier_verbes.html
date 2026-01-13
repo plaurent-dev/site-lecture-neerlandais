@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Révision Verbes Irréguliers (NL)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .irregular-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .frequency-filters {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 12px;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: var(--bg-light-gray);
+            border-radius: 8px;
+            border: 1px solid var(--border);
+        }
+
+        .filter-btn {
+            padding: 12px 20px;
+            border: 2px solid var(--border);
+            background: white;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            font-size: 0.95em;
+            color: var(--text-dark);
+        }
+
+        .filter-btn:hover {
+            border-color: var(--primary);
+            background: var(--info);
+            transform: translateY(-2px);
+        }
+
+        .filter-btn.active {
+            border-color: var(--primary);
+            background: var(--primary);
+            color: white;
+        }
+
+        .exercise-box {
+            background: var(--bg-light-gray);
+            padding: 30px;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary);
+        }
+
+        .verb-display {
+            margin-bottom: 25px;
+        }
+
+        .infinitive-form {
+            font-size: 1.4em;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .translation {
+            font-size: 1em;
+            color: var(--text-medium);
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+
+        .question-type {
+            font-size: 1.1em;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 20px;
+            padding: 12px;
+            background: white;
+            border-left: 4px solid var(--secondary);
+            border-radius: 4px;
+        }
+
+        .options {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .option-btn {
+            padding: 15px;
+            border: 2px solid var(--border);
+            background: white;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1em;
+            font-weight: 600;
+            text-align: left;
+            color: var(--text-dark);
+        }
+
+        .option-btn:hover {
+            border-color: var(--primary);
+            background: var(--info);
+            transform: translateX(5px);
+        }
+
+        .option-btn.selected {
+            border-color: var(--primary);
+            background: var(--primary);
+            color: white;
+        }
+
+        .option-btn.correct {
+            border-color: var(--success);
+            background: var(--success);
+            color: white;
+        }
+
+        .option-btn.incorrect {
+            border-color: var(--accent);
+            background: var(--accent);
+            color: white;
+        }
+
+        .feedback {
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+            font-weight: 600;
+            display: none;
+        }
+
+        .feedback.correct {
+            background: #D1FAE5;
+            color: #065F46;
+            border-left: 4px solid var(--success);
+            display: block;
+        }
+
+        .feedback.incorrect {
+            background: #FEE2E2;
+            color: #7F1D1D;
+            border-left: 4px solid var(--accent);
+            display: block;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .btn {
+            flex: 1;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            font-size: 1em;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+
+        .btn-primary:hover:not(:disabled) {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        .btn-primary:disabled {
+            background: var(--text-light);
+            cursor: not-allowed;
+        }
+
+        .btn-secondary {
+            background: var(--secondary);
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background: var(--secondary-dark);
+            transform: translateY(-2px);
+        }
+
+        .score {
+            text-align: center;
+            padding: 15px;
+            background: var(--info);
+            border-radius: 8px;
+            font-weight: 600;
+            color: var(--primary);
+            font-size: 1.1em;
+            margin-bottom: 20px;
+        }
+
+        .memory {
+            background: #FEF3C7;
+            border-left: 4px solid var(--warning);
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            color: #92400E;
+            line-height: 1.6;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .stat-box {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid var(--border);
+        }
+
+        .stat-label {
+            font-size: 0.9em;
+            color: var(--text-medium);
+            margin-bottom: 5px;
+        }
+
+        .stat-value {
+            font-size: 1.5em;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .filter-info {
+            text-align: center;
+            padding: 10px;
+            background: var(--info);
+            border-radius: 8px;
+            color: var(--primary);
+            font-weight: 600;
+            margin-top: 15px;
+        }
+
+        .no-verbs-message {
+            text-align: center;
+            padding: 40px 20px;
+            color: var(--text-medium);
+            background: var(--bg-light-gray);
+            border-radius: 8px;
+            border-left: 4px solid var(--accent);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-content">
+            <h1>📚 FR/NL</h1>
+            <div class="navbar-buttons">
+                <a href="index.html" class="navbar-link">🏠 Accueil</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1 style="margin-top: 0;">Révision des Verbes Irréguliers</h1>
+        <p class="subtitle">Entraîne-toi à reconnaître les formes de l'imparfait (passé simple) des verbes irréguliers néerlandais !</p>
+
+        <div class="memory">
+            <strong>📝 Rappel :</strong> <br>
+            L'<b>imparfait singulier</b> (ik/jij/hij/zij/u) et <b>pluriel</b> (wij/jullie/zij) sont importants à mémoriser pour les verbes irréguliers. Le <b>participe passé</b> est utilisé avec "hebben" ou "zijn" pour former les temps composés.
+        </div>
+
+        <h2 style="color: var(--primary); margin-top: 30px;">Choisir votre niveau</h2>
+        <div class="frequency-filters">
+            <button class="filter-btn active" onclick="changerFiltre('very_frequent')">
+                ⭐ Très fréquent
+            </button>
+            <button class="filter-btn" onclick="changerFiltre('frequent')">
+                ⭐⭐ Fréquent
+            </button>
+            <button class="filter-btn" onclick="changerFiltre('all')">
+                ⭐⭐⭐ Tous les verbes
+            </button>
+        </div>
+
+        <div class="score">
+            Réponses correctes : <span id="scoreValue">0</span> / <span id="totalValue">0</span>
+        </div>
+
+        <div class="exercise-box">
+            <div class="verb-display">
+                <div class="infinitive-form" id="infinitiveForm">Chargement...</div>
+                <div class="translation" id="translation">Attente du chargement...</div>
+            </div>
+
+            <div class="question-type" id="questionType"></div>
+
+            <div class="options" id="optionsContainer"></div>
+
+            <div class="feedback" id="feedback"></div>
+
+            <div class="button-group">
+                <button class="btn btn-primary" id="validateBtn" onclick="validerReponse()" disabled>Valider</button>
+                <button class="btn btn-secondary" id="nextBtn" onclick="nouvelleQuestion()" style="display: none;">Question suivante</button>
+            </div>
+
+            <div class="stats">
+                <div class="stat-box">
+                    <div class="stat-label">Bonnes réponses</div>
+                    <div class="stat-value" id="correctCount">0</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-label">Taux de réussite</div>
+                    <div class="stat-value" id="percentage">0%</div>
+                </div>
+            </div>
+
+            <div class="filter-info" id="filterInfo"></div>
+        </div>
+    </div>
+
+    <script>
+        let verbes = [];
+        let verbesFiltrés = [];
+        let currentVerb = null;
+        let currentQuestion = null;
+        let selectedOption = null;
+        let correctAnswer = null;
+        let questionAnswered = false;
+        let correctCount = 0;
+        let totalCount = 0;
+        let currentFrequency = 'very_frequent';
+        const MAX_QUESTIONS = 10;
+
+        // Types de questions possibles
+        const questionTypes = [
+            { type: 'singular', label: 'Imparfait singulier', field: 'past_singular' },
+            { type: 'plural', label: 'Imparfait pluriel', field: 'past_plural' },
+            { type: 'participle', label: 'Participe passé', field: 'past_participle' }
+        ];
+
+        async function chargerVerbes() {
+            try {
+                const response = await fetch('irregulier.json?t=' + Date.now());
+                if (!response.ok) {
+                    throw new Error('Impossible de charger irregulier.json');
+                }
+                verbes = await response.json();
+                console.log('Verbes chargés:', verbes.length);
+                
+                // Appliquer le filtre initial
+                appliquerFiltre();
+            } catch (e) {
+                console.error('Erreur:', e);
+                document.querySelector('.exercise-box').innerHTML = 
+                    `<div style="color: red;"><strong>Erreur:</strong> ${e.message}</div>`;
+            }
+        }
+
+        function appliquerFiltre() {
+            if (currentFrequency === 'very_frequent') {
+                verbesFiltrés = verbes.filter(v => v.frequency === 'very_frequent');
+            } else if (currentFrequency === 'frequent') {
+                verbesFiltrés = verbes.filter(v => v.frequency === 'very_frequent' || v.frequency === 'frequent');
+            } else {
+                verbesFiltrés = verbes;
+            }
+
+            console.log('Verbes filtrés:', verbesFiltrés.length);
+
+            // Afficher les informations
+            let infoBullets = '';
+            const countVeryFrequent = verbes.filter(v => v.frequency === 'very_frequent').length;
+            const countFrequent = verbes.filter(v => v.frequency === 'frequent').length;
+
+            if (currentFrequency === 'very_frequent') {
+                infoBullets = `${countVeryFrequent} verbes chargés`;
+            } else if (currentFrequency === 'frequent') {
+                infoBullets = `${countVeryFrequent + countFrequent} verbes chargés`;
+            } else {
+                infoBullets = `${verbes.length} verbes chargés`;
+            }
+
+            document.getElementById('filterInfo').textContent = infoBullets;
+
+            if (verbesFiltrés.length === 0) {
+                document.querySelector('.exercise-box').innerHTML = 
+                    `<div class="no-verbs-message">
+                        <strong>Aucun verbe disponible</strong><br>
+                        Aucun verbe trouvé pour cette catégorie. Veuillez choisir un autre filtre.
+                    </div>`;
+            } else {
+                // Réinitialiser l'exercice
+                correctCount = 0;
+                totalCount = 0;
+                questionAnswered = false;
+                selectedOption = null;
+                document.getElementById('validateBtn').disabled = false;
+                document.getElementById('validateBtn').style.display = 'block';
+                document.getElementById('nextBtn').style.display = 'none';
+                document.getElementById('feedback').className = 'feedback';
+                document.getElementById('feedback').textContent = '';
+                updateScore();
+                nouvelleQuestion();
+            }
+        }
+
+        function changerFiltre(frequency) {
+            currentFrequency = frequency;
+            
+            // Mettre à jour les boutons
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+
+            appliquerFiltre();
+        }
+
+        function nouvelleQuestion() {
+            // Vérifier si l'exercice est terminé
+            if (totalCount >= MAX_QUESTIONS) {
+                afficherEcranFin();
+                return;
+            }
+
+            if (verbesFiltrés.length === 0) return;
+
+            questionAnswered = false;
+            selectedOption = null;
+            document.getElementById('validateBtn').style.display = 'block';
+            document.getElementById('nextBtn').style.display = 'none';
+            document.getElementById('validateBtn').disabled = false;
+            document.getElementById('feedback').className = 'feedback';
+            document.getElementById('feedback').textContent = '';
+
+            // Choisir un verbe aléatoire
+            currentVerb = verbesFiltrés[Math.floor(Math.random() * verbesFiltrés.length)];
+
+            // Choisir un type de question aléatoire
+            const typeQuestion = questionTypes[Math.floor(Math.random() * questionTypes.length)];
+            currentQuestion = typeQuestion;
+
+            // Récupérer la bonne réponse
+            correctAnswer = currentVerb[typeQuestion.field];
+
+            // Générer les options
+            const options = genererOptionsAleatoires();
+
+            // Afficher le verbe
+            document.getElementById('infinitiveForm').textContent = currentVerb.infinitive;
+            document.getElementById('translation').textContent = `(${currentVerb.translation})`;
+            document.getElementById('questionType').innerHTML = `<strong>Quel est le ${typeQuestion.label} ?</strong>`;
+
+            // Afficher les options
+            const optionsContainer = document.getElementById('optionsContainer');
+            optionsContainer.innerHTML = '';
+            options.forEach((option) => {
+                const btn = document.createElement('button');
+                btn.className = 'option-btn';
+                btn.textContent = option;
+                btn.onclick = () => selectionnerOption(btn, option);
+                optionsContainer.appendChild(btn);
+            });
+
+            totalCount++;
+            updateScore();
+        }
+
+        function genererOptionsAleatoires() {
+            const correctOpt = correctAnswer;
+            const allOptions = [];
+
+            // Récupérer d'autres verbes pour les mauvaises réponses
+            for (let i = 0; i < verbesFiltrés.length && allOptions.length < 3; i++) {
+                const randomVerb = verbesFiltrés[Math.floor(Math.random() * verbesFiltrés.length)];
+                const randomField = currentQuestion.field;
+                const option = randomVerb[randomField];
+                
+                if (option !== correctOpt && !allOptions.includes(option)) {
+                    allOptions.push(option);
+                }
+            }
+
+            // Si on n'a pas assez d'options, on en fabrique
+            while (allOptions.length < 3) {
+                allOptions.push(`Option ${allOptions.length + 1}`);
+            }
+
+            // Mélanger et ajouter la bonne réponse
+            allOptions.push(correctOpt);
+            return allOptions.sort(() => Math.random() - 0.5);
+        }
+
+        function selectionnerOption(btn, option) {
+            if (questionAnswered) return;
+
+            // Désélectionner l'option précédente
+            document.querySelectorAll('.option-btn').forEach(b => b.classList.remove('selected'));
+            
+            // Sélectionner la nouvelle option
+            btn.classList.add('selected');
+            selectedOption = option;
+            document.getElementById('validateBtn').disabled = false;
+        }
+
+        function validerReponse() {
+            if (!selectedOption || questionAnswered) return;
+
+            questionAnswered = true;
+            const isCorrect = selectedOption === correctAnswer;
+
+            if (isCorrect) {
+                correctCount++;
+                document.getElementById('feedback').className = 'feedback correct';
+                document.getElementById('feedback').innerHTML = 
+                    `✅ <strong>Correct !</strong> Le ${currentQuestion.label} de <strong>${currentVerb.infinitive}</strong> est bien <strong>${correctAnswer}</strong>.`;
+                document.querySelectorAll('.option-btn').forEach(btn => {
+                    if (btn.textContent === correctAnswer) {
+                        btn.classList.add('correct');
+                    }
+                });
+            } else {
+                document.getElementById('feedback').className = 'feedback incorrect';
+                document.getElementById('feedback').innerHTML = 
+                    `❌ <strong>Incorrect !</strong> La bonne réponse est <strong>${correctAnswer}</strong>.`;
+                document.querySelectorAll('.option-btn').forEach(btn => {
+                    if (btn.textContent === correctAnswer) {
+                        btn.classList.add('correct');
+                    } else if (btn.textContent === selectedOption) {
+                        btn.classList.add('incorrect');
+                    }
+                });
+            }
+
+            document.getElementById('validateBtn').style.display = 'none';
+            document.getElementById('nextBtn').style.display = 'block';
+            updateScore();
+        }
+
+        function updateScore() {
+            document.getElementById('scoreValue').textContent = correctCount;
+            document.getElementById('totalValue').textContent = totalCount;
+            document.getElementById('correctCount').textContent = correctCount;
+            
+            if (totalCount > 0) {
+                const percentage = Math.round((correctCount / totalCount) * 100);
+                document.getElementById('percentage').textContent = percentage + '%';
+            }
+        }
+
+        function afficherEcranFin() {
+            const percentage = Math.round((correctCount / MAX_QUESTIONS) * 100);
+            let message = '';
+            let emoji = '😊';
+            
+            if (percentage === 100) {
+                message = 'Parfait ! 🌟 Vous maîtrisez ces verbes irréguliers !';
+                emoji = '🌟';
+            } else if (percentage >= 80) {
+                message = 'Très bien ! 👏 Continuez comme ça !';
+                emoji = '👏';
+            } else if (percentage >= 60) {
+                message = 'Bien ! 👍 Vous progressez !';
+                emoji = '👍';
+            } else {
+                message = 'À revoir ! 📚 Réessayez pour vous améliorer !';
+                emoji = '📚';
+            }
+
+            const exerciseBox = document.querySelector('.exercise-box');
+            exerciseBox.innerHTML = `
+                <div style="text-align: center; padding: 40px 20px;">
+                    <div style="font-size: 4em; margin-bottom: 20px;">${emoji}</div>
+                    <h2 style="color: var(--primary); font-size: 1.8em; margin-bottom: 15px;">Exercice terminé !</h2>
+                    <p style="font-size: 1.2em; margin-bottom: 30px;">${message}</p>
+                    
+                    <div class="stats" style="margin: 30px 0;">
+                        <div class="stat-box">
+                            <div class="stat-label">Score final</div>
+                            <div class="stat-value">${correctCount}/${MAX_QUESTIONS}</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-label">Pourcentage</div>
+                            <div class="stat-value">${percentage}%</div>
+                        </div>
+                    </div>
+                    
+                    <button class="btn btn-secondary" onclick="location.reload()" style="margin-top: 30px; padding: 15px 30px; font-size: 1.1em;">
+                        🔄 Recommencer
+                    </button>
+                </div>
+            `;
+
+            document.querySelector('.score').style.display = 'none';
+        }
+
+        // Initialisation
+        window.addEventListener('load', () => {
+            chargerVerbes();
+        });
+    </script>
+</body>
+</html>
