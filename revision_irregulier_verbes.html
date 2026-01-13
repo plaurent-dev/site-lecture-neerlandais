@@ -64,6 +64,38 @@
             font-weight: 700;
             color: var(--primary);
             margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .auxiliary-badge {
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 700;
+            cursor: default;
+            pointer-events: none;
+            border: 2px solid;
+            white-space: nowrap;
+        }
+
+        .auxiliary-badge.hebben {
+            background: #BFDBFE;
+            border-color: #3B82F6;
+            color: #1E40AF;
+        }
+
+        .auxiliary-badge.zijn {
+            background: #BBEF63;
+            border-color: #22C55E;
+            color: #166534;
+        }
+
+        .auxiliary-badge.both {
+            background: #FCD34D;
+            border-color: #F59E0B;
+            color: #92400E;
         }
 
         .translation {
@@ -348,6 +380,28 @@
             { type: 'participle', label: 'Participe passé', field: 'past_participle' }
         ];
 
+        function getAuxiliaryType(participlePassé) {
+            if (!participlePassé) return null;
+            
+            if (participlePassé.startsWith('h/i ') || participlePassé.startsWith('h/i-')) {
+                return 'both';
+            } else if (participlePassé.startsWith('h ') || participlePassé.startsWith('h') || participlePassé.startsWith('-h ')) {
+                return 'hebben';
+            } else if (participlePassé.startsWith('i ') || participlePassé.startsWith('i')) {
+                return 'zijn';
+            }
+            return null;
+        }
+
+        function getAuxiliaryDisplay(auxiliaryType) {
+            const displays = {
+                'hebben': '🔵 hebben',
+                'zijn': '🟢 zijn',
+                'both': '🟡 hebben of zijn'
+            };
+            return displays[auxiliaryType] || '';
+        }
+
         async function chargerVerbes() {
             try {
                 const response = await fetch('irregulier.json?t=' + Date.now());
@@ -457,7 +511,14 @@
             const options = genererOptionsAleatoires();
 
             // Afficher le verbe
-            document.getElementById('infinitiveForm').textContent = currentVerb.infinitive;
+            const auxiliaryType = getAuxiliaryType(currentVerb.past_participle);
+            const infinitiveDiv = document.getElementById('infinitiveForm');
+            infinitiveDiv.innerHTML = `
+                <span>${currentVerb.infinitive}</span>
+                <button class="auxiliary-badge ${auxiliaryType}" disabled>
+                    ${getAuxiliaryDisplay(auxiliaryType)}
+                </button>
+            `;
             document.getElementById('translation').textContent = `(${currentVerb.translation})`;
             document.getElementById('questionType').innerHTML = `<strong>Quel est le ${typeQuestion.label} ?</strong>`;
 
