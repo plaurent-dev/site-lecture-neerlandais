@@ -373,24 +373,8 @@
         let currentFrequency = 'very_frequent';
         const MAX_QUESTIONS = 10;
 
-        // Types de questions possibles
-        const questionTypes = [
-            { type: 'singular', label: 'Imparfait singulier', field: 'past_singular' },
-            { type: 'plural', label: 'Imparfait pluriel', field: 'past_plural' },
-            { type: 'participle', label: 'Participe passé', field: 'past_participle' }
-        ];
-
-        function getAuxiliaryType(participlePassé) {
-            if (!participlePassé) return null;
-            
-            if (participlePassé.startsWith('h/i ') || participlePassé.startsWith('h/i-')) {
-                return 'both';
-            } else if (participlePassé.startsWith('h ') || participlePassé.startsWith('h') || participlePassé.startsWith('-h ')) {
-                return 'hebben';
-            } else if (participlePassé.startsWith('i ') || participlePassé.startsWith('i')) {
-                return 'zijn';
-            }
-            return null;
+        function getAuxiliaryType(verb) {
+            return verb.auxiliary || null;
         }
 
         function getAuxiliaryDisplay(auxiliaryType) {
@@ -400,6 +384,20 @@
                 'both': '🟡 hebben of zijn'
             };
             return displays[auxiliaryType] || '';
+        }
+
+        function translateAuxiliary(participlePassé, auxiliaryType) {
+            if (!participlePassé) return participlePassé;
+            
+            const icon = auxiliaryType === 'hebben' ? '🔵' : 
+                        auxiliaryType === 'zijn' ? '🟢' : 
+                        auxiliaryType === 'both' ? '🟡' : '';
+            
+            const auxiliary = auxiliaryType === 'hebben' ? 'hebben' :
+                             auxiliaryType === 'zijn' ? 'zijn' :
+                             auxiliaryType === 'both' ? 'hebben of zijn' : '';
+            
+            return icon + ' ' + auxiliary + ' ' + participlePassé;
         }
 
         async function chargerVerbes() {
@@ -511,7 +509,7 @@
             const options = genererOptionsAleatoires();
 
             // Afficher le verbe
-            const auxiliaryType = getAuxiliaryType(currentVerb.past_participle);
+            const auxiliaryType = getAuxiliaryType(currentVerb);
             const infinitiveDiv = document.getElementById('infinitiveForm');
             infinitiveDiv.innerHTML = `
                 <span>${currentVerb.infinitive}</span>
@@ -525,10 +523,11 @@
             // Afficher les options
             const optionsContainer = document.getElementById('optionsContainer');
             optionsContainer.innerHTML = '';
+            const auxiliaryType = getAuxiliaryType(currentVerb);
             options.forEach((option) => {
                 const btn = document.createElement('button');
                 btn.className = 'option-btn';
-                btn.textContent = option;
+                btn.textContent = translateAuxiliary(option, auxiliaryType);
                 btn.onclick = () => selectionnerOption(btn, option);
                 optionsContainer.appendChild(btn);
             });
@@ -579,25 +578,28 @@
 
             questionAnswered = true;
             const isCorrect = selectedOption === correctAnswer;
+            const auxiliaryType = getAuxiliaryType(currentVerb);
+            const correctAnswerDisplay = translateAuxiliary(correctAnswer, auxiliaryType);
+            const selectedOptionDisplay = translateAuxiliary(selectedOption, auxiliaryType);
 
             if (isCorrect) {
                 correctCount++;
                 document.getElementById('feedback').className = 'feedback correct';
                 document.getElementById('feedback').innerHTML = 
-                    `✅ <strong>Correct !</strong> Le ${currentQuestion.label} de <strong>${currentVerb.infinitive}</strong> est bien <strong>${correctAnswer}</strong>.`;
+                    `✅ <strong>Correct !</strong> Le ${currentQuestion.label} de <strong>${currentVerb.infinitive}</strong> est bien <strong>${correctAnswerDisplay}</strong>.`;
                 document.querySelectorAll('.option-btn').forEach(btn => {
-                    if (btn.textContent === correctAnswer) {
+                    if (btn.textContent === correctAnswerDisplay) {
                         btn.classList.add('correct');
                     }
                 });
             } else {
                 document.getElementById('feedback').className = 'feedback incorrect';
                 document.getElementById('feedback').innerHTML = 
-                    `❌ <strong>Incorrect !</strong> La bonne réponse est <strong>${correctAnswer}</strong>.`;
+                    `❌ <strong>Incorrect !</strong> La bonne réponse est <strong>${correctAnswerDisplay}</strong>.`;
                 document.querySelectorAll('.option-btn').forEach(btn => {
-                    if (btn.textContent === correctAnswer) {
+                    if (btn.textContent === correctAnswerDisplay) {
                         btn.classList.add('correct');
-                    } else if (btn.textContent === selectedOption) {
+                    } else if (btn.textContent === selectedOptionDisplay) {
                         btn.classList.add('incorrect');
                     }
                 });
