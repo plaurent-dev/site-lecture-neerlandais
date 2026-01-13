@@ -543,52 +543,84 @@
             console.log(`${filteredVerbes.length} verbes après filtrage`);
         }
 
-        // Événements des filtres fréquence
-        document.querySelectorAll('[data-frequency]').forEach(btn => {
-            btn.addEventListener('click', function() {
-                document.querySelectorAll('[data-frequency]').forEach(b => b.classList.remove('active'));
-                this.classList.add('active');
-                selectedFrequency = this.dataset.frequency;
+        // Initialiser les event listeners
+        function initializeEventListeners() {
+            // Événements des filtres fréquence
+            document.querySelectorAll('[data-frequency]').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    document.querySelectorAll('[data-frequency]').forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    selectedFrequency = this.dataset.frequency;
+                });
             });
-        });
 
-        document.querySelectorAll('[data-time]').forEach(btn => {
-            btn.addEventListener('click', function() {
-                document.querySelectorAll('[data-time]').forEach(b => b.classList.remove('active'));
-                this.classList.add('active');
-                selectedTime = this.dataset.time;
+            // Événements des filtres temps
+            document.querySelectorAll('[data-time]').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    document.querySelectorAll('[data-time]').forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    selectedTime = this.dataset.time;
+                });
             });
-        });
 
-        // Slider
-        document.getElementById('verbCount').addEventListener('change', function() {
-            verbCount = parseInt(this.value);
-            document.getElementById('verbCountDisplay').textContent = verbCount;
-        });
-
-        // Démarrer le quiz
-        document.getElementById('startBtn').addEventListener('click', function() {
-            applyFilters();
-            
-            if (filteredVerbes.length === 0) {
-                alert('Aucun verbe ne correspond à vos critères!');
-                return;
+            // Slider
+            const verbCountInput = document.getElementById('verbCount');
+            if (verbCountInput) {
+                verbCountInput.addEventListener('change', function() {
+                    verbCount = parseInt(this.value);
+                    document.getElementById('verbCountDisplay').textContent = verbCount;
+                });
+                verbCountInput.addEventListener('input', function() {
+                    verbCount = parseInt(this.value);
+                    document.getElementById('verbCountDisplay').textContent = verbCount;
+                });
             }
 
-            if (verbCount > filteredVerbes.length) {
-                verbCount = filteredVerbes.length;
+            // Démarrer le quiz
+            const startBtn = document.getElementById('startBtn');
+            if (startBtn) {
+                startBtn.addEventListener('click', function() {
+                    applyFilters();
+                    
+                    if (filteredVerbes.length === 0) {
+                        alert('Aucun verbe ne correspond à vos critères!');
+                        return;
+                    }
+
+                    if (verbCount > filteredVerbes.length) {
+                        verbCount = filteredVerbes.length;
+                    }
+
+                    currentQuestionIndex = 0;
+                    score = 0;
+                    answered = false;
+                    selectedAnswer = null;
+
+                    document.getElementById('configScreen').classList.add('hidden');
+                    document.getElementById('quizScreen').classList.remove('hidden');
+
+                    nextQuestion();
+                });
             }
 
-            currentQuestionIndex = 0;
-            score = 0;
-            answered = false;
-            selectedAnswer = null;
+            // Bouton suivant
+            const nextBtn = document.getElementById('nextBtn');
+            if (nextBtn) {
+                nextBtn.addEventListener('click', () => {
+                    currentQuestionIndex++;
+                    nextQuestion();
+                });
+            }
 
-            document.getElementById('configScreen').classList.add('hidden');
-            document.getElementById('quizScreen').classList.remove('hidden');
-
-            nextQuestion();
-        });
+            // Bouton recommencer
+            const restartBtn = document.getElementById('restartBtn');
+            if (restartBtn) {
+                restartBtn.addEventListener('click', () => {
+                    document.getElementById('endScreen').classList.add('hidden');
+                    document.getElementById('configScreen').classList.remove('hidden');
+                });
+            }
+        }
 
         // Générer la prochaine question
         function nextQuestion() {
@@ -718,11 +750,6 @@
             document.getElementById('nextBtn').style.display = 'block';
         }
 
-        document.getElementById('nextBtn').addEventListener('click', () => {
-            currentQuestionIndex++;
-            nextQuestion();
-        });
-
         function updateQuizHeader() {
             const progress = (currentQuestionIndex / verbCount) * 100;
             document.getElementById('progressFill').style.width = progress + '%';
@@ -757,13 +784,11 @@
             document.getElementById('scoreText').textContent = message;
         }
 
-        document.getElementById('restartBtn').addEventListener('click', () => {
-            document.getElementById('endScreen').classList.add('hidden');
-            document.getElementById('configScreen').classList.remove('hidden');
+        // Initialisation au chargement du DOM
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeEventListeners();
+            loadVerbes();
         });
-
-        // Initialisation
-        loadVerbes();
     </script>
 </body>
 </html>
