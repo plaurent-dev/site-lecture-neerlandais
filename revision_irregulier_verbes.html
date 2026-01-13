@@ -634,26 +634,38 @@
                 return;
             }
 
-            // Sélectionner un verbe aléatoire
-            currentVerb = filteredVerbes[Math.floor(Math.random() * filteredVerbes.length)];
+            try {
+                // Sélectionner un verbe aléatoire
+                if (!filteredVerbes || filteredVerbes.length === 0) {
+                    console.error('Aucun verbe après filtrage!');
+                    alert('Aucun verbe ne correspond à vos critères!');
+                    return;
+                }
 
-            // Sélectionner le temps aléatoirement ou selon le filtre
-            let timeToUse = selectedTime === 'all' 
-                ? ['present', 'preterite', 'past_participle'][Math.floor(Math.random() * 3)]
-                : selectedTime;
+                currentVerb = filteredVerbes[Math.floor(Math.random() * filteredVerbes.length)];
 
-            // Choisir une personne aléatoire
-            const persons = ['ik', 'jij', 'hij_zij_het', 'wij', 'jullie', 'zij'];
-            const randomPerson = persons[Math.floor(Math.random() * persons.length)];
+                // Sélectionner le temps aléatoirement ou selon le filtre
+                let timeToUse = selectedTime === 'all' 
+                    ? ['present', 'preterite', 'past_participle'][Math.floor(Math.random() * 3)]
+                    : selectedTime;
 
-            // Générer la question et les options
-            generateQuestion(currentVerb, timeToUse, randomPerson);
+                // Choisir une personne aléatoire
+                const persons = ['ik', 'jij', 'hij_zij_het', 'wij', 'jullie', 'zij'];
+                const randomPerson = persons[Math.floor(Math.random() * persons.length)];
+
+                // Générer la question et les options
+                generateQuestion(currentVerb, timeToUse, randomPerson);
+            } catch (error) {
+                console.error('Erreur dans nextQuestion:', error);
+            }
 
             // Mettre à jour le header
             updateQuizHeader();
         }
 
         function generateQuestion(verb, timeType, person) {
+            console.log(`Génération question: ${verb.infinitive}, ${timeType}, ${person}`);
+            
             let timeLabel = {
                 'present': 'Présent',
                 'preterite': 'Prétérit',
@@ -679,6 +691,8 @@
                 correctAnswer = verb.past_participle_conjugated[person];
             }
 
+            console.log(`Bonne réponse: ${correctAnswer}`);
+
             // Générer 3 mauvaises réponses à partir du même verbe (personnes différentes)
             const wrongAnswers = [];
             const availablePersons = ['ik', 'jij', 'hij_zij_het', 'wij', 'jullie', 'zij'].filter(p => p !== person);
@@ -700,26 +714,36 @@
             const allAnswers = [correctAnswer, ...wrongAnswers].sort(() => Math.random() - 0.5);
 
             // Afficher les infos du verbe
-            document.getElementById('verbInfinitive').textContent = verb.infinitive;
+            const verbInfElement = document.getElementById('verbInfinitive');
+            if (verbInfElement) {
+                verbInfElement.textContent = verb.infinitive;
+            }
+            
             const auxBadge = document.getElementById('auxiliaryBadge');
-            auxBadge.textContent = verb.auxiliary === 'both' ? 'hebben ou zijn' : verb.auxiliary;
-            auxBadge.className = `auxiliary-badge ${verb.auxiliary}`;
+            if (auxBadge) {
+                auxBadge.textContent = verb.auxiliary === 'both' ? 'hebben ou zijn' : verb.auxiliary;
+                auxBadge.className = `auxiliary-badge ${verb.auxiliary}`;
+            }
 
             // Afficher la question
-            document.getElementById('questionText').textContent = `Conjuguer au ${timeLabel} (${personLabel})?`;
+            const questionTextElement = document.getElementById('questionText');
+            if (questionTextElement) {
+                questionTextElement.textContent = `Conjuguer au ${timeLabel} (${personLabel})?`;
+            }
 
             // Afficher les options
             const optionsGrid = document.getElementById('optionsGrid');
-            optionsGrid.innerHTML = '';
+            if (optionsGrid) {
+                optionsGrid.innerHTML = '';
 
-            allAnswers.forEach((answer, index) => {
-                const btn = document.createElement('button');
-                btn.className = 'option-btn';
-                btn.textContent = answer;
-                btn.addEventListener('click', () => selectAnswer(answer, correctAnswer, btn));
-                optionsGrid.appendChild(btn);
-            });
-        }
+                allAnswers.forEach((answer, index) => {
+                    const btn = document.createElement('button');
+                    btn.className = 'option-btn';
+                    btn.textContent = answer;
+                    btn.addEventListener('click', () => selectAnswer(answer, correctAnswer, btn));
+                    optionsGrid.appendChild(btn);
+                });
+            }
 
         function selectAnswer(selected, correct, btnElement) {
             if (answered) return;
