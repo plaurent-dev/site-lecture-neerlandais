@@ -358,6 +358,7 @@
         let questionAnswered = false;
         let correctCount = 0;
         let totalCount = 0;
+        const MAX_QUESTIONS = 10;
 
         function initMap() {
             const centerNl = { lat: 52.1326, lng: 5.2913 };
@@ -435,6 +436,12 @@
         }
 
         function nouvelleQuestion() {
+            // Vérifier si l'exercice est terminé
+            if (totalCount >= MAX_QUESTIONS) {
+                afficherEcranFin();
+                return;
+            }
+
             questionAnswered = false;
             selectedOption = null;
             document.getElementById('validateBtn').style.display = 'block';
@@ -537,6 +544,54 @@
                 const percentage = Math.round((correctCount / totalCount) * 100);
                 document.getElementById('percentage').textContent = percentage + '%';
             }
+        }
+
+        function afficherEcranFin() {
+            const percentage = Math.round((correctCount / MAX_QUESTIONS) * 100);
+            let message = '';
+            let emoji = '😊';
+            
+            if (percentage === 100) {
+                message = 'Parfait ! 🌟 Vous maîtrisez les positions spatiales !';
+                emoji = '🌟';
+            } else if (percentage >= 80) {
+                message = 'Très bien ! 👏 Vous êtes presque parfait !';
+                emoji = '👏';
+            } else if (percentage >= 60) {
+                message = 'Bien ! 👍 Continuez vos révisions !';
+                emoji = '👍';
+            } else {
+                message = 'À revoir ! 📚 Réessayez pour vous améliorer !';
+                emoji = '📚';
+            }
+
+            const exerciseBox = document.querySelector('.exercise-box');
+            exerciseBox.innerHTML = `
+                <div style="text-align: center; padding: 40px 20px;">
+                    <div style="font-size: 4em; margin-bottom: 20px;">${emoji}</div>
+                    <h2 style="color: var(--primary); font-size: 1.8em; margin-bottom: 15px;">Exercice terminé !</h2>
+                    <p style="font-size: 1.2em; margin-bottom: 30px;">${message}</p>
+                    
+                    <div class="stats" style="margin: 30px 0;">
+                        <div class="stat-box">
+                            <div class="stat-label">Score final</div>
+                            <div class="stat-value">${correctCount}/${MAX_QUESTIONS}</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-label">Pourcentage</div>
+                            <div class="stat-value">${percentage}%</div>
+                        </div>
+                    </div>
+                    
+                    <button class="btn btn-secondary" onclick="location.reload()" style="margin-top: 30px; padding: 15px 30px; font-size: 1.1em;">
+                        🔄 Recommencer
+                    </button>
+                </div>
+            `;
+
+            // Cacher la carte
+            document.getElementById('map').style.display = 'none';
+            document.querySelector('.score').style.display = 'none';
         }
 
         // Initialisation
