@@ -2,7 +2,7 @@
   {
     "infinitive": "kruipen",
     "translation": "ramper",
-    "frequency": "none",
+    "frequency": "frequent",
     "auxiliary": "both",
     "preterite": {
       "ik": "kroop",
@@ -91,7 +91,7 @@
   {
     "infinitive": "kunnen",
     "translation": "pouvoir",
-    "frequency": "none",
+    "frequency": "very_frequent",
     "auxiliary": "hebben",
     "preterite": {
       "ik": "kon",
@@ -180,7 +180,7 @@
   {
     "infinitive": "lachen",
     "translation": "rire",
-    "frequency": "none",
+    "frequency": "very_frequent",
     "auxiliary": "hebben",
     "preterite": {
       "ik": "lachte",
@@ -269,7 +269,7 @@
   {
     "infinitive": "laden",
     "translation": "charger",
-    "frequency": "none",
+    "frequency": "frequent",
     "auxiliary": "hebben",
     "preterite": {
       "ik": "laadde",
@@ -358,7 +358,7 @@
   {
     "infinitive": "laten",
     "translation": "laisser",
-    "frequency": "none",
+    "frequency": "very_frequent",
     "auxiliary": "hebben",
     "preterite": {
       "ik": "liet",
@@ -447,7 +447,7 @@
   {
     "infinitive": "lezen",
     "translation": "lire",
-    "frequency": "none",
+    "frequency": "very_frequent",
     "auxiliary": "hebben",
     "preterite": {
       "ik": "las",
@@ -536,7 +536,7 @@
   {
     "infinitive": "liegen",
     "translation": "mentir",
-    "frequency": "none",
+    "frequency": "very_frequent",
     "auxiliary": "hebben",
     "preterite": {
       "ik": "loog",
@@ -625,7 +625,7 @@
   {
     "infinitive": "liggen",
     "translation": "être couché, être situé",
-    "frequency": "none",
+    "frequency": "very_frequent",
     "auxiliary": "hebben",
     "preterite": {
       "ik": "lag",
@@ -714,7 +714,7 @@
   {
     "infinitive": "lijden",
     "translation": "souffrir",
-    "frequency": "none",
+    "frequency": "frequent",
     "auxiliary": "hebben",
     "preterite": {
       "ik": "leed",
@@ -803,7 +803,7 @@
   {
     "infinitive": "lijken",
     "translation": "sembler, ressembler",
-    "frequency": "none",
+    "frequency": "very_frequent",
     "auxiliary": "hebben",
     "preterite": {
       "ik": "leek",
@@ -892,7 +892,7 @@
   {
     "infinitive": "lopen",
     "translation": "marcher, courir",
-    "frequency": "none",
+    "frequency": "very_frequent",
     "auxiliary": "both",
     "preterite": {
       "ik": "liep",
@@ -981,7 +981,7 @@
   {
     "infinitive": "meten",
     "translation": "mesurer",
-    "frequency": "none",
+    "frequency": "frequent",
     "auxiliary": "hebben",
     "preterite": {
       "ik": "mat",
@@ -1159,7 +1159,7 @@
   {
     "infinitive": "moeten",
     "translation": "devoir",
-    "frequency": "none",
+    "frequency": "very_frequent",
     "auxiliary": "hebben",
     "preterite": {
       "ik": "moest",
@@ -1248,7 +1248,7 @@
   {
     "infinitive": "mogen",
     "translation": "pouvoir",
-    "frequency": "none",
+    "frequency": "very_frequent",
     "auxiliary": "hebben",
     "preterite": {
       "ik": "mocht",
@@ -1337,7 +1337,7 @@
   {
     "infinitive": "nemen",
     "translation": "prendre",
-    "frequency": "none",
+    "frequency": "very_frequent",
     "auxiliary": "hebben",
     "preterite": {
       "ik": "nam",
@@ -1604,7 +1604,7 @@
   {
     "infinitive": "raden",
     "translation": "deviner, conseiller",
-    "frequency": "none",
+    "frequency": "frequent",
     "auxiliary": "hebben",
     "preterite": {
       "ik": "raadde",
@@ -1693,7 +1693,7 @@
   {
     "infinitive": "rijden",
     "translation": "rouler",
-    "frequency": "none",
+    "frequency": "very_frequent",
     "auxiliary": "both",
     "preterite": {
       "ik": "reed",
@@ -1871,7 +1871,7 @@
   {
     "infinitive": "roepen",
     "translation": "crier, appeler",
-    "frequency": "none",
+    "frequency": "very_frequent",
     "auxiliary": "hebben",
     "preterite": {
       "ik": "riep",
@@ -2583,7 +2583,7 @@
   {
     "infinitive": "schieten",
     "translation": "tirer (arme)",
-    "frequency": "none",
+    "frequency": "frequent",
     "auxiliary": "both",
     "preterite": {
       "ik": "schoot",
@@ -2672,7 +2672,7 @@
   {
     "infinitive": "schijnen",
     "translation": "sembler, briller",
-    "frequency": "none",
+    "frequency": "very_frequent",
     "auxiliary": "both",
     "preterite": {
       "ik": "scheen",
@@ -2761,7 +2761,7 @@
   {
     "infinitive": "schrijven",
     "translation": "écrire",
-    "frequency": "none",
+    "frequency": "very_frequent",
     "auxiliary": "hebben",
     "preterite": {
       "ik": "schreef",
@@ -2850,7 +2850,7 @@
   {
     "infinitive": "schrikken",
     "translation": "s'effrayer",
-    "frequency": "none",
+    "frequency": "frequent",
     "auxiliary": "both",
     "preterite": {
       "ik": "schrok",
@@ -3028,7 +3028,7 @@
   {
     "infinitive": "slaan",
     "translation": "frapper",
-    "frequency": "none",
+    "frequency": "very_frequent",
     "auxiliary": "hebben",
     "preterite": {
       "ik": "sloeg",
@@ -3117,7 +3117,7 @@
   {
     "infinitive": "slapen",
     "translation": "dormir",
-    "frequency": "none",
+    "frequency": "very_frequent",
     "auxiliary": "hebben",
     "preterite": {
       "ik": "sliep",
@@ -3384,7 +3384,7 @@
   {
     "infinitive": "sluiten",
     "translation": "fermer",
-    "frequency": "none",
+    "frequency": "very_frequent",
     "auxiliary": "hebben",
     "preterite": {
       "ik": "sloot",
@@ -3651,7 +3651,7 @@
   {
     "infinitive": "snijden",
     "translation": "couper",
-    "frequency": "none",
+    "frequency": "frequent",
     "auxiliary": "hebben",
     "preterite": {
       "ik": "sneed",
@@ -3918,7 +3918,7 @@
   {
     "infinitive": "spannen",
     "translation": "tendre",
-    "frequency": "none",
+    "frequency": "frequent",
     "auxiliary": "hebben",
     "preterite": {
       "ik": "spande",
@@ -4096,7 +4096,7 @@
   {
     "infinitive": "spreken",
     "translation": "parler",
-    "frequency": "none",
+    "frequency": "very_frequent",
     "auxiliary": "hebben",
     "preterite": {
       "ik": "sprak",
@@ -4185,7 +4185,7 @@
   {
     "infinitive": "springen",
     "translation": "sauter",
-    "frequency": "none",
+    "frequency": "frequent",
     "auxiliary": "both",
     "preterite": {
       "ik": "sprong",
@@ -4274,7 +4274,7 @@
   {
     "infinitive": "staan",
     "translation": "être debout",
-    "frequency": "none",
+    "frequency": "very_frequent",
     "auxiliary": "hebben",
     "preterite": {
       "ik": "stond",
@@ -4363,7 +4363,7 @@
   {
     "infinitive": "steken",
     "translation": "mettre (dans), piquer",
-    "frequency": "none",
+    "frequency": "very_frequent",
     "auxiliary": "hebben",
     "preterite": {
       "ik": "stak",
@@ -4452,7 +4452,7 @@
   {
     "infinitive": "stelen",
     "translation": "dérober",
-    "frequency": "none",
+    "frequency": "very_frequent",
     "auxiliary": "hebben",
     "preterite": {
       "ik": "stal",
@@ -4541,7 +4541,7 @@
   {
     "infinitive": "sterven",
     "translation": "mourir",
-    "frequency": "none",
+    "frequency": "very_frequent",
     "auxiliary": "zijn",
     "preterite": {
       "ik": "stierf",
@@ -4630,7 +4630,7 @@
   {
     "infinitive": "stijgen",
     "translation": "s'élever, augmenter",
-    "frequency": "none",
+    "frequency": "very_frequent",
     "auxiliary": "zijn",
     "preterite": {
       "ik": "steeg",
@@ -4719,7 +4719,7 @@
   {
     "infinitive": "bevelen",
     "translation": "ordonner, commander",
-    "frequency": "none",
+    "frequency": "frequent",
     "auxiliary": "hebben",
     "preterite": {
       "ik": "beval",
@@ -4986,7 +4986,7 @@
   {
     "infinitive": "bieden",
     "translation": "offrir, faire offre",
-    "frequency": "none",
+    "frequency": "very_frequent",
     "auxiliary": "hebben",
     "preterite": {
       "ik": "bood",
@@ -5075,7 +5075,7 @@
   {
     "infinitive": "bijten",
     "translation": "mordre",
-    "frequency": "none",
+    "frequency": "frequent",
     "auxiliary": "hebben",
     "preterite": {
       "ik": "beet",
@@ -5164,7 +5164,7 @@
   {
     "infinitive": "binden",
     "translation": "lier",
-    "frequency": "none",
+    "frequency": "frequent",
     "auxiliary": "hebben",
     "preterite": {
       "ik": "bond",
@@ -5253,7 +5253,7 @@
   {
     "infinitive": "blazen",
     "translation": "souffler",
-    "frequency": "none",
+    "frequency": "frequent",
     "auxiliary": "hebben",
     "preterite": {
       "ik": "blies",
@@ -5342,7 +5342,7 @@
   {
     "infinitive": "blijken",
     "translation": "s'avérer",
-    "frequency": "none",
+    "frequency": "frequent",
     "auxiliary": "zijn",
     "preterite": {
       "ik": "bleek",
@@ -5431,7 +5431,7 @@
   {
     "infinitive": "blijven",
     "translation": "rester",
-    "frequency": "none",
+    "frequency": "very_frequent",
     "auxiliary": "zijn",
     "preterite": {
       "ik": "bleef",
@@ -5520,7 +5520,7 @@
   {
     "infinitive": "blinken",
     "translation": "briller",
-    "frequency": "none",
+    "frequency": "frequent",
     "auxiliary": "hebben",
     "preterite": {
       "ik": "blonk",
@@ -5698,7 +5698,7 @@
   {
     "infinitive": "breken",
     "translation": "casser, rompre",
-    "frequency": "none",
+    "frequency": "very_frequent",
     "auxiliary": "both",
     "preterite": {
       "ik": "brak",
@@ -5787,7 +5787,7 @@
   {
     "infinitive": "brengen",
     "translation": "apporter, conduire",
-    "frequency": "none",
+    "frequency": "very_frequent",
     "auxiliary": "hebben",
     "preterite": {
       "ik": "bracht",
@@ -5876,7 +5876,7 @@
   {
     "infinitive": "buigen",
     "translation": "courber",
-    "frequency": "none",
+    "frequency": "frequent",
     "auxiliary": "hebben",
     "preterite": {
       "ik": "boog",
@@ -6054,7 +6054,7 @@
   {
     "infinitive": "denken",
     "translation": "penser",
-    "frequency": "none",
+    "frequency": "very_frequent",
     "auxiliary": "hebben",
     "preterite": {
       "ik": "dacht",
@@ -6143,7 +6143,7 @@
   {
     "infinitive": "doen",
     "translation": "faire",
-    "frequency": "none",
+    "frequency": "very_frequent",
     "auxiliary": "hebben",
     "preterite": {
       "ik": "deed",
@@ -6232,7 +6232,7 @@
   {
     "infinitive": "dragen",
     "translation": "porter",
-    "frequency": "none",
+    "frequency": "very_frequent",
     "auxiliary": "hebben",
     "preterite": {
       "ik": "droeg",
@@ -6499,7 +6499,7 @@
   {
     "infinitive": "drinken",
     "translation": "boire",
-    "frequency": "none",
+    "frequency": "very_frequent",
     "auxiliary": "hebben",
     "preterite": {
       "ik": "dronk",
@@ -6766,7 +6766,7 @@
   {
     "infinitive": "dwingen",
     "translation": "forcer",
-    "frequency": "none",
+    "frequency": "frequent",
     "auxiliary": "hebben",
     "preterite": {
       "ik": "dwong",
@@ -6855,7 +6855,7 @@
   {
     "infinitive": "eten",
     "translation": "manger",
-    "frequency": "none",
+    "frequency": "very_frequent",
     "auxiliary": "hebben",
     "preterite": {
       "ik": "at",
@@ -6944,7 +6944,7 @@
   {
     "infinitive": "fluiten",
     "translation": "siffler",
-    "frequency": "none",
+    "frequency": "frequent",
     "auxiliary": "hebben",
     "preterite": {
       "ik": "floot",
@@ -7033,7 +7033,7 @@
   {
     "infinitive": "gaan",
     "translation": "aller",
-    "frequency": "none",
+    "frequency": "very_frequent",
     "auxiliary": "zijn",
     "preterite": {
       "ik": "ging",
@@ -7122,7 +7122,7 @@
   {
     "infinitive": "gelden",
     "translation": "valoir (pour...)",
-    "frequency": "none",
+    "frequency": "frequent",
     "auxiliary": "hebben",
     "preterite": {
       "ik": "gold",
@@ -7211,7 +7211,7 @@
   {
     "infinitive": "genezen",
     "translation": "guérir",
-    "frequency": "none",
+    "frequency": "very_frequent",
     "auxiliary": "both",
     "preterite": {
       "ik": "genas",
@@ -7300,7 +7300,7 @@
   {
     "infinitive": "genieten",
     "translation": "jouir",
-    "frequency": "none",
+    "frequency": "frequent",
     "auxiliary": "hebben",
     "preterite": {
       "ik": "genoot",
@@ -7389,7 +7389,7 @@
   {
     "infinitive": "geven",
     "translation": "donner",
-    "frequency": "none",
+    "frequency": "very_frequent",
     "auxiliary": "hebben",
     "preterite": {
       "ik": "gaf",
@@ -7478,7 +7478,7 @@
   {
     "infinitive": "gieten",
     "translation": "verser",
-    "frequency": "none",
+    "frequency": "frequent",
     "auxiliary": "hebben",
     "preterite": {
       "ik": "goot",
@@ -7745,7 +7745,7 @@
   {
     "infinitive": "graven",
     "translation": "creuser",
-    "frequency": "none",
+    "frequency": "frequent",
     "auxiliary": "hebben",
     "preterite": {
       "ik": "groef",
@@ -7834,7 +7834,7 @@
   {
     "infinitive": "grijpen",
     "translation": "saisir",
-    "frequency": "none",
+    "frequency": "frequent",
     "auxiliary": "hebben",
     "preterite": {
       "ik": "greep",
@@ -7923,7 +7923,7 @@
   {
     "infinitive": "hangen",
     "translation": "pendre, être pendu",
-    "frequency": "none",
+    "frequency": "very_frequent",
     "auxiliary": "hebben",
     "preterite": {
       "ik": "hing",
@@ -8012,7 +8012,7 @@
   {
     "infinitive": "hebben",
     "translation": "avoir",
-    "frequency": "none",
+    "frequency": "very_frequent",
     "auxiliary": "hebben",
     "preterite": {
       "ik": "had",
@@ -8101,7 +8101,7 @@
   {
     "infinitive": "heffen",
     "translation": "lever, soulever",
-    "frequency": "none",
+    "frequency": "frequent",
     "auxiliary": "hebben",
     "preterite": {
       "ik": "hief",
@@ -8190,7 +8190,7 @@
   {
     "infinitive": "helpen",
     "translation": "aider",
-    "frequency": "none",
+    "frequency": "very_frequent",
     "auxiliary": "hebben",
     "preterite": {
       "ik": "hielp",
@@ -8279,7 +8279,7 @@
   {
     "infinitive": "heten",
     "translation": "s'appeler",
-    "frequency": "none",
+    "frequency": "very_frequent",
     "auxiliary": "hebben",
     "preterite": {
       "ik": "heette",
@@ -8457,7 +8457,7 @@
   {
     "infinitive": "houden",
     "translation": "tenir",
-    "frequency": "none",
+    "frequency": "very_frequent",
     "auxiliary": "hebben",
     "preterite": {
       "ik": "hield",
@@ -8635,7 +8635,7 @@
   {
     "infinitive": "kiezen",
     "translation": "choisir",
-    "frequency": "none",
+    "frequency": "very_frequent",
     "auxiliary": "hebben",
     "preterite": {
       "ik": "koos",
@@ -8724,7 +8724,7 @@
   {
     "infinitive": "kijken",
     "translation": "regarder",
-    "frequency": "none",
+    "frequency": "very_frequent",
     "auxiliary": "hebben",
     "preterite": {
       "ik": "keek",
@@ -8813,7 +8813,7 @@
   {
     "infinitive": "klimmen",
     "translation": "grimper",
-    "frequency": "none",
+    "frequency": "frequent",
     "auxiliary": "both",
     "preterite": {
       "ik": "klom",
@@ -8902,7 +8902,7 @@
   {
     "infinitive": "klinken",
     "translation": "sonner, tinter",
-    "frequency": "none",
+    "frequency": "frequent",
     "auxiliary": "hebben",
     "preterite": {
       "ik": "klonk",
@@ -9080,7 +9080,7 @@
   {
     "infinitive": "komen",
     "translation": "venir",
-    "frequency": "none",
+    "frequency": "very_frequent",
     "auxiliary": "zijn",
     "preterite": {
       "ik": "kwam",
@@ -9169,7 +9169,7 @@
   {
     "infinitive": "kopen",
     "translation": "acheter",
-    "frequency": "none",
+    "frequency": "very_frequent",
     "auxiliary": "hebben",
     "preterite": {
       "ik": "kocht",
@@ -9258,7 +9258,7 @@
   {
     "infinitive": "krijgen",
     "translation": "recevoir",
-    "frequency": "none",
+    "frequency": "very_frequent",
     "auxiliary": "hebben",
     "preterite": {
       "ik": "kreeg",
@@ -9436,7 +9436,7 @@
   {
     "infinitive": "stinken",
     "translation": "puer",
-    "frequency": "none",
+    "frequency": "frequent",
     "auxiliary": "hebben",
     "preterite": {
       "ik": "stonk",
@@ -9614,7 +9614,7 @@
   {
     "infinitive": "strijden",
     "translation": "lutter",
-    "frequency": "none",
+    "frequency": "frequent",
     "auxiliary": "hebben",
     "preterite": {
       "ik": "streed",
@@ -9881,7 +9881,7 @@
   {
     "infinitive": "treffen",
     "translation": "toucher",
-    "frequency": "none",
+    "frequency": "very_frequent",
     "auxiliary": "hebben",
     "preterite": {
       "ik": "trof",
@@ -9970,7 +9970,7 @@
   {
     "infinitive": "trekken",
     "translation": "tirer",
-    "frequency": "none",
+    "frequency": "very_frequent",
     "auxiliary": "both",
     "preterite": {
       "ik": "trok",
@@ -10059,7 +10059,7 @@
   {
     "infinitive": "vallen",
     "translation": "tomber",
-    "frequency": "none",
+    "frequency": "very_frequent",
     "auxiliary": "zijn",
     "preterite": {
       "ik": "viel",
@@ -10148,7 +10148,7 @@
   {
     "infinitive": "vangen",
     "translation": "attraper",
-    "frequency": "none",
+    "frequency": "very_frequent",
     "auxiliary": "hebben",
     "preterite": {
       "ik": "ving",
@@ -10237,7 +10237,7 @@
   {
     "infinitive": "varen",
     "translation": "naviguer",
-    "frequency": "none",
+    "frequency": "frequent",
     "auxiliary": "both",
     "preterite": {
       "ik": "voer",
@@ -10326,7 +10326,7 @@
   {
     "infinitive": "vechten",
     "translation": "se battre",
-    "frequency": "none",
+    "frequency": "frequent",
     "auxiliary": "hebben",
     "preterite": {
       "ik": "vocht",
@@ -10415,7 +10415,7 @@
   {
     "infinitive": "verdwijnen",
     "translation": "disparaître",
-    "frequency": "none",
+    "frequency": "very_frequent",
     "auxiliary": "zijn",
     "preterite": {
       "ik": "verdween",
@@ -10504,7 +10504,7 @@
   {
     "infinitive": "vergeten",
     "translation": "oublier",
-    "frequency": "none",
+    "frequency": "very_frequent",
     "auxiliary": "both",
     "preterite": {
       "ik": "vergat",
@@ -10593,7 +10593,7 @@
   {
     "infinitive": "verliezen",
     "translation": "perdre",
-    "frequency": "none",
+    "frequency": "very_frequent",
     "auxiliary": "hebben",
     "preterite": {
       "ik": "verloor",
@@ -10682,7 +10682,7 @@
   {
     "infinitive": "vinden",
     "translation": "trouver",
-    "frequency": "none",
+    "frequency": "very_frequent",
     "auxiliary": "hebben",
     "preterite": {
       "ik": "vond",
@@ -10771,7 +10771,7 @@
   {
     "infinitive": "vliegen",
     "translation": "voler (oiseau)",
-    "frequency": "none",
+    "frequency": "very_frequent",
     "auxiliary": "both",
     "preterite": {
       "ik": "vloog",
@@ -10860,7 +10860,7 @@
   {
     "infinitive": "vouwen",
     "translation": "plier",
-    "frequency": "none",
+    "frequency": "frequent",
     "auxiliary": "hebben",
     "preterite": {
       "ik": "vouwde",
@@ -10949,7 +10949,7 @@
   {
     "infinitive": "vragen",
     "translation": "demander",
-    "frequency": "none",
+    "frequency": "very_frequent",
     "auxiliary": "hebben",
     "preterite": {
       "ik": "vroeg",
@@ -11038,7 +11038,7 @@
   {
     "infinitive": "vriezen",
     "translation": "geler",
-    "frequency": "none",
+    "frequency": "very_frequent",
     "auxiliary": "both",
     "preterite": {
       "ik": "vroor",
@@ -11127,7 +11127,7 @@
   {
     "infinitive": "wassen",
     "translation": "laver",
-    "frequency": "none",
+    "frequency": "very_frequent",
     "auxiliary": "both",
     "preterite": {
       "ik": "waste",
@@ -11216,7 +11216,7 @@
   {
     "infinitive": "wegen",
     "translation": "peser",
-    "frequency": "none",
+    "frequency": "very_frequent",
     "auxiliary": "hebben",
     "preterite": {
       "ik": "woog",
@@ -11305,7 +11305,7 @@
   {
     "infinitive": "werpen",
     "translation": "lancer",
-    "frequency": "none",
+    "frequency": "very_frequent",
     "auxiliary": "hebben",
     "preterite": {
       "ik": "wierp",
@@ -11394,7 +11394,7 @@
   {
     "infinitive": "werven",
     "translation": "recruter",
-    "frequency": "none",
+    "frequency": "frequent",
     "auxiliary": "hebben",
     "preterite": {
       "ik": "wierf",
@@ -11483,7 +11483,7 @@
   {
     "infinitive": "weten",
     "translation": "savoir (qqch.)",
-    "frequency": "none",
+    "frequency": "very_frequent",
     "auxiliary": "hebben",
     "preterite": {
       "ik": "wist",
@@ -11661,7 +11661,7 @@
   {
     "infinitive": "wijzen",
     "translation": "indiquer, montrer",
-    "frequency": "none",
+    "frequency": "very_frequent",
     "auxiliary": "hebben",
     "preterite": {
       "ik": "wees",
@@ -11750,7 +11750,7 @@
   {
     "infinitive": "willen",
     "translation": "vouloir",
-    "frequency": "none",
+    "frequency": "very_frequent",
     "auxiliary": "unknown",
     "preterite": {
       "ik": "wou",
@@ -11839,7 +11839,7 @@
   {
     "infinitive": "winnen",
     "translation": "gagner",
-    "frequency": "none",
+    "frequency": "very_frequent",
     "auxiliary": "hebben",
     "preterite": {
       "ik": "won",
@@ -12106,7 +12106,7 @@
   {
     "infinitive": "wrijven",
     "translation": "frotter",
-    "frequency": "none",
+    "frequency": "frequent",
     "auxiliary": "hebben",
     "preterite": {
       "ik": "wreef",
@@ -12284,7 +12284,7 @@
   {
     "infinitive": "zeggen",
     "translation": "dire",
-    "frequency": "none",
+    "frequency": "very_frequent",
     "auxiliary": "hebben",
     "preterite": {
       "ik": "zei",
@@ -12373,7 +12373,7 @@
   {
     "infinitive": "zenden",
     "translation": "envoyer",
-    "frequency": "none",
+    "frequency": "very_frequent",
     "auxiliary": "hebben",
     "preterite": {
       "ik": "zond",
@@ -12462,7 +12462,7 @@
   {
     "infinitive": "zien",
     "translation": "voir",
-    "frequency": "none",
+    "frequency": "very_frequent",
     "auxiliary": "hebben",
     "preterite": {
       "ik": "zag",
@@ -12640,7 +12640,7 @@
   {
     "infinitive": "zingen",
     "translation": "chanter",
-    "frequency": "none",
+    "frequency": "frequent",
     "auxiliary": "hebben",
     "preterite": {
       "ik": "zong",
@@ -12729,7 +12729,7 @@
   {
     "infinitive": "zinken",
     "translation": "sombrer",
-    "frequency": "none",
+    "frequency": "frequent",
     "auxiliary": "hebben",
     "preterite": {
       "ik": "zonk",
@@ -12907,7 +12907,7 @@
   {
     "infinitive": "zitten",
     "translation": "être assis",
-    "frequency": "none",
+    "frequency": "very_frequent",
     "auxiliary": "hebben",
     "preterite": {
       "ik": "zat",
@@ -12996,7 +12996,7 @@
   {
     "infinitive": "zoeken",
     "translation": "chercher",
-    "frequency": "none",
+    "frequency": "very_frequent",
     "auxiliary": "hebben",
     "preterite": {
       "ik": "zocht",
@@ -13263,7 +13263,7 @@
   {
     "infinitive": "zwemmen",
     "translation": "nager",
-    "frequency": "none",
+    "frequency": "frequent",
     "auxiliary": "both",
     "preterite": {
       "ik": "zwom",
@@ -13530,7 +13530,7 @@
   {
     "infinitive": "zwijgen",
     "translation": "se taire",
-    "frequency": "none",
+    "frequency": "very_frequent",
     "auxiliary": "hebben",
     "preterite": {
       "ik": "zweeg",
