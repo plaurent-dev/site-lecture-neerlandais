@@ -1,0 +1,1604 @@
+[
+  {
+    "infinitive": "werken",
+    "translation": "travailler",
+    "frequency": "very_frequent",
+    "auxiliary": "hebben",
+    "present": {
+      "ik": "werk",
+      "jij": "werkt",
+      "hij_zij_het": "werkt",
+      "wij": "werken",
+      "jullie": "werken",
+      "zij": "werken"
+    },
+    "preterite": {
+      "ik": "werkte",
+      "jij": "werkte",
+      "hij_zij_het": "werkte",
+      "wij": "werkten",
+      "jullie": "werkten",
+      "zij": "werkten"
+    },
+    "past_participle": "gewerkt",
+    "past_participle_conjugated": {
+      "ik": "heb gewerkt",
+      "jij": "hebt gewerkt",
+      "hij_zij_het": "heeft gewerkt",
+      "wij": "hebben gewerkt",
+      "jullie": "hebben gewerkt",
+      "zij": "hebben gewerkt"
+    },
+    "examples": [
+      {
+        "person": "ik",
+        "preterite": "Ik werkte gisteren.",
+        "past_participle": "Ik heb hard gewerkt."
+      },
+      {
+        "person": "jij",
+        "preterite": "Jij werkte vandaag.",
+        "past_participle": "Jij hebt goed gewerkt."
+      },
+      {
+        "person": "hij_zij_het",
+        "preterite": "Hij werkte thuis.",
+        "past_participle": "Hij heeft gewerkt."
+      },
+      {
+        "person": "wij",
+        "preterite": "Wij werkten samen.",
+        "past_participle": "Wij hebben samengewerkt."
+      },
+      {
+        "person": "jullie",
+        "preterite": "Jullie werkten hard.",
+        "past_participle": "Jullie hebben goed gewerkt."
+      },
+      {
+        "person": "zij",
+        "preterite": "Zij werkten laat.",
+        "past_participle": "Zij hebben veel gewerkt."
+      }
+    ],
+    "examples_present": [
+      {
+        "person": "ik",
+        "present": "Ik werk in Amsterdam."
+      },
+      {
+        "person": "jij",
+        "present": "Jij werkt op kantoor."
+      },
+      {
+        "person": "hij_zij_het",
+        "present": "Hij werkt als engineer."
+      },
+      {
+        "person": "wij",
+        "present": "Wij werken hard."
+      },
+      {
+        "person": "jullie",
+        "present": "Jullie werken samen."
+      },
+      {
+        "person": "zij",
+        "present": "Zij werken veel."
+      }
+    ]
+  },
+  {
+    "infinitive": "spelen",
+    "translation": "jouer",
+    "frequency": "very_frequent",
+    "auxiliary": "hebben",
+    "present": {
+      "ik": "speel",
+      "jij": "speelt",
+      "hij_zij_het": "speelt",
+      "wij": "spelen",
+      "jullie": "spelen",
+      "zij": "spelen"
+    },
+    "preterite": {
+      "ik": "speelde",
+      "jij": "speelde",
+      "hij_zij_het": "speelde",
+      "wij": "speelden",
+      "jullie": "speelden",
+      "zij": "speelden"
+    },
+    "past_participle": "gespeeld",
+    "past_participle_conjugated": {
+      "ik": "heb gespeeld",
+      "jij": "hebt gespeeld",
+      "hij_zij_het": "heeft gespeeld",
+      "wij": "hebben gespeeld",
+      "jullie": "hebben gespeeld",
+      "zij": "hebben gespeeld"
+    },
+    "examples": [
+      {
+        "person": "ik",
+        "preterite": "Ik speelde voetbal.",
+        "past_participle": "Ik heb gespeeld."
+      },
+      {
+        "person": "jij",
+        "preterite": "Jij speelde tennis.",
+        "past_participle": "Jij hebt gespeeld."
+      },
+      {
+        "person": "hij_zij_het",
+        "preterite": "Hij speelde piano.",
+        "past_participle": "Hij heeft gespeeld."
+      },
+      {
+        "person": "wij",
+        "preterite": "Wij speelden samen.",
+        "past_participle": "Wij hebben samen gespeeld."
+      },
+      {
+        "person": "jullie",
+        "preterite": "Jullie speelden kaarten.",
+        "past_participle": "Jullie hebben kaarten gespeeld."
+      },
+      {
+        "person": "zij",
+        "preterite": "Zij speelden buiten.",
+        "past_participle": "Zij hebben buiten gespeeld."
+      }
+    ],
+    "examples_present": [
+      {
+        "person": "ik",
+        "present": "Ik speel graag."
+      },
+      {
+        "person": "jij",
+        "present": "Jij speelt goed."
+      },
+      {
+        "person": "hij_zij_het",
+        "present": "Hij speelt tennis."
+      },
+      {
+        "person": "wij",
+        "present": "Wij spelen voetbal."
+      },
+      {
+        "person": "jullie",
+        "present": "Jullie spelen samen."
+      },
+      {
+        "person": "zij",
+        "present": "Zij spelen buiten."
+      }
+    ]
+  },
+  {
+    "infinitive": "wandelen",
+    "translation": "marcher, se promener",
+    "frequency": "frequent",
+    "auxiliary": "hebben",
+    "present": {
+      "ik": "wandel",
+      "jij": "wandelt",
+      "hij_zij_het": "wandelt",
+      "wij": "wandelen",
+      "jullie": "wandelen",
+      "zij": "wandelen"
+    },
+    "preterite": {
+      "ik": "wandelde",
+      "jij": "wandelde",
+      "hij_zij_het": "wandelde",
+      "wij": "wandelden",
+      "jullie": "wandelden",
+      "zij": "wandelden"
+    },
+    "past_participle": "gewandeld",
+    "past_participle_conjugated": {
+      "ik": "heb gewandeld",
+      "jij": "hebt gewandeld",
+      "hij_zij_het": "heeft gewandeld",
+      "wij": "hebben gewandeld",
+      "jullie": "hebben gewandeld",
+      "zij": "hebben gewandeld"
+    },
+    "examples": [
+      {
+        "person": "ik",
+        "preterite": "Ik wandelde in het park.",
+        "past_participle": "Ik heb gewandeld."
+      },
+      {
+        "person": "jij",
+        "preterite": "Jij wandelde langs het water.",
+        "past_participle": "Jij hebt gewandeld."
+      },
+      {
+        "person": "hij_zij_het",
+        "preterite": "Hij wandelde lang.",
+        "past_participle": "Hij heeft lang gewandeld."
+      },
+      {
+        "person": "wij",
+        "preterite": "Wij wandelden samen.",
+        "past_participle": "Wij hebben samen gewandeld."
+      },
+      {
+        "person": "jullie",
+        "preterite": "Jullie wandelden ver.",
+        "past_participle": "Jullie hebben ver gewandeld."
+      },
+      {
+        "person": "zij",
+        "preterite": "Zij wandelden buiten.",
+        "past_participle": "Zij hebben gewandeld."
+      }
+    ],
+    "examples_present": [
+      {
+        "person": "ik",
+        "present": "Ik wandel graag."
+      },
+      {
+        "person": "jij",
+        "present": "Jij wandelt snel."
+      },
+      {
+        "person": "hij_zij_het",
+        "present": "Hij wandelt elke dag."
+      },
+      {
+        "person": "wij",
+        "present": "Wij wandelen in het park."
+      },
+      {
+        "person": "jullie",
+        "present": "Jullie wandelen samen."
+      },
+      {
+        "person": "zij",
+        "present": "Zij wandelen vroeg."
+      }
+    ]
+  },
+  {
+    "infinitive": "kijken",
+    "translation": "regarder",
+    "frequency": "very_frequent",
+    "auxiliary": "hebben",
+    "present": {
+      "ik": "kijk",
+      "jij": "kijkt",
+      "hij_zij_het": "kijkt",
+      "wij": "kijken",
+      "jullie": "kijken",
+      "zij": "kijken"
+    },
+    "preterite": {
+      "ik": "keek",
+      "jij": "keek",
+      "hij_zij_het": "keek",
+      "wij": "keken",
+      "jullie": "keken",
+      "zij": "keken"
+    },
+    "past_participle": "gekeken",
+    "past_participle_conjugated": {
+      "ik": "heb gekeken",
+      "jij": "hebt gekeken",
+      "hij_zij_het": "heeft gekeken",
+      "wij": "hebben gekeken",
+      "jullie": "hebben gekeken",
+      "zij": "hebben gekeken"
+    },
+    "examples": [
+      {
+        "person": "ik",
+        "preterite": "Ik keek naar het scherm.",
+        "past_participle": "Ik heb gekeken."
+      },
+      {
+        "person": "jij",
+        "preterite": "Jij keek buiten.",
+        "past_participle": "Jij hebt gekeken."
+      },
+      {
+        "person": "hij_zij_het",
+        "preterite": "Hij keek aandachtig.",
+        "past_participle": "Hij heeft aandachtig gekeken."
+      },
+      {
+        "person": "wij",
+        "preterite": "Wij keken samen.",
+        "past_participle": "Wij hebben samen gekeken."
+      },
+      {
+        "person": "jullie",
+        "preterite": "Jullie keken rond.",
+        "past_participle": "Jullie hebben rondgekeken."
+      },
+      {
+        "person": "zij",
+        "preterite": "Zij keken naar de film.",
+        "past_participle": "Zij hebben naar de film gekeken."
+      }
+    ],
+    "examples_present": [
+      {
+        "person": "ik",
+        "present": "Ik kijk graag."
+      },
+      {
+        "person": "jij",
+        "present": "Jij kijkt goed."
+      },
+      {
+        "person": "hij_zij_het",
+        "present": "Hij kijkt naar beneden."
+      },
+      {
+        "person": "wij",
+        "present": "Wij kijken samen."
+      },
+      {
+        "person": "jullie",
+        "present": "Jullie kijken naar tv."
+      },
+      {
+        "person": "zij",
+        "present": "Zij kijken rond."
+      }
+    ]
+  },
+  {
+    "infinitive": "luisteren",
+    "translation": "écouter",
+    "frequency": "very_frequent",
+    "auxiliary": "hebben",
+    "present": {
+      "ik": "luister",
+      "jij": "luistert",
+      "hij_zij_het": "luistert",
+      "wij": "luisteren",
+      "jullie": "luisteren",
+      "zij": "luisteren"
+    },
+    "preterite": {
+      "ik": "luisterde",
+      "jij": "luisterde",
+      "hij_zij_het": "luisterde",
+      "wij": "luisterden",
+      "jullie": "luisterden",
+      "zij": "luisterden"
+    },
+    "past_participle": "geluisterd",
+    "past_participle_conjugated": {
+      "ik": "heb geluisterd",
+      "jij": "hebt geluisterd",
+      "hij_zij_het": "heeft geluisterd",
+      "wij": "hebben geluisterd",
+      "jullie": "hebben geluisterd",
+      "zij": "hebben geluisterd"
+    },
+    "examples": [
+      {
+        "person": "ik",
+        "preterite": "Ik luisterde naar muziek.",
+        "past_participle": "Ik heb geluisterd."
+      },
+      {
+        "person": "jij",
+        "preterite": "Jij luisterde aandachtig.",
+        "past_participle": "Jij hebt aandachtig geluisterd."
+      },
+      {
+        "person": "hij_zij_het",
+        "preterite": "Hij luisterde goed.",
+        "past_participle": "Hij heeft goed geluisterd."
+      },
+      {
+        "person": "wij",
+        "preterite": "Wij luisterden samen.",
+        "past_participle": "Wij hebben samen geluisterd."
+      },
+      {
+        "person": "jullie",
+        "preterite": "Jullie luisterden rustig.",
+        "past_participle": "Jullie hebben rustig geluisterd."
+      },
+      {
+        "person": "zij",
+        "preterite": "Zij luisterden naar het verhaal.",
+        "past_participle": "Zij hebben naar het verhaal geluisterd."
+      }
+    ],
+    "examples_present": [
+      {
+        "person": "ik",
+        "present": "Ik luister graag."
+      },
+      {
+        "person": "jij",
+        "present": "Jij luistert goed."
+      },
+      {
+        "person": "hij_zij_het",
+        "present": "Hij luistert naar muziek."
+      },
+      {
+        "person": "wij",
+        "present": "Wij luisteren samen."
+      },
+      {
+        "person": "jullie",
+        "present": "Jullie luisteren aandachtig."
+      },
+      {
+        "person": "zij",
+        "present": "Zij luisteren naar mij."
+      }
+    ]
+  },
+  {
+    "infinitive": "wonen",
+    "translation": "habiter",
+    "frequency": "very_frequent",
+    "auxiliary": "hebben",
+    "present": {
+      "ik": "woon",
+      "jij": "woont",
+      "hij_zij_het": "woont",
+      "wij": "wonen",
+      "jullie": "wonen",
+      "zij": "wonen"
+    },
+    "preterite": {
+      "ik": "woonde",
+      "jij": "woonde",
+      "hij_zij_het": "woonde",
+      "wij": "woonden",
+      "jullie": "woonden",
+      "zij": "woonden"
+    },
+    "past_participle": "gewoond",
+    "past_participle_conjugated": {
+      "ik": "heb gewoond",
+      "jij": "hebt gewoond",
+      "hij_zij_het": "heeft gewoond",
+      "wij": "hebben gewoond",
+      "jullie": "hebben gewoond",
+      "zij": "hebben gewoond"
+    },
+    "examples": [
+      {
+        "person": "ik",
+        "preterite": "Ik woonde in Amsterdam.",
+        "past_participle": "Ik heb gewoond."
+      },
+      {
+        "person": "jij",
+        "preterite": "Jij woonde in de stad.",
+        "past_participle": "Jij hebt lang gewoond."
+      },
+      {
+        "person": "hij_zij_het",
+        "preterite": "Hij woonde op het platteland.",
+        "past_participle": "Hij heeft gewoond."
+      },
+      {
+        "person": "wij",
+        "preterite": "Wij woonden samen.",
+        "past_participle": "Wij hebben samen gewoond."
+      },
+      {
+        "person": "jullie",
+        "preterite": "Jullie woonden daar.",
+        "past_participle": "Jullie hebben daar gewoond."
+      },
+      {
+        "person": "zij",
+        "preterite": "Zij woonden hier.",
+        "past_participle": "Zij hebben hier gewoond."
+      }
+    ],
+    "examples_present": [
+      {
+        "person": "ik",
+        "present": "Ik woon in Nederland."
+      },
+      {
+        "person": "jij",
+        "present": "Jij woont in Utrecht."
+      },
+      {
+        "person": "hij_zij_het",
+        "present": "Hij woont dichtbij."
+      },
+      {
+        "person": "wij",
+        "present": "Wij wonen hier."
+      },
+      {
+        "person": "jullie",
+        "present": "Jullie wonen samen."
+      },
+      {
+        "person": "zij",
+        "present": "Zij wonen ver weg."
+      }
+    ]
+  },
+  {
+    "infinitive": "studeren",
+    "translation": "étudier",
+    "frequency": "very_frequent",
+    "auxiliary": "hebben",
+    "present": {
+      "ik": "studeer",
+      "jij": "studeert",
+      "hij_zij_het": "studeert",
+      "wij": "studeren",
+      "jullie": "studeren",
+      "zij": "studeren"
+    },
+    "preterite": {
+      "ik": "studeerde",
+      "jij": "studeerde",
+      "hij_zij_het": "studeerde",
+      "wij": "studeerden",
+      "jullie": "studeerden",
+      "zij": "studeerden"
+    },
+    "past_participle": "gestudeerd",
+    "past_participle_conjugated": {
+      "ik": "heb gestudeerd",
+      "jij": "hebt gestudeerd",
+      "hij_zij_het": "heeft gestudeerd",
+      "wij": "hebben gestudeerd",
+      "jullie": "hebben gestudeerd",
+      "zij": "hebben gestudeerd"
+    },
+    "examples": [
+      {
+        "person": "ik",
+        "preterite": "Ik studeerde Nederlands.",
+        "past_participle": "Ik heb gestudeerd."
+      },
+      {
+        "person": "jij",
+        "preterite": "Jij studeerde hard.",
+        "past_participle": "Jij hebt hard gestudeerd."
+      },
+      {
+        "person": "hij_zij_het",
+        "preterite": "Hij studeerde geneeskunde.",
+        "past_participle": "Hij heeft geneeskunde gestudeerd."
+      },
+      {
+        "person": "wij",
+        "preterite": "Wij studeerden samen.",
+        "past_participle": "Wij hebben samen gestudeerd."
+      },
+      {
+        "person": "jullie",
+        "preterite": "Jullie studeerden veel.",
+        "past_participle": "Jullie hebben veel gestudeerd."
+      },
+      {
+        "person": "zij",
+        "preterite": "Zij studeerden in Utrecht.",
+        "past_participle": "Zij hebben in Utrecht gestudeerd."
+      }
+    ],
+    "examples_present": [
+      {
+        "person": "ik",
+        "present": "Ik studeer Nederlands."
+      },
+      {
+        "person": "jij",
+        "present": "Jij studeert goed."
+      },
+      {
+        "person": "hij_zij_het",
+        "present": "Hij studeert hard."
+      },
+      {
+        "person": "wij",
+        "present": "Wij studeren samen."
+      },
+      {
+        "person": "jullie",
+        "present": "Jullie studeren veel."
+      },
+      {
+        "person": "zij",
+        "present": "Zij studeren geneeskunde."
+      }
+    ]
+  },
+  {
+    "infinitive": "kopen",
+    "translation": "acheter",
+    "frequency": "frequent",
+    "auxiliary": "hebben",
+    "present": {
+      "ik": "koop",
+      "jij": "koopt",
+      "hij_zij_het": "koopt",
+      "wij": "kopen",
+      "jullie": "kopen",
+      "zij": "kopen"
+    },
+    "preterite": {
+      "ik": "kocht",
+      "jij": "kocht",
+      "hij_zij_het": "kocht",
+      "wij": "kochten",
+      "jullie": "kochten",
+      "zij": "kochten"
+    },
+    "past_participle": "gekocht",
+    "past_participle_conjugated": {
+      "ik": "heb gekocht",
+      "jij": "hebt gekocht",
+      "hij_zij_het": "heeft gekocht",
+      "wij": "hebben gekocht",
+      "jullie": "hebben gekocht",
+      "zij": "hebben gekocht"
+    },
+    "examples": [
+      {
+        "person": "ik",
+        "preterite": "Ik kocht boeken.",
+        "past_participle": "Ik heb gekocht."
+      },
+      {
+        "person": "jij",
+        "preterite": "Jij kocht kleren.",
+        "past_participle": "Jij hebt gekocht."
+      },
+      {
+        "person": "hij_zij_het",
+        "preterite": "Hij kocht voedsel.",
+        "past_participle": "Hij heeft gekocht."
+      },
+      {
+        "person": "wij",
+        "preterite": "Wij kochten samen.",
+        "past_participle": "Wij hebben samen gekocht."
+      },
+      {
+        "person": "jullie",
+        "preterite": "Jullie kochten veel.",
+        "past_participle": "Jullie hebben veel gekocht."
+      },
+      {
+        "person": "zij",
+        "preterite": "Zij kochten huizen.",
+        "past_participle": "Zij hebben huizen gekocht."
+      }
+    ],
+    "examples_present": [
+      {
+        "person": "ik",
+        "present": "Ik koop graag."
+      },
+      {
+        "person": "jij",
+        "present": "Jij koopt goed."
+      },
+      {
+        "person": "hij_zij_het",
+        "present": "Hij koopt veel."
+      },
+      {
+        "person": "wij",
+        "present": "Wij kopen samen."
+      },
+      {
+        "person": "jullie",
+        "present": "Jullie kopen voedsel."
+      },
+      {
+        "person": "zij",
+        "present": "Zij kopen kleren."
+      }
+    ]
+  },
+  {
+    "infinitive": "vullen",
+    "translation": "remplir",
+    "frequency": "frequent",
+    "auxiliary": "hebben",
+    "present": {
+      "ik": "vul",
+      "jij": "vult",
+      "hij_zij_het": "vult",
+      "wij": "vullen",
+      "jullie": "vullen",
+      "zij": "vullen"
+    },
+    "preterite": {
+      "ik": "vulde",
+      "jij": "vulde",
+      "hij_zij_het": "vulde",
+      "wij": "vulden",
+      "jullie": "vulden",
+      "zij": "vulden"
+    },
+    "past_participle": "gevuld",
+    "past_participle_conjugated": {
+      "ik": "heb gevuld",
+      "jij": "hebt gevuld",
+      "hij_zij_het": "heeft gevuld",
+      "wij": "hebben gevuld",
+      "jullie": "hebben gevuld",
+      "zij": "hebben gevuld"
+    },
+    "examples": [
+      {
+        "person": "ik",
+        "preterite": "Ik vulde het glas.",
+        "past_participle": "Ik heb gevuld."
+      },
+      {
+        "person": "jij",
+        "preterite": "Jij vulde het formulier.",
+        "past_participle": "Jij hebt het formulier gevuld."
+      },
+      {
+        "person": "hij_zij_het",
+        "preterite": "Hij vulde het in.",
+        "past_participle": "Hij heeft ingevuld."
+      },
+      {
+        "person": "wij",
+        "preterite": "Wij vulden samen.",
+        "past_participle": "Wij hebben samen gevuld."
+      },
+      {
+        "person": "jullie",
+        "preterite": "Jullie vulden de tabel.",
+        "past_participle": "Jullie hebben de tabel gevuld."
+      },
+      {
+        "person": "zij",
+        "preterite": "Zij vulden uit.",
+        "past_participle": "Zij hebben uitgevuld."
+      }
+    ],
+    "examples_present": [
+      {
+        "person": "ik",
+        "present": "Ik vul het glas."
+      },
+      {
+        "person": "jij",
+        "present": "Jij vult de tabel."
+      },
+      {
+        "person": "hij_zij_het",
+        "present": "Hij vult het formulier."
+      },
+      {
+        "person": "wij",
+        "present": "Wij vullen samen."
+      },
+      {
+        "person": "jullie",
+        "present": "Jullie vullen in."
+      },
+      {
+        "person": "zij",
+        "present": "Zij vullen uit."
+      }
+    ]
+  },
+  {
+    "infinitive": "stellen",
+    "translation": "poser, placer",
+    "frequency": "very_frequent",
+    "auxiliary": "hebben",
+    "present": {
+      "ik": "stel",
+      "jij": "stelt",
+      "hij_zij_het": "stelt",
+      "wij": "stellen",
+      "jullie": "stellen",
+      "zij": "stellen"
+    },
+    "preterite": {
+      "ik": "stelde",
+      "jij": "stelde",
+      "hij_zij_het": "stelde",
+      "wij": "stelden",
+      "jullie": "stelden",
+      "zij": "stelden"
+    },
+    "past_participle": "gesteld",
+    "past_participle_conjugated": {
+      "ik": "heb gesteld",
+      "jij": "hebt gesteld",
+      "hij_zij_het": "heeft gesteld",
+      "wij": "hebben gesteld",
+      "jullie": "hebben gesteld",
+      "zij": "hebben gesteld"
+    },
+    "examples": [
+      {
+        "person": "ik",
+        "preterite": "Ik stelde een vraag.",
+        "past_participle": "Ik heb gesteld."
+      },
+      {
+        "person": "jij",
+        "preterite": "Jij stelde voor.",
+        "past_participle": "Jij hebt voorgesteld."
+      },
+      {
+        "person": "hij_zij_het",
+        "preterite": "Hij stelde eisen.",
+        "past_participle": "Hij heeft eisen gesteld."
+      },
+      {
+        "person": "wij",
+        "preterite": "Wij stelden samen.",
+        "past_participle": "Wij hebben samen gesteld."
+      },
+      {
+        "person": "jullie",
+        "preterite": "Jullie stelden vragen.",
+        "past_participle": "Jullie hebben vragen gesteld."
+      },
+      {
+        "person": "zij",
+        "preterite": "Zij stelden vast.",
+        "past_participle": "Zij hebben vastgesteld."
+      }
+    ],
+    "examples_present": [
+      {
+        "person": "ik",
+        "present": "Ik stel een vraag."
+      },
+      {
+        "person": "jij",
+        "present": "Jij stelt voor."
+      },
+      {
+        "person": "hij_zij_het",
+        "present": "Hij stelt eisen."
+      },
+      {
+        "person": "wij",
+        "present": "Wij stellen samen."
+      },
+      {
+        "person": "jullie",
+        "present": "Jullie stellen vragen."
+      },
+      {
+        "person": "zij",
+        "present": "Zij stellen vast."
+      }
+    ]
+  },
+  {
+    "infinitive": "tellen",
+    "translation": "compter, compter sur",
+    "frequency": "frequent",
+    "auxiliary": "hebben",
+    "present": {
+      "ik": "tel",
+      "jij": "telt",
+      "hij_zij_het": "telt",
+      "wij": "tellen",
+      "jullie": "tellen",
+      "zij": "tellen"
+    },
+    "preterite": {
+      "ik": "telde",
+      "jij": "telde",
+      "hij_zij_het": "telde",
+      "wij": "telden",
+      "jullie": "telden",
+      "zij": "telden"
+    },
+    "past_participle": "geteld",
+    "past_participle_conjugated": {
+      "ik": "heb geteld",
+      "jij": "hebt geteld",
+      "hij_zij_het": "heeft geteld",
+      "wij": "hebben geteld",
+      "jullie": "hebben geteld",
+      "zij": "hebben geteld"
+    },
+    "examples": [
+      {
+        "person": "ik",
+        "preterite": "Ik telde tot tien.",
+        "past_participle": "Ik heb geteld."
+      },
+      {
+        "person": "jij",
+        "preterite": "Jij telde snel.",
+        "past_participle": "Jij hebt snel geteld."
+      },
+      {
+        "person": "hij_zij_het",
+        "preterite": "Hij telde op haar.",
+        "past_participle": "Hij heeft op haar geteld."
+      },
+      {
+        "person": "wij",
+        "preterite": "Wij telden samen.",
+        "past_participle": "Wij hebben samen geteld."
+      },
+      {
+        "person": "jullie",
+        "preterite": "Jullie telden af.",
+        "past_participle": "Jullie hebben afgeteld."
+      },
+      {
+        "person": "zij",
+        "preterite": "Zij telden geld.",
+        "past_participle": "Zij hebben geld geteld."
+      }
+    ],
+    "examples_present": [
+      {
+        "person": "ik",
+        "present": "Ik tel tot tien."
+      },
+      {
+        "person": "jij",
+        "present": "Jij telt snel."
+      },
+      {
+        "person": "hij_zij_het",
+        "present": "Hij telt op haar."
+      },
+      {
+        "person": "wij",
+        "present": "Wij tellen samen."
+      },
+      {
+        "person": "jullie",
+        "present": "Jullie tellen af."
+      },
+      {
+        "person": "zij",
+        "present": "Zij tellen geld."
+      }
+    ]
+  },
+  {
+    "infinitive": "werpen",
+    "translation": "jeter, lancer",
+    "frequency": "frequent",
+    "auxiliary": "hebben",
+    "present": {
+      "ik": "werp",
+      "jij": "werpt",
+      "hij_zij_het": "werpt",
+      "wij": "werpen",
+      "jullie": "werpen",
+      "zij": "werpen"
+    },
+    "preterite": {
+      "ik": "wierp",
+      "jij": "wierp",
+      "hij_zij_het": "wierp",
+      "wij": "wierpen",
+      "jullie": "wierpen",
+      "zij": "wierpen"
+    },
+    "past_participle": "geworpen",
+    "past_participle_conjugated": {
+      "ik": "heb geworpen",
+      "jij": "hebt geworpen",
+      "hij_zij_het": "heeft geworpen",
+      "wij": "hebben geworpen",
+      "jullie": "hebben geworpen",
+      "zij": "hebben geworpen"
+    },
+    "examples": [
+      {
+        "person": "ik",
+        "preterite": "Ik wierp de bal.",
+        "past_participle": "Ik heb geworpen."
+      },
+      {
+        "person": "jij",
+        "preterite": "Jij wierp hard.",
+        "past_participle": "Jij hebt geworpen."
+      },
+      {
+        "person": "hij_zij_het",
+        "preterite": "Hij wierp weg.",
+        "past_participle": "Hij heeft weggeworpen."
+      },
+      {
+        "person": "wij",
+        "preterite": "Wij wierpen samen.",
+        "past_participle": "Wij hebben samen geworpen."
+      },
+      {
+        "person": "jullie",
+        "preterite": "Jullie wierpen goed.",
+        "past_participle": "Jullie hebben goed geworpen."
+      },
+      {
+        "person": "zij",
+        "preterite": "Zij wierpen uit.",
+        "past_participle": "Zij hebben uitgeworpen."
+      }
+    ],
+    "examples_present": [
+      {
+        "person": "ik",
+        "present": "Ik werp de bal."
+      },
+      {
+        "person": "jij",
+        "present": "Jij werpt hard."
+      },
+      {
+        "person": "hij_zij_het",
+        "present": "Hij werpt weg."
+      },
+      {
+        "person": "wij",
+        "present": "Wij werpen samen."
+      },
+      {
+        "person": "jullie",
+        "present": "Jullie werpen goed."
+      },
+      {
+        "person": "zij",
+        "present": "Zij werpen uit."
+      }
+    ]
+  },
+  {
+    "infinitive": "halen",
+    "translation": "chercher, aller chercher",
+    "frequency": "very_frequent",
+    "auxiliary": "hebben",
+    "present": {
+      "ik": "haal",
+      "jij": "haalt",
+      "hij_zij_het": "haalt",
+      "wij": "halen",
+      "jullie": "halen",
+      "zij": "halen"
+    },
+    "preterite": {
+      "ik": "haalde",
+      "jij": "haalde",
+      "hij_zij_het": "haalde",
+      "wij": "haalden",
+      "jullie": "haalden",
+      "zij": "haalden"
+    },
+    "past_participle": "gehaald",
+    "past_participle_conjugated": {
+      "ik": "heb gehaald",
+      "jij": "hebt gehaald",
+      "hij_zij_het": "heeft gehaald",
+      "wij": "hebben gehaald",
+      "jullie": "hebben gehaald",
+      "zij": "hebben gehaald"
+    },
+    "examples": [
+      {
+        "person": "ik",
+        "preterite": "Ik haalde water.",
+        "past_participle": "Ik heb gehaald."
+      },
+      {
+        "person": "jij",
+        "preterite": "Jij haalde hem.",
+        "past_participle": "Jij hebt hem gehaald."
+      },
+      {
+        "person": "hij_zij_het",
+        "preterite": "Hij haalde uit.",
+        "past_participle": "Hij heeft uitgehaald."
+      },
+      {
+        "person": "wij",
+        "preterite": "Wij haalden samen.",
+        "past_participle": "Wij hebben samen gehaald."
+      },
+      {
+        "person": "jullie",
+        "preterite": "Jullie haalden voedsel.",
+        "past_participle": "Jullie hebben voedsel gehaald."
+      },
+      {
+        "person": "zij",
+        "preterite": "Zij haalden diep adem.",
+        "past_participle": "Zij hebben diep gehaald."
+      }
+    ],
+    "examples_present": [
+      {
+        "person": "ik",
+        "present": "Ik haal water."
+      },
+      {
+        "person": "jij",
+        "present": "Jij haalt hem."
+      },
+      {
+        "person": "hij_zij_het",
+        "present": "Hij haalt uit."
+      },
+      {
+        "person": "wij",
+        "present": "Wij halen samen."
+      },
+      {
+        "person": "jullie",
+        "present": "Jullie halen voedsel."
+      },
+      {
+        "person": "zij",
+        "present": "Zij halen diep adem."
+      }
+    ]
+  },
+  {
+    "infinitive": "zetten",
+    "translation": "mettre, poser",
+    "frequency": "very_frequent",
+    "auxiliary": "hebben",
+    "present": {
+      "ik": "zet",
+      "jij": "zet",
+      "hij_zij_het": "zet",
+      "wij": "zetten",
+      "jullie": "zetten",
+      "zij": "zetten"
+    },
+    "preterite": {
+      "ik": "zette",
+      "jij": "zette",
+      "hij_zij_het": "zette",
+      "wij": "zetten",
+      "jullie": "zetten",
+      "zij": "zetten"
+    },
+    "past_participle": "gezet",
+    "past_participle_conjugated": {
+      "ik": "heb gezet",
+      "jij": "hebt gezet",
+      "hij_zij_het": "heeft gezet",
+      "wij": "hebben gezet",
+      "jullie": "hebben gezet",
+      "zij": "hebben gezet"
+    },
+    "examples": [
+      {
+        "person": "ik",
+        "preterite": "Ik zette het neer.",
+        "past_participle": "Ik heb gezet."
+      },
+      {
+        "person": "jij",
+        "preterite": "Jij zette thee.",
+        "past_participle": "Jij hebt thee gezet."
+      },
+      {
+        "person": "hij_zij_het",
+        "preterite": "Hij zette in.",
+        "past_participle": "Hij heeft ingezet."
+      },
+      {
+        "person": "wij",
+        "preterite": "Wij zetten samen.",
+        "past_participle": "Wij hebben samen gezet."
+      },
+      {
+        "person": "jullie",
+        "preterite": "Jullie zetten aan.",
+        "past_participle": "Jullie hebben aangezet."
+      },
+      {
+        "person": "zij",
+        "preterite": "Zij zetten uit.",
+        "past_participle": "Zij hebben uitgezet."
+      }
+    ],
+    "examples_present": [
+      {
+        "person": "ik",
+        "present": "Ik zet het neer."
+      },
+      {
+        "person": "jij",
+        "present": "Jij zet thee."
+      },
+      {
+        "person": "hij_zij_het",
+        "present": "Hij zet in."
+      },
+      {
+        "person": "wij",
+        "present": "Wij zetten samen."
+      },
+      {
+        "person": "jullie",
+        "present": "Jullie zetten aan."
+      },
+      {
+        "person": "zij",
+        "present": "Zij zetten uit."
+      }
+    ]
+  },
+  {
+    "infinitive": "zoeken",
+    "translation": "chercher",
+    "frequency": "very_frequent",
+    "auxiliary": "hebben",
+    "present": {
+      "ik": "zoek",
+      "jij": "zoekt",
+      "hij_zij_het": "zoekt",
+      "wij": "zoeken",
+      "jullie": "zoeken",
+      "zij": "zoeken"
+    },
+    "preterite": {
+      "ik": "zocht",
+      "jij": "zocht",
+      "hij_zij_het": "zocht",
+      "wij": "zochten",
+      "jullie": "zochten",
+      "zij": "zochten"
+    },
+    "past_participle": "gezocht",
+    "past_participle_conjugated": {
+      "ik": "heb gezocht",
+      "jij": "hebt gezocht",
+      "hij_zij_het": "heeft gezocht",
+      "wij": "hebben gezocht",
+      "jullie": "hebben gezocht",
+      "zij": "hebben gezocht"
+    },
+    "examples": [
+      {
+        "person": "ik",
+        "preterite": "Ik zocht mijn sleutels.",
+        "past_participle": "Ik heb gezocht."
+      },
+      {
+        "person": "jij",
+        "preterite": "Jij zocht overal.",
+        "past_participle": "Jij hebt gezocht."
+      },
+      {
+        "person": "hij_zij_het",
+        "preterite": "Hij zocht naar haar.",
+        "past_participle": "Hij heeft naar haar gezocht."
+      },
+      {
+        "person": "wij",
+        "preterite": "Wij zochten samen.",
+        "past_participle": "Wij hebben samen gezocht."
+      },
+      {
+        "person": "jullie",
+        "preterite": "Jullie zochten lang.",
+        "past_participle": "Jullie hebben lang gezocht."
+      },
+      {
+        "person": "zij",
+        "preterite": "Zij zochten uit.",
+        "past_participle": "Zij hebben uitgezocht."
+      }
+    ],
+    "examples_present": [
+      {
+        "person": "ik",
+        "present": "Ik zoek mijn sleutels."
+      },
+      {
+        "person": "jij",
+        "present": "Jij zoekt overal."
+      },
+      {
+        "person": "hij_zij_het",
+        "present": "Hij zoekt naar haar."
+      },
+      {
+        "person": "wij",
+        "present": "Wij zoeken samen."
+      },
+      {
+        "person": "jullie",
+        "present": "Jullie zoeken lang."
+      },
+      {
+        "person": "zij",
+        "present": "Zij zoeken uit."
+      }
+    ]
+  },
+  {
+    "infinitive": "dankbaarheid tonen",
+    "translation": "remercier",
+    "frequency": "very_frequent",
+    "auxiliary": "hebben",
+    "present": {
+      "ik": "bedank",
+      "jij": "bedankt",
+      "hij_zij_het": "bedankt",
+      "wij": "bedanken",
+      "jullie": "bedanken",
+      "zij": "bedanken"
+    },
+    "preterite": {
+      "ik": "bedankte",
+      "jij": "bedankte",
+      "hij_zij_het": "bedankte",
+      "wij": "bedankten",
+      "jullie": "bedankten",
+      "zij": "bedankten"
+    },
+    "past_participle": "bedankt",
+    "past_participle_conjugated": {
+      "ik": "heb bedankt",
+      "jij": "hebt bedankt",
+      "hij_zij_het": "heeft bedankt",
+      "wij": "hebben bedankt",
+      "jullie": "hebben bedankt",
+      "zij": "hebben bedankt"
+    },
+    "examples": [
+      {
+        "person": "ik",
+        "preterite": "Ik bedankte hem.",
+        "past_participle": "Ik heb bedankt."
+      },
+      {
+        "person": "jij",
+        "preterite": "Jij bedankte haar.",
+        "past_participle": "Jij hebt bedankt."
+      },
+      {
+        "person": "hij_zij_het",
+        "preterite": "Hij bedankte vriendelijk.",
+        "past_participle": "Hij heeft vriendelijk bedankt."
+      },
+      {
+        "person": "wij",
+        "preterite": "Wij bedankten samen.",
+        "past_participle": "Wij hebben samen bedankt."
+      },
+      {
+        "person": "jullie",
+        "preterite": "Jullie bedankten hartig.",
+        "past_participle": "Jullie hebben hartig bedankt."
+      },
+      {
+        "person": "zij",
+        "preterite": "Zij bedankten beleefd.",
+        "past_participle": "Zij hebben beleefd bedankt."
+      }
+    ],
+    "examples_present": [
+      {
+        "person": "ik",
+        "present": "Ik bedank hem."
+      },
+      {
+        "person": "jij",
+        "present": "Jij bedankt haar."
+      },
+      {
+        "person": "hij_zij_het",
+        "present": "Hij bedankt vriendelijk."
+      },
+      {
+        "person": "wij",
+        "present": "Wij bedanken samen."
+      },
+      {
+        "person": "jullie",
+        "present": "Jullie bedanken hartig."
+      },
+      {
+        "person": "zij",
+        "present": "Zij bedanken beleefd."
+      }
+    ]
+  },
+  {
+    "infinitive": "spreken",
+    "translation": "parler",
+    "frequency": "very_frequent",
+    "auxiliary": "hebben",
+    "present": {
+      "ik": "spreek",
+      "jij": "spreekt",
+      "hij_zij_het": "spreekt",
+      "wij": "spreken",
+      "jullie": "spreken",
+      "zij": "spreken"
+    },
+    "preterite": {
+      "ik": "sprak",
+      "jij": "sprak",
+      "hij_zij_het": "sprak",
+      "wij": "spraken",
+      "jullie": "spraken",
+      "zij": "spraken"
+    },
+    "past_participle": "gesproken",
+    "past_participle_conjugated": {
+      "ik": "heb gesproken",
+      "jij": "hebt gesproken",
+      "hij_zij_het": "heeft gesproken",
+      "wij": "hebben gesproken",
+      "jullie": "hebben gesproken",
+      "zij": "hebben gesproken"
+    },
+    "examples": [
+      {
+        "person": "ik",
+        "preterite": "Ik sprak Nederlands.",
+        "past_participle": "Ik heb gesproken."
+      },
+      {
+        "person": "jij",
+        "preterite": "Jij sprak luid.",
+        "past_participle": "Jij hebt luid gesproken."
+      },
+      {
+        "person": "hij_zij_het",
+        "preterite": "Hij sprak over.",
+        "past_participle": "Hij heeft erover gesproken."
+      },
+      {
+        "person": "wij",
+        "preterite": "Wij spraken samen.",
+        "past_participle": "Wij hebben samen gesproken."
+      },
+      {
+        "person": "jullie",
+        "preterite": "Jullie spraken af.",
+        "past_participle": "Jullie hebben afgesproken."
+      },
+      {
+        "person": "zij",
+        "preterite": "Zij spraken Engels.",
+        "past_participle": "Zij hebben Engels gesproken."
+      }
+    ],
+    "examples_present": [
+      {
+        "person": "ik",
+        "present": "Ik spreek Nederlands."
+      },
+      {
+        "person": "jij",
+        "present": "Jij spreekt luid."
+      },
+      {
+        "person": "hij_zij_het",
+        "present": "Hij spreekt over."
+      },
+      {
+        "person": "wij",
+        "present": "Wij spreken samen."
+      },
+      {
+        "person": "jullie",
+        "present": "Jullie spreken af."
+      },
+      {
+        "person": "zij",
+        "present": "Zij spreken Engels."
+      }
+    ]
+  },
+  {
+    "infinitive": "verwijzen",
+    "translation": "renvoyer, orienter",
+    "frequency": "frequent",
+    "auxiliary": "hebben",
+    "present": {
+      "ik": "verwijs",
+      "jij": "verwijst",
+      "hij_zij_het": "verwijst",
+      "wij": "verwijzen",
+      "jullie": "verwijzen",
+      "zij": "verwijzen"
+    },
+    "preterite": {
+      "ik": "verwees",
+      "jij": "verwees",
+      "hij_zij_het": "verwees",
+      "wij": "verwezen",
+      "jullie": "verwezen",
+      "zij": "verwezen"
+    },
+    "past_participle": "verwezen",
+    "past_participle_conjugated": {
+      "ik": "heb verwezen",
+      "jij": "hebt verwezen",
+      "hij_zij_het": "heeft verwezen",
+      "wij": "hebben verwezen",
+      "jullie": "hebben verwezen",
+      "zij": "hebben verwezen"
+    },
+    "examples": [
+      {
+        "person": "ik",
+        "preterite": "Ik verwees naar haar.",
+        "past_participle": "Ik heb verwezen."
+      },
+      {
+        "person": "jij",
+        "preterite": "Jij verwees af.",
+        "past_participle": "Jij hebt afgewezen."
+      },
+      {
+        "person": "hij_zij_het",
+        "preterite": "Hij verwees door.",
+        "past_participle": "Hij heeft doorverwezen."
+      },
+      {
+        "person": "wij",
+        "preterite": "Wij verwezen samen.",
+        "past_participle": "Wij hebben samen verwezen."
+      },
+      {
+        "person": "jullie",
+        "preterite": "Jullie verwezen naar rechter.",
+        "past_participle": "Jullie hebben naar rechter verwezen."
+      },
+      {
+        "person": "zij",
+        "preterite": "Zij verwezen uit.",
+        "past_participle": "Zij hebben uitverwezen."
+      }
+    ],
+    "examples_present": [
+      {
+        "person": "ik",
+        "present": "Ik verwijs naar haar."
+      },
+      {
+        "person": "jij",
+        "present": "Jij verwijst af."
+      },
+      {
+        "person": "hij_zij_het",
+        "present": "Hij verwijst door."
+      },
+      {
+        "person": "wij",
+        "present": "Wij verwijzen samen."
+      },
+      {
+        "person": "jullie",
+        "present": "Jullie verwijzen naar rechter."
+      },
+      {
+        "person": "zij",
+        "present": "Zij verwijzen uit."
+      }
+    ]
+  }
+]
