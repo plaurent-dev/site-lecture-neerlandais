@@ -552,6 +552,8 @@
         let currentVerb = null;
         let selectedAnswer = null;
         let answered = false;
+        let currentTimeType = null;
+        let currentPerson = null;
 
         // Charger les verbes
         async function loadVerbes() {
@@ -705,6 +707,10 @@
         }
 
         function generateQuestion(verb, timeType, person) {
+            // Sauvegarder les variables pour utilisation dans selectAnswer
+            currentTimeType = timeType;
+            currentPerson = person;
+            
             console.log(`Génération question: ${verb.infinitive}, ${timeType}, ${person}`);
             
             let timeLabel = {
@@ -821,13 +827,13 @@
             
             // Trouver un exemple pertinent
             if (currentVerb.examples && currentVerb.examples.length > 0) {
-                const relevantExample = currentVerb.examples.find(ex => ex.person === person);
+                const relevantExample = currentVerb.examples.find(ex => ex.person === currentPerson);
                 if (relevantExample) {
-                    if (timeType === 'present' && relevantExample.present) {
+                    if (currentTimeType === 'present' && relevantExample.present) {
                         exampleSentence = `<br><strong>Exemple:</strong> ${relevantExample.present}`;
-                    } else if (timeType === 'preterite' && relevantExample.preterite) {
+                    } else if (currentTimeType === 'preterite' && relevantExample.preterite) {
                         exampleSentence = `<br><strong>Exemple:</strong> ${relevantExample.preterite}`;
-                    } else if (timeType === 'past_participle' && relevantExample.past_participle) {
+                    } else if (currentTimeType === 'past_participle' && relevantExample.past_participle) {
                         exampleSentence = `<br><strong>Exemple:</strong> ${relevantExample.past_participle}`;
                     }
                 }
