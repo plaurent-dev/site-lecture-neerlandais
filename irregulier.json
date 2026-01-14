@@ -232,9 +232,9 @@
       }
     ],
     "present": {
-      "ik": "lachen",
-      "jij": "lachent",
-      "hij_zij_het": "lachent",
+      "ik": "lach",
+      "jij": "lacht",
+      "hij_zij_het": "lacht",
       "wij": "lachen",
       "jullie": "lachen",
       "zij": "lachen"
@@ -242,15 +242,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik lachen dit."
+        "present": "Ik lach dit."
       },
       {
         "person": "jij",
-        "present": "Jij lachent dit."
+        "present": "Jij lacht dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij lachent dit."
+        "present": "Hij lacht dit."
       },
       {
         "person": "wij",
@@ -321,9 +321,9 @@
       }
     ],
     "present": {
-      "ik": "laden",
-      "jij": "ladent",
-      "hij_zij_het": "ladent",
+      "ik": "laad",
+      "jij": "laadt",
+      "hij_zij_het": "ladt",
       "wij": "laden",
       "jullie": "laden",
       "zij": "laden"
@@ -331,15 +331,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik laden dit."
+        "present": "Ik lad dit."
       },
       {
         "person": "jij",
-        "present": "Jij ladent dit."
+        "present": "Jij ladt dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij ladent dit."
+        "present": "Hij ladt dit."
       },
       {
         "person": "wij",
@@ -588,9 +588,9 @@
       }
     ],
     "present": {
-      "ik": "liegen",
-      "jij": "liegent",
-      "hij_zij_het": "liegent",
+      "ik": "lieg",
+      "jij": "liegt",
+      "hij_zij_het": "liegt",
       "wij": "liegen",
       "jullie": "liegen",
       "zij": "liegen"
@@ -598,15 +598,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik liegen dit."
+        "present": "Ik lieg dit."
       },
       {
         "person": "jij",
-        "present": "Jij liegent dit."
+        "present": "Jij liegt dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij liegent dit."
+        "present": "Hij liegt dit."
       },
       {
         "person": "wij",
@@ -766,9 +766,9 @@
       }
     ],
     "present": {
-      "ik": "lijden",
-      "jij": "lijdent",
-      "hij_zij_het": "lijdent",
+      "ik": "lijd",
+      "jij": "lijdt",
+      "hij_zij_het": "lijdt",
       "wij": "lijden",
       "jullie": "lijden",
       "zij": "lijden"
@@ -776,15 +776,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik lijden dit."
+        "present": "Ik lijd dit."
       },
       {
         "person": "jij",
-        "present": "Jij lijdent dit."
+        "present": "Jij lijdt dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij lijdent dit."
+        "present": "Hij lijdt dit."
       },
       {
         "person": "wij",
@@ -855,9 +855,9 @@
       }
     ],
     "present": {
-      "ik": "lijken",
-      "jij": "lijkent",
-      "hij_zij_het": "lijkent",
+      "ik": "lijk",
+      "jij": "lijkt",
+      "hij_zij_het": "lijkt",
       "wij": "lijken",
       "jullie": "lijken",
       "zij": "lijken"
@@ -865,15 +865,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik lijken dit."
+        "present": "Ik lijk dit."
       },
       {
         "person": "jij",
-        "present": "Jij lijkent dit."
+        "present": "Jij lijkt dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij lijkent dit."
+        "present": "Hij lijkt dit."
       },
       {
         "person": "wij",
@@ -1033,9 +1033,9 @@
       }
     ],
     "present": {
-      "ik": "meten",
-      "jij": "metent",
-      "hij_zij_het": "metent",
+      "ik": "met",
+      "jij": "mett",
+      "hij_zij_het": "mett",
       "wij": "meten",
       "jullie": "meten",
       "zij": "meten"
@@ -1043,15 +1043,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik meten dit."
+        "present": "Ik met dit."
       },
       {
         "person": "jij",
-        "present": "Jij metent dit."
+        "present": "Jij mett dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij metent dit."
+        "present": "Hij mett dit."
       },
       {
         "person": "wij",
@@ -1122,9 +1122,9 @@
       }
     ],
     "present": {
-      "ik": "mijden",
-      "jij": "mijdent",
-      "hij_zij_het": "mijdent",
+      "ik": "mijd",
+      "jij": "mijdt",
+      "hij_zij_het": "mijdt",
       "wij": "mijden",
       "jullie": "mijden",
       "zij": "mijden"
@@ -1132,15 +1132,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik mijden dit."
+        "present": "Ik mijd dit."
       },
       {
         "person": "jij",
-        "present": "Jij mijdent dit."
+        "present": "Jij mijdt dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij mijdent dit."
+        "present": "Hij mijdt dit."
       },
       {
         "person": "wij",
@@ -1478,9 +1478,9 @@
       }
     ],
     "present": {
-      "ik": "plegen",
-      "jij": "plegent",
-      "hij_zij_het": "plegent",
+      "ik": "pleg",
+      "jij": "plegt",
+      "hij_zij_het": "plegt",
       "wij": "plegen",
       "jullie": "plegen",
       "zij": "plegen"
@@ -1488,15 +1488,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik plegen dit."
+        "present": "Ik pleg dit."
       },
       {
         "person": "jij",
-        "present": "Jij plegent dit."
+        "present": "Jij plegt dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij plegent dit."
+        "present": "Hij plegt dit."
       },
       {
         "person": "wij",
@@ -1567,9 +1567,9 @@
       }
     ],
     "present": {
-      "ik": "prijzen",
-      "jij": "prijzent",
-      "hij_zij_het": "prijzent",
+      "ik": "prijz",
+      "jij": "prijzt",
+      "hij_zij_het": "prijzt",
       "wij": "prijzen",
       "jullie": "prijzen",
       "zij": "prijzen"
@@ -1577,15 +1577,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik prijzen dit."
+        "present": "Ik prijz dit."
       },
       {
         "person": "jij",
-        "present": "Jij prijzent dit."
+        "present": "Jij prijzt dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij prijzent dit."
+        "present": "Hij prijzt dit."
       },
       {
         "person": "wij",
@@ -1656,9 +1656,9 @@
       }
     ],
     "present": {
-      "ik": "raden",
-      "jij": "radent",
-      "hij_zij_het": "radent",
+      "ik": "raad",
+      "jij": "raadt",
+      "hij_zij_het": "radt",
       "wij": "raden",
       "jullie": "raden",
       "zij": "raden"
@@ -1666,15 +1666,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik raden dit."
+        "present": "Ik rad dit."
       },
       {
         "person": "jij",
-        "present": "Jij radent dit."
+        "present": "Jij radt dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij radent dit."
+        "present": "Hij radt dit."
       },
       {
         "person": "wij",
@@ -1745,9 +1745,9 @@
       }
     ],
     "present": {
-      "ik": "rijden",
-      "jij": "rijdent",
-      "hij_zij_het": "rijdent",
+      "ik": "rijd",
+      "jij": "rijdt",
+      "hij_zij_het": "rijdt",
       "wij": "rijden",
       "jullie": "rijden",
       "zij": "rijden"
@@ -1755,15 +1755,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik rijden dit."
+        "present": "Ik rijd dit."
       },
       {
         "person": "jij",
-        "present": "Jij rijdent dit."
+        "present": "Jij rijdt dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij rijdent dit."
+        "present": "Hij rijdt dit."
       },
       {
         "person": "wij",
@@ -1834,9 +1834,9 @@
       }
     ],
     "present": {
-      "ik": "rijzen",
-      "jij": "rijzent",
-      "hij_zij_het": "rijzent",
+      "ik": "rijz",
+      "jij": "rijzt",
+      "hij_zij_het": "rijzt",
       "wij": "rijzen",
       "jullie": "rijzen",
       "zij": "rijzen"
@@ -1844,15 +1844,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik rijzen dit."
+        "present": "Ik rijz dit."
       },
       {
         "person": "jij",
-        "present": "Jij rijzent dit."
+        "present": "Jij rijzt dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij rijzent dit."
+        "present": "Hij rijzt dit."
       },
       {
         "person": "wij",
@@ -1923,9 +1923,9 @@
       }
     ],
     "present": {
-      "ik": "roepen",
-      "jij": "roepent",
-      "hij_zij_het": "roepent",
+      "ik": "roep",
+      "jij": "roept",
+      "hij_zij_het": "roept",
       "wij": "roepen",
       "jullie": "roepen",
       "zij": "roepen"
@@ -1933,15 +1933,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik roepen dit."
+        "present": "Ik roep dit."
       },
       {
         "person": "jij",
-        "present": "Jij roepent dit."
+        "present": "Jij roept dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij roepent dit."
+        "present": "Hij roept dit."
       },
       {
         "person": "wij",
@@ -2012,9 +2012,9 @@
       }
     ],
     "present": {
-      "ik": "ruiken",
-      "jij": "ruikent",
-      "hij_zij_het": "ruikent",
+      "ik": "ruik",
+      "jij": "ruikt",
+      "hij_zij_het": "ruikt",
       "wij": "ruiken",
       "jullie": "ruiken",
       "zij": "ruiken"
@@ -2022,15 +2022,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik ruiken dit."
+        "present": "Ik ruik dit."
       },
       {
         "person": "jij",
-        "present": "Jij ruikent dit."
+        "present": "Jij ruikt dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij ruikent dit."
+        "present": "Hij ruikt dit."
       },
       {
         "person": "wij",
@@ -2101,9 +2101,9 @@
       }
     ],
     "present": {
-      "ik": "scheiden",
-      "jij": "scheident",
-      "hij_zij_het": "scheident",
+      "ik": "scheid",
+      "jij": "scheidt",
+      "hij_zij_het": "scheidt",
       "wij": "scheiden",
       "jullie": "scheiden",
       "zij": "scheiden"
@@ -2111,15 +2111,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik scheiden dit."
+        "present": "Ik scheid dit."
       },
       {
         "person": "jij",
-        "present": "Jij scheident dit."
+        "present": "Jij scheidt dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij scheident dit."
+        "present": "Hij scheidt dit."
       },
       {
         "person": "wij",
@@ -2190,9 +2190,9 @@
       }
     ],
     "present": {
-      "ik": "schelden",
-      "jij": "scheldent",
-      "hij_zij_het": "scheldent",
+      "ik": "scheld",
+      "jij": "scheldt",
+      "hij_zij_het": "scheldt",
       "wij": "schelden",
       "jullie": "schelden",
       "zij": "schelden"
@@ -2200,15 +2200,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik schelden dit."
+        "present": "Ik scheld dit."
       },
       {
         "person": "jij",
-        "present": "Jij scheldent dit."
+        "present": "Jij scheldt dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij scheldent dit."
+        "present": "Hij scheldt dit."
       },
       {
         "person": "wij",
@@ -2279,9 +2279,9 @@
       }
     ],
     "present": {
-      "ik": "schenken",
-      "jij": "schenkent",
-      "hij_zij_het": "schenkent",
+      "ik": "schenk",
+      "jij": "schenkt",
+      "hij_zij_het": "schenkt",
       "wij": "schenken",
       "jullie": "schenken",
       "zij": "schenken"
@@ -2289,15 +2289,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik schenken dit."
+        "present": "Ik schenk dit."
       },
       {
         "person": "jij",
-        "present": "Jij schenkent dit."
+        "present": "Jij schenkt dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij schenkent dit."
+        "present": "Hij schenkt dit."
       },
       {
         "person": "wij",
@@ -2457,9 +2457,9 @@
       }
     ],
     "present": {
-      "ik": "scheppen",
-      "jij": "scheppent",
-      "hij_zij_het": "scheppent",
+      "ik": "schepp",
+      "jij": "scheppt",
+      "hij_zij_het": "scheppt",
       "wij": "scheppen",
       "jullie": "scheppen",
       "zij": "scheppen"
@@ -2467,15 +2467,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik scheppen dit."
+        "present": "Ik schepp dit."
       },
       {
         "person": "jij",
-        "present": "Jij scheppent dit."
+        "present": "Jij scheppt dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij scheppent dit."
+        "present": "Hij scheppt dit."
       },
       {
         "person": "wij",
@@ -2546,9 +2546,9 @@
       }
     ],
     "present": {
-      "ik": "scheren",
-      "jij": "scherent",
-      "hij_zij_het": "scherent",
+      "ik": "scher",
+      "jij": "schert",
+      "hij_zij_het": "schert",
       "wij": "scheren",
       "jullie": "scheren",
       "zij": "scheren"
@@ -2556,15 +2556,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik scheren dit."
+        "present": "Ik scher dit."
       },
       {
         "person": "jij",
-        "present": "Jij scherent dit."
+        "present": "Jij schert dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij scherent dit."
+        "present": "Hij schert dit."
       },
       {
         "person": "wij",
@@ -2635,9 +2635,9 @@
       }
     ],
     "present": {
-      "ik": "schieten",
-      "jij": "schietent",
-      "hij_zij_het": "schietent",
+      "ik": "schiet",
+      "jij": "schiett",
+      "hij_zij_het": "schiett",
       "wij": "schieten",
       "jullie": "schieten",
       "zij": "schieten"
@@ -2645,15 +2645,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik schieten dit."
+        "present": "Ik schiet dit."
       },
       {
         "person": "jij",
-        "present": "Jij schietent dit."
+        "present": "Jij schiett dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij schietent dit."
+        "present": "Hij schiett dit."
       },
       {
         "person": "wij",
@@ -2724,9 +2724,9 @@
       }
     ],
     "present": {
-      "ik": "schijnen",
-      "jij": "schijnent",
-      "hij_zij_het": "schijnent",
+      "ik": "schijn",
+      "jij": "schijnt",
+      "hij_zij_het": "schijnt",
       "wij": "schijnen",
       "jullie": "schijnen",
       "zij": "schijnen"
@@ -2734,15 +2734,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik schijnen dit."
+        "present": "Ik schijn dit."
       },
       {
         "person": "jij",
-        "present": "Jij schijnent dit."
+        "present": "Jij schijnt dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij schijnent dit."
+        "present": "Hij schijnt dit."
       },
       {
         "person": "wij",
@@ -2902,9 +2902,9 @@
       }
     ],
     "present": {
-      "ik": "schrikken",
-      "jij": "schrikkent",
-      "hij_zij_het": "schrikkent",
+      "ik": "schrikk",
+      "jij": "schrikkt",
+      "hij_zij_het": "schrikkt",
       "wij": "schrikken",
       "jullie": "schrikken",
       "zij": "schrikken"
@@ -2912,15 +2912,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik schrikken dit."
+        "present": "Ik schrikk dit."
       },
       {
         "person": "jij",
-        "present": "Jij schrikkent dit."
+        "present": "Jij schrikkt dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij schrikkent dit."
+        "present": "Hij schrikkt dit."
       },
       {
         "person": "wij",
@@ -2991,9 +2991,9 @@
       }
     ],
     "present": {
-      "ik": "schuiven",
-      "jij": "schuivent",
-      "hij_zij_het": "schuivent",
+      "ik": "schuiv",
+      "jij": "schuivt",
+      "hij_zij_het": "schuivt",
       "wij": "schuiven",
       "jullie": "schuiven",
       "zij": "schuiven"
@@ -3001,15 +3001,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik schuiven dit."
+        "present": "Ik schuiv dit."
       },
       {
         "person": "jij",
-        "present": "Jij schuivent dit."
+        "present": "Jij schuivt dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij schuivent dit."
+        "present": "Hij schuivt dit."
       },
       {
         "person": "wij",
@@ -3169,9 +3169,9 @@
       }
     ],
     "present": {
-      "ik": "slapen",
-      "jij": "slapent",
-      "hij_zij_het": "slapent",
+      "ik": "slap",
+      "jij": "slapt",
+      "hij_zij_het": "slapt",
       "wij": "slapen",
       "jullie": "slapen",
       "zij": "slapen"
@@ -3179,15 +3179,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik slapen dit."
+        "present": "Ik slap dit."
       },
       {
         "person": "jij",
-        "present": "Jij slapent dit."
+        "present": "Jij slapt dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij slapent dit."
+        "present": "Hij slapt dit."
       },
       {
         "person": "wij",
@@ -3258,9 +3258,9 @@
       }
     ],
     "present": {
-      "ik": "slijten",
-      "jij": "slijtent",
-      "hij_zij_het": "slijtent",
+      "ik": "slijt",
+      "jij": "slijtt",
+      "hij_zij_het": "slijtt",
       "wij": "slijten",
       "jullie": "slijten",
       "zij": "slijten"
@@ -3268,15 +3268,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik slijten dit."
+        "present": "Ik slijt dit."
       },
       {
         "person": "jij",
-        "present": "Jij slijtent dit."
+        "present": "Jij slijtt dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij slijtent dit."
+        "present": "Hij slijtt dit."
       },
       {
         "person": "wij",
@@ -3347,9 +3347,9 @@
       }
     ],
     "present": {
-      "ik": "sluipen",
-      "jij": "sluipent",
-      "hij_zij_het": "sluipent",
+      "ik": "sluip",
+      "jij": "sluipt",
+      "hij_zij_het": "sluipt",
       "wij": "sluipen",
       "jullie": "sluipen",
       "zij": "sluipen"
@@ -3357,15 +3357,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik sluipen dit."
+        "present": "Ik sluip dit."
       },
       {
         "person": "jij",
-        "present": "Jij sluipent dit."
+        "present": "Jij sluipt dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij sluipent dit."
+        "present": "Hij sluipt dit."
       },
       {
         "person": "wij",
@@ -3436,9 +3436,9 @@
       }
     ],
     "present": {
-      "ik": "sluiten",
-      "jij": "sluitent",
-      "hij_zij_het": "sluitent",
+      "ik": "sluit",
+      "jij": "sluitt",
+      "hij_zij_het": "sluitt",
       "wij": "sluiten",
       "jullie": "sluiten",
       "zij": "sluiten"
@@ -3446,15 +3446,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik sluiten dit."
+        "present": "Ik sluit dit."
       },
       {
         "person": "jij",
-        "present": "Jij sluitent dit."
+        "present": "Jij sluitt dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij sluitent dit."
+        "present": "Hij sluitt dit."
       },
       {
         "person": "wij",
@@ -3525,9 +3525,9 @@
       }
     ],
     "present": {
-      "ik": "smelten",
-      "jij": "smeltent",
-      "hij_zij_het": "smeltent",
+      "ik": "smelt",
+      "jij": "smeltt",
+      "hij_zij_het": "smeltt",
       "wij": "smelten",
       "jullie": "smelten",
       "zij": "smelten"
@@ -3535,15 +3535,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik smelten dit."
+        "present": "Ik smelt dit."
       },
       {
         "person": "jij",
-        "present": "Jij smeltent dit."
+        "present": "Jij smeltt dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij smeltent dit."
+        "present": "Hij smeltt dit."
       },
       {
         "person": "wij",
@@ -3614,9 +3614,9 @@
       }
     ],
     "present": {
-      "ik": "smijten",
-      "jij": "smijtent",
-      "hij_zij_het": "smijtent",
+      "ik": "smijt",
+      "jij": "smijtt",
+      "hij_zij_het": "smijtt",
       "wij": "smijten",
       "jullie": "smijten",
       "zij": "smijten"
@@ -3624,15 +3624,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik smijten dit."
+        "present": "Ik smijt dit."
       },
       {
         "person": "jij",
-        "present": "Jij smijtent dit."
+        "present": "Jij smijtt dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij smijtent dit."
+        "present": "Hij smijtt dit."
       },
       {
         "person": "wij",
@@ -3703,9 +3703,9 @@
       }
     ],
     "present": {
-      "ik": "snijden",
-      "jij": "snijdent",
-      "hij_zij_het": "snijdent",
+      "ik": "snijd",
+      "jij": "snijdt",
+      "hij_zij_het": "snijdt",
       "wij": "snijden",
       "jullie": "snijden",
       "zij": "snijden"
@@ -3713,15 +3713,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik snijden dit."
+        "present": "Ik snijd dit."
       },
       {
         "person": "jij",
-        "present": "Jij snijdent dit."
+        "present": "Jij snijdt dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij snijdent dit."
+        "present": "Hij snijdt dit."
       },
       {
         "person": "wij",
@@ -3792,9 +3792,9 @@
       }
     ],
     "present": {
-      "ik": "snuiten",
-      "jij": "snuitent",
-      "hij_zij_het": "snuitent",
+      "ik": "snuit",
+      "jij": "snuitt",
+      "hij_zij_het": "snuitt",
       "wij": "snuiten",
       "jullie": "snuiten",
       "zij": "snuiten"
@@ -3802,15 +3802,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik snuiten dit."
+        "present": "Ik snuit dit."
       },
       {
         "person": "jij",
-        "present": "Jij snuitent dit."
+        "present": "Jij snuitt dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij snuitent dit."
+        "present": "Hij snuitt dit."
       },
       {
         "person": "wij",
@@ -3881,9 +3881,9 @@
       }
     ],
     "present": {
-      "ik": "snuiven",
-      "jij": "snuivent",
-      "hij_zij_het": "snuivent",
+      "ik": "snuiv",
+      "jij": "snuivt",
+      "hij_zij_het": "snuivt",
       "wij": "snuiven",
       "jullie": "snuiven",
       "zij": "snuiven"
@@ -3891,15 +3891,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik snuiven dit."
+        "present": "Ik snuiv dit."
       },
       {
         "person": "jij",
-        "present": "Jij snuivent dit."
+        "present": "Jij snuivt dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij snuivent dit."
+        "present": "Hij snuivt dit."
       },
       {
         "person": "wij",
@@ -3970,9 +3970,9 @@
       }
     ],
     "present": {
-      "ik": "spannen",
-      "jij": "spannent",
-      "hij_zij_het": "spannent",
+      "ik": "spann",
+      "jij": "spannt",
+      "hij_zij_het": "spannt",
       "wij": "spannen",
       "jullie": "spannen",
       "zij": "spannen"
@@ -3980,15 +3980,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik spannen dit."
+        "present": "Ik spann dit."
       },
       {
         "person": "jij",
-        "present": "Jij spannent dit."
+        "present": "Jij spannt dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij spannent dit."
+        "present": "Hij spannt dit."
       },
       {
         "person": "wij",
@@ -4059,9 +4059,9 @@
       }
     ],
     "present": {
-      "ik": "spijten",
-      "jij": "spijtent",
-      "hij_zij_het": "spijtent",
+      "ik": "spijt",
+      "jij": "spijtt",
+      "hij_zij_het": "spijtt",
       "wij": "spijten",
       "jullie": "spijten",
       "zij": "spijten"
@@ -4069,15 +4069,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik spijten dit."
+        "present": "Ik spijt dit."
       },
       {
         "person": "jij",
-        "present": "Jij spijtent dit."
+        "present": "Jij spijtt dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij spijtent dit."
+        "present": "Hij spijtt dit."
       },
       {
         "person": "wij",
@@ -4237,9 +4237,9 @@
       }
     ],
     "present": {
-      "ik": "springen",
-      "jij": "springent",
-      "hij_zij_het": "springent",
+      "ik": "spring",
+      "jij": "springt",
+      "hij_zij_het": "springt",
       "wij": "springen",
       "jullie": "springen",
       "zij": "springen"
@@ -4247,15 +4247,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik springen dit."
+        "present": "Ik spring dit."
       },
       {
         "person": "jij",
-        "present": "Jij springent dit."
+        "present": "Jij springt dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij springent dit."
+        "present": "Hij springt dit."
       },
       {
         "person": "wij",
@@ -4415,9 +4415,9 @@
       }
     ],
     "present": {
-      "ik": "steken",
-      "jij": "stekent",
-      "hij_zij_het": "stekent",
+      "ik": "stek",
+      "jij": "stekt",
+      "hij_zij_het": "stekt",
       "wij": "steken",
       "jullie": "steken",
       "zij": "steken"
@@ -4425,15 +4425,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik steken dit."
+        "present": "Ik stek dit."
       },
       {
         "person": "jij",
-        "present": "Jij stekent dit."
+        "present": "Jij stekt dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij stekent dit."
+        "present": "Hij stekt dit."
       },
       {
         "person": "wij",
@@ -4504,9 +4504,9 @@
       }
     ],
     "present": {
-      "ik": "stelen",
-      "jij": "stelent",
-      "hij_zij_het": "stelent",
+      "ik": "stel",
+      "jij": "stelt",
+      "hij_zij_het": "stelt",
       "wij": "stelen",
       "jullie": "stelen",
       "zij": "stelen"
@@ -4514,15 +4514,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik stelen dit."
+        "present": "Ik stel dit."
       },
       {
         "person": "jij",
-        "present": "Jij stelent dit."
+        "present": "Jij stelt dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij stelent dit."
+        "present": "Hij stelt dit."
       },
       {
         "person": "wij",
@@ -4593,9 +4593,9 @@
       }
     ],
     "present": {
-      "ik": "sterven",
-      "jij": "stervent",
-      "hij_zij_het": "stervent",
+      "ik": "sterv",
+      "jij": "stervt",
+      "hij_zij_het": "stervt",
       "wij": "sterven",
       "jullie": "sterven",
       "zij": "sterven"
@@ -4603,15 +4603,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik sterven dit."
+        "present": "Ik sterv dit."
       },
       {
         "person": "jij",
-        "present": "Jij stervent dit."
+        "present": "Jij stervt dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij stervent dit."
+        "present": "Hij stervt dit."
       },
       {
         "person": "wij",
@@ -4682,9 +4682,9 @@
       }
     ],
     "present": {
-      "ik": "stijgen",
-      "jij": "stijgent",
-      "hij_zij_het": "stijgent",
+      "ik": "stijg",
+      "jij": "stijgt",
+      "hij_zij_het": "stijgt",
       "wij": "stijgen",
       "jullie": "stijgen",
       "zij": "stijgen"
@@ -4692,15 +4692,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik stijgen dit."
+        "present": "Ik stijg dit."
       },
       {
         "person": "jij",
-        "present": "Jij stijgent dit."
+        "present": "Jij stijgt dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij stijgent dit."
+        "present": "Hij stijgt dit."
       },
       {
         "person": "wij",
@@ -4771,9 +4771,9 @@
       }
     ],
     "present": {
-      "ik": "bevelen",
-      "jij": "bevelent",
-      "hij_zij_het": "bevelent",
+      "ik": "bevel",
+      "jij": "bevelt",
+      "hij_zij_het": "bevelt",
       "wij": "bevelen",
       "jullie": "bevelen",
       "zij": "bevelen"
@@ -4781,15 +4781,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik bevelen dit."
+        "present": "Ik bevel dit."
       },
       {
         "person": "jij",
-        "present": "Jij bevelent dit."
+        "present": "Jij bevelt dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij bevelent dit."
+        "present": "Hij bevelt dit."
       },
       {
         "person": "wij",
@@ -4860,9 +4860,9 @@
       }
     ],
     "present": {
-      "ik": "bezwijken",
-      "jij": "bezwijkent",
-      "hij_zij_het": "bezwijkent",
+      "ik": "bezwijk",
+      "jij": "bezwijkt",
+      "hij_zij_het": "bezwijkt",
       "wij": "bezwijken",
       "jullie": "bezwijken",
       "zij": "bezwijken"
@@ -4870,15 +4870,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik bezwijken dit."
+        "present": "Ik bezwijk dit."
       },
       {
         "person": "jij",
-        "present": "Jij bezwijkent dit."
+        "present": "Jij bezwijkt dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij bezwijkent dit."
+        "present": "Hij bezwijkt dit."
       },
       {
         "person": "wij",
@@ -4949,9 +4949,9 @@
       }
     ],
     "present": {
-      "ik": "bidden",
-      "jij": "biddent",
-      "hij_zij_het": "biddent",
+      "ik": "bidd",
+      "jij": "biddt",
+      "hij_zij_het": "biddt",
       "wij": "bidden",
       "jullie": "bidden",
       "zij": "bidden"
@@ -4959,15 +4959,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik bidden dit."
+        "present": "Ik bidd dit."
       },
       {
         "person": "jij",
-        "present": "Jij biddent dit."
+        "present": "Jij biddt dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij biddent dit."
+        "present": "Hij biddt dit."
       },
       {
         "person": "wij",
@@ -5038,9 +5038,9 @@
       }
     ],
     "present": {
-      "ik": "bieden",
-      "jij": "biedent",
-      "hij_zij_het": "biedent",
+      "ik": "bied",
+      "jij": "biedt",
+      "hij_zij_het": "biedt",
       "wij": "bieden",
       "jullie": "bieden",
       "zij": "bieden"
@@ -5048,15 +5048,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik bieden dit."
+        "present": "Ik bied dit."
       },
       {
         "person": "jij",
-        "present": "Jij biedent dit."
+        "present": "Jij biedt dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij biedent dit."
+        "present": "Hij biedt dit."
       },
       {
         "person": "wij",
@@ -5127,9 +5127,9 @@
       }
     ],
     "present": {
-      "ik": "bijten",
-      "jij": "bijtent",
-      "hij_zij_het": "bijtent",
+      "ik": "bijt",
+      "jij": "bijtt",
+      "hij_zij_het": "bijtt",
       "wij": "bijten",
       "jullie": "bijten",
       "zij": "bijten"
@@ -5137,15 +5137,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik bijten dit."
+        "present": "Ik bijt dit."
       },
       {
         "person": "jij",
-        "present": "Jij bijtent dit."
+        "present": "Jij bijtt dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij bijtent dit."
+        "present": "Hij bijtt dit."
       },
       {
         "person": "wij",
@@ -5216,9 +5216,9 @@
       }
     ],
     "present": {
-      "ik": "binden",
-      "jij": "bindent",
-      "hij_zij_het": "bindent",
+      "ik": "bind",
+      "jij": "bindt",
+      "hij_zij_het": "bindt",
       "wij": "binden",
       "jullie": "binden",
       "zij": "binden"
@@ -5226,15 +5226,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik binden dit."
+        "present": "Ik bind dit."
       },
       {
         "person": "jij",
-        "present": "Jij bindent dit."
+        "present": "Jij bindt dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij bindent dit."
+        "present": "Hij bindt dit."
       },
       {
         "person": "wij",
@@ -5305,9 +5305,9 @@
       }
     ],
     "present": {
-      "ik": "blazen",
-      "jij": "blazent",
-      "hij_zij_het": "blazent",
+      "ik": "blaz",
+      "jij": "blazt",
+      "hij_zij_het": "blazt",
       "wij": "blazen",
       "jullie": "blazen",
       "zij": "blazen"
@@ -5315,15 +5315,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik blazen dit."
+        "present": "Ik blaz dit."
       },
       {
         "person": "jij",
-        "present": "Jij blazent dit."
+        "present": "Jij blazt dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij blazent dit."
+        "present": "Hij blazt dit."
       },
       {
         "person": "wij",
@@ -5394,9 +5394,9 @@
       }
     ],
     "present": {
-      "ik": "blijken",
-      "jij": "blijkent",
-      "hij_zij_het": "blijkent",
+      "ik": "blijk",
+      "jij": "blijkt",
+      "hij_zij_het": "blijkt",
       "wij": "blijken",
       "jullie": "blijken",
       "zij": "blijken"
@@ -5404,15 +5404,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik blijken dit."
+        "present": "Ik blijk dit."
       },
       {
         "person": "jij",
-        "present": "Jij blijkent dit."
+        "present": "Jij blijkt dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij blijkent dit."
+        "present": "Hij blijkt dit."
       },
       {
         "person": "wij",
@@ -5483,9 +5483,9 @@
       }
     ],
     "present": {
-      "ik": "blijven",
-      "jij": "blijvent",
-      "hij_zij_het": "blijvent",
+      "ik": "blijv",
+      "jij": "blijvt",
+      "hij_zij_het": "blijvt",
       "wij": "blijven",
       "jullie": "blijven",
       "zij": "blijven"
@@ -5493,15 +5493,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik blijven dit."
+        "present": "Ik blijv dit."
       },
       {
         "person": "jij",
-        "present": "Jij blijvent dit."
+        "present": "Jij blijvt dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij blijvent dit."
+        "present": "Hij blijvt dit."
       },
       {
         "person": "wij",
@@ -5572,9 +5572,9 @@
       }
     ],
     "present": {
-      "ik": "blinken",
-      "jij": "blinkent",
-      "hij_zij_het": "blinkent",
+      "ik": "blink",
+      "jij": "blinkt",
+      "hij_zij_het": "blinkt",
       "wij": "blinken",
       "jullie": "blinken",
       "zij": "blinken"
@@ -5582,15 +5582,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik blinken dit."
+        "present": "Ik blink dit."
       },
       {
         "person": "jij",
-        "present": "Jij blinkent dit."
+        "present": "Jij blinkt dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij blinkent dit."
+        "present": "Hij blinkt dit."
       },
       {
         "person": "wij",
@@ -5661,9 +5661,9 @@
       }
     ],
     "present": {
-      "ik": "braden",
-      "jij": "bradent",
-      "hij_zij_het": "bradent",
+      "ik": "brad",
+      "jij": "bradt",
+      "hij_zij_het": "bradt",
       "wij": "braden",
       "jullie": "braden",
       "zij": "braden"
@@ -5671,15 +5671,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik braden dit."
+        "present": "Ik brad dit."
       },
       {
         "person": "jij",
-        "present": "Jij bradent dit."
+        "present": "Jij bradt dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij bradent dit."
+        "present": "Hij bradt dit."
       },
       {
         "person": "wij",
@@ -5750,9 +5750,9 @@
       }
     ],
     "present": {
-      "ik": "breken",
-      "jij": "brekent",
-      "hij_zij_het": "brekent",
+      "ik": "brek",
+      "jij": "brekt",
+      "hij_zij_het": "brekt",
       "wij": "breken",
       "jullie": "breken",
       "zij": "breken"
@@ -5760,15 +5760,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik breken dit."
+        "present": "Ik brek dit."
       },
       {
         "person": "jij",
-        "present": "Jij brekent dit."
+        "present": "Jij brekt dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij brekent dit."
+        "present": "Hij brekt dit."
       },
       {
         "person": "wij",
@@ -5839,9 +5839,9 @@
       }
     ],
     "present": {
-      "ik": "brengen",
-      "jij": "brengent",
-      "hij_zij_het": "brengent",
+      "ik": "breng",
+      "jij": "brengt",
+      "hij_zij_het": "brengt",
       "wij": "brengen",
       "jullie": "brengen",
       "zij": "brengen"
@@ -5849,15 +5849,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik brengen dit."
+        "present": "Ik breng dit."
       },
       {
         "person": "jij",
-        "present": "Jij brengent dit."
+        "present": "Jij brengt dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij brengent dit."
+        "present": "Hij brengt dit."
       },
       {
         "person": "wij",
@@ -5928,9 +5928,9 @@
       }
     ],
     "present": {
-      "ik": "buigen",
-      "jij": "buigent",
-      "hij_zij_het": "buigent",
+      "ik": "buig",
+      "jij": "buigt",
+      "hij_zij_het": "buigt",
       "wij": "buigen",
       "jullie": "buigen",
       "zij": "buigen"
@@ -5938,15 +5938,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik buigen dit."
+        "present": "Ik buig dit."
       },
       {
         "person": "jij",
-        "present": "Jij buigent dit."
+        "present": "Jij buigt dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij buigent dit."
+        "present": "Hij buigt dit."
       },
       {
         "person": "wij",
@@ -6017,9 +6017,9 @@
       }
     ],
     "present": {
-      "ik": "delven",
-      "jij": "delvent",
-      "hij_zij_het": "delvent",
+      "ik": "delv",
+      "jij": "delvt",
+      "hij_zij_het": "delvt",
       "wij": "delven",
       "jullie": "delven",
       "zij": "delven"
@@ -6027,15 +6027,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik delven dit."
+        "present": "Ik delv dit."
       },
       {
         "person": "jij",
-        "present": "Jij delvent dit."
+        "present": "Jij delvt dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij delvent dit."
+        "present": "Hij delvt dit."
       },
       {
         "person": "wij",
@@ -6373,9 +6373,9 @@
       }
     ],
     "present": {
-      "ik": "drijven",
-      "jij": "drijvent",
-      "hij_zij_het": "drijvent",
+      "ik": "drijv",
+      "jij": "drijvt",
+      "hij_zij_het": "drijvt",
       "wij": "drijven",
       "jullie": "drijven",
       "zij": "drijven"
@@ -6383,15 +6383,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik drijven dit."
+        "present": "Ik drijv dit."
       },
       {
         "person": "jij",
-        "present": "Jij drijvent dit."
+        "present": "Jij drijvt dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij drijvent dit."
+        "present": "Hij drijvt dit."
       },
       {
         "person": "wij",
@@ -6462,9 +6462,9 @@
       }
     ],
     "present": {
-      "ik": "dringen",
-      "jij": "dringent",
-      "hij_zij_het": "dringent",
+      "ik": "dring",
+      "jij": "dringt",
+      "hij_zij_het": "dringt",
       "wij": "dringen",
       "jullie": "dringen",
       "zij": "dringen"
@@ -6472,15 +6472,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik dringen dit."
+        "present": "Ik dring dit."
       },
       {
         "person": "jij",
-        "present": "Jij dringent dit."
+        "present": "Jij dringt dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij dringent dit."
+        "present": "Hij dringt dit."
       },
       {
         "person": "wij",
@@ -6551,9 +6551,9 @@
       }
     ],
     "present": {
-      "ik": "drinken",
-      "jij": "drinkent",
-      "hij_zij_het": "drinkent",
+      "ik": "drink",
+      "jij": "drinkt",
+      "hij_zij_het": "drinkt",
       "wij": "drinken",
       "jullie": "drinken",
       "zij": "drinken"
@@ -6561,15 +6561,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik drinken dit."
+        "present": "Ik drink dit."
       },
       {
         "person": "jij",
-        "present": "Jij drinkent dit."
+        "present": "Jij drinkt dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij drinkent dit."
+        "present": "Hij drinkt dit."
       },
       {
         "person": "wij",
@@ -6640,9 +6640,9 @@
       }
     ],
     "present": {
-      "ik": "druipen",
-      "jij": "druipent",
-      "hij_zij_het": "druipent",
+      "ik": "druip",
+      "jij": "druipt",
+      "hij_zij_het": "druipt",
       "wij": "druipen",
       "jullie": "druipen",
       "zij": "druipen"
@@ -6650,15 +6650,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik druipen dit."
+        "present": "Ik druip dit."
       },
       {
         "person": "jij",
-        "present": "Jij druipent dit."
+        "present": "Jij druipt dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij druipent dit."
+        "present": "Hij druipt dit."
       },
       {
         "person": "wij",
@@ -6729,9 +6729,9 @@
       }
     ],
     "present": {
-      "ik": "duiken",
-      "jij": "duikent",
-      "hij_zij_het": "duikent",
+      "ik": "duik",
+      "jij": "duikt",
+      "hij_zij_het": "duikt",
       "wij": "duiken",
       "jullie": "duiken",
       "zij": "duiken"
@@ -6739,15 +6739,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik duiken dit."
+        "present": "Ik duik dit."
       },
       {
         "person": "jij",
-        "present": "Jij duikent dit."
+        "present": "Jij duikt dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij duikent dit."
+        "present": "Hij duikt dit."
       },
       {
         "person": "wij",
@@ -6818,9 +6818,9 @@
       }
     ],
     "present": {
-      "ik": "dwingen",
-      "jij": "dwingent",
-      "hij_zij_het": "dwingent",
+      "ik": "dwing",
+      "jij": "dwingt",
+      "hij_zij_het": "dwingt",
       "wij": "dwingen",
       "jullie": "dwingen",
       "zij": "dwingen"
@@ -6828,15 +6828,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik dwingen dit."
+        "present": "Ik dwing dit."
       },
       {
         "person": "jij",
-        "present": "Jij dwingent dit."
+        "present": "Jij dwingt dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij dwingent dit."
+        "present": "Hij dwingt dit."
       },
       {
         "person": "wij",
@@ -6996,9 +6996,9 @@
       }
     ],
     "present": {
-      "ik": "fluiten",
-      "jij": "fluitent",
-      "hij_zij_het": "fluitent",
+      "ik": "fluit",
+      "jij": "fluitt",
+      "hij_zij_het": "fluitt",
       "wij": "fluiten",
       "jullie": "fluiten",
       "zij": "fluiten"
@@ -7006,15 +7006,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik fluiten dit."
+        "present": "Ik fluit dit."
       },
       {
         "person": "jij",
-        "present": "Jij fluitent dit."
+        "present": "Jij fluitt dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij fluitent dit."
+        "present": "Hij fluitt dit."
       },
       {
         "person": "wij",
@@ -7174,9 +7174,9 @@
       }
     ],
     "present": {
-      "ik": "gelden",
-      "jij": "geldent",
-      "hij_zij_het": "geldent",
+      "ik": "geld",
+      "jij": "geldt",
+      "hij_zij_het": "geldt",
       "wij": "gelden",
       "jullie": "gelden",
       "zij": "gelden"
@@ -7184,15 +7184,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik gelden dit."
+        "present": "Ik geld dit."
       },
       {
         "person": "jij",
-        "present": "Jij geldent dit."
+        "present": "Jij geldt dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij geldent dit."
+        "present": "Hij geldt dit."
       },
       {
         "person": "wij",
@@ -7263,9 +7263,9 @@
       }
     ],
     "present": {
-      "ik": "genezen",
-      "jij": "genezent",
-      "hij_zij_het": "genezent",
+      "ik": "genez",
+      "jij": "genezt",
+      "hij_zij_het": "genezt",
       "wij": "genezen",
       "jullie": "genezen",
       "zij": "genezen"
@@ -7273,15 +7273,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik genezen dit."
+        "present": "Ik genez dit."
       },
       {
         "person": "jij",
-        "present": "Jij genezent dit."
+        "present": "Jij genezt dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij genezent dit."
+        "present": "Hij genezt dit."
       },
       {
         "person": "wij",
@@ -7352,9 +7352,9 @@
       }
     ],
     "present": {
-      "ik": "genieten",
-      "jij": "genietent",
-      "hij_zij_het": "genietent",
+      "ik": "geniet",
+      "jij": "geniett",
+      "hij_zij_het": "geniett",
       "wij": "genieten",
       "jullie": "genieten",
       "zij": "genieten"
@@ -7362,15 +7362,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik genieten dit."
+        "present": "Ik geniet dit."
       },
       {
         "person": "jij",
-        "present": "Jij genietent dit."
+        "present": "Jij geniett dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij genietent dit."
+        "present": "Hij geniett dit."
       },
       {
         "person": "wij",
@@ -7530,9 +7530,9 @@
       }
     ],
     "present": {
-      "ik": "gieten",
-      "jij": "gietent",
-      "hij_zij_het": "gietent",
+      "ik": "giet",
+      "jij": "giett",
+      "hij_zij_het": "giett",
       "wij": "gieten",
       "jullie": "gieten",
       "zij": "gieten"
@@ -7540,15 +7540,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik gieten dit."
+        "present": "Ik giet dit."
       },
       {
         "person": "jij",
-        "present": "Jij gietent dit."
+        "present": "Jij giett dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij gietent dit."
+        "present": "Hij giett dit."
       },
       {
         "person": "wij",
@@ -7619,9 +7619,9 @@
       }
     ],
     "present": {
-      "ik": "glijden",
-      "jij": "glijdent",
-      "hij_zij_het": "glijdent",
+      "ik": "glijd",
+      "jij": "glijdt",
+      "hij_zij_het": "glijdt",
       "wij": "glijden",
       "jullie": "glijden",
       "zij": "glijden"
@@ -7629,15 +7629,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik glijden dit."
+        "present": "Ik glijd dit."
       },
       {
         "person": "jij",
-        "present": "Jij glijdent dit."
+        "present": "Jij glijdt dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij glijdent dit."
+        "present": "Hij glijdt dit."
       },
       {
         "person": "wij",
@@ -7708,9 +7708,9 @@
       }
     ],
     "present": {
-      "ik": "glimmen",
-      "jij": "glimment",
-      "hij_zij_het": "glimment",
+      "ik": "glimm",
+      "jij": "glimmt",
+      "hij_zij_het": "glimmt",
       "wij": "glimmen",
       "jullie": "glimmen",
       "zij": "glimmen"
@@ -7718,15 +7718,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik glimmen dit."
+        "present": "Ik glimm dit."
       },
       {
         "person": "jij",
-        "present": "Jij glimment dit."
+        "present": "Jij glimmt dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij glimment dit."
+        "present": "Hij glimmt dit."
       },
       {
         "person": "wij",
@@ -7797,9 +7797,9 @@
       }
     ],
     "present": {
-      "ik": "graven",
-      "jij": "gravent",
-      "hij_zij_het": "gravent",
+      "ik": "grav",
+      "jij": "gravt",
+      "hij_zij_het": "gravt",
       "wij": "graven",
       "jullie": "graven",
       "zij": "graven"
@@ -7807,15 +7807,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik graven dit."
+        "present": "Ik grav dit."
       },
       {
         "person": "jij",
-        "present": "Jij gravent dit."
+        "present": "Jij gravt dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij gravent dit."
+        "present": "Hij gravt dit."
       },
       {
         "person": "wij",
@@ -7886,9 +7886,9 @@
       }
     ],
     "present": {
-      "ik": "grijpen",
-      "jij": "grijpent",
-      "hij_zij_het": "grijpent",
+      "ik": "grijp",
+      "jij": "grijpt",
+      "hij_zij_het": "grijpt",
       "wij": "grijpen",
       "jullie": "grijpen",
       "zij": "grijpen"
@@ -7896,15 +7896,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik grijpen dit."
+        "present": "Ik grijp dit."
       },
       {
         "person": "jij",
-        "present": "Jij grijpent dit."
+        "present": "Jij grijpt dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij grijpent dit."
+        "present": "Hij grijpt dit."
       },
       {
         "person": "wij",
@@ -7975,9 +7975,9 @@
       }
     ],
     "present": {
-      "ik": "hangen",
-      "jij": "hangent",
-      "hij_zij_het": "hangent",
+      "ik": "hang",
+      "jij": "hangt",
+      "hij_zij_het": "hangt",
       "wij": "hangen",
       "jullie": "hangen",
       "zij": "hangen"
@@ -7985,15 +7985,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik hangen dit."
+        "present": "Ik hang dit."
       },
       {
         "person": "jij",
-        "present": "Jij hangent dit."
+        "present": "Jij hangt dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij hangent dit."
+        "present": "Hij hangt dit."
       },
       {
         "person": "wij",
@@ -8153,9 +8153,9 @@
       }
     ],
     "present": {
-      "ik": "heffen",
-      "jij": "heffent",
-      "hij_zij_het": "heffent",
+      "ik": "heff",
+      "jij": "hefft",
+      "hij_zij_het": "hefft",
       "wij": "heffen",
       "jullie": "heffen",
       "zij": "heffen"
@@ -8163,15 +8163,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik heffen dit."
+        "present": "Ik heff dit."
       },
       {
         "person": "jij",
-        "present": "Jij heffent dit."
+        "present": "Jij hefft dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij heffent dit."
+        "present": "Hij hefft dit."
       },
       {
         "person": "wij",
@@ -8242,9 +8242,9 @@
       }
     ],
     "present": {
-      "ik": "helpen",
-      "jij": "helpent",
-      "hij_zij_het": "helpent",
+      "ik": "help",
+      "jij": "helpt",
+      "hij_zij_het": "helpt",
       "wij": "helpen",
       "jullie": "helpen",
       "zij": "helpen"
@@ -8252,15 +8252,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik helpen dit."
+        "present": "Ik help dit."
       },
       {
         "person": "jij",
-        "present": "Jij helpent dit."
+        "present": "Jij helpt dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij helpent dit."
+        "present": "Hij helpt dit."
       },
       {
         "person": "wij",
@@ -8331,9 +8331,9 @@
       }
     ],
     "present": {
-      "ik": "heten",
-      "jij": "hetent",
-      "hij_zij_het": "hetent",
+      "ik": "het",
+      "jij": "hett",
+      "hij_zij_het": "hett",
       "wij": "heten",
       "jullie": "heten",
       "zij": "heten"
@@ -8341,15 +8341,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik heten dit."
+        "present": "Ik het dit."
       },
       {
         "person": "jij",
-        "present": "Jij hetent dit."
+        "present": "Jij hett dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij hetent dit."
+        "present": "Hij hett dit."
       },
       {
         "person": "wij",
@@ -8420,9 +8420,9 @@
       }
     ],
     "present": {
-      "ik": "hijsen",
-      "jij": "hijsent",
-      "hij_zij_het": "hijsent",
+      "ik": "hijs",
+      "jij": "hijst",
+      "hij_zij_het": "hijst",
       "wij": "hijsen",
       "jullie": "hijsen",
       "zij": "hijsen"
@@ -8430,15 +8430,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik hijsen dit."
+        "present": "Ik hijs dit."
       },
       {
         "person": "jij",
-        "present": "Jij hijsent dit."
+        "present": "Jij hijst dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij hijsent dit."
+        "present": "Hij hijst dit."
       },
       {
         "person": "wij",
@@ -8598,9 +8598,9 @@
       }
     ],
     "present": {
-      "ik": "jagen",
-      "jij": "jagent",
-      "hij_zij_het": "jagent",
+      "ik": "jag",
+      "jij": "jagt",
+      "hij_zij_het": "jagt",
       "wij": "jagen",
       "jullie": "jagen",
       "zij": "jagen"
@@ -8608,15 +8608,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik jagen dit."
+        "present": "Ik jag dit."
       },
       {
         "person": "jij",
-        "present": "Jij jagent dit."
+        "present": "Jij jagt dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij jagent dit."
+        "present": "Hij jagt dit."
       },
       {
         "person": "wij",
@@ -8776,9 +8776,9 @@
       }
     ],
     "present": {
-      "ik": "kijken",
-      "jij": "kijkent",
-      "hij_zij_het": "kijkent",
+      "ik": "kijk",
+      "jij": "kijkt",
+      "hij_zij_het": "kijkt",
       "wij": "kijken",
       "jullie": "kijken",
       "zij": "kijken"
@@ -8786,15 +8786,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik kijken dit."
+        "present": "Ik kijk dit."
       },
       {
         "person": "jij",
-        "present": "Jij kijkent dit."
+        "present": "Jij kijkt dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij kijkent dit."
+        "present": "Hij kijkt dit."
       },
       {
         "person": "wij",
@@ -8865,9 +8865,9 @@
       }
     ],
     "present": {
-      "ik": "klimmen",
-      "jij": "klimment",
-      "hij_zij_het": "klimment",
+      "ik": "klimm",
+      "jij": "klimmt",
+      "hij_zij_het": "klimmt",
       "wij": "klimmen",
       "jullie": "klimmen",
       "zij": "klimmen"
@@ -8875,15 +8875,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik klimmen dit."
+        "present": "Ik klimm dit."
       },
       {
         "person": "jij",
-        "present": "Jij klimment dit."
+        "present": "Jij klimmt dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij klimment dit."
+        "present": "Hij klimmt dit."
       },
       {
         "person": "wij",
@@ -8954,9 +8954,9 @@
       }
     ],
     "present": {
-      "ik": "klinken",
-      "jij": "klinkent",
-      "hij_zij_het": "klinkent",
+      "ik": "klink",
+      "jij": "klinkt",
+      "hij_zij_het": "klinkt",
       "wij": "klinken",
       "jullie": "klinken",
       "zij": "klinken"
@@ -8964,15 +8964,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik klinken dit."
+        "present": "Ik klink dit."
       },
       {
         "person": "jij",
-        "present": "Jij klinkent dit."
+        "present": "Jij klinkt dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij klinkent dit."
+        "present": "Hij klinkt dit."
       },
       {
         "person": "wij",
@@ -9043,9 +9043,9 @@
       }
     ],
     "present": {
-      "ik": "knijpen",
-      "jij": "knijpent",
-      "hij_zij_het": "knijpent",
+      "ik": "knijp",
+      "jij": "knijpt",
+      "hij_zij_het": "knijpt",
       "wij": "knijpen",
       "jullie": "knijpen",
       "zij": "knijpen"
@@ -9053,15 +9053,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik knijpen dit."
+        "present": "Ik knijp dit."
       },
       {
         "person": "jij",
-        "present": "Jij knijpent dit."
+        "present": "Jij knijpt dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij knijpent dit."
+        "present": "Hij knijpt dit."
       },
       {
         "person": "wij",
@@ -9221,9 +9221,9 @@
       }
     ],
     "present": {
-      "ik": "kopen",
-      "jij": "kopent",
-      "hij_zij_het": "kopent",
+      "ik": "kop",
+      "jij": "kopt",
+      "hij_zij_het": "kopt",
       "wij": "kopen",
       "jullie": "kopen",
       "zij": "kopen"
@@ -9231,15 +9231,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik kopen dit."
+        "present": "Ik kop dit."
       },
       {
         "person": "jij",
-        "present": "Jij kopent dit."
+        "present": "Jij kopt dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij kopent dit."
+        "present": "Hij kopt dit."
       },
       {
         "person": "wij",
@@ -9399,9 +9399,9 @@
       }
     ],
     "present": {
-      "ik": "krimpen",
-      "jij": "krimpent",
-      "hij_zij_het": "krimpent",
+      "ik": "krimp",
+      "jij": "krimpt",
+      "hij_zij_het": "krimpt",
       "wij": "krimpen",
       "jullie": "krimpen",
       "zij": "krimpen"
@@ -9409,15 +9409,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik krimpen dit."
+        "present": "Ik krimp dit."
       },
       {
         "person": "jij",
-        "present": "Jij krimpent dit."
+        "present": "Jij krimpt dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij krimpent dit."
+        "present": "Hij krimpt dit."
       },
       {
         "person": "wij",
@@ -9488,9 +9488,9 @@
       }
     ],
     "present": {
-      "ik": "stinken",
-      "jij": "stinkent",
-      "hij_zij_het": "stinkent",
+      "ik": "stink",
+      "jij": "stinkt",
+      "hij_zij_het": "stinkt",
       "wij": "stinken",
       "jullie": "stinken",
       "zij": "stinken"
@@ -9498,15 +9498,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik stinken dit."
+        "present": "Ik stink dit."
       },
       {
         "person": "jij",
-        "present": "Jij stinkent dit."
+        "present": "Jij stinkt dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij stinkent dit."
+        "present": "Hij stinkt dit."
       },
       {
         "person": "wij",
@@ -9577,9 +9577,9 @@
       }
     ],
     "present": {
-      "ik": "stoten",
-      "jij": "stotent",
-      "hij_zij_het": "stotent",
+      "ik": "stot",
+      "jij": "stott",
+      "hij_zij_het": "stott",
       "wij": "stoten",
       "jullie": "stoten",
       "zij": "stoten"
@@ -9587,15 +9587,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik stoten dit."
+        "present": "Ik stot dit."
       },
       {
         "person": "jij",
-        "present": "Jij stotent dit."
+        "present": "Jij stott dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij stotent dit."
+        "present": "Hij stott dit."
       },
       {
         "person": "wij",
@@ -9666,9 +9666,9 @@
       }
     ],
     "present": {
-      "ik": "strijden",
-      "jij": "strijdent",
-      "hij_zij_het": "strijdent",
+      "ik": "strijd",
+      "jij": "strijdt",
+      "hij_zij_het": "strijdt",
       "wij": "strijden",
       "jullie": "strijden",
       "zij": "strijden"
@@ -9676,15 +9676,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik strijden dit."
+        "present": "Ik strijd dit."
       },
       {
         "person": "jij",
-        "present": "Jij strijdent dit."
+        "present": "Jij strijdt dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij strijdent dit."
+        "present": "Hij strijdt dit."
       },
       {
         "person": "wij",
@@ -9755,9 +9755,9 @@
       }
     ],
     "present": {
-      "ik": "strijken",
-      "jij": "strijkent",
-      "hij_zij_het": "strijkent",
+      "ik": "strijk",
+      "jij": "strijkt",
+      "hij_zij_het": "strijkt",
       "wij": "strijken",
       "jullie": "strijken",
       "zij": "strijken"
@@ -9765,15 +9765,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik strijken dit."
+        "present": "Ik strijk dit."
       },
       {
         "person": "jij",
-        "present": "Jij strijkent dit."
+        "present": "Jij strijkt dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij strijkent dit."
+        "present": "Hij strijkt dit."
       },
       {
         "person": "wij",
@@ -9844,9 +9844,9 @@
       }
     ],
     "present": {
-      "ik": "treden",
-      "jij": "tredent",
-      "hij_zij_het": "tredent",
+      "ik": "tred",
+      "jij": "tredt",
+      "hij_zij_het": "tredt",
       "wij": "treden",
       "jullie": "treden",
       "zij": "treden"
@@ -9854,15 +9854,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik treden dit."
+        "present": "Ik tred dit."
       },
       {
         "person": "jij",
-        "present": "Jij tredent dit."
+        "present": "Jij tredt dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij tredent dit."
+        "present": "Hij tredt dit."
       },
       {
         "person": "wij",
@@ -9933,9 +9933,9 @@
       }
     ],
     "present": {
-      "ik": "treffen",
-      "jij": "treffent",
-      "hij_zij_het": "treffent",
+      "ik": "treff",
+      "jij": "trefft",
+      "hij_zij_het": "trefft",
       "wij": "treffen",
       "jullie": "treffen",
       "zij": "treffen"
@@ -9943,15 +9943,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik treffen dit."
+        "present": "Ik treff dit."
       },
       {
         "person": "jij",
-        "present": "Jij treffent dit."
+        "present": "Jij trefft dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij treffent dit."
+        "present": "Hij trefft dit."
       },
       {
         "person": "wij",
@@ -10022,9 +10022,9 @@
       }
     ],
     "present": {
-      "ik": "trekken",
-      "jij": "trekkent",
-      "hij_zij_het": "trekkent",
+      "ik": "trekk",
+      "jij": "trekkt",
+      "hij_zij_het": "trekkt",
       "wij": "trekken",
       "jullie": "trekken",
       "zij": "trekken"
@@ -10032,15 +10032,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik trekken dit."
+        "present": "Ik trekk dit."
       },
       {
         "person": "jij",
-        "present": "Jij trekkent dit."
+        "present": "Jij trekkt dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij trekkent dit."
+        "present": "Hij trekkt dit."
       },
       {
         "person": "wij",
@@ -10111,9 +10111,9 @@
       }
     ],
     "present": {
-      "ik": "vallen",
-      "jij": "vallent",
-      "hij_zij_het": "vallent",
+      "ik": "vall",
+      "jij": "vallt",
+      "hij_zij_het": "vallt",
       "wij": "vallen",
       "jullie": "vallen",
       "zij": "vallen"
@@ -10121,15 +10121,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik vallen dit."
+        "present": "Ik vall dit."
       },
       {
         "person": "jij",
-        "present": "Jij vallent dit."
+        "present": "Jij vallt dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij vallent dit."
+        "present": "Hij vallt dit."
       },
       {
         "person": "wij",
@@ -10200,9 +10200,9 @@
       }
     ],
     "present": {
-      "ik": "vangen",
-      "jij": "vangent",
-      "hij_zij_het": "vangent",
+      "ik": "vang",
+      "jij": "vangt",
+      "hij_zij_het": "vangt",
       "wij": "vangen",
       "jullie": "vangen",
       "zij": "vangen"
@@ -10210,15 +10210,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik vangen dit."
+        "present": "Ik vang dit."
       },
       {
         "person": "jij",
-        "present": "Jij vangent dit."
+        "present": "Jij vangt dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij vangent dit."
+        "present": "Hij vangt dit."
       },
       {
         "person": "wij",
@@ -10289,9 +10289,9 @@
       }
     ],
     "present": {
-      "ik": "varen",
-      "jij": "varent",
-      "hij_zij_het": "varent",
+      "ik": "var",
+      "jij": "vart",
+      "hij_zij_het": "vart",
       "wij": "varen",
       "jullie": "varen",
       "zij": "varen"
@@ -10299,15 +10299,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik varen dit."
+        "present": "Ik var dit."
       },
       {
         "person": "jij",
-        "present": "Jij varent dit."
+        "present": "Jij vart dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij varent dit."
+        "present": "Hij vart dit."
       },
       {
         "person": "wij",
@@ -10378,9 +10378,9 @@
       }
     ],
     "present": {
-      "ik": "vechten",
-      "jij": "vechtent",
-      "hij_zij_het": "vechtent",
+      "ik": "vecht",
+      "jij": "vechtt",
+      "hij_zij_het": "vechtt",
       "wij": "vechten",
       "jullie": "vechten",
       "zij": "vechten"
@@ -10388,15 +10388,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik vechten dit."
+        "present": "Ik vecht dit."
       },
       {
         "person": "jij",
-        "present": "Jij vechtent dit."
+        "present": "Jij vechtt dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij vechtent dit."
+        "present": "Hij vechtt dit."
       },
       {
         "person": "wij",
@@ -10467,9 +10467,9 @@
       }
     ],
     "present": {
-      "ik": "verdwijnen",
-      "jij": "verdwijnent",
-      "hij_zij_het": "verdwijnent",
+      "ik": "verdwijn",
+      "jij": "verdwijnt",
+      "hij_zij_het": "verdwijnt",
       "wij": "verdwijnen",
       "jullie": "verdwijnen",
       "zij": "verdwijnen"
@@ -10477,15 +10477,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik verdwijnen dit."
+        "present": "Ik verdwijn dit."
       },
       {
         "person": "jij",
-        "present": "Jij verdwijnent dit."
+        "present": "Jij verdwijnt dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij verdwijnent dit."
+        "present": "Hij verdwijnt dit."
       },
       {
         "person": "wij",
@@ -10556,9 +10556,9 @@
       }
     ],
     "present": {
-      "ik": "vergeten",
-      "jij": "vergetent",
-      "hij_zij_het": "vergetent",
+      "ik": "verget",
+      "jij": "vergett",
+      "hij_zij_het": "vergett",
       "wij": "vergeten",
       "jullie": "vergeten",
       "zij": "vergeten"
@@ -10566,15 +10566,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik vergeten dit."
+        "present": "Ik verget dit."
       },
       {
         "person": "jij",
-        "present": "Jij vergetent dit."
+        "present": "Jij vergett dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij vergetent dit."
+        "present": "Hij vergett dit."
       },
       {
         "person": "wij",
@@ -10645,9 +10645,9 @@
       }
     ],
     "present": {
-      "ik": "verliezen",
-      "jij": "verliezent",
-      "hij_zij_het": "verliezent",
+      "ik": "verliez",
+      "jij": "verliezt",
+      "hij_zij_het": "verliezt",
       "wij": "verliezen",
       "jullie": "verliezen",
       "zij": "verliezen"
@@ -10655,15 +10655,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik verliezen dit."
+        "present": "Ik verliez dit."
       },
       {
         "person": "jij",
-        "present": "Jij verliezent dit."
+        "present": "Jij verliezt dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij verliezent dit."
+        "present": "Hij verliezt dit."
       },
       {
         "person": "wij",
@@ -10823,9 +10823,9 @@
       }
     ],
     "present": {
-      "ik": "vliegen",
-      "jij": "vliegent",
-      "hij_zij_het": "vliegent",
+      "ik": "vlieg",
+      "jij": "vliegt",
+      "hij_zij_het": "vliegt",
       "wij": "vliegen",
       "jullie": "vliegen",
       "zij": "vliegen"
@@ -10833,15 +10833,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik vliegen dit."
+        "present": "Ik vlieg dit."
       },
       {
         "person": "jij",
-        "present": "Jij vliegent dit."
+        "present": "Jij vliegt dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij vliegent dit."
+        "present": "Hij vliegt dit."
       },
       {
         "person": "wij",
@@ -10912,9 +10912,9 @@
       }
     ],
     "present": {
-      "ik": "vouwen",
-      "jij": "vouwent",
-      "hij_zij_het": "vouwent",
+      "ik": "vouw",
+      "jij": "vouwt",
+      "hij_zij_het": "vouwt",
       "wij": "vouwen",
       "jullie": "vouwen",
       "zij": "vouwen"
@@ -10922,15 +10922,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik vouwen dit."
+        "present": "Ik vouw dit."
       },
       {
         "person": "jij",
-        "present": "Jij vouwent dit."
+        "present": "Jij vouwt dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij vouwent dit."
+        "present": "Hij vouwt dit."
       },
       {
         "person": "wij",
@@ -11001,9 +11001,9 @@
       }
     ],
     "present": {
-      "ik": "vragen",
-      "jij": "vragent",
-      "hij_zij_het": "vragent",
+      "ik": "vrag",
+      "jij": "vragt",
+      "hij_zij_het": "vragt",
       "wij": "vragen",
       "jullie": "vragen",
       "zij": "vragen"
@@ -11011,15 +11011,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik vragen dit."
+        "present": "Ik vrag dit."
       },
       {
         "person": "jij",
-        "present": "Jij vragent dit."
+        "present": "Jij vragt dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij vragent dit."
+        "present": "Hij vragt dit."
       },
       {
         "person": "wij",
@@ -11090,9 +11090,9 @@
       }
     ],
     "present": {
-      "ik": "vriezen",
-      "jij": "vriezent",
-      "hij_zij_het": "vriezent",
+      "ik": "vriez",
+      "jij": "vriezt",
+      "hij_zij_het": "vriezt",
       "wij": "vriezen",
       "jullie": "vriezen",
       "zij": "vriezen"
@@ -11100,15 +11100,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik vriezen dit."
+        "present": "Ik vriez dit."
       },
       {
         "person": "jij",
-        "present": "Jij vriezent dit."
+        "present": "Jij vriezt dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij vriezent dit."
+        "present": "Hij vriezt dit."
       },
       {
         "person": "wij",
@@ -11179,9 +11179,9 @@
       }
     ],
     "present": {
-      "ik": "wassen",
-      "jij": "wassent",
-      "hij_zij_het": "wassent",
+      "ik": "wass",
+      "jij": "wasst",
+      "hij_zij_het": "wasst",
       "wij": "wassen",
       "jullie": "wassen",
       "zij": "wassen"
@@ -11189,15 +11189,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik wassen dit."
+        "present": "Ik wass dit."
       },
       {
         "person": "jij",
-        "present": "Jij wassent dit."
+        "present": "Jij wasst dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij wassent dit."
+        "present": "Hij wasst dit."
       },
       {
         "person": "wij",
@@ -11268,9 +11268,9 @@
       }
     ],
     "present": {
-      "ik": "wegen",
-      "jij": "wegent",
-      "hij_zij_het": "wegent",
+      "ik": "weg",
+      "jij": "wegt",
+      "hij_zij_het": "wegt",
       "wij": "wegen",
       "jullie": "wegen",
       "zij": "wegen"
@@ -11278,15 +11278,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik wegen dit."
+        "present": "Ik weg dit."
       },
       {
         "person": "jij",
-        "present": "Jij wegent dit."
+        "present": "Jij wegt dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij wegent dit."
+        "present": "Hij wegt dit."
       },
       {
         "person": "wij",
@@ -11357,9 +11357,9 @@
       }
     ],
     "present": {
-      "ik": "werpen",
-      "jij": "werpent",
-      "hij_zij_het": "werpent",
+      "ik": "werp",
+      "jij": "werpt",
+      "hij_zij_het": "werpt",
       "wij": "werpen",
       "jullie": "werpen",
       "zij": "werpen"
@@ -11367,15 +11367,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik werpen dit."
+        "present": "Ik werp dit."
       },
       {
         "person": "jij",
-        "present": "Jij werpent dit."
+        "present": "Jij werpt dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij werpent dit."
+        "present": "Hij werpt dit."
       },
       {
         "person": "wij",
@@ -11446,9 +11446,9 @@
       }
     ],
     "present": {
-      "ik": "werven",
-      "jij": "wervent",
-      "hij_zij_het": "wervent",
+      "ik": "werv",
+      "jij": "wervt",
+      "hij_zij_het": "wervt",
       "wij": "werven",
       "jullie": "werven",
       "zij": "werven"
@@ -11456,15 +11456,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik werven dit."
+        "present": "Ik werv dit."
       },
       {
         "person": "jij",
-        "present": "Jij wervent dit."
+        "present": "Jij wervt dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij wervent dit."
+        "present": "Hij wervt dit."
       },
       {
         "person": "wij",
@@ -11535,9 +11535,9 @@
       }
     ],
     "present": {
-      "ik": "weten",
-      "jij": "wetent",
-      "hij_zij_het": "wetent",
+      "ik": "wet",
+      "jij": "wett",
+      "hij_zij_het": "wett",
       "wij": "weten",
       "jullie": "weten",
       "zij": "weten"
@@ -11545,15 +11545,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik weten dit."
+        "present": "Ik wet dit."
       },
       {
         "person": "jij",
-        "present": "Jij wetent dit."
+        "present": "Jij wett dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij wetent dit."
+        "present": "Hij wett dit."
       },
       {
         "person": "wij",
@@ -11624,9 +11624,9 @@
       }
     ],
     "present": {
-      "ik": "wijken",
-      "jij": "wijkent",
-      "hij_zij_het": "wijkent",
+      "ik": "wijk",
+      "jij": "wijkt",
+      "hij_zij_het": "wijkt",
       "wij": "wijken",
       "jullie": "wijken",
       "zij": "wijken"
@@ -11634,15 +11634,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik wijken dit."
+        "present": "Ik wijk dit."
       },
       {
         "person": "jij",
-        "present": "Jij wijkent dit."
+        "present": "Jij wijkt dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij wijkent dit."
+        "present": "Hij wijkt dit."
       },
       {
         "person": "wij",
@@ -11713,9 +11713,9 @@
       }
     ],
     "present": {
-      "ik": "wijzen",
-      "jij": "wijzent",
-      "hij_zij_het": "wijzent",
+      "ik": "wijz",
+      "jij": "wijzt",
+      "hij_zij_het": "wijzt",
       "wij": "wijzen",
       "jullie": "wijzen",
       "zij": "wijzen"
@@ -11723,15 +11723,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik wijzen dit."
+        "present": "Ik wijz dit."
       },
       {
         "person": "jij",
-        "present": "Jij wijzent dit."
+        "present": "Jij wijzt dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij wijzent dit."
+        "present": "Hij wijzt dit."
       },
       {
         "person": "wij",
@@ -11891,9 +11891,9 @@
       }
     ],
     "present": {
-      "ik": "winnen",
-      "jij": "winnent",
-      "hij_zij_het": "winnent",
+      "ik": "winn",
+      "jij": "winnt",
+      "hij_zij_het": "winnt",
       "wij": "winnen",
       "jullie": "winnen",
       "zij": "winnen"
@@ -11901,15 +11901,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik winnen dit."
+        "present": "Ik winn dit."
       },
       {
         "person": "jij",
-        "present": "Jij winnent dit."
+        "present": "Jij winnt dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij winnent dit."
+        "present": "Hij winnt dit."
       },
       {
         "person": "wij",
@@ -11980,9 +11980,9 @@
       }
     ],
     "present": {
-      "ik": "worden",
-      "jij": "wordent",
-      "hij_zij_het": "wordent",
+      "ik": "word",
+      "jij": "wordt",
+      "hij_zij_het": "wordt",
       "wij": "worden",
       "jullie": "worden",
       "zij": "worden"
@@ -11990,15 +11990,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik worden dit."
+        "present": "Ik word dit."
       },
       {
         "person": "jij",
-        "present": "Jij wordent dit."
+        "present": "Jij wordt dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij wordent dit."
+        "present": "Hij wordt dit."
       },
       {
         "person": "wij",
@@ -12069,9 +12069,9 @@
       }
     ],
     "present": {
-      "ik": "wreken",
-      "jij": "wrekent",
-      "hij_zij_het": "wrekent",
+      "ik": "wrek",
+      "jij": "wrekt",
+      "hij_zij_het": "wrekt",
       "wij": "wreken",
       "jullie": "wreken",
       "zij": "wreken"
@@ -12079,15 +12079,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik wreken dit."
+        "present": "Ik wrek dit."
       },
       {
         "person": "jij",
-        "present": "Jij wrekent dit."
+        "present": "Jij wrekt dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij wrekent dit."
+        "present": "Hij wrekt dit."
       },
       {
         "person": "wij",
@@ -12158,9 +12158,9 @@
       }
     ],
     "present": {
-      "ik": "wrijven",
-      "jij": "wrijvent",
-      "hij_zij_het": "wrijvent",
+      "ik": "wrijv",
+      "jij": "wrijvt",
+      "hij_zij_het": "wrijvt",
       "wij": "wrijven",
       "jullie": "wrijven",
       "zij": "wrijven"
@@ -12168,15 +12168,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik wrijven dit."
+        "present": "Ik wrijv dit."
       },
       {
         "person": "jij",
-        "present": "Jij wrijvent dit."
+        "present": "Jij wrijvt dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij wrijvent dit."
+        "present": "Hij wrijvt dit."
       },
       {
         "person": "wij",
@@ -12247,9 +12247,9 @@
       }
     ],
     "present": {
-      "ik": "wringen",
-      "jij": "wringent",
-      "hij_zij_het": "wringent",
+      "ik": "wring",
+      "jij": "wringt",
+      "hij_zij_het": "wringt",
       "wij": "wringen",
       "jullie": "wringen",
       "zij": "wringen"
@@ -12257,15 +12257,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik wringen dit."
+        "present": "Ik wring dit."
       },
       {
         "person": "jij",
-        "present": "Jij wringent dit."
+        "present": "Jij wringt dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij wringent dit."
+        "present": "Hij wringt dit."
       },
       {
         "person": "wij",
@@ -12336,9 +12336,9 @@
       }
     ],
     "present": {
-      "ik": "zeggen",
-      "jij": "zeggent",
-      "hij_zij_het": "zeggent",
+      "ik": "zegg",
+      "jij": "zeggt",
+      "hij_zij_het": "zeggt",
       "wij": "zeggen",
       "jullie": "zeggen",
       "zij": "zeggen"
@@ -12346,15 +12346,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik zeggen dit."
+        "present": "Ik zegg dit."
       },
       {
         "person": "jij",
-        "present": "Jij zeggent dit."
+        "present": "Jij zeggt dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij zeggent dit."
+        "present": "Hij zeggt dit."
       },
       {
         "person": "wij",
@@ -12425,9 +12425,9 @@
       }
     ],
     "present": {
-      "ik": "zenden",
-      "jij": "zendent",
-      "hij_zij_het": "zendent",
+      "ik": "zend",
+      "jij": "zendt",
+      "hij_zij_het": "zendt",
       "wij": "zenden",
       "jullie": "zenden",
       "zij": "zenden"
@@ -12435,15 +12435,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik zenden dit."
+        "present": "Ik zend dit."
       },
       {
         "person": "jij",
-        "present": "Jij zendent dit."
+        "present": "Jij zendt dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij zendent dit."
+        "present": "Hij zendt dit."
       },
       {
         "person": "wij",
@@ -12603,8 +12603,8 @@
       }
     ],
     "present": {
-      "ik": "ben",
-      "jij": "bent",
+      "ik": "zijn",
+      "jij": "bt",
       "hij_zij_het": "is",
       "wij": "zijn",
       "jullie": "zijn",
@@ -12613,15 +12613,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik ben dit."
+        "present": "Ik zijn dit."
       },
       {
         "person": "jij",
-        "present": "Jij bent dit."
+        "present": "Jij bt dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij is dit."
+        "present": "Hij t dit."
       },
       {
         "person": "wij",
@@ -12692,9 +12692,9 @@
       }
     ],
     "present": {
-      "ik": "zingen",
-      "jij": "zingent",
-      "hij_zij_het": "zingent",
+      "ik": "zing",
+      "jij": "zingt",
+      "hij_zij_het": "zingt",
       "wij": "zingen",
       "jullie": "zingen",
       "zij": "zingen"
@@ -12702,15 +12702,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik zingen dit."
+        "present": "Ik zing dit."
       },
       {
         "person": "jij",
-        "present": "Jij zingent dit."
+        "present": "Jij zingt dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij zingent dit."
+        "present": "Hij zingt dit."
       },
       {
         "person": "wij",
@@ -12781,9 +12781,9 @@
       }
     ],
     "present": {
-      "ik": "zinken",
-      "jij": "zinkent",
-      "hij_zij_het": "zinkent",
+      "ik": "zink",
+      "jij": "zinkt",
+      "hij_zij_het": "zinkt",
       "wij": "zinken",
       "jullie": "zinken",
       "zij": "zinken"
@@ -12791,15 +12791,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik zinken dit."
+        "present": "Ik zink dit."
       },
       {
         "person": "jij",
-        "present": "Jij zinkent dit."
+        "present": "Jij zinkt dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij zinkent dit."
+        "present": "Hij zinkt dit."
       },
       {
         "person": "wij",
@@ -12870,9 +12870,9 @@
       }
     ],
     "present": {
-      "ik": "zinnen",
-      "jij": "zinnent",
-      "hij_zij_het": "zinnent",
+      "ik": "zinn",
+      "jij": "zinnt",
+      "hij_zij_het": "zinnt",
       "wij": "zinnen",
       "jullie": "zinnen",
       "zij": "zinnen"
@@ -12880,15 +12880,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik zinnen dit."
+        "present": "Ik zinn dit."
       },
       {
         "person": "jij",
-        "present": "Jij zinnent dit."
+        "present": "Jij zinnt dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij zinnent dit."
+        "present": "Hij zinnt dit."
       },
       {
         "person": "wij",
@@ -13048,9 +13048,9 @@
       }
     ],
     "present": {
-      "ik": "zoeken",
-      "jij": "zoekent",
-      "hij_zij_het": "zoekent",
+      "ik": "zoek",
+      "jij": "zoekt",
+      "hij_zij_het": "zoekt",
       "wij": "zoeken",
       "jullie": "zoeken",
       "zij": "zoeken"
@@ -13058,15 +13058,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik zoeken dit."
+        "present": "Ik zoek dit."
       },
       {
         "person": "jij",
-        "present": "Jij zoekent dit."
+        "present": "Jij zoekt dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij zoekent dit."
+        "present": "Hij zoekt dit."
       },
       {
         "person": "wij",
@@ -13137,9 +13137,9 @@
       }
     ],
     "present": {
-      "ik": "zuigen",
-      "jij": "zuigent",
-      "hij_zij_het": "zuigent",
+      "ik": "zuig",
+      "jij": "zuigt",
+      "hij_zij_het": "zuigt",
       "wij": "zuigen",
       "jullie": "zuigen",
       "zij": "zuigen"
@@ -13147,15 +13147,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik zuigen dit."
+        "present": "Ik zuig dit."
       },
       {
         "person": "jij",
-        "present": "Jij zuigent dit."
+        "present": "Jij zuigt dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij zuigent dit."
+        "present": "Hij zuigt dit."
       },
       {
         "person": "wij",
@@ -13226,9 +13226,9 @@
       }
     ],
     "present": {
-      "ik": "zuipen",
-      "jij": "zuipent",
-      "hij_zij_het": "zuipent",
+      "ik": "zuip",
+      "jij": "zuipt",
+      "hij_zij_het": "zuipt",
       "wij": "zuipen",
       "jullie": "zuipen",
       "zij": "zuipen"
@@ -13236,15 +13236,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik zuipen dit."
+        "present": "Ik zuip dit."
       },
       {
         "person": "jij",
-        "present": "Jij zuipent dit."
+        "present": "Jij zuipt dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij zuipent dit."
+        "present": "Hij zuipt dit."
       },
       {
         "person": "wij",
@@ -13315,9 +13315,9 @@
       }
     ],
     "present": {
-      "ik": "zwemmen",
-      "jij": "zwemment",
-      "hij_zij_het": "zwemment",
+      "ik": "zwemm",
+      "jij": "zwemmt",
+      "hij_zij_het": "zwemmt",
       "wij": "zwemmen",
       "jullie": "zwemmen",
       "zij": "zwemmen"
@@ -13325,15 +13325,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik zwemmen dit."
+        "present": "Ik zwemm dit."
       },
       {
         "person": "jij",
-        "present": "Jij zwemment dit."
+        "present": "Jij zwemmt dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij zwemment dit."
+        "present": "Hij zwemmt dit."
       },
       {
         "person": "wij",
@@ -13404,9 +13404,9 @@
       }
     ],
     "present": {
-      "ik": "zweren",
-      "jij": "zwerent",
-      "hij_zij_het": "zwerent",
+      "ik": "zwer",
+      "jij": "zwert",
+      "hij_zij_het": "zwert",
       "wij": "zweren",
       "jullie": "zweren",
       "zij": "zweren"
@@ -13414,15 +13414,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik zweren dit."
+        "present": "Ik zwer dit."
       },
       {
         "person": "jij",
-        "present": "Jij zwerent dit."
+        "present": "Jij zwert dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij zwerent dit."
+        "present": "Hij zwert dit."
       },
       {
         "person": "wij",
@@ -13493,9 +13493,9 @@
       }
     ],
     "present": {
-      "ik": "zwerven",
-      "jij": "zwervent",
-      "hij_zij_het": "zwervent",
+      "ik": "zwerv",
+      "jij": "zwervt",
+      "hij_zij_het": "zwervt",
       "wij": "zwerven",
       "jullie": "zwerven",
       "zij": "zwerven"
@@ -13503,15 +13503,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik zwerven dit."
+        "present": "Ik zwerv dit."
       },
       {
         "person": "jij",
-        "present": "Jij zwervent dit."
+        "present": "Jij zwervt dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij zwervent dit."
+        "present": "Hij zwervt dit."
       },
       {
         "person": "wij",
@@ -13582,9 +13582,9 @@
       }
     ],
     "present": {
-      "ik": "zwijgen",
-      "jij": "zwijgent",
-      "hij_zij_het": "zwijgent",
+      "ik": "zwijg",
+      "jij": "zwijgt",
+      "hij_zij_het": "zwijgt",
       "wij": "zwijgen",
       "jullie": "zwijgen",
       "zij": "zwijgen"
@@ -13592,15 +13592,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik zwijgen dit."
+        "present": "Ik zwijg dit."
       },
       {
         "person": "jij",
-        "present": "Jij zwijgent dit."
+        "present": "Jij zwijgt dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij zwijgent dit."
+        "present": "Hij zwijgt dit."
       },
       {
         "person": "wij",
@@ -13671,9 +13671,9 @@
       }
     ],
     "present": {
-      "ik": "bakken",
-      "jij": "bakkent",
-      "hij_zij_het": "bakkent",
+      "ik": "bakk",
+      "jij": "bakkt",
+      "hij_zij_het": "bakkt",
       "wij": "bakken",
       "jullie": "bakken",
       "zij": "bakken"
@@ -13681,15 +13681,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik bakken dit."
+        "present": "Ik bakk dit."
       },
       {
         "person": "jij",
-        "present": "Jij bakkent dit."
+        "present": "Jij bakkt dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij bakkent dit."
+        "present": "Hij bakkt dit."
       },
       {
         "person": "wij",
@@ -13760,9 +13760,9 @@
       }
     ],
     "present": {
-      "ik": "barsten",
-      "jij": "barstent",
-      "hij_zij_het": "barstent",
+      "ik": "barst",
+      "jij": "barstt",
+      "hij_zij_het": "barstt",
       "wij": "barsten",
       "jullie": "barsten",
       "zij": "barsten"
@@ -13770,15 +13770,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik barsten dit."
+        "present": "Ik barst dit."
       },
       {
         "person": "jij",
-        "present": "Jij barstent dit."
+        "present": "Jij barstt dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij barstent dit."
+        "present": "Hij barstt dit."
       },
       {
         "person": "wij",
@@ -13849,9 +13849,9 @@
       }
     ],
     "present": {
-      "ik": "bederven",
-      "jij": "bedervent",
-      "hij_zij_het": "bedervent",
+      "ik": "bederv",
+      "jij": "bedervt",
+      "hij_zij_het": "bedervt",
       "wij": "bederven",
       "jullie": "bederven",
       "zij": "bederven"
@@ -13859,15 +13859,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik bederven dit."
+        "present": "Ik bederv dit."
       },
       {
         "person": "jij",
-        "present": "Jij bedervent dit."
+        "present": "Jij bedervt dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij bedervent dit."
+        "present": "Hij bedervt dit."
       },
       {
         "person": "wij",
@@ -13938,9 +13938,9 @@
       }
     ],
     "present": {
-      "ik": "bedriegen",
-      "jij": "bedriegent",
-      "hij_zij_het": "bedriegent",
+      "ik": "bedrieg",
+      "jij": "bedriegt",
+      "hij_zij_het": "bedriegt",
       "wij": "bedriegen",
       "jullie": "bedriegen",
       "zij": "bedriegen"
@@ -13948,15 +13948,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik bedriegen dit."
+        "present": "Ik bedrieg dit."
       },
       {
         "person": "jij",
-        "present": "Jij bedriegent dit."
+        "present": "Jij bedriegt dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij bedriegent dit."
+        "present": "Hij bedriegt dit."
       },
       {
         "person": "wij",
@@ -14116,9 +14116,9 @@
       }
     ],
     "present": {
-      "ik": "begrijpen",
-      "jij": "begrijpent",
-      "hij_zij_het": "begrijpent",
+      "ik": "begrijp",
+      "jij": "begrijpt",
+      "hij_zij_het": "begrijpt",
       "wij": "begrijpen",
       "jullie": "begrijpen",
       "zij": "begrijpen"
@@ -14126,15 +14126,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik begrijpen dit."
+        "present": "Ik begrijp dit."
       },
       {
         "person": "jij",
-        "present": "Jij begrijpent dit."
+        "present": "Jij begrijpt dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij begrijpent dit."
+        "present": "Hij begrijpt dit."
       },
       {
         "person": "wij",
@@ -14205,9 +14205,9 @@
       }
     ],
     "present": {
-      "ik": "bergen",
-      "jij": "bergent",
-      "hij_zij_het": "bergent",
+      "ik": "berg",
+      "jij": "bergt",
+      "hij_zij_het": "bergt",
       "wij": "bergen",
       "jullie": "bergen",
       "zij": "bergen"
@@ -14215,15 +14215,15 @@
     "examples_present": [
       {
         "person": "ik",
-        "present": "Ik bergen dit."
+        "present": "Ik berg dit."
       },
       {
         "person": "jij",
-        "present": "Jij bergent dit."
+        "present": "Jij bergt dit."
       },
       {
         "person": "hij_zij_het",
-        "present": "Hij bergent dit."
+        "present": "Hij bergt dit."
       },
       {
         "person": "wij",
