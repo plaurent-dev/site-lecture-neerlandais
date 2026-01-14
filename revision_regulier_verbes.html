@@ -506,6 +506,11 @@
         <div class="config-screen" id="configScreen">
             <h1>🇳🇱 Verbes Réguliers</h1>
 
+            <!-- SECTION RAPPELS DES RÈGLES -->
+            <div id="rulesSection" style="display: none; background: #f0f4ff; padding: 20px; border-radius: 8px; border-left: 4px solid #667eea; margin-bottom: 30px;">
+                <div id="rulesContent"></div>
+            </div>
+
             <div class="config-section">
                 <label>Filtre par Fréquence</label>
                 <div class="filter-group">
@@ -621,6 +626,72 @@
             console.log(`${filteredVerbes.length} verbes après filtrage`);
         }
 
+        // Afficher les rappels des règles en fonction du temps sélectionné
+        function updateRulesDisplay() {
+            const rulesSection = document.getElementById('rulesSection');
+            const rulesContent = document.getElementById('rulesContent');
+
+            if (selectedTime === 'all') {
+                rulesSection.style.display = 'none';
+                return;
+            }
+
+            rulesSection.style.display = 'block';
+
+            const rules = {
+                'present': `
+                    <strong>📝 Conjugaison du Présent - Verbes Réguliers</strong><br><br>
+                    <b>Structure générale :</b><br>
+                    - <b>Radicaux modifiés au 1ère personne du singulier :</b> v → f, z → s<br>
+                    Ex : leven → ik leef (et non lev) ; reizen → ik reis (et non reiz)<br><br>
+                    - <b>Formes régulières :</b><br>
+                    ik : radical brut (leef)<br>
+                    jij : radical + t (leeft)<br>
+                    hij/zij/het : radical + t (leeft)<br>
+                    wij : infinitif (leven)<br>
+                    jullie : infinitif (leven)<br>
+                    zij : infinitif (leven)<br><br>
+                    <b>Exemple : werken</b><br>
+                    ik werk | jij werkt | hij werkt | wij werken | jullie werken | zij werken
+                `,
+                'preterite': `
+                    <strong>📝 Conjugaison du Prétérit - Verbes Réguliers</strong><br><br>
+                    <b>Deux formes : singulier et pluriel</b><br><br>
+                    <b>Comment choisir -te(n) ou -de(n) ?</b><br>
+                    1. Prends le <b>radical brut</b> (infinitif sans -en ou -n)<br>
+                    2. Si la dernière lettre du radical est dans : <b>T K F S CH P X</b><br>
+                    (mnémo : <b>'t KofSCHip + X</b> ou <b>SoFT KeTCHuP + X</b>)<br>
+                    → c'est <b>-te(n)</b><br>
+                    3. Sinon, c'est <b>-de(n)</b><br><br>
+                    <b>Formes :</b><br>
+                    - Singulier : ik werkte, jij werkte, hij/zij/het werkte<br>
+                    - Pluriel : wij werkten, jullie werkten, zij werkten<br><br>
+                    <b>Exemples :</b><br>
+                    - werken → ik <b>werkte</b> | wij <b>werkten</b><br>
+                    - leven → ik <b>leefde</b> | wij <b>leefden</b>
+                `,
+                'past_participle': `
+                    <strong>📝 Conjugaison du Participe Passé - Verbes Réguliers</strong><br><br>
+                    <b>Formation :</b><br>
+                    <b>ge-</b> + radical + <b>-t</b><br><br>
+                    <b>Auxiliaires :</b><br>
+                    - <b>hebben</b> : pour la plupart des verbes<br>
+                    Ex : ik heb gewerkt, jij hebt gewerkt<br><br>
+                    - <b>zijn</b> : pour les verbes de mouvement<br>
+                    Ex : ik ben gegaan, jij bent gegaan<br><br>
+                    <b>Formes conjuguées :</b><br>
+                    ik heb/ben + participe | jij hebt/bent + participe<br>
+                    hij/zij/het heeft/is + participe<br>
+                    wij hebben/zijn + participe | jullie hebben/zijn + participe<br>
+                    zij hebben/zijn + participe<br><br>
+                    <b>Exemple : werken (avoir)</b><br>
+                    ik heb gewerkt | jij hebt gewerkt | hij heeft gewerkt | wij hebben gewerkt
+                `
+            };
+
+            rulesContent.innerHTML = rules[selectedTime] || '';
+        }
+
         // Initialiser les event listeners
         function initializeEventListeners() {
             // Événements des filtres fréquence
@@ -638,6 +709,7 @@
                     document.querySelectorAll('[data-time]').forEach(b => b.classList.remove('active'));
                     this.classList.add('active');
                     selectedTime = this.dataset.time;
+                    updateRulesDisplay();
                 });
             });
 
@@ -973,6 +1045,7 @@
         document.addEventListener('DOMContentLoaded', function() {
             initializeEventListeners();
             loadVerbes();
+            updateRulesDisplay();
         });
     </script>
 </body>

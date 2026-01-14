@@ -506,6 +506,11 @@
         <div class="config-screen" id="configScreen">
             <h1>🇳🇱 Verbes Irréguliers</h1>
 
+            <!-- SECTION RAPPELS DES RÈGLES -->
+            <div id="rulesSection" style="display: none; background: #f0f4ff; padding: 20px; border-radius: 8px; border-left: 4px solid #667eea; margin-bottom: 30px;">
+                <div id="rulesContent"></div>
+            </div>
+
             <div class="config-section">
                 <label>Filtre par Fréquence</label>
                 <div class="filter-group">
@@ -621,6 +626,67 @@
             console.log(`${filteredVerbes.length} verbes après filtrage`);
         }
 
+        // Afficher les rappels des règles en fonction du temps sélectionné
+        function updateRulesDisplay() {
+            const rulesSection = document.getElementById('rulesSection');
+            const rulesContent = document.getElementById('rulesContent');
+
+            if (selectedTime === 'all') {
+                rulesSection.style.display = 'none';
+                return;
+            }
+
+            rulesSection.style.display = 'block';
+
+            const rules = {
+                'present': `
+                    <strong>📝 Conjugaison du Présent - Verbes Irréguliers</strong><br><br>
+                    <b>Caractéristique principale : Changement de voyelle du radical</b><br>
+                    Les verbes irréguliers changeant la voyelle du radical entre l'infinitif et le présent.<br><br>
+                    <b>Exemples courants :</b><br>
+                    - <b>gaan</b> (aller) : ik <b>ga</b> | jij <b>gaat</b> | hij <b>gaat</b> | wij <b>gaan</b> | zij <b>gaan</b><br>
+                    - <b>nemen</b> (prendre) : ik <b>neem</b> | jij <b>neemt</b> | hij <b>neemt</b> | wij <b>nemen</b> | zij <b>nemen</b><br>
+                    - <b>geven</b> (donner) : ik <b>geef</b> | jij <b>geeft</b> | hij <b>geeft</b> | wij <b>geven</b> | zij <b>geven</b><br>
+                    - <b>houden</b> (tenir) : ik <b>hou</b> | jij <b>houdt</b> | hij <b>houdt</b> | wij <b>houden</b> | zij <b>houden</b><br><br>
+                    <b>⚠️ Important :</b> Les formes irrégulières doivent être apprises par cœur ou consultées dans un dictionnaire.
+                `,
+                'preterite': `
+                    <strong>📝 Conjugaison du Prétérit - Verbes Irréguliers</strong><br><br>
+                    <b>Caractéristique principale : Changement de voyelle du radical</b><br>
+                    Le prétérit des verbes irréguliers montre une modification vocalique distincte.<br><br>
+                    <b>Structure :</b><br>
+                    - Singulier : forme unique (ik, jij, hij/zij/het)<br>
+                    - Pluriel : forme unique (wij, jullie, zij)<br><br>
+                    <b>Exemples courants :</b><br>
+                    - <b>gaan</b> : ik <b>ging</b> | wij <b>gingen</b><br>
+                    - <b>nemen</b> : ik <b>nam</b> | wij <b>namen</b><br>
+                    - <b>geven</b> : ik <b>gaf</b> | wij <b>gaven</b><br>
+                    - <b>drinken</b> : ik <b>dronk</b> | wij <b>dronken</b><br>
+                    - <b>denken</b> : ik <b>dacht</b> | wij <b>dachten</b><br><br>
+                    <b>⚠️ Important :</b> Les formes irrégulières doivent être apprises par cœur.
+                `,
+                'past_participle': `
+                    <strong>📝 Conjugaison du Participe Passé - Verbes Irréguliers</strong><br><br>
+                    <b>Formation variable :</b><br>
+                    Les verbes irréguliers n'ont pas de forme unique. Souvent :<br>
+                    <b>ge-</b> + radical modifié + <b>-en</b> ou <b>-t</b><br><br>
+                    <b>Auxiliaires :</b><br>
+                    - <b>hebben</b> : pour la plupart des verbes<br>
+                    - <b>zijn</b> : pour les verbes de mouvement (gaan, komen, vertrekken, etc.)<br><br>
+                    <b>Exemples courants :</b><br>
+                    - <b>gaan</b> (hebben ou zijn) : ik ben <b>gegaan</b><br>
+                    - <b>nemen</b> (hebben) : ik heb <b>genomen</b><br>
+                    - <b>geven</b> (hebben) : ik heb <b>gegeven</b><br>
+                    - <b>drinken</b> (hebben) : ik heb <b>gedronken</b><br>
+                    - <b>denken</b> (hebben) : ik heb <b>gedacht</b><br>
+                    - <b>komen</b> (zijn) : ik ben <b>gekomen</b><br><br>
+                    <b>⚠️ Important :</b> Chaque verbe irrégulier a son propre participe à apprendre.
+                `
+            };
+
+            rulesContent.innerHTML = rules[selectedTime] || '';
+        }
+
         // Initialiser les event listeners
         function initializeEventListeners() {
             // Événements des filtres fréquence
@@ -638,6 +704,7 @@
                     document.querySelectorAll('[data-time]').forEach(b => b.classList.remove('active'));
                     this.classList.add('active');
                     selectedTime = this.dataset.time;
+                    updateRulesDisplay();
                 });
             });
 
@@ -973,6 +1040,7 @@
         document.addEventListener('DOMContentLoaded', function() {
             initializeEventListeners();
             loadVerbes();
+            updateRulesDisplay();
         });
     </script>
 </body>
