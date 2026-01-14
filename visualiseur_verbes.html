@@ -272,15 +272,19 @@
 </head>
 <body>
     <div class="container">
-        <h1>🇳🇱 Vérification Verbes Irréguliers</h1>
-        <p class="subtitle">Visualisez et téléchargez votre fichier irregulier.json</p>
+        <h1>🇳🇱 Vérification Verbes Néerlandais</h1>
+        <p class="subtitle">Visualisez et téléchargez vos fichiers de verbes réguliers ou irréguliers</p>
 
         <div class="info-message">
-            ℹ️ Cette page vous permet de vérifier le contenu de votre fichier irregulier.json et de le télécharger sous différents formats pour partage avec vos professeurs.
+            ℹ️ Cette page vous permet de vérifier le contenu de vos fichiers de verbes et de les télécharger sous différents formats pour partage avec vos professeurs.
         </div>
 
         <div class="controls">
-            <input type="text" class="search-box" id="searchBox" placeholder="Rechercher un verbe (infinitif ou traduction)...">
+            <select id="verbType" class="search-box" style="flex: 0 1 200px; max-width: 200px; padding: 10px 15px; font-weight: 600;">
+                <option value="irregulier">Verbes Irréguliers</option>
+                <option value="regulier">Verbes Réguliers</option>
+            </select>
+            <input type="text" class="search-box" id="searchBox" placeholder="Rechercher un verbe (infinitif ou traduction)..." style="flex: 1; min-width: 250px; max-width: 400px;">
             <div class="button-group">
                 <button class="btn-download" onclick="downloadAsHTML()">📥 Télécharger (HTML)</button>
                 <button class="btn-download" onclick="downloadAsCSV()">📥 Télécharger (CSV)</button>
@@ -335,13 +339,14 @@
         let filteredVerbs = [];
 
         // Charger les verbes
-        async function loadVerbs() {
+        async function loadVerbs(type = 'irregulier') {
             try {
-                const response = await fetch('irregulier.json');
+                const fileName = type === 'regulier' ? 'regulier.json' : 'irregulier.json';
+                const response = await fetch(fileName);
                 allVerbs = await response.json();
+                document.getElementById('loadingMessage').style.display = 'none';
                 displayVerbs(allVerbs);
                 calculateStats(allVerbs);
-                document.getElementById('loadingMessage').style.display = 'none';
                 document.getElementById('verbsTable').style.display = 'table';
             } catch (error) {
                 console.error('Erreur de chargement:', error);
@@ -574,6 +579,11 @@
 
         // Initialisation
         document.getElementById('searchBox').addEventListener('keyup', searchVerbs);
+        document.getElementById('verbType').addEventListener('change', function() {
+            document.getElementById('loadingMessage').style.display = 'block';
+            document.getElementById('verbsTable').style.display = 'none';
+            loadVerbs(this.value);
+        });
         document.addEventListener('DOMContentLoaded', loadVerbs);
     </script>
 </body>
