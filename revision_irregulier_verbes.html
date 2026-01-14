@@ -460,9 +460,47 @@
         .hidden {
             display: none !important;
         }
+
+        /* BOUTON DE RETOUR */
+        .back-btn {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            padding: 12px 20px;
+            background: white;
+            color: #667eea;
+            border: 2px solid #667eea;
+            border-radius: 8px;
+            font-size: 1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            text-decoration: none;
+        }
+
+        .back-btn:hover {
+            background: #667eea;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .back-btn:active {
+            transform: translateY(0);
+        }
+
+        @media (max-width: 600px) {
+            .back-btn {
+                padding: 10px 16px;
+                font-size: 0.9em;
+            }
+        }
     </style>
 </head>
 <body>
+    <a href="index.html" class="back-btn">← Retour</a>
     <div class="container">
         <!-- ÉCRAN DE CONFIGURATION -->
         <div class="config-screen" id="configScreen">
