@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Révision Verbes Irréguliers NL - Kahoot Style</title>
+    <title>Révision Verbes Irréguliers NL</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <style>
@@ -211,12 +211,40 @@
             background: #f8f9ff;
             border-radius: 8px;
             border-left: 4px solid #667eea;
+            justify-content: space-between;
+        }
+
+        .verb-infinitive-section {
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
 
         .verb-infinitive {
             font-size: 1.5em;
             font-weight: 700;
             color: #667eea;
+        }
+
+        .pronunciation-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1.3em;
+            padding: 5px 8px;
+            color: #667eea;
+            transition: transform 0.2s ease;
+        }
+
+        .pronunciation-btn:hover {
+            transform: scale(1.2);
+        }
+
+        .verb-translation {
+            font-size: 1.1em;
+            color: #764ba2;
+            font-weight: 600;
+            font-style: italic;
         }
 
         .auxiliary-badge {
@@ -315,6 +343,7 @@
             font-weight: 600;
             text-align: center;
             animation: slideIn 0.3s ease;
+            line-height: 1.6;
         }
 
         .feedback.correct {
@@ -327,6 +356,13 @@
             background: #f8d7da;
             color: #721c24;
             border: 2px solid #dc3545;
+        }
+
+        .feedback strong {
+            display: block;
+            margin-top: 10px;
+            font-style: italic;
+            font-weight: 500;
         }
 
         .next-btn {
@@ -430,7 +466,7 @@
     <div class="container">
         <!-- ÉCRAN DE CONFIGURATION -->
         <div class="config-screen" id="configScreen">
-            <h1>🇳🇱 Verbes Irréguliers Kahoot</h1>
+            <h1>🇳🇱 Verbes Irréguliers</h1>
 
             <div class="config-section">
                 <label>Filtre par Fréquence</label>
@@ -475,8 +511,12 @@
             <div class="quiz-content">
                 <div class="question-section">
                     <div class="verb-info">
-                        <span class="verb-infinitive" id="verbInfinitive">gaan</span>
+                        <div class="verb-infinitive-section">
+                            <button class="pronunciation-btn" id="pronunciationBtn" title="Écouter la prononciation">🔊</button>
+                            <span class="verb-infinitive" id="verbInfinitive">gaan</span>
+                        </div>
                         <span class="auxiliary-badge" id="auxiliaryBadge">hebben</span>
+                        <span class="verb-translation" id="verbTranslation">aller</span>
                     </div>
 
                     <div class="question-text" id="questionText">Comment conjuguer au présent (jij)?</div>
@@ -732,6 +772,18 @@
                 questionTextElement.textContent = `Conjuguer au ${timeLabel} (${personLabel})?`;
             }
 
+            // Afficher la traduction du verbe
+            const verbTranslation = document.getElementById('verbTranslation');
+            if (verbTranslation) {
+                verbTranslation.textContent = verb.translation || '';
+            }
+
+            // Afficher le bouton de prononciation
+            const pronunciationBtn = document.getElementById('pronunciationBtn');
+            if (pronunciationBtn) {
+                pronunciationBtn.onclick = () => pronounce(verb.infinitive);
+            }
+
             // Afficher les options
             const optionsGrid = document.getElementById('optionsGrid');
             if (optionsGrid) {
@@ -763,13 +815,29 @@
                 }
             });
 
-            // Feedback
+            // Feedback avec exemple
             const feedbackArea = document.getElementById('feedbackArea');
+            let exampleSentence = '';
+            
+            // Trouver un exemple pertinent
+            if (currentVerb.examples && currentVerb.examples.length > 0) {
+                const relevantExample = currentVerb.examples.find(ex => ex.person === person);
+                if (relevantExample) {
+                    if (timeType === 'present' && relevantExample.present) {
+                        exampleSentence = `<br><strong>Exemple:</strong> ${relevantExample.present}`;
+                    } else if (timeType === 'preterite' && relevantExample.preterite) {
+                        exampleSentence = `<br><strong>Exemple:</strong> ${relevantExample.preterite}`;
+                    } else if (timeType === 'past_participle' && relevantExample.past_participle) {
+                        exampleSentence = `<br><strong>Exemple:</strong> ${relevantExample.past_participle}`;
+                    }
+                }
+            }
+
             if (selected === correct) {
                 score++;
-                feedbackArea.innerHTML = '<div class="feedback correct">✓ Correct!</div>';
+                feedbackArea.innerHTML = `<div class="feedback correct">✓ Correct!${exampleSentence}</div>`;
             } else {
-                feedbackArea.innerHTML = `<div class="feedback incorrect">✗ Incorrect. La bonne réponse est: ${correct}</div>`;
+                feedbackArea.innerHTML = `<div class="feedback incorrect">✗ Incorrect. La bonne réponse est: ${correct}${exampleSentence}</div>`;
             }
 
             // Afficher le bouton suivant
@@ -808,6 +876,15 @@
 
             document.getElementById('scoreEmoji').textContent = emoji;
             document.getElementById('scoreText').textContent = message;
+        }
+
+        // Fonction pour écouter la prononciation
+        function pronounce(word) {
+            const utterance = new SpeechSynthesisUtterance(word);
+            utterance.lang = 'nl-NL';
+            utterance.rate = 0.8;
+            window.speechSynthesis.cancel();
+            window.speechSynthesis.speak(utterance);
         }
 
         // Initialisation au chargement du DOM
