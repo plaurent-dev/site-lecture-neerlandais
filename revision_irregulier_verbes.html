@@ -740,11 +740,14 @@
 
             console.log(`Bonne réponse: ${correctAnswer}`);
 
-            // Générer 3 mauvaises réponses à partir du même verbe (personnes différentes)
+            // Générer 3 mauvaises réponses avec déduplication
             const wrongAnswers = [];
-            const availablePersons = ['ik', 'jij', 'hij_zij_het', 'wij', 'jullie', 'zij'].filter(p => p !== person);
+            const usedAnswers = new Set([correctAnswer]); // Éviter les doublons
 
-            for (let i = 0; i < 3; i++) {
+            // Essayer d'abord les différentes personnes du même verbe
+            const availablePersons = ['ik', 'jij', 'hij_zij_het', 'wij', 'jullie', 'zij'].filter(p => p !== person);
+            
+            for (let i = 0; i < availablePersons.length && wrongAnswers.length < 3; i++) {
                 const wrongPerson = availablePersons[i];
                 let wrongAnswer;
                 if (timeType === 'present') {
@@ -754,7 +757,42 @@
                 } else if (timeType === 'past_participle') {
                     wrongAnswer = verb.past_participle_conjugated[wrongPerson];
                 }
-                wrongAnswers.push(wrongAnswer);
+                
+                // Ajouter seulement si pas déjà utilisé
+                if (!usedAnswers.has(wrongAnswer)) {
+                    wrongAnswers.push(wrongAnswer);
+                    usedAnswers.add(wrongAnswer);
+                }
+            }
+
+            // Si on n'a pas assez de réponses uniques du même verbe, en prendre d'autres verbes
+            if (wrongAnswers.length < 3) {
+                const otherVerbs = filteredVerbes.filter(v => v.infinitive !== verb.infinitive);
+                let verbIndex = 0;
+                
+                while (wrongAnswers.length < 3 && verbIndex < otherVerbs.length) {
+                    const otherVerb = otherVerbs[verbIndex];
+                    const personForOther = ['ik', 'jij', 'hij_zij_het', 'wij', 'jullie', 'zij'][
+                        Math.floor(Math.random() * 6)
+                    ];
+                    
+                    let wrongAnswer;
+                    if (timeType === 'present') {
+                        wrongAnswer = otherVerb.present[personForOther];
+                    } else if (timeType === 'preterite') {
+                        wrongAnswer = otherVerb.preterite[personForOther];
+                    } else if (timeType === 'past_participle') {
+                        wrongAnswer = otherVerb.past_participle_conjugated[personForOther];
+                    }
+                    
+                    // Ajouter seulement si pas déjà utilisé
+                    if (!usedAnswers.has(wrongAnswer)) {
+                        wrongAnswers.push(wrongAnswer);
+                        usedAnswers.add(wrongAnswer);
+                    }
+                    
+                    verbIndex++;
+                }
             }
 
             // Mélanger les réponses
