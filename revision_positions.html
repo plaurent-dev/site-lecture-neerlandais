@@ -158,6 +158,30 @@
             margin-top: 20px;
         }
 
+        .listen-btn {
+            padding: 8px 16px;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 0.95em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+            display: inline-block;
+        }
+
+        .listen-btn:hover {
+            background: #5568d3;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(102, 126, 234, 0.3);
+        }
+
+        .listen-btn:active {
+            transform: translateY(0);
+        }
+
         .btn {
             flex: 1;
             padding: 12px 20px;
@@ -548,8 +572,9 @@
             if (isCorrect) {
                 correctCount++;
                 document.getElementById('feedback').className = 'feedback correct';
+                const sentenceCorrect = `${currentQuestion.city2.nom} ligt ${correctAnswer.nl} ${currentQuestion.city1.nom}`;
                 document.getElementById('feedback').innerHTML = 
-                    `✅ <strong>Correct !</strong> ${currentQuestion.city2.nom} ligt ${correctAnswer.nl} ${currentQuestion.city1.nom}.`;
+                    `✅ <strong>Correct !</strong> ${sentenceCorrect}.<br><button class="listen-btn" onclick="ecouter('${sentenceCorrect}')">🔊 Écouter</button>`;
                 document.querySelectorAll('.option-btn').forEach(btn => {
                     if (btn.textContent === correctAnswer.nl) {
                         btn.classList.add('correct');
@@ -557,8 +582,9 @@
                 });
             } else {
                 document.getElementById('feedback').className = 'feedback incorrect';
+                const sentenceIncorrect = `${currentQuestion.city2.nom} ligt ${correctAnswer.nl} ${currentQuestion.city1.nom}`;
                 document.getElementById('feedback').innerHTML = 
-                    `❌ <strong>Incorrect !</strong> ${currentQuestion.city2.nom} ligt ${correctAnswer.nl} ${currentQuestion.city1.nom}.`;
+                    `❌ <strong>Incorrect !</strong> ${sentenceIncorrect}.<br><button class="listen-btn" onclick="ecouter('${sentenceIncorrect}')">🔊 Écouter</button>`;
                 document.querySelectorAll('.option-btn').forEach(btn => {
                     if (btn.textContent === correctAnswer.nl) {
                         btn.classList.add('correct');
@@ -571,6 +597,19 @@
             document.getElementById('validateBtn').style.display = 'none';
             document.getElementById('nextBtn').style.display = 'block';
             updateScore();
+        }
+
+        // Fonction pour prononcer une phrase en néerlandais
+        function ecouter(texte) {
+            // Arrêter la parole en cours si elle existe
+            window.speechSynthesis.cancel();
+            
+            const utterance = new SpeechSynthesisUtterance(texte);
+            utterance.lang = 'nl-NL';  // Néerlandais
+            utterance.rate = 0.9;      // Vitesse légèrement réduite pour clarté
+            utterance.pitch = 1;
+            
+            window.speechSynthesis.speak(utterance);
         }
 
         function updateScore() {
