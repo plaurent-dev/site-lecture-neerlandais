@@ -574,7 +574,7 @@
                 document.getElementById('feedback').className = 'feedback correct';
                 const sentenceCorrect = `${currentQuestion.city2.nom} ligt ${correctAnswer.nl} ${currentQuestion.city1.nom}`;
                 document.getElementById('feedback').innerHTML = 
-                    `✅ <strong>Correct !</strong> ${sentenceCorrect}.<br><button class="listen-btn" onclick="ecouter('${sentenceCorrect}')">🔊 Écouter</button>`;
+                    `✅ <strong>Correct !</strong> ${sentenceCorrect}.<br><button class="listen-btn" onclick="ecouter('${sentenceCorrect}')">🔊 Luister naar de zin</button>`;
                 document.querySelectorAll('.option-btn').forEach(btn => {
                     if (btn.textContent === correctAnswer.nl) {
                         btn.classList.add('correct');
@@ -584,7 +584,7 @@
                 document.getElementById('feedback').className = 'feedback incorrect';
                 const sentenceIncorrect = `${currentQuestion.city2.nom} ligt ${correctAnswer.nl} ${currentQuestion.city1.nom}`;
                 document.getElementById('feedback').innerHTML = 
-                    `❌ <strong>Incorrect !</strong> ${sentenceIncorrect}.<br><button class="listen-btn" onclick="ecouter('${sentenceIncorrect}')">🔊 Écouter</button>`;
+                    `❌ <strong>Incorrect !</strong> ${sentenceIncorrect}.<br><button class="listen-btn" onclick="ecouter('${sentenceIncorrect}')">🔊 Luister naar de zin</button>`;
                 document.querySelectorAll('.option-btn').forEach(btn => {
                     if (btn.textContent === correctAnswer.nl) {
                         btn.classList.add('correct');
