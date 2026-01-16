@@ -549,7 +549,7 @@
                 correctCount++;
                 document.getElementById('feedback').className = 'feedback correct';
                 document.getElementById('feedback').innerHTML = 
-                    `✅ <strong>Correct !</strong> ${currentQuestion.city2.nom} est bien ${correctAnswer.nl} ${currentQuestion.city1.nom}.`;
+                    `✅ <strong>Correct !</strong> ${currentQuestion.city2.nom} ligt ${correctAnswer.nl} ${currentQuestion.city1.nom}.`;
                 document.querySelectorAll('.option-btn').forEach(btn => {
                     if (btn.textContent === correctAnswer.nl) {
                         btn.classList.add('correct');
@@ -558,7 +558,7 @@
             } else {
                 document.getElementById('feedback').className = 'feedback incorrect';
                 document.getElementById('feedback').innerHTML = 
-                    `❌ <strong>Incorrect !</strong> La bonne réponse est : ${correctAnswer.nl} ${currentQuestion.city1.nom}.`;
+                    `❌ <strong>Incorrect !</strong> ${currentQuestion.city2.nom} ligt ${correctAnswer.nl} ${currentQuestion.city1.nom}.`;
                 document.querySelectorAll('.option-btn').forEach(btn => {
                     if (btn.textContent === correctAnswer.nl) {
                         btn.classList.add('correct');
