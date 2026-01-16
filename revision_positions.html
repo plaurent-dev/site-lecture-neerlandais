@@ -534,7 +534,7 @@
             currentQuestion = { city1, city2, bearing };
             document.getElementById('cityName').textContent = city1.nom + ' (1) 🔵';
             document.getElementById('questionText').innerHTML = 
-                `<strong>${city2.nom}</strong> (2 🔴) est... ?`;
+                `<strong>${city2.nom}</strong> (2 🔴) ligt <span style="font-size: 1.3em; font-weight: bold; color: var(--primary);">........................</span> <strong>${city1.nom}</strong>. ?`;
 
             // Afficher les options
             const optionsContainer = document.getElementById('optionsContainer');
