@@ -622,6 +622,9 @@
             return;
         }
 
+        // Trier les fiches par date décroissante (plus récent en premier)
+        fiches.sort((a, b) => new Date(b.date) - new Date(a.date));
+
         // Sur mobile (< 480px), afficher seulement le plus récent (1 article)
         // Sur desktop, afficher 6 articles récents
         const isMobile = window.innerWidth < 480;
