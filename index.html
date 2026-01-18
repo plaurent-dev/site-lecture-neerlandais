@@ -622,7 +622,11 @@
             return;
         }
 
-        const fichesRecentes = fiches.slice(0, 6);
+        // Sur mobile (< 480px), afficher seulement le plus récent (1 article)
+        // Sur desktop, afficher 6 articles récents
+        const isMobile = window.innerWidth < 480;
+        const nombreArticles = isMobile ? 1 : 6;
+        const fichesRecentes = fiches.slice(0, nombreArticles);
 
         container.innerHTML = fichesRecentes.map(fiche => `
             <div class="fiche-card" data-fiche="${fiche.href}">
@@ -833,6 +837,11 @@
         afficherFichesRecentes();
         afficherMarqueursGoogleMap();
     };
+
+    // Mettre à jour l'affichage des fiches quand la fenêtre est redimensionnée
+    window.addEventListener('resize', function() {
+        afficherFichesRecentes();
+    });
 </script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYnaelzF3AanXmOGDG8j9kv3GyETYf1Js"></script>
 </body>
