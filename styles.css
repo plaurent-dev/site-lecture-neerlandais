@@ -1612,6 +1612,15 @@ a:hover {
         gap: 8px;
     }
 
+    /* Afficher seulement le dernier article sur mobile */
+    #fichesRecentes .fiche-card {
+        display: none;
+    }
+
+    #fichesRecentes .fiche-card:last-child {
+        display: block;
+    }
+
     .fiche-container {
         padding: 15px;
         margin: 15px 5px;
