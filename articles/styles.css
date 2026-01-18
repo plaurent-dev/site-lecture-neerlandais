@@ -44,6 +44,8 @@
 
 html, body {
     height: 100%;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 body {
@@ -56,6 +58,12 @@ body {
     font-size: 16px;
 }
 
+/* Optimisation pour mobile */
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
 /* ============================================
    NAVBAR
    ============================================ */
@@ -66,6 +74,7 @@ body {
     position: sticky;
     top: 0;
     z-index: 100;
+    width: 100%;
 }
 
 .navbar-content {
@@ -75,6 +84,7 @@ body {
     justify-content: space-between;
     align-items: center;
     height: 70px;
+    flex-wrap: wrap;
 }
 
 .navbar h1 {
@@ -82,12 +92,14 @@ body {
     font-size: 1.5em;
     margin: 0;
     font-weight: 700;
+    white-space: nowrap;
 }
 
 .navbar-buttons {
     display: flex;
     gap: 15px;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .navbar-link {
@@ -101,12 +113,13 @@ body {
     border: none;
     background: rgba(255, 255, 255, 0.2);
     font-size: 0.95em;
+    white-space: nowrap;
 }
 
 .navbar-link:hover {
     background: rgba(255, 255, 255, 0.3);
     transform: translateY(-2px);
-}
+}}
 
 .navbar-link.admin {
     background: var(--secondary);
@@ -1292,4 +1305,261 @@ a:hover {
     font-size: 2em;
     margin-bottom: 10px;
     text-align: center;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN - TABLETTES & ÉCRANS MOYENS
+   ============================================ */
+
+/* Tablettes : 768px - 1024px */
+@media (min-width: 769px) and (max-width: 1024px) {
+    body {
+        font-size: 15px;
+    }
+
+    .navbar {
+        padding: 0 20px;
+    }
+
+    .navbar h1 {
+        font-size: 1.3em;
+    }
+
+    .fiche-container {
+        padding: 30px;
+        margin: 30px auto;
+    }
+
+    .fiche-title {
+        font-size: 1.8em;
+    }
+
+    .clock-container {
+        width: 200px;
+        height: 200px;
+    }
+
+    .fiche-table {
+        font-size: 14px;
+    }
+
+    .fiche-table th,
+    .fiche-table td {
+        padding: 10px;
+    }
+}
+
+/* ============================================
+   RESPONSIVE DESIGN - TÉLÉPHONES MOYENS
+   ============================================ */
+
+/* Téléphones : 480px - 768px */
+@media (min-width: 481px) and (max-width: 768px) {
+    body {
+        font-size: 15px;
+    }
+
+    .navbar {
+        padding: 0 15px;
+    }
+
+    .navbar h1 {
+        font-size: 1.2em;
+    }
+
+    .fiche-container {
+        padding: 20px;
+        margin: 20px auto;
+        border-radius: 8px;
+    }
+
+    .fiche-title {
+        font-size: 1.5em;
+    }
+
+    .fiche-meta {
+        font-size: 0.95em;
+    }
+
+    .fiche-section h2 {
+        font-size: 1.3em;
+    }
+
+    .fiche-image-large {
+        max-height: 300px;
+    }
+
+    .clock-container {
+        width: 180px;
+        height: 180px;
+    }
+
+    .fiche-table {
+        font-size: 13px;
+    }
+
+    .fiche-table th,
+    .fiche-table td {
+        padding: 8px;
+    }
+}
+
+/* ============================================
+   RESPONSIVE DESIGN - PETITS TÉLÉPHONES
+   ============================================ */
+
+/* Très petit écran : < 480px */
+@media (max-width: 480px) {
+    html {
+        font-size: 14px;
+    }
+
+    body {
+        font-size: 14px;
+    }
+
+    .navbar {
+        padding: 0 12px;
+    }
+
+    .navbar-content {
+        height: 50px;
+    }
+
+    .navbar h1 {
+        font-size: 1.1em;
+        margin-bottom: 5px;
+    }
+
+    .back-btn {
+        top: 60px;
+        right: 15px;
+        width: 45px;
+        height: 45px;
+        font-size: 1.5em;
+    }
+
+    .fiche-container {
+        padding: 15px;
+        margin: 15px 5px;
+        border-radius: 8px;
+    }
+
+    .fiche-title {
+        font-size: 1.3em;
+        margin-bottom: 8px;
+    }
+
+    .fiche-meta {
+        font-size: 0.85em;
+    }
+
+    .fiche-article {
+        padding: 12px;
+        font-size: 0.95em;
+        margin: 15px 0;
+        line-height: 1.6;
+    }
+
+    .fiche-section {
+        margin: 20px 0;
+    }
+
+    .fiche-section h2 {
+        font-size: 1.1em;
+        margin-top: 20px;
+        margin-bottom: 15px;
+    }
+
+    .fiche-image-large {
+        max-height: 250px;
+        margin: 15px 0;
+    }
+
+    .clock-wrapper {
+        margin: 20px 0;
+    }
+
+    .clock-container {
+        width: 150px;
+        height: 150px;
+    }
+
+    .time-indicator {
+        font-size: 1.5em;
+    }
+
+    .fiche-table {
+        font-size: 12px;
+    }
+
+    .fiche-table th,
+    .fiche-table td {
+        padding: 6px;
+    }
+
+    /* Amélioration des inputs sur mobile */
+    input[type="text"],
+    input[type="number"],
+    select,
+    textarea {
+        font-size: 16px !important;
+        padding: 12px;
+        border-radius: 6px;
+        margin-bottom: 8px;
+    }
+
+    /* Éviter le zoom sur input sur iOS */
+    input,
+    select,
+    textarea {
+        font-size: 16px;
+    }
+
+    /* Améliorations pour les éléments tactiles */
+    button,
+    .btn,
+    .navbar-link {
+        min-height: 44px;
+        min-width: 44px;
+    }
+}
+
+/* ============================================
+   RESPONSIVE DESIGN - ÉCRANS ULTRA-LARGES
+   ============================================ */
+
+/* Grands écrans : > 1440px */
+@media (min-width: 1441px) {
+    .fiche-container {
+        max-width: 1100px;
+    }
+}
+
+/* ============================================
+   OPTIMISATIONS SUPPLÉMENTAIRES
+   ============================================ */
+
+/* Éviter le zoom lors du focus sur input iOS */
+@supports (-webkit-touch-callout: none) {
+    input,
+    select,
+    textarea {
+        font-size: 16px;
+    }
+}
+
+/* Amélioration de la lisibilité sur écrans petits */
+@media (max-width: 600px) {
+    /* Amélioration des liens et boutons tactiles */
+    a, button, .btn, .navbar-link {
+        -webkit-tap-highlight-color: rgba(59, 130, 246, 0.2);
+    }
+
+    /* Adaptation des images */
+    img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
 }

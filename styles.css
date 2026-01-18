@@ -44,6 +44,8 @@
 
 html, body {
     height: 100%;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 body {
@@ -56,6 +58,12 @@ body {
     font-size: 16px;
 }
 
+/* Optimisation pour mobile */
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
 /* ============================================
    NAVBAR
    ============================================ */
@@ -66,6 +74,7 @@ body {
     position: sticky;
     top: 0;
     z-index: 100;
+    width: 100%;
 }
 
 .navbar-content {
@@ -75,6 +84,7 @@ body {
     justify-content: space-between;
     align-items: center;
     height: 70px;
+    flex-wrap: wrap;
 }
 
 .navbar h1 {
@@ -82,12 +92,14 @@ body {
     font-size: 1.5em;
     margin: 0;
     font-weight: 700;
+    white-space: nowrap;
 }
 
 .navbar-buttons {
     display: flex;
     gap: 15px;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .navbar-link {
@@ -101,6 +113,7 @@ body {
     border: none;
     background: rgba(255, 255, 255, 0.2);
     font-size: 0.95em;
+    white-space: nowrap;
 }
 
 .navbar-link:hover {
@@ -206,16 +219,18 @@ body {
    ============================================ */
 .container {
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 40px auto;
     background: var(--bg-white);
     border-radius: 12px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
     padding: 40px;
-    margin: 40px 20px;
+    width: 100%;
+    max-width: calc(100% - 40px);
 }
 
 .section {
     margin-bottom: 50px;
+    width: 100%;
 }
 
 /* ============================================
@@ -227,6 +242,7 @@ h1 {
     margin-bottom: 10px;
     font-size: 2.5em;
     font-weight: 700;
+    word-wrap: break-word;
 }
 
 h2 {
@@ -235,6 +251,8 @@ h2 {
     font-size: 1.8em;
     padding-bottom: 10px;
     border-bottom: 3px solid var(--info);
+    word-wrap: break-word;
+}
     font-weight: 700;
 }
 
@@ -1292,4 +1310,549 @@ a:hover {
     font-size: 2em;
     margin-bottom: 10px;
     text-align: center;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN - TABLETTES & ÉCRANS MOYENS
+   ============================================ */
+
+/* Tablettes : 768px - 1024px */
+@media (min-width: 769px) and (max-width: 1024px) {
+    body {
+        font-size: 15px;
+    }
+
+    .navbar {
+        padding: 0 20px;
+    }
+
+    .navbar-content {
+        height: 60px;
+    }
+
+    .navbar h1 {
+        font-size: 1.3em;
+    }
+
+    .container {
+        padding: 25px;
+        max-width: 100%;
+    }
+
+    h1 {
+        font-size: 2.2em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    .fiche-container {
+        padding: 30px;
+        margin: 30px auto;
+    }
+
+    .fiche-title {
+        font-size: 1.8em;
+    }
+
+    .word-display {
+        font-size: 2em;
+    }
+
+    .buttons {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .fiches-grid {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+        gap: 15px;
+    }
+
+    .card-vocabulary {
+        padding: 20px;
+    }
+
+    .clock-container {
+        width: 200px;
+        height: 200px;
+    }
+
+    .quiz-table {
+        font-size: 14px;
+    }
+
+    .quiz-table th,
+    .quiz-table td {
+        padding: 10px;
+    }
+}
+
+/* ============================================
+   RESPONSIVE DESIGN - TÉLÉPHONES MOYENS
+   ============================================ */
+
+/* Téléphones : 480px - 768px */
+@media (min-width: 481px) and (max-width: 768px) {
+    body {
+        font-size: 15px;
+    }
+
+    .navbar {
+        padding: 0 15px;
+    }
+
+    .navbar-content {
+        height: 60px;
+    }
+
+    .navbar h1 {
+        font-size: 1.2em;
+    }
+
+    .navbar-buttons {
+        width: 100%;
+        margin-top: 10px;
+        flex-wrap: wrap;
+    }
+
+    .navbar-link {
+        padding: 8px 12px;
+        font-size: 0.85em;
+        margin: 5px 2px;
+    }
+
+    .container {
+        padding: 20px;
+        margin: 15px 10px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    h2 {
+        font-size: 1.3em;
+    }
+
+    h3 {
+        font-size: 1.1em;
+    }
+
+    .button-group {
+        grid-template-columns: 1fr;
+    }
+
+    .search-buttons {
+        grid-template-columns: 1fr;
+    }
+
+    .fiches-grid {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        gap: 10px;
+    }
+
+    .fiche-container {
+        padding: 20px;
+        margin: 20px auto;
+        border-radius: 8px;
+    }
+
+    .fiche-title {
+        font-size: 1.5em;
+    }
+
+    .fiche-meta {
+        font-size: 0.95em;
+    }
+
+    .fiche-section h2 {
+        font-size: 1.3em;
+    }
+
+    .card-vocabulary {
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+
+    .word-display {
+        font-size: 1.8em;
+    }
+
+    .buttons {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .btn-validate,
+    .btn-next {
+        padding: 10px 20px;
+        font-size: 0.95em;
+    }
+
+    .controls {
+        gap: 12px;
+    }
+
+    .controls input {
+        padding: 10px;
+        font-size: 1em;
+    }
+
+    .fiche-image-large {
+        max-height: 300px;
+    }
+
+    .clock-container {
+        width: 180px;
+        height: 180px;
+    }
+
+    .quiz-table {
+        font-size: 13px;
+    }
+
+    .quiz-table th,
+    .quiz-table td {
+        padding: 8px;
+    }
+
+    .fiche-table {
+        font-size: 13px;
+    }
+
+    .fiche-table th,
+    .fiche-table td {
+        padding: 8px;
+    }
+}
+
+/* ============================================
+   RESPONSIVE DESIGN - PETITS TÉLÉPHONES
+   ============================================ */
+
+/* Très petit écran : < 480px */
+@media (max-width: 480px) {
+    html {
+        font-size: 14px;
+    }
+
+    body {
+        font-size: 14px;
+    }
+
+    .navbar {
+        padding: 0 12px;
+    }
+
+    .navbar-content {
+        height: 50px;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .navbar h1 {
+        font-size: 1.1em;
+        margin-bottom: 5px;
+    }
+
+    .navbar-buttons {
+        width: 100%;
+        margin-top: 8px;
+        gap: 8px;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .navbar-link {
+        padding: 6px 10px;
+        font-size: 0.8em;
+        border-radius: 6px;
+        margin: 3px;
+    }
+
+    .back-btn {
+        top: 60px;
+        right: 15px;
+        width: 45px;
+        height: 45px;
+        font-size: 1.5em;
+    }
+
+    .container {
+        padding: 12px;
+        margin: 10px 5px;
+    }
+
+    h1 {
+        font-size: 1.4em;
+        margin: 15px 0 10px 0;
+    }
+
+    h2 {
+        font-size: 1.1em;
+    }
+
+    h3 {
+        font-size: 0.95em;
+    }
+
+    .button-group {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .search-buttons {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .fiches-grid {
+        grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+        gap: 8px;
+    }
+
+    .fiche-container {
+        padding: 15px;
+        margin: 15px 5px;
+        border-radius: 8px;
+    }
+
+    .fiche-title {
+        font-size: 1.3em;
+        margin-bottom: 8px;
+    }
+
+    .fiche-meta {
+        font-size: 0.85em;
+    }
+
+    .fiche-article {
+        padding: 12px;
+        font-size: 0.95em;
+        margin: 15px 0;
+        line-height: 1.6;
+    }
+
+    .fiche-section {
+        margin: 20px 0;
+    }
+
+    .fiche-section h2 {
+        font-size: 1.1em;
+        margin-top: 20px;
+        margin-bottom: 15px;
+    }
+
+    .card-vocabulary {
+        padding: 12px;
+        margin-bottom: 12px;
+        border-radius: 8px;
+    }
+
+    .word-label {
+        font-size: 0.85em;
+    }
+
+    .word-display {
+        font-size: 1.5em;
+        margin: 15px 0;
+    }
+
+    .pluriel {
+        font-size: 1em;
+    }
+
+    .controls {
+        gap: 10px;
+    }
+
+    .control-group label {
+        font-size: 0.9em;
+    }
+
+    .controls input {
+        padding: 10px;
+        font-size: 1em;
+        border-radius: 6px;
+    }
+
+    .buttons {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .btn-validate,
+    .btn-next,
+    .btn {
+        padding: 10px 15px;
+        font-size: 0.9em;
+        border-radius: 6px;
+        width: 100%;
+    }
+
+    .result {
+        padding: 10px;
+        font-size: 0.95em;
+    }
+
+    .result-text {
+        font-size: 1em;
+    }
+
+    .hint {
+        font-size: 0.9em;
+        padding: 10px;
+    }
+
+    .aide-memoire {
+        font-size: 1em;
+        padding: 12px 15px;
+        margin: 15px auto 20px auto;
+    }
+
+    .fiche-image-large {
+        max-height: 250px;
+        margin: 15px 0;
+    }
+
+    .clock-wrapper {
+        margin: 20px 0;
+    }
+
+    .clock-container {
+        width: 150px;
+        height: 150px;
+    }
+
+    .time-indicator {
+        font-size: 1.5em;
+    }
+
+    .quiz-table {
+        margin: 15px 0;
+        font-size: 12px;
+    }
+
+    .quiz-table th,
+    .quiz-table td {
+        padding: 6px;
+    }
+
+    .fiche-table {
+        font-size: 12px;
+    }
+
+    .fiche-table th,
+    .fiche-table td {
+        padding: 6px;
+    }
+
+    .mode-selector {
+        gap: 5px;
+        margin-bottom: 20px;
+    }
+
+    .mode-btn {
+        padding: 8px 12px;
+        font-size: 0.85em;
+        border-radius: 6px;
+    }
+
+    /* Amélioration des inputs sur mobile */
+    input[type="text"],
+    input[type="number"],
+    select,
+    textarea {
+        font-size: 16px !important;
+        padding: 12px;
+        border-radius: 6px;
+        margin-bottom: 8px;
+    }
+
+    /* Éviter le zoom sur input sur iOS */
+    input,
+    select,
+    textarea {
+        font-size: 16px;
+    }
+
+    /* Améliorations pour les éléments tactiles */
+    button,
+    .btn,
+    .navbar-link {
+        min-height: 44px;
+        min-width: 44px;
+    }
+
+    /* Texte sélectionnable pour tablettes */
+    p, span, div {
+        -webkit-user-select: text;
+        user-select: text;
+    }
+}
+
+/* ============================================
+   RESPONSIVE DESIGN - ÉCRANS ULTRA-LARGES
+   ============================================ */
+
+/* Grands écrans : > 1440px */
+@media (min-width: 1441px) {
+    .container {
+        max-width: 1400px;
+        padding: 40px;
+    }
+
+    .fiche-container {
+        max-width: 1100px;
+    }
+
+    h1 {
+        font-size: 2.8em;
+    }
+
+    h2 {
+        font-size: 1.8em;
+    }
+
+    .button-group {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .fiches-grid {
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    }
+}
+
+/* ============================================
+   OPTIMISATIONS SUPPLÉMENTAIRES
+   ============================================ */
+
+/* Éviter le zoom lors du focus sur input iOS */
+@supports (-webkit-touch-callout: none) {
+    input,
+    select,
+    textarea {
+        font-size: 16px;
+    }
+}
+
+/* Amélioration de la lisibilité sur écrans petits */
+@media (max-width: 600px) {
+    /* Amélioration des liens et boutons tactiles */
+    a, button, .btn, .navbar-link {
+        -webkit-tap-highlight-color: rgba(59, 130, 246, 0.2);
+    }
+
+    /* Réduction de la hauteur des cartes sur petit écran */
+    .card-vocabulary {
+        min-height: auto;
+    }
+
+    /* Adaptation des images */
+    img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
 }
