@@ -372,6 +372,31 @@
             width: 100%;
             text-align: left;
             user-select: none;
+            gap: 15px;
+        }
+
+        .accordion-title {
+            font-size: 1.1em;
+            min-width: 80px;
+        }
+
+        .accordion-icons {
+            display: flex;
+            gap: 10px;
+            flex: 1;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .accordion-icon-item {
+            font-size: 1.3em;
+            opacity: 0.9;
+            transition: opacity 0.3s ease;
+        }
+
+        .accordion-header:hover .accordion-icon-item {
+            opacity: 1;
         }
 
         .accordion-header:hover {
@@ -671,7 +696,10 @@
                 const header = document.createElement('button');
                 header.className = 'accordion-header';
                 header.innerHTML = `
-                    <span>${icon} ${prep.preposition}</span>
+                    <span class="accordion-title">${icon} ${prep.preposition}</span>
+                    <div class="accordion-icons">
+                        ${visuals.map(v => `<span class="accordion-icon-item" title="${v.text}">${v.icon}</span>`).join('')}
+                    </div>
                     <span class="accordion-toggle">▼</span>
                 `;
 
@@ -935,7 +963,10 @@
                 const header = document.createElement('button');
                 header.className = 'accordion-header';
                 header.innerHTML = `
-                    <span>${icon} ${prep.preposition}</span>
+                    <span class="accordion-title">${icon} ${prep.preposition}</span>
+                    <div class="accordion-icons">
+                        ${visuals.map(v => `<span class="accordion-icon-item" title="${v.text}">${v.icon}</span>`).join('')}
+                    </div>
                     <span class="accordion-toggle">▼</span>
                 `;
 
