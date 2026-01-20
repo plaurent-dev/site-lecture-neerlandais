@@ -3,15 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Expires" content="0">
     <title>Kortes nieuwsartikelen</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lexend:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css?v=1.0.0">
+    <link rel="stylesheet" href="styles.css">
 
     <style>
         * {
@@ -522,8 +519,6 @@
             background: #D1F9F3;
         }
     </style>
-
-    <script src="version.js"></script>
 </head>
 
 <body>
@@ -541,6 +536,7 @@
                     <a href="revision_irregulier_verbes.html" class="dropdown-item">Verbes irréguliers</a>
                     <a href="revision_regulier_verbes.html" class="dropdown-item">Verbes réguliers</a>
                     <a href="revision_positions.html" class="dropdown-item">Positions spatiales</a>
+                    <a href="revision_prepositions_spatiales.html" class="dropdown-item">🗺️ Prépositions spatiales</a>
                     <a href="visualiseur_verbes.html" class="dropdown-item">Tous les verbes</a>
                     </div>
             </div>
@@ -622,14 +618,7 @@
             return;
         }
 
-        // Trier les fiches par date décroissante (plus récent en premier)
-        fiches.sort((a, b) => new Date(b.date) - new Date(a.date));
-
-        // Sur mobile (< 480px), afficher seulement le plus récent (1 article)
-        // Sur desktop, afficher 6 articles récents
-        const isMobile = window.innerWidth < 480;
-        const nombreArticles = isMobile ? 1 : 6;
-        const fichesRecentes = fiches.slice(0, nombreArticles);
+        const fichesRecentes = fiches.slice(0, 6);
 
         container.innerHTML = fichesRecentes.map(fiche => `
             <div class="fiche-card" data-fiche="${fiche.href}">
@@ -840,11 +829,6 @@
         afficherFichesRecentes();
         afficherMarqueursGoogleMap();
     };
-
-    // Mettre à jour l'affichage des fiches quand la fenêtre est redimensionnée
-    window.addEventListener('resize', function() {
-        afficherFichesRecentes();
-    });
 </script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYnaelzF3AanXmOGDG8j9kv3GyETYf1Js"></script>
 </body>
