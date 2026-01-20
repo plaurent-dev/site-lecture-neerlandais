@@ -456,6 +456,8 @@
         let mode = 'schema'; // schema, quiz, results
         let synth = window.speechSynthesis;
 
+        console.log('Page chargée, démarrage du script...');
+
         // Fonction pour prononcer la question
         function prononcerQuestion() {
             // Arrêter toute prononciation en cours
@@ -473,16 +475,34 @@
         // Charger les données
         async function loadData() {
             try {
-                const response = await fetch('prepositions_spatiales.json?t=' + Date.now());
-                if (!response.ok) throw new Error('Impossible de charger les données');
+                console.log('Chargement du JSON...');
+                
+                // Essayer avec le protocole file:// si nécessaire
+                let jsonPath = 'prepositions_spatiales.json?t=' + Date.now();
+                
+                const response = await fetch(jsonPath);
+                if (!response.ok) throw new Error('HTTP ' + response.status + ' - Fichier non trouvé');
+                
                 const data = await response.json();
-                prepositions = data.prepositions;
-                questions = data.questions;
+                console.log('Données chargées:', data);
+                prepositions = data.prepositions || [];
+                questions = data.questions || [];
+                console.log('Prépositions:', prepositions.length);
+                console.log('Questions:', questions.length);
+                
+                if (prepositions.length === 0 || questions.length === 0) {
+                    throw new Error('Données vides ou manquantes');
+                }
+                
                 afficherSchemas();
             } catch (error) {
-                console.error('Erreur:', error);
-                document.getElementById('schemaMode').innerHTML = 
-                    '<p style="color: red;"><strong>Erreur :</strong> Impossible de charger l\'exercice.</p>';
+                console.error('Erreur de chargement:', error);
+                const schemaMode = document.getElementById('schemaMode');
+                if (schemaMode) {
+                    schemaMode.innerHTML = 
+                        '<div style="padding: 20px; color: red;"><strong>Erreur de chargement :</strong><br>' + error.message + '<br><br>Assurez-vous que le fichier <code>prepositions_spatiales.json</code> est dans le même dossier.</div>';
+                    schemaMode.classList.remove('hidden');
+                }
             }
         }
 
@@ -668,7 +688,11 @@
         }
 
         // Charger les données au démarrage
-        loadData();
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', loadData);
+        } else {
+            loadData();
+        }
 
         // Afficher les règles dans une modal
         function afficherRules() {
@@ -725,5 +749,6 @@
                 modal.classList.remove('active');
             }
         }
+    </script>
 </body>
 </html>
