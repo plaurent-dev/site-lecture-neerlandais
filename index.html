@@ -801,7 +801,7 @@
             const coords = villesNL[ville];
             if (coords) {
                 const articlesVille = articlesParVille[ville];
-                const marker = new google.maps.Marker({
+                const marker = new google.maps.marker.AdvancedMarkerElement({
                     position: coords,
                     map: map,
                     title: `${ville} (${articlesVille.length} article${articlesVille.length > 1 ? 's' : ''})`
@@ -830,6 +830,6 @@
         afficherMarqueursGoogleMap();
     };
 </script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYnaelzF3AanXmOGDG8j9kv3GyETYf1Js"></script>
+<script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYnaelzF3AanXmOGDG8j9kv3GyETYf1Js"></script>
 </body>
 </html>
