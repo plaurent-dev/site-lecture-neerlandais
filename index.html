@@ -785,7 +785,8 @@
         const map = new google.maps.Map(document.getElementById('map'), {
             center: { lat: 52.1, lng: 5.2 },
             zoom: 8,
-            mapTypeId: 'roadmap'
+            mapTypeId: 'roadmap',
+            mapId: 'articles_map'
         });
 
         // Regrouper les articles par ville
@@ -801,9 +802,9 @@
             const coords = villesNL[ville];
             if (coords) {
                 const articlesVille = articlesParVille[ville];
-                const marker = new google.maps.Marker({
-                    position: coords,
+                const marker = new google.maps.marker.AdvancedMarkerElement({
                     map: map,
+                    position: coords,
                     title: `${ville} (${articlesVille.length} article${articlesVille.length > 1 ? 's' : ''})`
                 });
 
@@ -834,6 +835,6 @@
         afficherMarqueursGoogleMap();
     };
 </script>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYnaelzF3AanXmOGDG8j9kv3GyETYf1Js&callback=afficherMarqueursGoogleMapReady"></script>
+<script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYnaelzF3AanXmOGDG8j9kv3GyETYf1Js&callback=afficherMarqueursGoogleMapReady&libraries=marker"></script>
 </body>
 </html>
