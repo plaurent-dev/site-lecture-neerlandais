@@ -158,63 +158,63 @@
     {
       "id": 1,
       "question": "De foto hangt ___ de muur",
-      "options": ["in de", "op de", "aan de", "bij de"],
+      "options": ["in", "op", "aan", "bij"],
       "correct": 2,
       "explanation": "AAN pour le contact vertical : aan de muur (accroché au mur)"
     },
     {
       "id": 2,
       "question": "De sleutels liggen ___ de lade",
-      "options": ["aan de", "op de", "in de", "bij de"],
+      "options": ["aan", "op", "in", "bij"],
       "correct": 2,
       "explanation": "IN pour l'intérieur fermé : in de lade (dans le tiroir)"
     },
     {
       "id": 3,
       "question": "Ik zit ___ de tafel",
-      "options": ["in de", "aan de", "op de", "bij de"],
+      "options": ["in", "aan", "op", "bij"],
       "correct": 1,
       "explanation": "AAN pour le contact social : aan tafel zitten (être à table)"
     },
     {
       "id": 4,
       "question": "Een vaas staat ___ de tafel",
-      "options": ["aan de", "in het", "op de", "bij de"],
+      "options": ["aan", "in", "op", "bij"],
       "correct": 2,
       "explanation": "OP pour la surface/stabilité : op de tafel (sur la table)"
     },
     {
       "id": 5,
       "question": "Ik kijk naar het voetbal ___ televisie",
-      "options": ["aan de", "in de", "op de", "bij de"],
+      "options": ["aan", "in", "op", "bij"],
       "correct": 2,
       "explanation": "OP pour l'abstrait : op televisie (à la télévision)"
     },
     {
       "id": 6,
       "question": "Wij wonen ___ de buitenwijk",
-      "options": ["in de", "op de", "aan de", "bij de"],
+      "options": ["in", "op", "aan", "bij"],
       "correct": 0,
       "explanation": "IN pour l'intérieur perçu : in de buitenwijk (dans la banlieue)"
     },
     {
       "id": 7,
       "question": "Ik ga ___ zee",
-      "options": ["op", "in het", "aan de", "bij de"],
+      "options": ["op", "in", "aan", "bij"],
       "correct": 2,
       "explanation": "AAN collocation obligatoire : aan zee (à la mer)"
     },
     {
       "id": 8,
       "question": "Zij werkt ___ het station",
-      "options": ["bij het", "op de", "aan de", "in het"],
+      "options": ["bij", "op", "aan", "in"],
       "correct": 0,
       "explanation": "BIJ pour la proximité : bij het station (près de la gare)"
     },
     {
       "id": 9,
       "question": "Het weer is mooi, we spelen ___",
-      "options": ["aan het", "op het", "in het", "buiten"],
+      "options": ["aan", "op", "in", "buiten"],
       "correct": 3,
       "explanation": "BUITEN pour l'extérieur : buiten spelen (jouer dehors)"
     },
@@ -249,7 +249,7 @@
     {
       "id": 14,
       "question": "De kat zit ___ de deur",
-      "options": ["in de", "op de", "aan de", "achter de"],
+      "options": ["in", "op", "aan", "achter"],
       "correct": 3,
       "explanation": "ACHTER pour derrière : achter de deur (derrière la porte)"
     },
@@ -263,7 +263,7 @@
     {
       "id": 16,
       "question": "Ik zit ___ de fiets",
-      "options": ["in de", "aan de", "op de", "bij de"],
+      "options": ["in", "aan", "op", "bij"],
       "correct": 2,
       "explanation": "OP pour le vélo : op de fiets (le piège est que on dit in de trein mais op de fiets)"
     },
@@ -277,7 +277,7 @@
     {
       "id": 18,
       "question": "Hij woont ___ zijn ouders",
-      "options": ["op de", "in de", "aan de", "bij"],
+      "options": ["op", "in", "aan", "bij"],
       "correct": 3,
       "explanation": "BIJ pour vivre chez quelqu'un : bij zijn ouders (chez ses parents)"
     },
