@@ -157,7 +157,7 @@
   "questions": [
     {
       "id": 1,
-      "question": "De foto hangt ___ de muur (aan de muur)",
+      "question": "De foto hangt ___ de muur",
       "options": ["in de", "op de", "aan de", "bij de"],
       "correct": 2,
       "explanation": "AAN pour le contact vertical : aan de muur (accroché au mur)"

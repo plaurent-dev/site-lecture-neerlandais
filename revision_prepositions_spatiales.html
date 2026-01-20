@@ -234,6 +234,121 @@
             display: none;
         }
 
+        .speaker-btn {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 1.2em;
+            margin-left: 10px;
+            transition: all 0.3s ease;
+            vertical-align: middle;
+        }
+
+        .speaker-btn:hover {
+            background: #764ba2;
+            transform: scale(1.1);
+        }
+
+        .speaker-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .question-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            overflow-y: auto;
+        }
+
+        .modal.active {
+            display: block;
+        }
+
+        .modal-content {
+            background-color: white;
+            margin: 5% auto;
+            padding: 30px;
+            border-radius: 12px;
+            width: 90%;
+            max-width: 900px;
+            max-height: 80vh;
+            overflow-y: auto;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #E5E7EB;
+        }
+
+        .modal-header h2 {
+            margin: 0;
+            color: #667eea;
+        }
+
+        .close-modal {
+            background: none;
+            border: none;
+            font-size: 2em;
+            cursor: pointer;
+            color: #666;
+            transition: color 0.3s;
+        }
+
+        .close-modal:hover {
+            color: #000;
+        }
+
+        .rules-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .rules-button-container {
+            text-align: center;
+            margin: 15px 0;
+        }
+
+        .rules-btn {
+            background: rgba(255, 255, 255, 0.3);
+            border: 2px solid white;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .rules-btn:hover {
+            background: rgba(255, 255, 255, 0.5);
+            transform: scale(1.05);
+        }
+
         @media (max-width: 768px) {
             .kahoot-quiz {
                 padding: 20px;
@@ -286,7 +401,10 @@
                     <div class="progress-fill" id="progressBar"></div>
                 </div>
 
-                <div class="kahoot-question" id="questionText"></div>
+                <div class="question-header">
+                    <div class="kahoot-question" id="questionText"></div>
+                    <button class="speaker-btn" id="speakerBtn" onclick="prononcerQuestion()" title="Écouter la phrase">🔊</button>
+                </div>
 
                 <div class="answers-grid" id="answersGrid"></div>
             </div>
@@ -299,6 +417,21 @@
 
             <div id="nextButtonContainer" style="text-align: center; margin: 20px 0;">
                 <button class="btn btn-primary hidden" id="nextBtn" onclick="prochainQuestion()">Question suivante →</button>
+            </div>
+
+            <div class="rules-button-container">
+                <button class="rules-btn" onclick="afficherRules()">📚 Consulter les règles</button>
+            </div>
+        </div>
+
+        <!-- Modal Règles -->
+        <div id="rulesModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>📖 Règles des prépositions spatiales</h2>
+                    <button class="close-modal" onclick="fermerRules()">✕</button>
+                </div>
+                <div id="rulesContainer" class="rules-container"></div>
             </div>
         </div>
 
@@ -321,6 +454,21 @@
         let score = 0;
         let answered = false;
         let mode = 'schema'; // schema, quiz, results
+        let synth = window.speechSynthesis;
+
+        // Fonction pour prononcer la question
+        function prononcerQuestion() {
+            // Arrêter toute prononciation en cours
+            synth.cancel();
+
+            const questionText = questions[currentQuestionIndex].question;
+            const utterance = new SpeechSynthesisUtterance(questionText);
+            utterance.lang = 'nl-NL'; // Néerlandais
+            utterance.rate = 0.9; // Vitesse légèrement ralentie pour clarté
+            utterance.pitch = 1;
+
+            synth.speak(utterance);
+        }
 
         // Charger les données
         async function loadData() {
@@ -521,6 +669,61 @@
 
         // Charger les données au démarrage
         loadData();
-    </script>
+
+        // Afficher les règles dans une modal
+        function afficherRules() {
+            const modal = document.getElementById('rulesModal');
+            const container = document.getElementById('rulesContainer');
+            
+            container.innerHTML = '';
+            prepositions.forEach((prep) => {
+                const card = document.createElement('div');
+                card.className = 'preposition-card';
+                card.style.borderLeftColor = prep.color;
+                card.style.backgroundColor = prep.color + '10';
+
+                const iconMap = {
+                    'OP': '📍',
+                    'IN': '📦',
+                    'AAN': '🔗',
+                    'BIJ': '👥',
+                    'VOOR': '⬅️',
+                    'TUSSEN': '↔️',
+                    'ACHTER': '🔙',
+                    'BINNEN / BUITEN': '🚪'
+                };
+
+                const icon = iconMap[prep.preposition] || '🗺️';
+
+                card.innerHTML = `
+                    <h3 style="color: ${prep.color};">${icon} ${prep.preposition}</h3>
+                    <p><strong>${prep.description}</strong></p>
+                    <ul class="rules-list">
+                        ${prep.rules.map(rule => `<li>${rule}</li>`).join('')}
+                    </ul>
+                    <p><strong>Exemples :</strong></p>
+                    <ul class="rules-list">
+                        ${prep.examples.map(ex => `<li><em>${ex}</em></li>`).join('')}
+                    </ul>
+                `;
+                container.appendChild(card);
+            });
+
+            modal.classList.add('active');
+        }
+
+        // Fermer la modal des règles
+        function fermerRules() {
+            const modal = document.getElementById('rulesModal');
+            modal.classList.remove('active');
+        }
+
+        // Fermer la modal en cliquant en dehors
+        window.onclick = function(event) {
+            const modal = document.getElementById('rulesModal');
+            if (event.target == modal) {
+                modal.classList.remove('active');
+            }
+        }
 </body>
 </html>
