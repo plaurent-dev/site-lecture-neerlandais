@@ -157,140 +157,140 @@
   "questions": [
     {
       "id": 1,
-      "question": "L'image est ___ le mur (accrochée)",
+      "question": "De foto hangt ___ de muur (aan de muur)",
       "options": ["in de", "op de", "aan de", "bij de"],
       "correct": 2,
       "explanation": "AAN pour le contact vertical : aan de muur (accroché au mur)"
     },
     {
       "id": 2,
-      "question": "Les clés sont ___ tiroir",
-      "options": ["aan het", "op het", "in het", "bij het"],
+      "question": "De sleutels liggen ___ de lade",
+      "options": ["aan de", "op de", "in de", "bij de"],
       "correct": 2,
-      "explanation": "IN pour l'intérieur fermé : in het tiroir (dans le tiroir)"
+      "explanation": "IN pour l'intérieur fermé : in de lade (dans le tiroir)"
     },
     {
       "id": 3,
-      "question": "Je m'assieds ___ table",
+      "question": "Ik zit ___ de tafel",
       "options": ["in de", "aan de", "op de", "bij de"],
       "correct": 1,
       "explanation": "AAN pour le contact social : aan tafel zitten (être à table)"
     },
     {
       "id": 4,
-      "question": "Il y a un vase ___ table",
+      "question": "Een vaas staat ___ de tafel",
       "options": ["aan de", "in het", "op de", "bij de"],
       "correct": 2,
       "explanation": "OP pour la surface/stabilité : op de tafel (sur la table)"
     },
     {
       "id": 5,
-      "question": "Je regarde le match ___ télévision",
+      "question": "Ik kijk naar het voetbal ___ televisie",
       "options": ["aan de", "in de", "op de", "bij de"],
       "correct": 2,
       "explanation": "OP pour l'abstrait : op televisie (à la télévision)"
     },
     {
       "id": 6,
-      "question": "Nous habitons ___ banlieue",
+      "question": "Wij wonen ___ de buitenwijk",
       "options": ["in de", "op de", "aan de", "bij de"],
       "correct": 0,
-      "explanation": "IN pour l'intérieur perçu : in de banlieue (dans la banlieue)"
+      "explanation": "IN pour l'intérieur perçu : in de buitenwijk (dans la banlieue)"
     },
     {
       "id": 7,
-      "question": "Je vais en vacances ___ mer",
+      "question": "Ik ga ___ zee",
       "options": ["op", "in het", "aan de", "bij de"],
       "correct": 2,
       "explanation": "AAN collocation obligatoire : aan zee (à la mer)"
     },
     {
       "id": 8,
-      "question": "Elle travaille ___ gare",
+      "question": "Zij werkt ___ het station",
       "options": ["bij het", "op de", "aan de", "in het"],
       "correct": 0,
       "explanation": "BIJ pour la proximité : bij het station (près de la gare)"
     },
     {
       "id": 9,
-      "question": "Il fait beau, on joue ___",
+      "question": "Het weer is mooi, we spelen ___",
       "options": ["aan het", "op het", "in het", "buiten"],
       "correct": 3,
       "explanation": "BUITEN pour l'extérieur : buiten spelen (jouer dehors)"
     },
     {
       "id": 10,
-      "question": "Je suis ___ danger",
+      "question": "Ik ben ___ gevaar",
       "options": ["op", "aan", "bij", "in"],
       "correct": 3,
       "explanation": "IN pour l'état/situation : in gevaar (en danger)"
     },
     {
       "id": 11,
-      "question": "La maison est ___ deux autres",
+      "question": "Het huis staat ___ twee andere huizen",
       "options": ["bij", "in", "op", "tussen"],
       "correct": 3,
       "explanation": "TUSSEN pour l'espace entre deux choses : tussen twee huizen (entre deux maisons)"
     },
     {
       "id": 12,
-      "question": "Je vais chez toi ___ demain",
+      "question": "Ik kom bij jou ___ morgen",
       "options": ["op", "in", "aan", "voor"],
       "correct": 3,
       "explanation": "VOOR pour le temporel : voor morgen (avant/pour demain)"
     },
     {
       "id": 13,
-      "question": "Il est à l'école ___",
-      "options": ["aan school", "in school", "op school", "bij school"],
+      "question": "Hij zit ___ school",
+      "options": ["aan", "in", "op", "bij"],
       "correct": 2,
       "explanation": "OP pour le lieu institutionnel : op school (à l'école, usage idiomatique)"
     },
     {
       "id": 14,
-      "question": "Le chat est derrière ___",
-      "options": ["in de deur", "op de deur", "aan de deur", "achter de deur"],
+      "question": "De kat zit ___ de deur",
+      "options": ["in de", "op de", "aan de", "achter de"],
       "correct": 3,
       "explanation": "ACHTER pour derrière : achter de deur (derrière la porte)"
     },
     {
       "id": 15,
-      "question": "Je dois finir ___ cinq minutes",
-      "options": ["op", "aan", "in", "bij"],
+      "question": "Ik moet klaar zijn ___ vijf minuten",
+      "options": ["op", "aan", "binnen", "bij"],
       "correct": 2,
       "explanation": "IN pour le temporel (délai) : binnen vijf minuten (dans cinq minutes)"
     },
     {
       "id": 16,
-      "question": "Je suis ___ vélo",
+      "question": "Ik zit ___ de fiets",
       "options": ["in de", "aan de", "op de", "bij de"],
       "correct": 2,
       "explanation": "OP pour le vélo : op de fiets (le piège est que on dit in de trein mais op de fiets)"
     },
     {
       "id": 17,
-      "question": "Elle pense souvent ___",
-      "options": ["aan mij", "op mij", "in mij", "bij mij"],
+      "question": "Zij denkt vaak ___ mij",
+      "options": ["aan", "op", "in", "bij"],
       "correct": 0,
       "explanation": "AAN pour la connexion mentale : aan iemand denken (penser à quelqu'un)"
     },
     {
       "id": 18,
-      "question": "Il habite ___ ses parents",
-      "options": ["op de", "in de", "aan de", "bij zijn"],
+      "question": "Hij woont ___ zijn ouders",
+      "options": ["op de", "in de", "aan de", "bij"],
       "correct": 3,
       "explanation": "BIJ pour vivre chez quelqu'un : bij zijn ouders (chez ses parents)"
     },
     {
       "id": 19,
-      "question": "L'aéroport est ___ la ville",
+      "question": "Het vliegveld ligt ___ de stad",
       "options": ["tussen", "buiten", "achter", "voor"],
       "correct": 1,
       "explanation": "BUITEN pour hors/extérieur : buiten de stad (en dehors de la ville)"
     },
     {
       "id": 20,
-      "question": "Je vais passer mes vacances ___ Malte",
+      "question": "Ik ga mijn vakantie doorbrengen ___ Malta",
       "options": ["in", "aan", "bij", "op"],
       "correct": 3,
       "explanation": "OP pour les îles (piège important) : op Malta. On ne dit pas 'in Malta'"

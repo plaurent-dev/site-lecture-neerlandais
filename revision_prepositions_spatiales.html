@@ -286,12 +286,12 @@
                     <div class="progress-fill" id="progressBar"></div>
                 </div>
 
-                <div class="rule-highlight" id="ruleHighlight"></div>
-
                 <div class="kahoot-question" id="questionText"></div>
 
                 <div class="answers-grid" id="answersGrid"></div>
             </div>
+
+            <div class="rule-highlight hidden" id="ruleHighlight"></div>
 
             <div class="feedback-box hidden" id="feedbackBox">
                 <div id="feedbackContent"></div>
@@ -397,20 +397,8 @@
             const progress = ((currentQuestionIndex + 1) / questions.length) * 100;
             document.getElementById('progressBar').style.width = progress + '%';
 
-            // Afficher la règle pertinente
-            const prepositionUsed = question.options[question.correct];
-            let prepositionName = prepositionUsed.substring(0, 2).toUpperCase();
-            if (prepositionName === 'BI') prepositionName = 'BIJ';
-            if (prepositionName === 'VO') prepositionName = 'VOOR';
-            if (prepositionName === 'TU') prepositionName = 'TUSSEN';
-            if (prepositionName === 'AC') prepositionName = 'ACHTER';
-            if (prepositionName === 'BU') prepositionName = 'BUITEN';
-
-            const prep = prepositions.find(p => p.preposition.includes(prepositionName));
-            if (prep) {
-                document.getElementById('ruleHighlight').innerHTML = 
-                    `<strong>${prep.preposition} :</strong> ${prep.description}`;
-            }
+            // Masquer la règle au départ
+            document.getElementById('ruleHighlight').classList.add('hidden');
 
             // Afficher les réponses
             const answersGrid = document.getElementById('answersGrid');
@@ -468,6 +456,22 @@
             `;
             
             box.classList.remove('hidden');
+
+            // Afficher la règle après la réponse
+            const prepositionUsed = questions[currentQuestionIndex].options[questions[currentQuestionIndex].correct];
+            let prepositionName = prepositionUsed.substring(0, 2).toUpperCase();
+            if (prepositionName === 'BI') prepositionName = 'BIJ';
+            if (prepositionName === 'VO') prepositionName = 'VOOR';
+            if (prepositionName === 'TU') prepositionName = 'TUSSEN';
+            if (prepositionName === 'AC') prepositionName = 'ACHTER';
+            if (prepositionName === 'BU') prepositionName = 'BUITEN';
+
+            const prep = prepositions.find(p => p.preposition.includes(prepositionName));
+            if (prep) {
+                document.getElementById('ruleHighlight').innerHTML = 
+                    `<strong>${prep.preposition} :</strong> ${prep.description}`;
+                document.getElementById('ruleHighlight').classList.remove('hidden');
+            }
         }
 
         function prochainQuestion() {
