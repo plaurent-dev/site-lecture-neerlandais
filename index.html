@@ -781,6 +781,11 @@
     };
 
     async function afficherMarqueursGoogleMap() {
+        // Ensure Google Maps API is fully loaded before proceeding
+        if (!window.google || !window.google.maps) {
+            console.warn('Google Maps API not yet loaded');
+            return;
+        }
         const articles = await chargerFichesFromJSON();
         const map = new google.maps.Map(document.getElementById('map'), {
             center: { lat: 52.1, lng: 5.2 },
@@ -827,9 +832,14 @@
     window.onload = function() {
         updateNavbar();
         afficherFichesRecentes();
-        afficherMarqueursGoogleMap();
+        // Wait for Google Maps API to load with async
+        if (window.google && window.google.maps) {
+            afficherMarqueursGoogleMap();
+        } else {
+            window.addEventListener('load', afficherMarqueursGoogleMap);
+        }
     };
 </script>
-<script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYnaelzF3AanXmOGDG8j9kv3GyETYf1Js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYnaelzF3AanXmOGDG8j9kv3GyETYf1Js"></script>
 </body>
 </html>
