@@ -463,7 +463,12 @@
             // Arrêter toute prononciation en cours
             synth.cancel();
 
-            const questionText = questions[currentQuestionIndex].question;
+            const question = questions[currentQuestionIndex];
+            const correctAnswer = question.options[question.correct];
+            
+            // Remplacer les tirets bas par la bonne réponse
+            const questionText = question.question.replace(/___/g, correctAnswer);
+            
             const utterance = new SpeechSynthesisUtterance(questionText);
             utterance.lang = 'nl-NL'; // Néerlandais
             utterance.rate = 0.9; // Vitesse légèrement ralentie pour clarté
