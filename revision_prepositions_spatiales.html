@@ -349,6 +349,98 @@
             transform: scale(1.05);
         }
 
+        /* Accordéon */
+        .accordion-item {
+            margin-bottom: 15px;
+            border-radius: 8px;
+            overflow: hidden;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .accordion-header {
+            padding: 15px 20px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            width: 100%;
+            text-align: left;
+            user-select: none;
+        }
+
+        .accordion-header:hover {
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+        }
+
+        .accordion-header.active {
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+        }
+
+        .accordion-toggle {
+            font-size: 1.5em;
+            transition: transform 0.3s ease;
+            display: inline-block;
+        }
+
+        .accordion-header.active .accordion-toggle {
+            transform: rotate(180deg);
+        }
+
+        .accordion-content {
+            display: none;
+            padding: 20px;
+            background: #FAFBFC;
+            border-top: 2px solid #E5E7EB;
+        }
+
+        .accordion-content.active {
+            display: block;
+            animation: slideDown 0.3s ease;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .visual-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 15px;
+            margin: 15px 0;
+        }
+
+        .visual-item {
+            text-align: center;
+            padding: 15px;
+            background: white;
+            border-radius: 8px;
+            border: 2px solid #E5E7EB;
+        }
+
+        .visual-icon {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .visual-text {
+            font-size: 0.85em;
+            color: #666;
+            font-weight: 600;
+        }
+
         @media (max-width: 768px) {
             .kahoot-quiz {
                 padding: 20px;
@@ -516,10 +608,8 @@
             container.innerHTML = '';
 
             prepositions.forEach((prep, index) => {
-                const card = document.createElement('div');
-                card.className = 'preposition-card';
-                card.style.borderLeftColor = prep.color;
-                card.style.backgroundColor = prep.color + '10';
+                const item = document.createElement('div');
+                item.className = 'accordion-item';
 
                 const iconMap = {
                     'OP': '📍',
@@ -532,20 +622,96 @@
                     'BINNEN / BUITEN': '🚪'
                 };
 
-                const icon = iconMap[prep.preposition] || '🗺️';
+                const visualMap = {
+                    'OP': [
+                        { icon: '📍', text: 'Surface' },
+                        { icon: '🏛️', text: 'Lieu' },
+                        { icon: '📺', text: 'Abstrait' }
+                    ],
+                    'IN': [
+                        { icon: '📦', text: 'Intérieur' },
+                        { icon: '🌳', text: 'Espace' },
+                        { icon: '⏰', text: 'Temps' }
+                    ],
+                    'AAN': [
+                        { icon: '🔗', text: 'Contact' },
+                        { icon: '📞', text: 'Connexion' },
+                        { icon: '🌊', text: 'Bordure' }
+                    ],
+                    'BIJ': [
+                        { icon: '👥', text: 'Proximité' },
+                        { icon: '🏠', text: 'Chez' },
+                        { icon: '👨‍💼', text: 'Groupe' }
+                    ],
+                    'VOOR': [
+                        { icon: '⬅️', text: 'Devant' },
+                        { icon: '⏰', text: 'Avant' },
+                        { icon: '❤️', text: 'Pour' }
+                    ],
+                    'TUSSEN': [
+                        { icon: '↔️', text: 'Entre' },
+                        { icon: '🏘️', text: 'Au milieu' },
+                        { icon: '📍', text: 'Position' }
+                    ],
+                    'ACHTER': [
+                        { icon: '🔙', text: 'Derrière' },
+                        { icon: '🚪', text: 'Arrière' },
+                        { icon: '👤', text: 'Soutien' }
+                    ],
+                    'BINNEN / BUITEN': [
+                        { icon: '🏠', text: 'Intérieur' },
+                        { icon: '🌳', text: 'Extérieur' },
+                        { icon: '⏱️', text: 'Délai' }
+                    ]
+                };
 
-                card.innerHTML = `
-                    <h3 style="color: ${prep.color};">${icon} ${prep.preposition}</h3>
-                    <p><strong>${prep.description}</strong></p>
-                    <ul class="rules-list">
-                        ${prep.rules.map(rule => `<li>${rule}</li>`).join('')}
-                    </ul>
-                    <p><strong>Exemples :</strong></p>
-                    <ul class="rules-list">
-                        ${prep.examples.slice(0, 4).map(ex => `<li><em>${ex}</em></li>`).join('')}
-                    </ul>
+                const icon = iconMap[prep.preposition] || '🗺️';
+                const visuals = visualMap[prep.preposition] || [];
+
+                const header = document.createElement('button');
+                header.className = 'accordion-header';
+                header.innerHTML = `
+                    <span>${icon} ${prep.preposition}</span>
+                    <span class="accordion-toggle">▼</span>
                 `;
-                container.appendChild(card);
+
+                const content = document.createElement('div');
+                content.className = 'accordion-content';
+                content.innerHTML = `
+                    <p style="margin-top: 0;"><strong style="color: #667eea; font-size: 1.05em;">${prep.description}</strong></p>
+                    
+                    <div class="visual-grid">
+                        ${visuals.map(v => `
+                            <div class="visual-item">
+                                <div class="visual-icon">${v.icon}</div>
+                                <div class="visual-text">${v.text}</div>
+                            </div>
+                        `).join('')}
+                    </div>
+
+                    <div style="margin-top: 15px;">
+                        <p style="margin: 10px 0 8px 0; font-weight: 600; color: #333;">📚 Règles :</p>
+                        <ul class="rules-list">
+                            ${prep.rules.map(rule => `<li>${rule}</li>`).join('')}
+                        </ul>
+                    </div>
+
+                    <div style="margin-top: 15px;">
+                        <p style="margin: 10px 0 8px 0; font-weight: 600; color: #333;">💡 Exemples :</p>
+                        <ul class="rules-list">
+                            ${prep.examples.map(ex => `<li><em>${ex}</em></li>`).join('')}
+                        </ul>
+                    </div>
+                `;
+
+                header.onclick = () => {
+                    header.classList.toggle('active');
+                    content.classList.toggle('active');
+                };
+
+                item.appendChild(header);
+                item.appendChild(content);
+                container.appendChild(item);
             });
 
             document.getElementById('schemaMode').classList.remove('hidden');
@@ -706,10 +872,8 @@
             
             container.innerHTML = '';
             prepositions.forEach((prep) => {
-                const card = document.createElement('div');
-                card.className = 'preposition-card';
-                card.style.borderLeftColor = prep.color;
-                card.style.backgroundColor = prep.color + '10';
+                const item = document.createElement('div');
+                item.className = 'accordion-item';
 
                 const iconMap = {
                     'OP': '📍',
@@ -722,20 +886,96 @@
                     'BINNEN / BUITEN': '🚪'
                 };
 
-                const icon = iconMap[prep.preposition] || '🗺️';
+                const visualMap = {
+                    'OP': [
+                        { icon: '📍', text: 'Surface' },
+                        { icon: '🏛️', text: 'Lieu' },
+                        { icon: '📺', text: 'Abstrait' }
+                    ],
+                    'IN': [
+                        { icon: '📦', text: 'Intérieur' },
+                        { icon: '🌳', text: 'Espace' },
+                        { icon: '⏰', text: 'Temps' }
+                    ],
+                    'AAN': [
+                        { icon: '🔗', text: 'Contact' },
+                        { icon: '📞', text: 'Connexion' },
+                        { icon: '🌊', text: 'Bordure' }
+                    ],
+                    'BIJ': [
+                        { icon: '👥', text: 'Proximité' },
+                        { icon: '🏠', text: 'Chez' },
+                        { icon: '👨‍💼', text: 'Groupe' }
+                    ],
+                    'VOOR': [
+                        { icon: '⬅️', text: 'Devant' },
+                        { icon: '⏰', text: 'Avant' },
+                        { icon: '❤️', text: 'Pour' }
+                    ],
+                    'TUSSEN': [
+                        { icon: '↔️', text: 'Entre' },
+                        { icon: '🏘️', text: 'Au milieu' },
+                        { icon: '📍', text: 'Position' }
+                    ],
+                    'ACHTER': [
+                        { icon: '🔙', text: 'Derrière' },
+                        { icon: '🚪', text: 'Arrière' },
+                        { icon: '👤', text: 'Soutien' }
+                    ],
+                    'BINNEN / BUITEN': [
+                        { icon: '🏠', text: 'Intérieur' },
+                        { icon: '🌳', text: 'Extérieur' },
+                        { icon: '⏱️', text: 'Délai' }
+                    ]
+                };
 
-                card.innerHTML = `
-                    <h3 style="color: ${prep.color};">${icon} ${prep.preposition}</h3>
-                    <p><strong>${prep.description}</strong></p>
-                    <ul class="rules-list">
-                        ${prep.rules.map(rule => `<li>${rule}</li>`).join('')}
-                    </ul>
-                    <p><strong>Exemples :</strong></p>
-                    <ul class="rules-list">
-                        ${prep.examples.map(ex => `<li><em>${ex}</em></li>`).join('')}
-                    </ul>
+                const icon = iconMap[prep.preposition] || '🗺️';
+                const visuals = visualMap[prep.preposition] || [];
+
+                const header = document.createElement('button');
+                header.className = 'accordion-header';
+                header.innerHTML = `
+                    <span>${icon} ${prep.preposition}</span>
+                    <span class="accordion-toggle">▼</span>
                 `;
-                container.appendChild(card);
+
+                const content = document.createElement('div');
+                content.className = 'accordion-content';
+                content.innerHTML = `
+                    <p style="margin-top: 0;"><strong style="color: #667eea; font-size: 1.05em;">${prep.description}</strong></p>
+                    
+                    <div class="visual-grid">
+                        ${visuals.map(v => `
+                            <div class="visual-item">
+                                <div class="visual-icon">${v.icon}</div>
+                                <div class="visual-text">${v.text}</div>
+                            </div>
+                        `).join('')}
+                    </div>
+
+                    <div style="margin-top: 15px;">
+                        <p style="margin: 10px 0 8px 0; font-weight: 600; color: #333;">📚 Règles :</p>
+                        <ul class="rules-list">
+                            ${prep.rules.map(rule => `<li>${rule}</li>`).join('')}
+                        </ul>
+                    </div>
+
+                    <div style="margin-top: 15px;">
+                        <p style="margin: 10px 0 8px 0; font-weight: 600; color: #333;">💡 Exemples :</p>
+                        <ul class="rules-list">
+                            ${prep.examples.map(ex => `<li><em>${ex}</em></li>`).join('')}
+                        </ul>
+                    </div>
+                `;
+
+                header.onclick = () => {
+                    header.classList.toggle('active');
+                    content.classList.toggle('active');
+                };
+
+                item.appendChild(header);
+                item.appendChild(content);
+                container.appendChild(item);
             });
 
             modal.classList.add('active');
