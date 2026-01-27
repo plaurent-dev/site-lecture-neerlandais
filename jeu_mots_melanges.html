@@ -521,13 +521,8 @@
         // Mélanger les mots
         function mixWords() {
             const words = currentPhrase.phrase.split(' ');
-            
-            // Retirer la négation "niet" si présente à la fin
-            if (words[words.length - 1] === 'niet') {
-                words.pop();
-            }
 
-            // Mélanger
+            // Mélanger tous les mots (y compris "niet" s'il est présent)
             for (let i = words.length - 1; i > 0; i--) {
                 const j = Math.floor(Math.random() * (i + 1));
                 [words[i], words[j]] = [words[j], words[i]];
@@ -600,7 +595,7 @@
             }
 
             const userAnswer = selectedWords.map(item => item.word).join(' ');
-            const correctAnswer = currentPhrase.phrase.replace(/\s+niet\s*$/, '');
+            const correctAnswer = currentPhrase.phrase;  // Accepter la phrase complète avec "niet"
 
             if (userAnswer === correctAnswer) {
                 score++;
@@ -653,7 +648,7 @@
         // Afficher la réponse
         function showAnswer() {
             const helpDiv = document.getElementById('helpContainer');
-            const correctAnswer = currentPhrase.phrase.replace(/\s+niet\s*$/, '');
+            const correctAnswer = currentPhrase.phrase;  // Afficher la phrase complète
             helpDiv.innerHTML = `
                 <div class="help-section show">
                     <h4>✅ Réponse correcte</h4>
