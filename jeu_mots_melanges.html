@@ -435,6 +435,7 @@
 
     <script>
         let corpus = [];
+        let randomizedCorpus = [];  // Phrases mélangées
         let currentPhraseIndex = 0;
         let currentPhrase = null;
         let selectedWords = [];
@@ -445,6 +446,16 @@
         let gameStarted = false;
         let phraseAnswered = false;
         let totalPhrasesToPlay = 0;  // Nombre de phrases sélectionnées
+
+        // Fonction pour mélanger un tableau (Fisher-Yates shuffle)
+        function shuffleArray(array) {
+            const shuffled = [...array];  // Copie du tableau
+            for (let i = shuffled.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+            }
+            return shuffled;
+        }
 
         // Charger le corpus
         async function loadCorpus() {
@@ -505,6 +516,8 @@
 
         // Démarrer avec le nombre de phrases choisi
         function startGameWithCount(count) {
+            // Mélanger le corpus pour chaque nouvelle partie
+            randomizedCorpus = shuffleArray(corpus);
             totalPhrasesToPlay = Math.min(count, corpus.length);
             
             gameStarted = true;
@@ -527,7 +540,7 @@
                     <div class="empty-state">Chargement...</div>
                 </div>
                 <div class="answer-container" id="answerContainer">
-                    <span class="empty-state">Cliquez sur les mots pour les ajouter</span>
+                    <span class="empty-state">Cliquez sur les mots pour les ajouter • Cliquez dans la réponse pour les retirer</span>
                 </div>
                 <div class="buttons-group">
                     <button class="btn-help" id="ruleBtn" onclick="showRule()">📋 Voir la règle</button>
@@ -553,7 +566,7 @@
 
             phraseAnswered = false;
             selectedWords = [];
-            currentPhrase = corpus[currentPhraseIndex];
+            currentPhrase = randomizedCorpus[currentPhraseIndex];  // Utiliser le corpus mélangé
             currentPhraseIndex++;
             testedCount++;
 
@@ -625,7 +638,7 @@
             });
 
             if (selectedWords.length === 0) {
-                container.innerHTML = '<span class="empty-state">Cliquez sur les mots pour les ajouter</span>';
+                container.innerHTML = '<span class="empty-state">Cliquez sur les mots pour les ajouter • Cliquez dans la réponse pour les retirer</span>';
             }
         }
 
@@ -641,7 +654,7 @@
 
         // Nettoyer le conteneur de réponse
         function clearAnswerContainer() {
-            document.getElementById('answerContainer').innerHTML = '<span class="empty-state">Cliquez sur les mots pour les ajouter</span>';
+            document.getElementById('answerContainer').innerHTML = '<span class="empty-state">Cliquez sur les mots pour les ajouter • Cliquez dans la réponse pour les retirer</span>';
         }
 
         // Valider la réponse
@@ -740,20 +753,7 @@
         // Fin du jeu
         function endGame() {
             gameStarted = false;
-            document.getElementById('sentenceDisplay').textContent = '🎊 Jeu terminé!';
-            document.getElementById('answerContainer').innerHTML = '';
-            clearHelp();
             
-            document.getElementById('startBtn').style.display = 'inline-block';
-            document.getElementById('startBtn').textContent = 'Recommencer';
-            document.getElementById('validateBtn').style.display = 'none';
-            document.getElementById('nextBtn').style.display = 'none';
-            document.getElementById('ruleBtn').style.display = 'none';
-            document.getElementById('exampleBtn').style.display = 'none';
-            document.getElementById('translationBtn').style.display = 'none';
-            document.getElementById('answerBtn').style.display = 'none';
-            document.getElementById('resetBtn').style.display = 'none';
-
             const percentage = Math.round((successCount / testedCount) * 100) || 0;
             
             // Message d'encouragement contextualisé
@@ -765,7 +765,7 @@
             } else if (percentage >= 60) {
                 encouragement = '👍 Bon travail! Vous progressez!';
             } else if (percentage >= 40) {
-                encouragement = '💪 Vous aprenez! Continuez vos efforts!';
+                encouragement = '💪 Vous apprenez! Continuez vos efforts!';
             } else {
                 encouragement = '📚 C\'est un bon début! La pratique rend parfait!';
             }
@@ -776,7 +776,23 @@
                     <p style="font-size: 1.1em; color: #3B82F6;"><strong>Score: ${successCount}/${testedCount} (${percentage}%)</strong></p>
                 </div>
             `;
-            document.getElementById('wordsContainer').innerHTML = resultHTML;
+            
+            // Recréer l'interface avec le bouton Recommencer
+            const gameArea = document.querySelector('.game-area');
+            gameArea.innerHTML = `
+                <div class="phrase-counter" id="phraseCounter"></div>
+                <div class="message" id="message"></div>
+                <div class="sentence-display" id="sentenceDisplay">🎊 Jeu terminé!</div>
+                <div id="helpContainer"></div>
+                <div class="words-container" id="wordsContainer">
+                    ${resultHTML}
+                </div>
+                <div class="answer-container" id="answerContainer"></div>
+                <div class="buttons-group">
+                    <button class="btn-reset" id="resetBtn" onclick="resetGame()">Recommencer</button>
+                </div>
+            `;
+            
             showMessage(`🎉 Résultat: ${successCount}/${testedCount} réussies (${percentage}%)`, "success");
         }
 
