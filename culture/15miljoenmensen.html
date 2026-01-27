@@ -126,9 +126,13 @@
   <div id="phase1">
     <div class="video-container">
       <div class="video-wrapper">
-        <iframe src="https://www.youtube.com/embed/wftARWunM2I" allowfullscreen="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" loading="lazy"></iframe>
+        <iframe src="https://www.youtube.com/embed/wftARWunM2I?cc_load_policy=1" allowfullscreen="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" loading="lazy"></iframe>
         <button class="video-fullscreen-btn" onclick="openFullscreenVideo()">🖥️ Plein écran</button>
       </div>
+    </div>
+
+    <div style="background: #e7f3ff; padding: 15px; border-radius: 8px; margin: 20px 0; border-left: 4px solid #3B82F6;">
+      <p style="margin: 0;"><strong>💡 Conseil :</strong> Les sous-titres sont activés par défaut. Si vous ne les voyez pas, cliquez sur l'icône CC (sous-titres) en bas à droite de la vidéo, ou appuyez sur C pour les afficher.</p>
     </div>
 
     <h2>📚 Vocabulaire - Expressions culturelles clés</h2>
@@ -145,6 +149,19 @@
       </tbody>
     </table>
 
+    <h2>📝 Transcription</h2>
+    <div style="background: #f5f5f5; padding: 20px; border-radius: 8px; line-height: 1.8; font-size: 0.95em;">
+      <p><strong>Land van 1000 meningen.</strong> Het land van nuchterheid met zijn allen op het strand beschuit bij het ontbijt. Het land waar niemand zich laat gaan. Behalve als we winnen, dan breekt acu de passie los. Dan blijft geen mens meer binnen. Het land wars van betutteling. Geen uniform is heilig. Een zoon die noemt zijn vader Piet. Een fiets staat nergens veilig.</p>
+
+      <p><strong>15 miljoen mensen</strong> op dat hele kleine stukje aarde. Je schrijf je in de wetten voor. Je laat je in een waarde. 15 miljoen mensen op het hele kleine stukje aarde. Die moeten niet het keurslijf in. Uwatje in hun waarde.</p>
+
+      <p>Het land vol groepen van protest. Geen chef die echt de baas is. Gordijnen altijd open zijn. Lunch, een broodje kaas is het land vol van verdraagzaamheid. Alleen niet voor de buurman. Een grote vraag die blijft altijd. Waar betaalt hij nou zijn huur van? Het land dat zorgt voor iedereen. Geen hond die van een groot weet. Met nassie ballen in de muur en niemand die droog brood eet.</p>
+
+      <p><strong>15 miljoen mensen</strong> om dat hele kleine stukje aarde. Je schrijft je niet de wetten voor. Die laat je in een waarde. 15 miljoen mensen op dat hele kleine stukje aarde die moeten niet het keurslijf in die laat je in hun waarden.</p>
+
+      <p><strong>15 miljoen mensen</strong> op dat hele kleine stukje aarde. Je schrijf je niet de wetten voor. Je laat je in een waarde. 15 miljoen mensen op het hele kleine stukje aarde die moeten niet het keurslijf in. U laat je in hun waarde.</p>
+    </div>
+
     <button class="btn btn-primary" onclick="goToQuiz()">➡️ Passer au quiz</button>
   </div>
 
@@ -159,7 +176,7 @@
 <div id="videoModal" class="modal-video">
   <div class="modal-content-video">
     <span class="close-modal" onclick="closeFullscreenVideo()">&times;</span>
-    <iframe src="https://www.youtube.com/embed/wftARWunM2I" allowfullscreen="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" loading="lazy"></iframe>
+    <iframe src="https://www.youtube.com/embed/wftARWunM2I?cc_load_policy=1" allowfullscreen="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" loading="lazy"></iframe>
   </div>
 </div>
 
@@ -294,7 +311,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (e.target === this) {
       closeFullscreenVideo();
     }
-  });
+  }, { passive: true });
 });
 </script>
 </body>
