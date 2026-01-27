@@ -470,6 +470,14 @@
             showDifficultySelection();
         }
 
+        // Afficher la sélection de difficulté au démarrage
+        function initializeGame() {
+            // Cacher le bouton "Commencer"
+            document.getElementById('startBtn').style.display = 'none';
+            // Afficher directement l'écran de sélection
+            showDifficultySelection();
+        }
+
         // Afficher l'écran de sélection
         function showDifficultySelection() {
             const gameArea = document.querySelector('.game-area');
@@ -507,19 +515,8 @@
             successCount = 0;
             failCount = 0;
             selectedWords = [];
-            updateStats();
 
-            // Afficher les contrôles du jeu
-            document.getElementById('startBtn').style.display = 'none';
-            document.getElementById('ruleBtn').style.display = 'inline-block';
-            document.getElementById('exampleBtn').style.display = 'inline-block';
-            document.getElementById('translationBtn').style.display = 'inline-block';
-            document.getElementById('answerBtn').style.display = 'inline-block';
-            document.getElementById('validateBtn').style.display = 'inline-block';
-            document.getElementById('resetBtn').style.display = 'inline-block';
-            document.getElementById('nextBtn').style.display = 'none';
-
-            // Recharger l'interface du jeu
+            // Recharger l'interface du jeu avec tous les éléments
             const gameArea = document.querySelector('.game-area');
             gameArea.innerHTML = `
                 <div class="phrase-counter" id="phraseCounter"></div>
@@ -532,8 +529,18 @@
                 <div class="answer-container" id="answerContainer">
                     <span class="empty-state">Cliquez sur les mots pour les ajouter</span>
                 </div>
+                <div class="buttons-group">
+                    <button class="btn-help" id="ruleBtn" onclick="showRule()">📋 Voir la règle</button>
+                    <button class="btn-help" id="exampleBtn" onclick="showExample()">💡 Voir l'exemple</button>
+                    <button class="btn-help" id="translationBtn" onclick="showTranslation()">🇫🇷 Voir traduction</button>
+                    <button class="btn-help" id="answerBtn" onclick="showAnswer()">✅ Voir la réponse</button>
+                    <button class="btn-next" id="validateBtn" onclick="validateAnswer()">Vérifier</button>
+                    <button class="btn-next" id="nextBtn" onclick="nextPhrase()" style="display:none;">Suivant →</button>
+                    <button class="btn-reset" id="resetBtn" onclick="resetGame()">Recommencer</button>
+                </div>
             `;
 
+            updateStats();
             loadNextPhrase();
         }
 
@@ -800,8 +807,9 @@
         }
 
         // Initialiser au chargement
-        window.addEventListener('load', () => {
-            loadCorpus();
+        window.addEventListener('load', async () => {
+            await loadCorpus();
+            initializeGame();
         });
     </script>
 </body>
