@@ -112,6 +112,52 @@
   .back-btn:hover {
     background: #5568d3;
   }
+
+  .collapsible-section {
+    margin: 20px 0;
+  }
+
+  .collapsible-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 15px 20px;
+    cursor: pointer;
+    border-radius: 8px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    user-select: none;
+    transition: all 0.3s ease;
+  }
+
+  .collapsible-header:hover {
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+  }
+
+  .collapsible-icon {
+    font-size: 1.3em;
+    transition: transform 0.3s ease;
+  }
+
+  .collapsible-content {
+    max-height: 1000px;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 0 0 8px 8px;
+  }
+
+  .collapsible-content.collapsed {
+    max-height: 0;
+    padding: 0 20px;
+  }
+
+  .collapsible-icon.collapsed {
+    transform: rotate(-90deg);
+  }
 </style>
 </head>
 <body>
@@ -135,31 +181,45 @@
       <p style="margin: 0;"><strong>💡 Conseil :</strong> Les sous-titres sont activés par défaut. Si vous ne les voyez pas, cliquez sur l'icône CC (sous-titres) en bas à droite de la vidéo, ou appuyez sur C pour les afficher.</p>
     </div>
 
-    <h2>📚 Vocabulaire - Expressions culturelles clés</h2>
-    <p style="font-style: italic; color: #666;">Cliquez sur 🔊 pour écouter la prononciation</p>
-    <table class="fiche-table">
-      <thead>
-        <tr>
-          <th>Néerlandais</th>
-          <th>Français</th>
-        </tr>
-      </thead>
-      <tbody id="vocabularyTable">
-        <!-- Rempli par JavaScript -->
-      </tbody>
-    </table>
+    <!-- Section Transcription Collapsible -->
+    <div class="collapsible-section">
+      <div class="collapsible-header" onclick="toggleCollapsible(this)">
+        <span>📝 Transcription</span>
+        <span class="collapsible-icon">▼</span>
+      </div>
+      <div class="collapsible-content">
+        <p><strong>Land van 1000 meningen.</strong> Het land van nuchterheid met zijn allen op het strand beschuit bij het ontbijt. Het land waar niemand zich laat gaan. Behalve als we winnen, dan breekt acu de passie los. Dan blijft geen mens meer binnen. Het land wars van betutteling. Geen uniform is heilig. Een zoon die noemt zijn vader Piet. Een fiets staat nergens veilig.</p>
 
-    <h2>📝 Transcription</h2>
-    <div style="background: #f5f5f5; padding: 20px; border-radius: 8px; line-height: 1.8; font-size: 0.95em;">
-      <p><strong>Land van 1000 meningen.</strong> Het land van nuchterheid met zijn allen op het strand beschuit bij het ontbijt. Het land waar niemand zich laat gaan. Behalve als we winnen, dan breekt acu de passie los. Dan blijft geen mens meer binnen. Het land wars van betutteling. Geen uniform is heilig. Een zoon die noemt zijn vader Piet. Een fiets staat nergens veilig.</p>
+        <p><strong>15 miljoen mensen</strong> op dat hele kleine stukje aarde. Je schrijf je in de wetten voor. Je laat je in een waarde. 15 miljoen mensen op het hele kleine stukje aarde. Die moeten niet het keurslijf in. Uwatje in hun waarde.</p>
 
-      <p><strong>15 miljoen mensen</strong> op dat hele kleine stukje aarde. Je schrijf je in de wetten voor. Je laat je in een waarde. 15 miljoen mensen op het hele kleine stukje aarde. Die moeten niet het keurslijf in. Uwatje in hun waarde.</p>
+        <p>Het land vol groepen van protest. Geen chef die echt de baas is. Gordijnen altijd open zijn. Lunch, een broodje kaas is het land vol van verdraagzaamheid. Alleen niet voor de buurman. Een grote vraag die blijft altijd. Waar betaalt hij nou zijn huur van? Het land dat zorgt voor iedereen. Geen hond die van een groot weet. Met nassie ballen in de muur en niemand die droog brood eet.</p>
 
-      <p>Het land vol groepen van protest. Geen chef die echt de baas is. Gordijnen altijd open zijn. Lunch, een broodje kaas is het land vol van verdraagzaamheid. Alleen niet voor de buurman. Een grote vraag die blijft altijd. Waar betaalt hij nou zijn huur van? Het land dat zorgt voor iedereen. Geen hond die van een groot weet. Met nassie ballen in de muur en niemand die droog brood eet.</p>
+        <p><strong>15 miljoen mensen</strong> om dat hele kleine stukje aarde. Je schrijft je niet de wetten voor. Die laat je in een waarde. 15 miljoen mensen op dat hele kleine stukje aarde die moeten niet het keurslijf in die laat je in hun waarden.</p>
 
-      <p><strong>15 miljoen mensen</strong> om dat hele kleine stukje aarde. Je schrijft je niet de wetten voor. Die laat je in een waarde. 15 miljoen mensen op dat hele kleine stukje aarde die moeten niet het keurslijf in die laat je in hun waarden.</p>
+        <p><strong>15 miljoen mensen</strong> op dat hele kleine stukje aarde. Je schrijf je niet de wetten voor. Je laat je in een waarde. 15 miljoen mensen op het hele kleine stukje aarde die moeten niet het keurslijf in. U laat je in hun waarde.</p>
+      </div>
+    </div>
 
-      <p><strong>15 miljoen mensen</strong> op dat hele kleine stukje aarde. Je schrijf je niet de wetten voor. Je laat je in een waarde. 15 miljoen mensen op het hele kleine stukje aarde die moeten niet het keurslijf in. U laat je in hun waarde.</p>
+    <!-- Section Vocabulaire Collapsible -->
+    <div class="collapsible-section">
+      <div class="collapsible-header" onclick="toggleCollapsible(this)">
+        <span>📚 Vocabulaire - Expressions culturelles clés</span>
+        <span class="collapsible-icon">▼</span>
+      </div>
+      <div class="collapsible-content">
+        <p style="font-style: italic; color: #666;">Cliquez sur 🔊 pour écouter la prononciation</p>
+        <table class="fiche-table">
+          <thead>
+            <tr>
+              <th>Néerlandais</th>
+              <th>Français</th>
+            </tr>
+          </thead>
+          <tbody id="vocabularyTable">
+            <!-- Rempli par JavaScript -->
+          </tbody>
+        </table>
+      </div>
     </div>
 
     <button class="btn btn-primary" onclick="goToQuiz()">➡️ Passer au quiz</button>
@@ -239,6 +299,15 @@ function pronounce(word) {
   utterance.lang = 'nl-NL';
   utterance.rate = 0.8;
   window.speechSynthesis.speak(utterance);
+}
+
+// Toggle collapsible sections
+function toggleCollapsible(header) {
+  const content = header.nextElementSibling;
+  const icon = header.querySelector('.collapsible-icon');
+  
+  content.classList.toggle('collapsed');
+  icon.classList.toggle('collapsed');
 }
 
 // Encouragement aléatoire
