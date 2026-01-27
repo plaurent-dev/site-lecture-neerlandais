@@ -444,6 +444,7 @@
         let failCount = 0;
         let gameStarted = false;
         let phraseAnswered = false;
+        let totalPhrasesToPlay = 0;  // Nombre de phrases sélectionnées
 
         // Charger le corpus
         async function loadCorpus() {
@@ -465,6 +466,39 @@
                 return;
             }
 
+            // Afficher l'écran de sélection du nombre de phrases
+            showDifficultySelection();
+        }
+
+        // Afficher l'écran de sélection
+        function showDifficultySelection() {
+            const gameArea = document.querySelector('.game-area');
+            gameArea.innerHTML = `
+                <div style="text-align: center; padding: 40px;">
+                    <h2 style="color: #3B82F6; margin-bottom: 30px; font-size: 1.8em;">🎯 Combien de phrases voulez-vous tester ?</h2>
+                    <p style="color: #6B7280; margin-bottom: 40px; font-size: 1.1em;">Plus vous en faites, plus vous progressez !</p>
+                    
+                    <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-bottom: 30px;">
+                        <button onclick="startGameWithCount(5)" style="padding: 20px 40px; font-size: 1.2em; background: #3B82F6; color: white; border: none; border-radius: 10px; cursor: pointer; transition: all 0.3s ease; font-weight: 600;">
+                            ⚡ 5 phrases
+                        </button>
+                        <button onclick="startGameWithCount(10)" style="padding: 20px 40px; font-size: 1.2em; background: #8B5CF6; color: white; border: none; border-radius: 10px; cursor: pointer; transition: all 0.3s ease; font-weight: 600;">
+                            🔥 10 phrases
+                        </button>
+                        <button onclick="startGameWithCount(20)" style="padding: 20px 40px; font-size: 1.2em; background: #EC4899; color: white; border: none; border-radius: 10px; cursor: pointer; transition: all 0.3s ease; font-weight: 600;">
+                            🚀 20 phrases
+                        </button>
+                    </div>
+                    
+                    <p style="color: #9CA3AF; font-size: 0.9em;">Vous pouvez arrêter à tout moment. Pas de pression ! 😊</p>
+                </div>
+            `;
+        }
+
+        // Démarrer avec le nombre de phrases choisi
+        function startGameWithCount(count) {
+            totalPhrasesToPlay = Math.min(count, corpus.length);
+            
             gameStarted = true;
             phraseAnswered = false;
             currentPhraseIndex = 0;
@@ -475,6 +509,7 @@
             selectedWords = [];
             updateStats();
 
+            // Afficher les contrôles du jeu
             document.getElementById('startBtn').style.display = 'none';
             document.getElementById('ruleBtn').style.display = 'inline-block';
             document.getElementById('exampleBtn').style.display = 'inline-block';
@@ -484,12 +519,27 @@
             document.getElementById('resetBtn').style.display = 'inline-block';
             document.getElementById('nextBtn').style.display = 'none';
 
+            // Recharger l'interface du jeu
+            const gameArea = document.querySelector('.game-area');
+            gameArea.innerHTML = `
+                <div class="phrase-counter" id="phraseCounter"></div>
+                <div class="message" id="message"></div>
+                <div class="sentence-display" id="sentenceDisplay">🎯 Reorganisez les mots</div>
+                <div id="helpContainer"></div>
+                <div class="words-container" id="wordsContainer">
+                    <div class="empty-state">Chargement...</div>
+                </div>
+                <div class="answer-container" id="answerContainer">
+                    <span class="empty-state">Cliquez sur les mots pour les ajouter</span>
+                </div>
+            `;
+
             loadNextPhrase();
         }
 
         // Charger la phrase suivante
         function loadNextPhrase() {
-            if (currentPhraseIndex >= corpus.length) {
+            if (currentPhraseIndex >= totalPhrasesToPlay) {
                 endGame();
                 return;
             }
@@ -506,7 +556,7 @@
             clearAnswerContainer();
             clearMessage();
 
-            document.getElementById('phraseCounter').textContent = `Phrase ${currentPhraseIndex} sur ${corpus.length}`;
+            document.getElementById('phraseCounter').textContent = `Phrase ${currentPhraseIndex} sur ${totalPhrasesToPlay}`;
             document.getElementById('validateBtn').style.display = 'inline-block';
             document.getElementById('nextBtn').style.display = 'none';
 
@@ -684,7 +734,6 @@
         function endGame() {
             gameStarted = false;
             document.getElementById('sentenceDisplay').textContent = '🎊 Jeu terminé!';
-            document.getElementById('wordsContainer').innerHTML = '<div class="empty-state">Bien joué! Vous avez complété toutes les phrases.</div>';
             document.getElementById('answerContainer').innerHTML = '';
             clearHelp();
             
@@ -699,6 +748,28 @@
             document.getElementById('resetBtn').style.display = 'none';
 
             const percentage = Math.round((successCount / testedCount) * 100) || 0;
+            
+            // Message d'encouragement contextualisé
+            let encouragement = '';
+            if (successCount === testedCount) {
+                encouragement = '🏆 Parfait! Vous avez réussi toutes les phrases! Bravo!';
+            } else if (percentage >= 80) {
+                encouragement = '⭐ Excellent! Vous maîtrisez très bien ce contenu!';
+            } else if (percentage >= 60) {
+                encouragement = '👍 Bon travail! Vous progressez!';
+            } else if (percentage >= 40) {
+                encouragement = '💪 Vous aprenez! Continuez vos efforts!';
+            } else {
+                encouragement = '📚 C\'est un bon début! La pratique rend parfait!';
+            }
+            
+            const resultHTML = `
+                <div class="empty-state">
+                    <p style="font-size: 1.2em; margin-bottom: 15px;">${encouragement}</p>
+                    <p style="font-size: 1.1em; color: #3B82F6;"><strong>Score: ${successCount}/${testedCount} (${percentage}%)</strong></p>
+                </div>
+            `;
+            document.getElementById('wordsContainer').innerHTML = resultHTML;
             showMessage(`🎉 Résultat: ${successCount}/${testedCount} réussies (${percentage}%)`, "success");
         }
 
@@ -712,25 +783,9 @@
             testedCount = 0;
             successCount = 0;
             failCount = 0;
-
-            document.getElementById('sentenceDisplay').textContent = 'Cliquez sur "Commencer" pour démarrer';
-            document.getElementById('wordsContainer').innerHTML = '<div class="empty-state">Chargement des phrases...</div>';
-            document.getElementById('answerContainer').innerHTML = '<span class="empty-state">Les mots réorganisés apparaîtront ici</span>';
-            clearHelp();
-            clearMessage();
-
-            document.getElementById('startBtn').style.display = 'inline-block';
-            document.getElementById('startBtn').textContent = 'Commencer';
-            document.getElementById('validateBtn').style.display = 'none';
-            document.getElementById('nextBtn').style.display = 'none';
-            document.getElementById('ruleBtn').style.display = 'none';
-            document.getElementById('exampleBtn').style.display = 'none';
-            document.getElementById('translationBtn').style.display = 'none';
-            document.getElementById('answerBtn').style.display = 'none';
-            document.getElementById('resetBtn').style.display = 'none';
-            document.getElementById('phraseCounter').textContent = '';
-
-            updateStats();
+            totalPhrasesToPlay = 0;
+            
+            showDifficultySelection();
         }
 
         // Mettre à jour les stats
