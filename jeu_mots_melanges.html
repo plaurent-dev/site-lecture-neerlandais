@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>Jeu des Mots Mélangés</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css?v=1.0.0">
+    <script src="version.js"></script>
+    <style>
+        /* BOUTON DE RETOUR */
+        .back-btn {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            padding: 12px 20px;
+            background: white;
+            color: #667eea;
+            border: 2px solid #667eea;
+            border-radius: 8px;
+            font-size: 1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            text-decoration: none;
+        }
+
+        .back-btn:hover {
+            background: #667eea;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .back-btn:active {
+            transform: translateY(0);
+        }
+
+        @media (max-width: 600px) {
+            .back-btn {
+                padding: 10px 16px;
+                font-size: 0.9em;
+            }
+        }
+
+        body {
+            background: #F9FAFB;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #3B82F6;
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 2.2em;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #6B7280;
+            margin-bottom: 30px;
+            font-size: 1.05em;
+        }
+
+        .game-area {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            margin-bottom: 20px;
+        }
+
+        .phrase-counter {
+            text-align: center;
+            color: #6B7280;
+            margin-bottom: 20px;
+            font-size: 1.1em;
+            font-weight: 500;
+        }
+
+        .score-display {
+            text-align: center;
+            background: #DBEAFE;
+            color: #1E40AF;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            font-weight: 600;
+            font-size: 1.1em;
+        }
+
+        .sentence-display {
+            background: #F3F4F6;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            text-align: center;
+            border-left: 4px solid #3B82F6;
+            min-height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1em;
+            color: #374151;
+            font-weight: 500;
+        }
+
+        .words-container {
+            background: #FEF3C7;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            min-height: 80px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            align-items: flex-start;
+            border: 2px dashed #F59E0B;
+        }
+
+        .word-box {
+            background: #FCD34D;
+            padding: 12px 16px;
+            border-radius: 8px;
+            cursor: move;
+            user-select: none;
+            border: 2px solid #F59E0B;
+            font-weight: 600;
+            color: #78350F;
+            transition: all 0.2s ease;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .word-box:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .word-box.selected {
+            background: #F59E0B;
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(245, 158, 11, 0.4);
+        }
+
+        .answer-container {
+            background: #ECFDF5;
+            border: 2px dashed #10B981;
+            border-radius: 10px;
+            padding: 20px;
+            min-height: 80px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+
+        .word-in-answer {
+            background: #A7F3D0;
+            padding: 12px 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            user-select: none;
+            border: 2px solid #10B981;
+            font-weight: 600;
+            color: #065F46;
+            transition: all 0.2s ease;
+        }
+
+        .word-in-answer:hover {
+            background: #6EE7B7;
+            transform: translateY(-2px);
+        }
+
+        .buttons-group {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1em;
+        }
+
+        .btn-primary {
+            background: #3B82F6;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #2563EB;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+        }
+
+        .btn-help {
+            background: #8B5CF6;
+            color: white;
+        }
+
+        .btn-help:hover {
+            background: #7C3AED;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
+        }
+
+        .btn-next {
+            background: #10B981;
+            color: white;
+        }
+
+        .btn-next:hover {
+            background: #059669;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+        }
+
+        .btn-reset {
+            background: #EF4444;
+            color: white;
+        }
+
+        .btn-reset:hover {
+            background: #DC2626;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
+        }
+
+        .help-section {
+            background: #F0F9FF;
+            border-left: 4px solid #8B5CF6;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            display: none;
+            animation: slideIn 0.3s ease;
+        }
+
+        .help-section.show {
+            display: block;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .help-section h4 {
+            color: #8B5CF6;
+            margin: 0 0 8px 0;
+            font-size: 0.95em;
+        }
+
+        .help-section p {
+            color: #6B7280;
+            margin: 5px 0;
+            font-size: 0.95em;
+            line-height: 1.5;
+        }
+
+        .message {
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            text-align: center;
+            font-weight: 600;
+            animation: slideIn 0.3s ease;
+            display: none;
+        }
+
+        .message.show {
+            display: block;
+        }
+
+        .message.success {
+            background: #D1FAE5;
+            color: #065F46;
+            border: 2px solid #10B981;
+        }
+
+        .message.error {
+            background: #FEE2E2;
+            color: #991B1B;
+            border: 2px solid #EF4444;
+        }
+
+        .message.info {
+            background: #DBEAFE;
+            color: #1E40AF;
+            border: 2px solid #3B82F6;
+        }
+
+        .empty-state {
+            text-align: center;
+            color: #9CA3AF;
+            padding: 30px;
+            font-size: 1.1em;
+        }
+
+        .stats {
+            background: #F0F9FF;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .stats-item {
+            display: inline-block;
+            margin: 0 20px;
+            color: #1E40AF;
+            font-weight: 600;
+        }
+
+        .stats-value {
+            color: #3B82F6;
+            font-size: 1.5em;
+        }
+
+        @media (max-width: 768px) {
+            .game-area {
+                padding: 15px;
+            }
+
+            .container {
+                padding: 10px;
+            }
+
+            h1 {
+                font-size: 1.8em;
+            }
+
+            .buttons-group {
+                flex-direction: column;
+            }
+
+            button {
+                width: 100%;
+            }
+
+            .stats {
+                text-align: center;
+            }
+
+            .stats-item {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-btn">← Retour</a>
+    <nav class="navbar">
+        <div class="navbar-content">
+            <h1>📚 FR/NL</h1>
+            <div class="navbar-buttons"></div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>🎮 Jeu des Mots Mélangés</h1>
+        <p class="subtitle">Remettez les mots dans le bon ordre avec votre souris</p>
+
+        <div class="score-display">
+            Points: <span id="score">0</span> | Phrases testées: <span id="tested">0</span>
+        </div>
+
+        <div class="game-area">
+            <div class="phrase-counter" id="phraseCounter"></div>
+
+            <div class="message" id="message"></div>
+
+            <div class="sentence-display" id="sentenceDisplay">
+                Cliquez sur "Commencer" pour démarrer
+            </div>
+
+            <div id="helpContainer"></div>
+
+            <div class="words-container" id="wordsContainer">
+                <div class="empty-state">Chargement des phrases...</div>
+            </div>
+
+            <div class="answer-container" id="answerContainer">
+                <span class="empty-state">Les mots réorganisés apparaîtront ici</span>
+            </div>
+
+            <div class="buttons-group">
+                <button class="btn-primary" id="startBtn" onclick="startGame()">Commencer</button>
+                <button class="btn-help" id="ruleBtn" onclick="showRule()" style="display:none;">📋 Voir la règle</button>
+                <button class="btn-help" id="exampleBtn" onclick="showExample()" style="display:none;">💡 Voir l'exemple</button>
+                <button class="btn-help" id="translationBtn" onclick="showTranslation()" style="display:none;">🇫🇷 Voir traduction</button>
+                <button class="btn-help" id="answerBtn" onclick="showAnswer()" style="display:none;">✅ Voir la réponse</button>
+                <button class="btn-next" id="validateBtn" onclick="validateAnswer()" style="display:none;">Vérifier</button>
+                <button class="btn-next" id="nextBtn" onclick="nextPhrase()" style="display:none;">Suivant →</button>
+                <button class="btn-reset" id="resetBtn" onclick="resetGame()" style="display:none;">Recommencer</button>
+            </div>
+        </div>
+
+        <div class="stats">
+            <div class="stats-item">
+                Réussies: <span class="stats-value" id="successCount">0</span>
+            </div>
+            <div class="stats-item">
+                Échouées: <span class="stats-value" id="failCount">0</span>
+            </div>
+            <div class="stats-item">
+                Score: <span class="stats-value" id="finalScore">0%</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let corpus = [];
+        let currentPhraseIndex = 0;
+        let currentPhrase = null;
+        let selectedWords = [];
+        let score = 0;
+        let testedCount = 0;
+        let successCount = 0;
+        let failCount = 0;
+        let gameStarted = false;
+        let phraseAnswered = false;
+
+        // Charger le corpus
+        async function loadCorpus() {
+            try {
+                const response = await fetch('corpus.json');
+                const data = await response.json();
+                corpus = data.corpus || [];
+                console.log(`Corpus chargé: ${corpus.length} phrases`);
+            } catch (error) {
+                console.error('Erreur au chargement du corpus:', error);
+                corpus = [];
+            }
+        }
+
+        // Démarrer le jeu
+        function startGame() {
+            if (corpus.length === 0) {
+                showMessage("Erreur: Corpus non chargé", "error");
+                return;
+            }
+
+            gameStarted = true;
+            phraseAnswered = false;
+            currentPhraseIndex = 0;
+            score = 0;
+            testedCount = 0;
+            successCount = 0;
+            failCount = 0;
+            selectedWords = [];
+            updateStats();
+
+            document.getElementById('startBtn').style.display = 'none';
+            document.getElementById('ruleBtn').style.display = 'inline-block';
+            document.getElementById('exampleBtn').style.display = 'inline-block';
+            document.getElementById('translationBtn').style.display = 'inline-block';
+            document.getElementById('answerBtn').style.display = 'inline-block';
+            document.getElementById('validateBtn').style.display = 'inline-block';
+            document.getElementById('resetBtn').style.display = 'inline-block';
+            document.getElementById('nextBtn').style.display = 'none';
+
+            loadNextPhrase();
+        }
+
+        // Charger la phrase suivante
+        function loadNextPhrase() {
+            if (currentPhraseIndex >= corpus.length) {
+                endGame();
+                return;
+            }
+
+            phraseAnswered = false;
+            selectedWords = [];
+            currentPhrase = corpus[currentPhraseIndex];
+            currentPhraseIndex++;
+            testedCount++;
+
+            clearHelp();
+            displayPhrase();
+            mixWords();
+            clearAnswerContainer();
+            clearMessage();
+
+            document.getElementById('phraseCounter').textContent = `Phrase ${currentPhraseIndex} sur ${corpus.length}`;
+            document.getElementById('validateBtn').style.display = 'inline-block';
+            document.getElementById('nextBtn').style.display = 'none';
+
+            updateStats();
+        }
+
+        // Afficher la phrase et les mots mélangés
+        function displayPhrase() {
+            document.getElementById('sentenceDisplay').textContent = '🎯 Reorganisez les mots';
+        }
+
+        // Mélanger les mots
+        function mixWords() {
+            const words = currentPhrase.phrase.split(' ');
+            
+            // Retirer la négation "niet" si présente à la fin
+            if (words[words.length - 1] === 'niet') {
+                words.pop();
+            }
+
+            // Mélanger
+            for (let i = words.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [words[i], words[j]] = [words[j], words[i]];
+            }
+
+            displayWords(words);
+        }
+
+        // Afficher les mots
+        function displayWords(words) {
+            const container = document.getElementById('wordsContainer');
+            container.innerHTML = '';
+
+            words.forEach((word, index) => {
+                const wordBox = document.createElement('div');
+                wordBox.className = 'word-box';
+                wordBox.textContent = word;
+                wordBox.onclick = () => selectWord(index, word, wordBox);
+                container.appendChild(wordBox);
+            });
+        }
+
+        // Sélectionner un mot
+        function selectWord(index, word, element) {
+            if (!gameStarted || phraseAnswered) return;
+
+            selectedWords.push({word, element});
+            element.classList.add('selected');
+            updateAnswerContainer();
+        }
+
+        // Mettre à jour le conteneur de réponse
+        function updateAnswerContainer() {
+            const container = document.getElementById('answerContainer');
+            container.innerHTML = '';
+
+            selectedWords.forEach((item, index) => {
+                const wordDiv = document.createElement('span');
+                wordDiv.className = 'word-in-answer';
+                wordDiv.textContent = item.word;
+                wordDiv.onclick = () => removeWord(index);
+                container.appendChild(wordDiv);
+            });
+
+            if (selectedWords.length === 0) {
+                container.innerHTML = '<span class="empty-state">Cliquez sur les mots pour les ajouter</span>';
+            }
+        }
+
+        // Retirer un mot de la réponse
+        function removeWord(index) {
+            if (!gameStarted || phraseAnswered) return;
+
+            const item = selectedWords[index];
+            item.element.classList.remove('selected');
+            selectedWords.splice(index, 1);
+            updateAnswerContainer();
+        }
+
+        // Nettoyer le conteneur de réponse
+        function clearAnswerContainer() {
+            document.getElementById('answerContainer').innerHTML = '<span class="empty-state">Cliquez sur les mots pour les ajouter</span>';
+        }
+
+        // Valider la réponse
+        function validateAnswer() {
+            if (!gameStarted || phraseAnswered || selectedWords.length === 0) {
+                showMessage("Sélectionnez d'abord des mots", "info");
+                return;
+            }
+
+            const userAnswer = selectedWords.map(item => item.word).join(' ');
+            const correctAnswer = currentPhrase.phrase.replace(/\s+niet\s*$/, '');
+
+            if (userAnswer === correctAnswer) {
+                score++;
+                successCount++;
+                showMessage("✅ Excellent! C'est correct!", "success");
+                phraseAnswered = true;
+            } else {
+                failCount++;
+                showMessage("❌ Ce n'est pas correct. Réessayez ou demandez de l'aide.", "error");
+            }
+
+            updateStats();
+            document.getElementById('validateBtn').style.display = 'none';
+            document.getElementById('nextBtn').style.display = 'inline-block';
+        }
+
+        // Afficher la règle
+        function showRule() {
+            const helpDiv = document.getElementById('helpContainer');
+            helpDiv.innerHTML = `
+                <div class="help-section show">
+                    <h4>📖 Règle associée</h4>
+                    <p><strong>${currentPhrase.regle}</strong></p>
+                </div>
+            `;
+        }
+
+        // Afficher l'exemple
+        function showExample() {
+            const helpDiv = document.getElementById('helpContainer');
+            helpDiv.innerHTML = `
+                <div class="help-section show">
+                    <h4>💡 Exemple du professeur</h4>
+                    <p>${currentPhrase.exemple}</p>
+                </div>
+            `;
+        }
+
+        // Afficher la traduction
+        function showTranslation() {
+            const helpDiv = document.getElementById('helpContainer');
+            helpDiv.innerHTML = `
+                <div class="help-section show">
+                    <h4>🇫🇷 Traduction française</h4>
+                    <p>"${currentPhrase.phrase_francais}"</p>
+                </div>
+            `;
+        }
+
+        // Afficher la réponse
+        function showAnswer() {
+            const helpDiv = document.getElementById('helpContainer');
+            const correctAnswer = currentPhrase.phrase.replace(/\s+niet\s*$/, '');
+            helpDiv.innerHTML = `
+                <div class="help-section show">
+                    <h4>✅ Réponse correcte</h4>
+                    <p><strong>${correctAnswer}</strong></p>
+                </div>
+            `;
+        }
+
+        // Effacer l'aide
+        function clearHelp() {
+            document.getElementById('helpContainer').innerHTML = '';
+        }
+
+        // Afficher un message
+        function showMessage(text, type) {
+            const msgEl = document.getElementById('message');
+            msgEl.textContent = text;
+            msgEl.className = `message show ${type}`;
+        }
+
+        // Effacer le message
+        function clearMessage() {
+            const msgEl = document.getElementById('message');
+            msgEl.className = 'message';
+        }
+
+        // Phrase suivante
+        function nextPhrase() {
+            loadNextPhrase();
+        }
+
+        // Fin du jeu
+        function endGame() {
+            gameStarted = false;
+            document.getElementById('sentenceDisplay').textContent = '🎊 Jeu terminé!';
+            document.getElementById('wordsContainer').innerHTML = '<div class="empty-state">Bien joué! Vous avez complété toutes les phrases.</div>';
+            document.getElementById('answerContainer').innerHTML = '';
+            clearHelp();
+            
+            document.getElementById('startBtn').style.display = 'inline-block';
+            document.getElementById('startBtn').textContent = 'Recommencer';
+            document.getElementById('validateBtn').style.display = 'none';
+            document.getElementById('nextBtn').style.display = 'none';
+            document.getElementById('ruleBtn').style.display = 'none';
+            document.getElementById('exampleBtn').style.display = 'none';
+            document.getElementById('translationBtn').style.display = 'none';
+            document.getElementById('answerBtn').style.display = 'none';
+            document.getElementById('resetBtn').style.display = 'none';
+
+            const percentage = Math.round((successCount / testedCount) * 100) || 0;
+            showMessage(`🎉 Résultat: ${successCount}/${testedCount} réussies (${percentage}%)`, "success");
+        }
+
+        // Réinitialiser
+        function resetGame() {
+            gameStarted = false;
+            phraseAnswered = false;
+            selectedWords = [];
+            currentPhraseIndex = 0;
+            score = 0;
+            testedCount = 0;
+            successCount = 0;
+            failCount = 0;
+
+            document.getElementById('sentenceDisplay').textContent = 'Cliquez sur "Commencer" pour démarrer';
+            document.getElementById('wordsContainer').innerHTML = '<div class="empty-state">Chargement des phrases...</div>';
+            document.getElementById('answerContainer').innerHTML = '<span class="empty-state">Les mots réorganisés apparaîtront ici</span>';
+            clearHelp();
+            clearMessage();
+
+            document.getElementById('startBtn').style.display = 'inline-block';
+            document.getElementById('startBtn').textContent = 'Commencer';
+            document.getElementById('validateBtn').style.display = 'none';
+            document.getElementById('nextBtn').style.display = 'none';
+            document.getElementById('ruleBtn').style.display = 'none';
+            document.getElementById('exampleBtn').style.display = 'none';
+            document.getElementById('translationBtn').style.display = 'none';
+            document.getElementById('answerBtn').style.display = 'none';
+            document.getElementById('resetBtn').style.display = 'none';
+            document.getElementById('phraseCounter').textContent = '';
+
+            updateStats();
+        }
+
+        // Mettre à jour les stats
+        function updateStats() {
+            document.getElementById('score').textContent = score;
+            document.getElementById('tested').textContent = testedCount;
+            document.getElementById('successCount').textContent = successCount;
+            document.getElementById('failCount').textContent = failCount;
+
+            const percentage = testedCount > 0 ? Math.round((score / testedCount) * 100) : 0;
+            document.getElementById('finalScore').textContent = percentage + '%';
+        }
+
+        // Initialiser au chargement
+        window.addEventListener('load', () => {
+            loadCorpus();
+        });
+    </script>
+</body>
+</html>

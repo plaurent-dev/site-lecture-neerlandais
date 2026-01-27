@@ -1,0 +1,1786 @@
+{
+  "metadata": {
+    "description": "Corpus de phrases néerlandaises A1 suivant les règles d'ordre des mots",
+    "date": "2026-01-27",
+    "total_phrases": 294,
+    "notes": "Corpus généré pour la pratique de la syntaxe néerlandaise A1"
+  },
+  "regles_principales": {
+    "regle_1": "Constructions de base: GNS + Verbe + Temps/Lieu ± Négation",
+    "regle_2": "Ordre des compléments: GNS + Verbe + COD/Temps + Lieu",
+    "regle_3": "Mêmes structures à l'imparfait",
+    "regle_4": "Structures complexes avec plusieurs compléments"
+  },
+  "details_regles": {
+    "Règle 1": "GNS + Verbe + Éléments fin de phrase (négation, temps, lieu)",
+    "Règle 2": "GNS + Verbe + COD et/ou Compléments (temps, lieu) dans l'ordre : temps, COD, lieu",
+    "Règle 3": "Mêmes structures avec verbes à l'imparfait",
+    "Règle 4": "Structures complexes avec plusieurs compléments combinés"
+  },
+  "corpus": [
+    {
+      "phrase": "Ik ga naar de bibliotheek niet",
+      "regle": "Règle 1.4: GNS + Verbe + Lieu + Négation",
+      "exemple": "Peter gaat naar het museum niet",
+      "phrase_francais": "Je ne vais pas à la bibliothèque"
+    },
+    {
+      "phrase": "Jij bent op het terras niet",
+      "regle": "Règle 1.4: GNS + Verbe + Lieu + Négation",
+      "exemple": "Peter gaat naar het museum niet",
+      "phrase_francais": "Tu n'es pas sur la terrasse"
+    },
+    {
+      "phrase": "Jij gaat naar het station niet",
+      "regle": "Règle 1.4: GNS + Verbe + Lieu + Négation",
+      "exemple": "Peter gaat naar het museum niet",
+      "phrase_francais": "Tu ne vas pas vers la gare"
+    },
+    {
+      "phrase": "Wij werken gisterdag",
+      "regle": "Règle 1.1: GNS + Verbe + Temps",
+      "exemple": "Bert komt vandaag",
+      "phrase_francais": "Nous travaillions hier"
+    },
+    {
+      "phrase": "Het kind neemt het boek volgende week",
+      "regle": "Règle 2.5: GNS + Verbe + COD + Temps",
+      "exemple": "Hij ziet de vrienden morgen",
+      "phrase_francais": "L'enfant prend le livre la semaine prochaine"
+    },
+    {
+      "phrase": "Hij ziet het boek in de stad",
+      "regle": "Règle 2.3: GNS + Verbe + COD + Lieu",
+      "exemple": "Ik wil een reis naar Spanje maken",
+      "phrase_francais": "Il voit le livre en ville"
+    },
+    {
+      "phrase": "Zij rijdt de auto volgende maand naar het station",
+      "regle": "Règle 4.3: GNS + Verbe + COD + Temps + Lieu",
+      "exemple": "Ik breng het boek morgen naar het museum",
+      "phrase_francais": "Elle conduit la voiture le mois prochain vers la gare"
+    },
+    {
+      "phrase": "Zij werkte van 9 tot 5",
+      "regle": "Règle 3.2: Imparfait - GNS + Verbe + Temps",
+      "exemple": "Zij kwamen gisterdag",
+      "phrase_francais": "Elle travaillait de 9 à 17 heures"
+    },
+    {
+      "phrase": "De jongen gaat 's avonds naar het museum niet",
+      "regle": "Règle 4.2: GNS + Verbe + Temps + Lieu + Négation",
+      "exemple": "Zij eten vandaag in het restaurant niet",
+      "phrase_francais": "Le garçon ne va pas au musée le soir"
+    },
+    {
+      "phrase": "De jongen woont in Amsterdam niet",
+      "regle": "Règle 1.4: GNS + Verbe + Lieu + Négation",
+      "exemple": "Peter gaat naar het museum niet",
+      "phrase_francais": "Le garçon n'habite pas à Amsterdam"
+    },
+    {
+      "phrase": "De man kookte om 8 uur",
+      "regle": "Règle 3.2: Imparfait - GNS + Verbe + Temps",
+      "exemple": "Zij kwamen gisterdag",
+      "phrase_francais": "L'homme cuisinait à 8 heures"
+    },
+    {
+      "phrase": "De man zat zaterdag op het terras",
+      "regle": "Règle 3.4: Imparfait - GNS + Verbe + Temps + Lieu",
+      "exemple": "Zij gingen gisterdag naar Amsterdam",
+      "phrase_francais": "L'homme était assis samedi sur la terrasse"
+    },
+    {
+      "phrase": "Zij brengen de auto woensdag naar school",
+      "regle": "Règle 4.3: GNS + Verbe + COD + Temps + Lieu",
+      "exemple": "Ik breng het boek morgen naar het museum",
+      "phrase_francais": "Elles apportent la voiture mercredi à l'école"
+    },
+    {
+      "phrase": "Ik ga naar Luik",
+      "regle": "Règle 1.3: GNS + Verbe + Lieu",
+      "exemple": "Zij gaan naar Amsterdam",
+      "phrase_francais": "Je vais à Liège"
+    },
+    {
+      "phrase": "Zij eet om 14 uur in het restaurant niet",
+      "regle": "Règle 4.2: GNS + Verbe + Temps + Lieu + Négation",
+      "exemple": "Zij eten vandaag in het restaurant niet",
+      "phrase_francais": "Elle ne mange pas à 14 heures au restaurant"
+    },
+    {
+      "phrase": "De vrouw was om 14 uur in de bibliotheek",
+      "regle": "Règle 3.4: Imparfait - GNS + Verbe + Temps + Lieu",
+      "exemple": "Zij gingen gisterdag naar Amsterdam",
+      "phrase_francais": "La femme était à la bibliothèque à 14 heures"
+    },
+    {
+      "phrase": "De vrouw rijdt zondag de auto",
+      "regle": "Règle 2.2: GNS + Verbe + Temps + COD",
+      "exemple": "Ik eet morgen het eten",
+      "phrase_francais": "La femme conduit la voiture dimanche"
+    },
+    {
+      "phrase": "De man leert Engels volgende jaar in het park",
+      "regle": "Règle 4.3: GNS + Verbe + COD + Temps + Lieu",
+      "exemple": "Ik breng het boek morgen naar het museum",
+      "phrase_francais": "L'homme apprend l'anglais l'année prochaine au parc"
+    },
+    {
+      "phrase": "Ik moest in de winkel iets kopen",
+      "regle": "Règle 3.3: Imparfait - GNS + Verbe + Lieu",
+      "exemple": "Wij waren in het park",
+      "phrase_francais": "Je devais acheter quelque chose au magasin"
+    },
+    {
+      "phrase": "De man ging voor het eten naar het museum",
+      "regle": "Règle 3.4: Imparfait - GNS + Verbe + Temps + Lieu",
+      "exemple": "Zij gingen gisterdag naar Amsterdam",
+      "phrase_francais": "L'homme allait avant le repas vers le musée"
+    },
+    {
+      "phrase": "Jij geeft vrijdag het cadeau in de winkel",
+      "regle": "Règle 4.1: GNS + Verbe + Temps + COD + Lieu",
+      "exemple": "Wij brengen het cadeau morgen naar Amsterdam",
+      "phrase_francais": "Tu donnes vendredi le cadeau au magasin"
+    },
+    {
+      "phrase": "Hij vraagde in de winkel",
+      "regle": "Règle 3.3: Imparfait - GNS + Verbe + Lieu",
+      "exemple": "Wij waren in het park",
+      "phrase_francais": "Il demandait au magasin"
+    },
+    {
+      "phrase": "Jij nam op straat",
+      "regle": "Règle 3.3: Imparfait - GNS + Verbe + Lieu",
+      "exemple": "Wij waren in het park",
+      "phrase_francais": "Tu prenais dans la rue"
+    },
+    {
+      "phrase": "Jij rijdt het paard op het plein",
+      "regle": "Règle 2.3: GNS + Verbe + COD + Lieu",
+      "exemple": "Ik wil een reis naar Spanje maken",
+      "phrase_francais": "Tu chevauches le cheval sur la place"
+    },
+    {
+      "phrase": "Wij gaan in Spanje",
+      "regle": "Règle 1.3: GNS + Verbe + Lieu",
+      "exemple": "Zij gaan naar Amsterdam",
+      "phrase_francais": "Nous allons en Espagne"
+    },
+    {
+      "phrase": "Zij speelde voetbal",
+      "regle": "Règle 3.1: Imparfait - GNS + Verbe + COD",
+      "exemple": "Zij zagen de hond",
+      "phrase_francais": "Elle jouait au football"
+    },
+    {
+      "phrase": "Ik moest donderdag werken",
+      "regle": "Règle 3.2: Imparfait - GNS + Verbe + Temps",
+      "exemple": "Zij kwamen gisterdag",
+      "phrase_francais": "Je devais travailler jeudi"
+    },
+    {
+      "phrase": "De jongen werkt aan de taak in Spanje",
+      "regle": "Règle 2.3: GNS + Verbe + COD + Lieu",
+      "exemple": "Ik wil een reis naar Spanje maken",
+      "phrase_francais": "Le garçon travaille à la tâche en Espagne"
+    },
+    {
+      "phrase": "De man wandelt in de stad",
+      "regle": "Règle 1.3: GNS + Verbe + Lieu",
+      "exemple": "Zij gaan naar Amsterdam",
+      "phrase_francais": "L'homme marche en ville"
+    },
+    {
+      "phrase": "Wij rijden woensdag op de fiets",
+      "regle": "Règle 2.2: GNS + Verbe + Temps + COD",
+      "exemple": "Ik eet morgen het eten",
+      "phrase_francais": "Nous allons à vélo mercredi"
+    },
+    {
+      "phrase": "Hij rijdt de auto naar het museum",
+      "regle": "Règle 2.3: GNS + Verbe + COD + Lieu",
+      "exemple": "Ik wil een reis naar Spanje maken",
+      "phrase_francais": "Il conduit la voiture vers le musée"
+    },
+    {
+      "phrase": "Zij kwamen 's ochtends",
+      "regle": "Règle 3.2: Imparfait - GNS + Verbe + Temps",
+      "exemple": "Zij kwamen gisterdag",
+      "phrase_francais": "Elles venaient le matin"
+    },
+    {
+      "phrase": "Wij rijden 's ochtends niet",
+      "regle": "Règle 1.2: GNS + Verbe + Temps + Négation",
+      "exemple": "Bert komt vandaag niet",
+      "phrase_francais": "Nous ne conduisons pas le matin"
+    },
+    {
+      "phrase": "Jij werkt volgende jaar naar Amsterdam",
+      "regle": "Règle 2.4: GNS + Verbe + Temps + Lieu",
+      "exemple": "Zij is op zondag naar het museum gegaan",
+      "phrase_francais": "Tu travailles l'année prochaine à Amsterdam"
+    },
+    {
+      "phrase": "De jongen speelt van 9 tot 5 niet",
+      "regle": "Règle 1.2: GNS + Verbe + Temps + Négation",
+      "exemple": "Bert komt vandaag niet",
+      "phrase_francais": "Le garçon ne joue pas de 9 à 17 heures"
+    },
+    {
+      "phrase": "De man geeft de brief in Nederland",
+      "regle": "Règle 2.3: GNS + Verbe + COD + Lieu",
+      "exemple": "Ik wil een reis naar Spanje maken",
+      "phrase_francais": "L'homme donne la lettre aux Pays-Bas"
+    },
+    {
+      "phrase": "Jij woonde zondag in het café",
+      "regle": "Règle 3.4: Imparfait - GNS + Verbe + Temps + Lieu",
+      "exemple": "Zij gingen gisterdag naar Amsterdam",
+      "phrase_francais": "Tu habitait dimanche au café"
+    },
+    {
+      "phrase": "Ik houd van het eten",
+      "regle": "Règle 2.1: GNS + Verbe + COD",
+      "exemple": "Hij kent de hond",
+      "phrase_francais": "Je aime de la nourriture"
+    },
+    {
+      "phrase": "De jongen luistert vandaag naar muziek",
+      "regle": "Règle 2.2: GNS + Verbe + Temps + COD",
+      "exemple": "Ik eet morgen het eten",
+      "phrase_francais": "Le garçon écoute de la musique aujourd'hui"
+    },
+    {
+      "phrase": "Het kind telt de taken in het café",
+      "regle": "Règle 2.3: GNS + Verbe + COD + Lieu",
+      "exemple": "Ik wil een reis naar Spanje maken",
+      "phrase_francais": "L'enfant compte les tâches au café"
+    },
+    {
+      "phrase": "Jij leert Nederlands vrijdag",
+      "regle": "Règle 2.5: GNS + Verbe + COD + Temps",
+      "exemple": "Hij ziet de vrienden morgen",
+      "phrase_francais": "Tu apprends le néerlandais vendredi"
+    },
+    {
+      "phrase": "Jij speelt in de nacht de gitaar",
+      "regle": "Règle 2.2: GNS + Verbe + Temps + COD",
+      "exemple": "Ik eet morgen het eten",
+      "phrase_francais": "Tu joues de la guitare la nuit"
+    },
+    {
+      "phrase": "Wij dachten zaterdag",
+      "regle": "Règle 3.2: Imparfait - GNS + Verbe + Temps",
+      "exemple": "Zij kwamen gisterdag",
+      "phrase_francais": "Nous pensions samedi"
+    },
+    {
+      "phrase": "Hij wandelde volgende maand",
+      "regle": "Règle 3.2: Imparfait - GNS + Verbe + Temps",
+      "exemple": "Zij kwamen gisterdag",
+      "phrase_francais": "Il marchait le mois prochain"
+    },
+    {
+      "phrase": "De vrouw kookte zaterdag",
+      "regle": "Règle 3.2: Imparfait - GNS + Verbe + Temps",
+      "exemple": "Zij kwamen gisterdag",
+      "phrase_francais": "La femme cuisinait samedi"
+    },
+    {
+      "phrase": "Zij mag in Spanje niet",
+      "regle": "Règle 1.4: GNS + Verbe + Lieu + Négation",
+      "exemple": "Peter gaat naar het museum niet",
+      "phrase_francais": "Elle ne peut pas aller en Espagne"
+    },
+    {
+      "phrase": "Zij gaat zaterdag naar Spanje",
+      "regle": "Règle 2.4: GNS + Verbe + Temps + Lieu",
+      "exemple": "Zij is op zondag naar het museum gegaan",
+      "phrase_francais": "Elle va samedi en Espagne"
+    },
+    {
+      "phrase": "Jullie gaan graag naar Nederland op zaterdag",
+      "regle": "Règle 4.3: GNS + Verbe + COD + Temps + Lieu",
+      "exemple": "Ik breng het boek morgen naar het museum",
+      "phrase_francais": "Vous aimez aller aux Pays-Bas le samedi"
+    },
+    {
+      "phrase": "Hij neemt het boek gisterdag",
+      "regle": "Règle 1.1: GNS + Verbe + Temps",
+      "exemple": "Bert komt vandaag",
+      "phrase_francais": "Il prend le livre hier"
+    },
+    {
+      "phrase": "Ik tel het geld",
+      "regle": "Règle 2.1: GNS + Verbe + COD",
+      "exemple": "Hij kent de hond",
+      "phrase_francais": "Je compte l'argent"
+    },
+    {
+      "phrase": "Ik rijd op de fiets na het werk",
+      "regle": "Règle 4.3: GNS + Verbe + COD + Temps + Lieu",
+      "exemple": "Ik breng het boek morgen naar het museum",
+      "phrase_francais": "Je vais à vélo après le travail"
+    },
+    {
+      "phrase": "De vrouw is 's middags in het restaurant niet",
+      "regle": "Règle 4.2: GNS + Verbe + Temps + Lieu + Négation",
+      "exemple": "Zij eten vandaag in het restaurant niet",
+      "phrase_francais": "La femme est l'après-midi au restaurant"
+    },
+    {
+      "phrase": "Ik ging naar Ierland",
+      "regle": "Règle 3.3: Imparfait - GNS + Verbe + Lieu",
+      "exemple": "Wij waren in het park",
+      "phrase_francais": "Je allais vers l'Irlande"
+    },
+    {
+      "phrase": "De jongen mocht zaterdag naar het station",
+      "regle": "Règle 3.4: Imparfait - GNS + Verbe + Temps + Lieu",
+      "exemple": "Zij gingen gisterdag naar Amsterdam",
+      "phrase_francais": "Le garçon mocht samedi vers la gare"
+    },
+    {
+      "phrase": "Zij zetten de spullen in Spanje niet",
+      "regle": "Règle 1.4: GNS + Verbe + Lieu + Négation",
+      "exemple": "Peter gaat naar het museum niet",
+      "phrase_francais": "Elles ne mettent pas les affaires en Espagne"
+    },
+    {
+      "phrase": "Jij zet het glas om 14 uur",
+      "regle": "Règle 1.1: GNS + Verbe + Temps",
+      "exemple": "Bert komt vandaag",
+      "phrase_francais": "Tu poses le verre à 14 heures"
+    },
+    {
+      "phrase": "Hij rekent de taken na het werk in het restaurant",
+      "regle": "Règle 4.3: GNS + Verbe + COD + Temps + Lieu",
+      "exemple": "Ik breng het boek morgen naar het museum",
+      "phrase_francais": "Il compte de taken après le travail au restaurant"
+    },
+    {
+      "phrase": "Zij werkten het plan",
+      "regle": "Règle 3.1: Imparfait - GNS + Verbe + COD",
+      "exemple": "Zij zagen de hond",
+      "phrase_francais": "Elles travaillaient sur le plan"
+    },
+    {
+      "phrase": "Zij mochten dinsdag naar het café",
+      "regle": "Règle 3.2: Imparfait - GNS + Verbe + Temps",
+      "exemple": "Zij kwamen gisterdag",
+      "phrase_francais": "Elles pouvaient aller au café mardi"
+    },
+    {
+      "phrase": "Jij opent het raam",
+      "regle": "Règle 2.1: GNS + Verbe + COD",
+      "exemple": "Hij kent de hond",
+      "phrase_francais": "Tu ouvres la fenêtre"
+    },
+    {
+      "phrase": "Zij stelt vandaag een vraag",
+      "regle": "Règle 1.1: GNS + Verbe + Temps",
+      "exemple": "Bert komt vandaag",
+      "phrase_francais": "Elle pose une question aujourd'hui"
+    },
+    {
+      "phrase": "Jij wandelt naar het museum niet",
+      "regle": "Règle 1.4: GNS + Verbe + Lieu + Négation",
+      "exemple": "Peter gaat naar het museum niet",
+      "phrase_francais": "Tu ne marches pas vers le musée"
+    },
+    {
+      "phrase": "Wij praten vandaag in de winkel niet",
+      "regle": "Règle 4.2: GNS + Verbe + Temps + Lieu + Négation",
+      "exemple": "Zij eten vandaag in het restaurant niet",
+      "phrase_francais": "Nous ne parlons pas aujourd'hui au magasin"
+    },
+    {
+      "phrase": "Ik leer Nederlands 's avonds",
+      "regle": "Règle 2.5: GNS + Verbe + COD + Temps",
+      "exemple": "Hij ziet de vrienden morgen",
+      "phrase_francais": "Je apprends néerlandais le soir"
+    },
+    {
+      "phrase": "Zij hield van de kat morgen in Amsterdam",
+      "regle": "Règle 3.4: Imparfait - GNS + Verbe + Temps + Lieu",
+      "exemple": "Zij gingen gisterdag naar Amsterdam",
+      "phrase_francais": "Elle aimait du chat demain à Amsterdam"
+    },
+    {
+      "phrase": "Ik kan in de nacht in de stad blijven",
+      "regle": "Règle 2.4: GNS + Verbe + Temps + Lieu",
+      "exemple": "Zij is op zondag naar het museum gegaan",
+      "phrase_francais": "Je peux rester la nuit en ville"
+    },
+    {
+      "phrase": "Hij kan donderdag komen",
+      "regle": "Règle 1.1: GNS + Verbe + Temps",
+      "exemple": "Bert komt vandaag",
+      "phrase_francais": "Il peut venir jeudi"
+    },
+    {
+      "phrase": "De vrouw speelde voetbal",
+      "regle": "Règle 3.1: Imparfait - GNS + Verbe + COD",
+      "exemple": "Zij zagen de hond",
+      "phrase_francais": "La femme jouait au football"
+    },
+    {
+      "phrase": "Het kind moet naar het station niet",
+      "regle": "Règle 1.4: GNS + Verbe + Lieu + Négation",
+      "exemple": "Peter gaat naar het museum niet",
+      "phrase_francais": "L'enfant ne doit pas aller vers la gare"
+    },
+    {
+      "phrase": "Ik ben zaterdag in Amsterdam niet",
+      "regle": "Règle 4.2: GNS + Verbe + Temps + Lieu + Négation",
+      "exemple": "Zij eten vandaag in het restaurant niet",
+      "phrase_francais": "Je ne suis pas samedi à Amsterdam"
+    },
+    {
+      "phrase": "Het kind gaat naar Brussel",
+      "regle": "Règle 1.3: GNS + Verbe + Lieu",
+      "exemple": "Zij gaan naar Amsterdam",
+      "phrase_francais": "L'enfant va vers Bruxelles"
+    },
+    {
+      "phrase": "Zij geeft 's middags op het terras",
+      "regle": "Règle 2.4: GNS + Verbe + Temps + Lieu",
+      "exemple": "Zij is op zondag naar het museum gegaan",
+      "phrase_francais": "Elle donne l'après-midi sur la terrasse"
+    },
+    {
+      "phrase": "Het kind ziet het museum naar Brussel",
+      "regle": "Règle 1.3: GNS + Verbe + Lieu",
+      "exemple": "Zij gaan naar Amsterdam",
+      "phrase_francais": "L'enfant voit le musée vers Bruxelles"
+    },
+    {
+      "phrase": "De vrouw praat in de nacht in Spanje niet",
+      "regle": "Règle 4.2: GNS + Verbe + Temps + Lieu + Négation",
+      "exemple": "Zij eten vandaag in het restaurant niet",
+      "phrase_francais": "La femme ne parle pas la nuit en Espagne"
+    },
+    {
+      "phrase": "Zij rijden 's ochtends op straat niet",
+      "regle": "Règle 4.2: GNS + Verbe + Temps + Lieu + Négation",
+      "exemple": "Zij eten vandaag in het restaurant niet",
+      "phrase_francais": "Elle ne conduisent pas le matin dans la rue"
+    },
+    {
+      "phrase": "Jullie leren Nederlands",
+      "regle": "Règle 2.1: GNS + Verbe + COD",
+      "exemple": "Hij kent de hond",
+      "phrase_francais": "Vous apprenez le néerlandais"
+    },
+    {
+      "phrase": "Ik hou donderdag van de muziek",
+      "regle": "Règle 2.2: GNS + Verbe + Temps + COD",
+      "exemple": "Ik eet morgen het eten",
+      "phrase_francais": "J'aime jeudi de la musique"
+    },
+    {
+      "phrase": "Ik bleef in het café",
+      "regle": "Règle 3.3: Imparfait - GNS + Verbe + Lieu",
+      "exemple": "Wij waren in het park",
+      "phrase_francais": "Je restais au café"
+    },
+    {
+      "phrase": "Ik was maandag in Amsterdam",
+      "regle": "Règle 3.4: Imparfait - GNS + Verbe + Temps + Lieu",
+      "exemple": "Zij gingen gisterdag naar Amsterdam",
+      "phrase_francais": "J'étais lundi à Amsterdam"
+    },
+    {
+      "phrase": "De jongen luistert vandaag naar muziek niet",
+      "regle": "Règle 4.2: GNS + Verbe + Temps + Lieu + Négation",
+      "exemple": "Zij eten vandaag in het restaurant niet",
+      "phrase_francais": "Le garçon n'écoute de la musique aujourd'hui"
+    },
+    {
+      "phrase": "Jij vraagde naar iemand in Brussel",
+      "regle": "Règle 3.3: Imparfait - GNS + Verbe + Lieu",
+      "exemple": "Wij waren in het park",
+      "phrase_francais": "Tu demandais quelque chose vers Bruxelles"
+    },
+    {
+      "phrase": "De vrouw had gisterdag haar boek op school",
+      "regle": "Règle 3.4: Imparfait - GNS + Verbe + Temps + Lieu",
+      "exemple": "Zij gingen gisterdag naar Amsterdam",
+      "phrase_francais": "La femme avait son livre hier à l'école"
+    },
+    {
+      "phrase": "De vrouw bleef volgende maand in het café",
+      "regle": "Règle 3.2: Imparfait - GNS + Verbe + Temps",
+      "exemple": "Zij kwamen gisterdag",
+      "phrase_francais": "La femme restait le mois prochain au café"
+    },
+    {
+      "phrase": "Zij is in het restaurant niet",
+      "regle": "Règle 1.4: GNS + Verbe + Lieu + Négation",
+      "exemple": "Peter gaat naar het museum niet",
+      "phrase_francais": "Elle n'est au restaurant"
+    },
+    {
+      "phrase": "Jij nam de spullen volgende jaar",
+      "regle": "Règle 3.2: Imparfait - GNS + Verbe + Temps",
+      "exemple": "Zij kwamen gisterdag",
+      "phrase_francais": "Tu prenais les affaires l'année prochaine"
+    },
+    {
+      "phrase": "Jullie koken na het werk op het plein",
+      "regle": "Règle 2.4: GNS + Verbe + Temps + Lieu",
+      "exemple": "Zij is op zondag naar het museum gegaan",
+      "phrase_francais": "Vous cuisinez après le travail sur la place"
+    },
+    {
+      "phrase": "De man rijdt het paard op het terras",
+      "regle": "Règle 2.2: GNS + Verbe + Temps + COD",
+      "exemple": "Ik eet morgen het eten",
+      "phrase_francais": "L'homme monte le cheval"
+    },
+    {
+      "phrase": "Wij spelen piano",
+      "regle": "Règle 2.1: GNS + Verbe + COD",
+      "exemple": "Hij kent de hond",
+      "phrase_francais": "Nous jouons du piano"
+    },
+    {
+      "phrase": "Wij nemen maandag in Spanje niet",
+      "regle": "Règle 4.2: GNS + Verbe + Temps + Lieu + Négation",
+      "exemple": "Zij eten vandaag in het restaurant niet",
+      "phrase_francais": "Nous ne prenons pas lundi en Espagne"
+    },
+    {
+      "phrase": "De man is zaterdag",
+      "regle": "Règle 1.1: GNS + Verbe + Temps",
+      "exemple": "Bert komt vandaag",
+      "phrase_francais": "L'homme est là samedi"
+    },
+    {
+      "phrase": "Wij werkten aan het project",
+      "regle": "Règle 3.1: Imparfait - GNS + Verbe + COD",
+      "exemple": "Zij zagen de hond",
+      "phrase_francais": "Nous travaillions au projet"
+    },
+    {
+      "phrase": "Het kind denkt vandaag in de winkel",
+      "regle": "Règle 2.4: GNS + Verbe + Temps + Lieu",
+      "exemple": "Zij is op zondag naar het museum gegaan",
+      "phrase_francais": "L'enfant pense aujourd'hui au magasin"
+    },
+    {
+      "phrase": "Jij neemt in de nacht niet",
+      "regle": "Règle 1.2: GNS + Verbe + Temps + Négation",
+      "exemple": "Bert komt vandaag niet",
+      "phrase_francais": "Tu ne prends pas la nuit"
+    },
+    {
+      "phrase": "Het kind gaat 's ochtends naar het museum",
+      "regle": "Règle 2.4: GNS + Verbe + Temps + Lieu",
+      "exemple": "Zij is op zondag naar het museum gegaan",
+      "phrase_francais": "L'enfant va le matin vers le musée"
+    },
+    {
+      "phrase": "Hij geeft volgende maand in Spanje",
+      "regle": "Règle 2.4: GNS + Verbe + Temps + Lieu",
+      "exemple": "Zij is op zondag naar het museum gegaan",
+      "phrase_francais": "Il donne le mois prochain en Espagne"
+    },
+    {
+      "phrase": "Zij hield vrijdag van de katjes op het terras",
+      "regle": "Règle 3.4: Imparfait - GNS + Verbe + Temps + Lieu",
+      "exemple": "Zij gingen gisterdag naar Amsterdam",
+      "phrase_francais": "Elle aimait les chatons sur la terrasse le vendredi"
+    },
+    {
+      "phrase": "De man reed de auto van 9 tot 5",
+      "regle": "Règle 3.2: Imparfait - GNS + Verbe + Temps",
+      "exemple": "Zij kwamen gisterdag",
+      "phrase_francais": "L'homme conduisait la voiture de 9 à 17 heures"
+    },
+    {
+      "phrase": "Hij houdt van de kat volgende week",
+      "regle": "Règle 2.5: GNS + Verbe + COD + Temps",
+      "exemple": "Hij ziet de vrienden morgen",
+      "phrase_francais": "Il aime le chat"
+    },
+    {
+      "phrase": "Het kind denkt om 14 uur aan de vakantie in het park",
+      "regle": "Règle 4.1: GNS + Verbe + Temps + COD + Lieu",
+      "exemple": "Wij brengen het cadeau morgen naar Amsterdam",
+      "phrase_francais": "L'enfant pense aux vacances au parc à 14 heures"
+    },
+    {
+      "phrase": "Hij denkt volgende maand aan zijn vrienden naar het station",
+      "regle": "Règle 2.4: GNS + Verbe + Temps + Lieu",
+      "exemple": "Zij is op zondag naar het museum gegaan",
+      "phrase_francais": "Il pense à ses amis vers la gare le mois prochain"
+    },
+    {
+      "phrase": "Jij praat morgen op het plein niet",
+      "regle": "Règle 4.2: GNS + Verbe + Temps + Lieu + Négation",
+      "exemple": "Zij eten vandaag in het restaurant niet",
+      "phrase_francais": "Tu parle demain sur la place"
+    },
+    {
+      "phrase": "Zij nam iets van 9 tot 5",
+      "regle": "Règle 3.2: Imparfait - GNS + Verbe + Temps",
+      "exemple": "Zij kwamen gisterdag",
+      "phrase_francais": "Elle prenais quelque chose de 9 à 17 heures"
+    },
+    {
+      "phrase": "Hij ziet volgende maand de hond",
+      "regle": "Règle 2.2: GNS + Verbe + Temps + COD",
+      "exemple": "Ik eet morgen het eten",
+      "phrase_francais": "Il voit le chien le mois prochain"
+    },
+    {
+      "phrase": "Het kind kookt donderdag de vis in Spanje",
+      "regle": "Règle 4.1: GNS + Verbe + Temps + COD + Lieu",
+      "exemple": "Wij brengen het cadeau morgen naar Amsterdam",
+      "phrase_francais": "L'enfant cuisine le poisson jeudi en Espagne"
+    },
+    {
+      "phrase": "De man kookt de maaltijd op straat",
+      "regle": "Règle 2.3: GNS + Verbe + COD + Lieu",
+      "exemple": "Ik wil een reis naar Spanje maken",
+      "phrase_francais": "L'homme cuisine le repas dans la rue"
+    },
+    {
+      "phrase": "Jij hebt in de stad niet",
+      "regle": "Règle 1.4: GNS + Verbe + Lieu + Négation",
+      "exemple": "Peter gaat naar het museum niet",
+      "phrase_francais": "Tu as en ville"
+    },
+    {
+      "phrase": "Hij denkt volgende jaar aan het werk",
+      "regle": "Règle 2.2: GNS + Verbe + Temps + COD",
+      "exemple": "Ik eet morgen het eten",
+      "phrase_francais": "Il pense l'année prochaine aan le travail"
+    },
+    {
+      "phrase": "De man wilde donderdag naar het café",
+      "regle": "Règle 3.2: Imparfait - GNS + Verbe + Temps",
+      "exemple": "Zij kwamen gisterdag",
+      "phrase_francais": "L'homme voulait aller au café jeudi"
+    },
+    {
+      "phrase": "De man had volgende maand een idée in het café",
+      "regle": "Règle 3.4: Imparfait - GNS + Verbe + Temps + Lieu",
+      "exemple": "Zij gingen gisterdag naar Amsterdam",
+      "phrase_francais": "L'homme avait une idée au café le mois prochain"
+    },
+    {
+      "phrase": "Wij speelden om 14 uur",
+      "regle": "Règle 3.2: Imparfait - GNS + Verbe + Temps",
+      "exemple": "Zij kwamen gisterdag",
+      "phrase_francais": "Nous jouions à 14 heures"
+    },
+    {
+      "phrase": "Jij werkt 's avonds aan de taak",
+      "regle": "Règle 2.2: GNS + Verbe + Temps + COD",
+      "exemple": "Ik eet morgen het eten",
+      "phrase_francais": "Tu travailles à la tâche le soir"
+    },
+    {
+      "phrase": "De vrouw kan in de nacht niet slapen",
+      "regle": "Règle 1.2: GNS + Verbe + Temps + Négation",
+      "exemple": "Bert komt vandaag niet",
+      "phrase_francais": "La femme ne peut pas dormir la nuit"
+    },
+    {
+      "phrase": "Ik zie de film 's ochtends in Brussel",
+      "regle": "Règle 4.3: GNS + Verbe + COD + Temps + Lieu",
+      "exemple": "Ik breng het boek morgen naar het museum",
+      "phrase_francais": "Je vois le film le matin à Bruxelles"
+    },
+    {
+      "phrase": "Jullie geven het boek donderdag",
+      "regle": "Règle 1.1: GNS + Verbe + Temps",
+      "exemple": "Bert komt vandaag",
+      "phrase_francais": "Vous donnez le livre jeudi"
+    },
+    {
+      "phrase": "De jongen is van 9 tot 5 niet",
+      "regle": "Règle 1.2: GNS + Verbe + Temps + Négation",
+      "exemple": "Bert komt vandaag niet",
+      "phrase_francais": "Le garçon est de 9 à 17 heures"
+    },
+    {
+      "phrase": "De vrouw werkte de taak",
+      "regle": "Règle 3.1: Imparfait - GNS + Verbe + COD",
+      "exemple": "Zij zagen de hond",
+      "phrase_francais": "La femme travaillait à la tâche"
+    },
+    {
+      "phrase": "De jongen kookt het vlees",
+      "regle": "Règle 2.1: GNS + Verbe + COD",
+      "exemple": "Hij kent de hond",
+      "phrase_francais": "Le garçon cuisine la viande"
+    },
+    {
+      "phrase": "Zij hebt 's ochtends naar Brussel niet",
+      "regle": "Règle 4.2: GNS + Verbe + Temps + Lieu + Négation",
+      "exemple": "Zij eten vandaag in het restaurant niet",
+      "phrase_francais": "Elle as le matin vers Bruxelles"
+    },
+    {
+      "phrase": "Hij praatte op straat",
+      "regle": "Règle 3.3: Imparfait - GNS + Verbe + Lieu",
+      "exemple": "Wij waren in het park",
+      "phrase_francais": "Il parlait dans la rue"
+    },
+    {
+      "phrase": "Ik speel voetbal naar Liège niet",
+      "regle": "Règle 1.4: GNS + Verbe + Lieu + Négation",
+      "exemple": "Peter gaat naar het museum niet",
+      "phrase_francais": "Je ne joue pas au football vers Liège"
+    },
+    {
+      "phrase": "Het kind woont in Amsterdam niet",
+      "regle": "Règle 1.4: GNS + Verbe + Lieu + Négation",
+      "exemple": "Peter gaat naar het museum niet",
+      "phrase_francais": "L'enfant n'habite à Amsterdam"
+    },
+    {
+      "phrase": "Zij geven voor het eten op school niet",
+      "regle": "Règle 4.2: GNS + Verbe + Temps + Lieu + Négation",
+      "exemple": "Zij eten vandaag in het restaurant niet",
+      "phrase_francais": "Elles ne donnent pas avant le repas à l'école"
+    },
+    {
+      "phrase": "Hij geeft maandag het geschenk",
+      "regle": "Règle 2.2: GNS + Verbe + Temps + COD",
+      "exemple": "Ik eet morgen het eten",
+      "phrase_francais": "Il donne lundi le cadeau"
+    },
+    {
+      "phrase": "De jongen neemt 's ochtends op straat",
+      "regle": "Règle 2.4: GNS + Verbe + Temps + Lieu",
+      "exemple": "Zij is op zondag naar het museum gegaan",
+      "phrase_francais": "Le garçon prend quelque chose le matin dans la rue"
+    },
+    {
+      "phrase": "Ik zie 's avonds de film",
+      "regle": "Règle 2.2: GNS + Verbe + Temps + COD",
+      "exemple": "Ik eet morgen het eten",
+      "phrase_francais": "Je vois le film le soir"
+    },
+    {
+      "phrase": "De jongen blijft in Amsterdam niet",
+      "regle": "Règle 1.4: GNS + Verbe + Lieu + Négation",
+      "exemple": "Peter gaat naar het museum niet",
+      "phrase_francais": "Le garçon ne reste pas à Amsterdam"
+    },
+    {
+      "phrase": "Ik blijf in het restaurant",
+      "regle": "Règle 1.3: GNS + Verbe + Lieu",
+      "exemple": "Zij gaan naar Amsterdam",
+      "phrase_francais": "Je reste au restaurant"
+    },
+    {
+      "phrase": "De vrouw woont in de stad niet",
+      "regle": "Règle 1.2: GNS + Verbe + Temps + Négation",
+      "exemple": "Bert komt vandaag niet",
+      "phrase_francais": "La femme n'habite en ville"
+    },
+    {
+      "phrase": "Zij gaven woensdag in Spanje",
+      "regle": "Règle 3.4: Imparfait - GNS + Verbe + Temps + Lieu",
+      "exemple": "Zij gingen gisterdag naar Amsterdam",
+      "phrase_francais": "Elles donnaient mercredi en Espagne"
+    },
+    {
+      "phrase": "Hij geeft het geschenk gisterdag op het plein",
+      "regle": "Règle 4.3: GNS + Verbe + COD + Temps + Lieu",
+      "exemple": "Ik breng het boek morgen naar het museum",
+      "phrase_francais": "Il donne le cadeau hier sur la place"
+    },
+    {
+      "phrase": "De vrouw werkt aan het plan",
+      "regle": "Règle 2.1: GNS + Verbe + COD",
+      "exemple": "Hij kent de hond",
+      "phrase_francais": "La femme travaille au plan"
+    },
+    {
+      "phrase": "Zij woonden gisterdag om 8 uur in Amsterdam",
+      "regle": "Règle 3.4: Imparfait - GNS + Verbe + Temps + Lieu",
+      "exemple": "Zij gingen gisterdag naar Amsterdam",
+      "phrase_francais": "Elles habitaient hier à 8 heures à Amsterdam"
+    },
+    {
+      "phrase": "Het kind rijdt donderdag het paard op het terras",
+      "regle": "Règle 4.1: GNS + Verbe + Temps + COD + Lieu",
+      "exemple": "Wij brengen het cadeau morgen naar Amsterdam",
+      "phrase_francais": "L'enfant conduit le cheval jeudi sur la terrasse"
+    },
+    {
+      "phrase": "Hij werkte het project",
+      "regle": "Règle 3.1: Imparfait - GNS + Verbe + COD",
+      "exemple": "Zij zagen de hond",
+      "phrase_francais": "Il travaillait le project"
+    },
+    {
+      "phrase": "Ik hou van de kat op het terras",
+      "regle": "Règle 2.3: GNS + Verbe + COD + Lieu",
+      "exemple": "Ik wil een reis naar Spanje maken",
+      "phrase_francais": "J'aime le chat sur la terrasse"
+    },
+    {
+      "phrase": "Jullie kunnen buiten op school spelen",
+      "regle": "Règle 1.3: GNS + Verbe + Lieu",
+      "exemple": "Zij gaan naar Amsterdam",
+      "phrase_francais": "Vous pouvez jouer à l'école"
+    },
+    {
+      "phrase": "De man maakte iets 's middags op het terras",
+      "regle": "Règle 3.4: Imparfait - GNS + Verbe + Temps + Lieu",
+      "exemple": "Zij gingen gisterdag naar Amsterdam",
+      "phrase_francais": "L'homme faisait quelque chose l'après-midi sur la terrasse"
+    },
+    {
+      "phrase": "Ik leer in de nacht Nederlands in de stad",
+      "regle": "Règle 4.1: GNS + Verbe + Temps + COD + Lieu",
+      "exemple": "Wij brengen het cadeau morgen naar Amsterdam",
+      "phrase_francais": "J'apprends le néerlandais la nuit en ville"
+    },
+    {
+      "phrase": "De man kan naar Amsterdam gaan",
+      "regle": "Règle 3.3: Imparfait - GNS + Verbe + Lieu",
+      "exemple": "Wij waren in het park",
+      "phrase_francais": "L'homme pouvait aller vers Amsterdam"
+    },
+    {
+      "phrase": "De man leert Nederlands op het terras",
+      "regle": "Règle 2.3: GNS + Verbe + COD + Lieu",
+      "exemple": "Ik wil een reis naar Spanje maken",
+      "phrase_francais": "L'homme apprend le néerlandais sur la terrasse"
+    },
+    {
+      "phrase": "Jij rekende de nummers",
+      "regle": "Règle 3.1: Imparfait - GNS + Verbe + COD",
+      "exemple": "Zij zagen de hond",
+      "phrase_francais": "Tu comptais les chiffres"
+    },
+    {
+      "phrase": "Jij neemt het boek naar het station niet",
+      "regle": "Règle 1.4: GNS + Verbe + Lieu + Négation",
+      "exemple": "Peter gaat naar het museum niet",
+      "phrase_francais": "Tu ne prends pas le livre vers la gare"
+    },
+    {
+      "phrase": "De jongen nam het boek naar Liège",
+      "regle": "Règle 3.3: Imparfait - GNS + Verbe + Lieu",
+      "exemple": "Wij waren in het park",
+      "phrase_francais": "Le garçon prenais le livre vers Liège"
+    },
+    {
+      "phrase": "Ik wil in de bibliotheek niet",
+      "regle": "Règle 1.4: GNS + Verbe + Lieu + Négation",
+      "exemple": "Peter gaat naar het museum niet",
+      "phrase_francais": "Je veux à la bibliothèque"
+    },
+    {
+      "phrase": "De jongen zet het glas vrijdag op het plein",
+      "regle": "Règle 2.4: GNS + Verbe + Temps + Lieu",
+      "exemple": "Zij is op zondag naar het museum gegaan",
+      "phrase_francais": "Le garçon pose le verre vendredi sur la place"
+    },
+    {
+      "phrase": "Jullie rekenden de taken",
+      "regle": "Règle 3.1: Imparfait - GNS + Verbe + COD",
+      "exemple": "Zij zagen de hond",
+      "phrase_francais": "Vous comptiez les tâches"
+    },
+    {
+      "phrase": "Ik geef zondag in de bibliotheek niet",
+      "regle": "Règle 4.2: GNS + Verbe + Temps + Lieu + Négation",
+      "exemple": "Zij eten vandaag in het restaurant niet",
+      "phrase_francais": "Je ne donne pas dimanche à la bibliothèque"
+    },
+    {
+      "phrase": "Zij speelt het piano 's avonds in het restaurant",
+      "regle": "Règle 4.3: GNS + Verbe + COD + Temps + Lieu",
+      "exemple": "Ik breng het boek morgen naar het museum",
+      "phrase_francais": "Elle joue le piano le soir au restaurant"
+    },
+    {
+      "phrase": "Ik moest in het restaurant",
+      "regle": "Règle 3.3: Imparfait - GNS + Verbe + Lieu",
+      "exemple": "Wij waren in het park",
+      "phrase_francais": "Je devais au restaurant"
+    },
+    {
+      "phrase": "De man speelt om 8 uur het piano in Nederland",
+      "regle": "Règle 4.1: GNS + Verbe + Temps + COD + Lieu",
+      "exemple": "Wij brengen het cadeau morgen naar Amsterdam",
+      "phrase_francais": "L'homme joue à 8 heures le piano aux Pays-Bas"
+    },
+    {
+      "phrase": "Hij haalt dinsdag niet",
+      "regle": "Règle 1.2: GNS + Verbe + Temps + Négation",
+      "exemple": "Bert komt vandaag niet",
+      "phrase_francais": "Il cherche mardi"
+    },
+    {
+      "phrase": "De jongen opent het geschenk vandaag op school",
+      "regle": "Règle 4.3: GNS + Verbe + COD + Temps + Lieu",
+      "exemple": "Ik breng het boek morgen naar het museum",
+      "phrase_francais": "Le garçon ouvre le cadeau aujourd'hui à l'école"
+    },
+    {
+      "phrase": "De man geeft de brief in de bibliotheek",
+      "regle": "Règle 2.3: GNS + Verbe + COD + Lieu",
+      "exemple": "Ik wil een reis naar Spanje maken",
+      "phrase_francais": "L'homme donne la lettre à la bibliothèque"
+    },
+    {
+      "phrase": "Wij nemen de pen",
+      "regle": "Règle 2.1: GNS + Verbe + COD",
+      "exemple": "Hij kent de hond",
+      "phrase_francais": "Nous prenons le stylo"
+    },
+    {
+      "phrase": "Hij vraagde in Nederland",
+      "regle": "Règle 3.3: Imparfait - GNS + Verbe + Lieu",
+      "exemple": "Wij waren in het park",
+      "phrase_francais": "Il demandait aux Pays-Bas"
+    },
+    {
+      "phrase": "Jij zet in de nacht in de bibliotheek",
+      "regle": "Règle 2.4: GNS + Verbe + Temps + Lieu",
+      "exemple": "Zij is op zondag naar het museum gegaan",
+      "phrase_francais": "Tu mets quelque chose la nuit à la bibliothèque"
+    },
+    {
+      "phrase": "Ik houd woensdag in het restaurant",
+      "regle": "Règle 2.4: GNS + Verbe + Temps + Lieu",
+      "exemple": "Zij is op zondag naar het museum gegaan",
+      "phrase_francais": "J'aime mercredi au restaurant"
+    },
+    {
+      "phrase": "Ik kook zaterdag in Spanje",
+      "regle": "Règle 2.4: GNS + Verbe + Temps + Lieu",
+      "exemple": "Zij is op zondag naar het museum gegaan",
+      "phrase_francais": "Je cuisine samedi en Espagne"
+    },
+    {
+      "phrase": "De man opent om 8 uur het geschenk in Amsterdam",
+      "regle": "Règle 4.1: GNS + Verbe + Temps + COD + Lieu",
+      "exemple": "Wij brengen het cadeau morgen naar Amsterdam",
+      "phrase_francais": "L'homme ouvre le cadeau à 8 heures à Amsterdam"
+    },
+    {
+      "phrase": "Het kind werkt het plan voor het eten",
+      "regle": "Règle 2.5: GNS + Verbe + COD + Temps",
+      "exemple": "Hij ziet de vrienden morgen",
+      "phrase_francais": "L'enfant travaille le plan avant le repas"
+    },
+    {
+      "phrase": "Zij houdt van de hond op school",
+      "regle": "Règle 2.3: GNS + Verbe + COD + Lieu",
+      "exemple": "Ik wil een reis naar Spanje maken",
+      "phrase_francais": "Elle aime le chien à l'école"
+    },
+    {
+      "phrase": "Ik neem naar Brussel",
+      "regle": "Règle 1.3: GNS + Verbe + Lieu",
+      "exemple": "Zij gaan naar Amsterdam",
+      "phrase_francais": "Je prends quelque chose vers Bruxelles"
+    },
+    {
+      "phrase": "De jongen is woensdag",
+      "regle": "Règle 1.1: GNS + Verbe + Temps",
+      "exemple": "Bert komt vandaag",
+      "phrase_francais": "Le garçon est là mercredi"
+    },
+    {
+      "phrase": "Zij wil in het café niet",
+      "regle": "Règle 1.4: GNS + Verbe + Lieu + Négation",
+      "exemple": "Peter gaat naar het museum niet",
+      "phrase_francais": "Elle veux au café"
+    },
+    {
+      "phrase": "Ik opende het boek",
+      "regle": "Règle 3.1: Imparfait - GNS + Verbe + COD",
+      "exemple": "Zij zagen de hond",
+      "phrase_francais": "J'ouvrais le livre"
+    },
+    {
+      "phrase": "Zij opent het raam",
+      "regle": "Règle 2.1: GNS + Verbe + COD",
+      "exemple": "Hij kent de hond",
+      "phrase_francais": "Elle ouvre la fenêtre"
+    },
+    {
+      "phrase": "Ik speel gisterdag",
+      "regle": "Règle 1.1: GNS + Verbe + Temps",
+      "exemple": "Bert komt vandaag",
+      "phrase_francais": "Je joue hier"
+    },
+    {
+      "phrase": "Jij komt dinsdag in Amsterdam niet",
+      "regle": "Règle 4.2: GNS + Verbe + Temps + Lieu + Négation",
+      "exemple": "Zij eten vandaag in het restaurant niet",
+      "phrase_francais": "Tu vient mardi à Amsterdam"
+    },
+    {
+      "phrase": "De jongen nam in Spanje",
+      "regle": "Règle 3.3: Imparfait - GNS + Verbe + Lieu",
+      "exemple": "Wij waren in het park",
+      "phrase_francais": "Le garçon prenais quelque chose en Espagne"
+    },
+    {
+      "phrase": "Zij denken volgende week naar Ierland niet",
+      "regle": "Règle 4.2: GNS + Verbe + Temps + Lieu + Négation",
+      "exemple": "Zij eten vandaag in het restaurant niet",
+      "phrase_francais": "Elles ne pensent pas la semaine prochaine vers l'Irlande"
+    },
+    {
+      "phrase": "Jullie werken gisterdag de taak op school",
+      "regle": "Règle 4.1: GNS + Verbe + Temps + COD + Lieu",
+      "exemple": "Wij brengen het cadeau morgen naar Amsterdam",
+      "phrase_francais": "Vous travailliez hier à la tâche à l'école"
+    },
+    {
+      "phrase": "Zij waren morgen",
+      "regle": "Règle 3.2: Imparfait - GNS + Verbe + Temps",
+      "exemple": "Zij kwamen gisterdag",
+      "phrase_francais": "Elles étaient demain"
+    },
+    {
+      "phrase": "Ik antwoordde morgen op het plein",
+      "regle": "Règle 3.4: Imparfait - GNS + Verbe + Temps + Lieu",
+      "exemple": "Zij gingen gisterdag naar Amsterdam",
+      "phrase_francais": "Je répondais demain sur la place"
+    },
+    {
+      "phrase": "De man neemt van 9 tot 5 op het terras niet",
+      "regle": "Règle 4.2: GNS + Verbe + Temps + Lieu + Négation",
+      "exemple": "Zij eten vandaag in het restaurant niet",
+      "phrase_francais": "L'homme prend de 9 à 17 heures sur la terrasse"
+    },
+    {
+      "phrase": "Zij openen de winkel op het plein",
+      "regle": "Règle 2.3: GNS + Verbe + COD + Lieu",
+      "exemple": "Ik wil een reis naar Spanje maken",
+      "phrase_francais": "Elles ouvrent le magasin sur la place"
+    },
+    {
+      "phrase": "Ik kom in de nacht in het café",
+      "regle": "Règle 2.4: GNS + Verbe + Temps + Lieu",
+      "exemple": "Zij is op zondag naar het museum gegaan",
+      "phrase_francais": "Je viens la nuit au café"
+    },
+    {
+      "phrase": "Jij kan voor het eten op school niet",
+      "regle": "Règle 4.2: GNS + Verbe + Temps + Lieu + Négation",
+      "exemple": "Zij eten vandaag in het restaurant niet",
+      "phrase_francais": "Tu peux avant le repas à l'école"
+    },
+    {
+      "phrase": "Jij kookt dinsdag",
+      "regle": "Règle 1.1: GNS + Verbe + Temps",
+      "exemple": "Bert komt vandaag",
+      "phrase_francais": "Tu cuisine mardi"
+    },
+    {
+      "phrase": "Ik reisde vandaag op straat",
+      "regle": "Règle 3.4: Imparfait - GNS + Verbe + Temps + Lieu",
+      "exemple": "Zij gingen gisterdag naar Amsterdam",
+      "phrase_francais": "Je voyageais aujourd'hui dans la rue"
+    },
+    {
+      "phrase": "De man bleef volgende maand in Amsterdam",
+      "regle": "Règle 3.4: Imparfait - GNS + Verbe + Temps + Lieu",
+      "exemple": "Zij gingen gisterdag naar Amsterdam",
+      "phrase_francais": "L'homme restait le mois prochain à Amsterdam"
+    },
+    {
+      "phrase": "De man houdt van de kat op school",
+      "regle": "Règle 2.3: GNS + Verbe + COD + Lieu",
+      "exemple": "Ik wil een reis naar Spanje maken",
+      "phrase_francais": "L'homme aime le chat à l'école"
+    },
+    {
+      "phrase": "Zij ziet het museum 's avonds op het terras",
+      "regle": "Règle 4.3: GNS + Verbe + COD + Temps + Lieu",
+      "exemple": "Ik breng het boek morgen naar het museum",
+      "phrase_francais": "Elle voit le musée le soir sur la terrasse"
+    },
+    {
+      "phrase": "De jongen geeft de brief volgende week in het café",
+      "regle": "Règle 4.3: GNS + Verbe + COD + Temps + Lieu",
+      "exemple": "Ik breng het boek morgen naar het museum",
+      "phrase_francais": "Le garçon donne la lettre la semaine prochaine au café"
+    },
+    {
+      "phrase": "Jij houdt naar het museum",
+      "regle": "Règle 1.3: GNS + Verbe + Lieu",
+      "exemple": "Zij gaan naar Amsterdam",
+      "phrase_francais": "Tu aimes vers le musée"
+    },
+    {
+      "phrase": "Zij hebben in de winkel",
+      "regle": "Règle 1.3: GNS + Verbe + Lieu",
+      "exemple": "Zij gaan naar Amsterdam",
+      "phrase_francais": "Elles ont au magasin"
+    },
+    {
+      "phrase": "Zij luisterde naar Ierland",
+      "regle": "Règle 3.3: Imparfait - GNS + Verbe + Lieu",
+      "exemple": "Wij waren in het park",
+      "phrase_francais": "Elle écoutait vers l'Irlande"
+    },
+    {
+      "phrase": "De man is vrijdag niet",
+      "regle": "Règle 1.2: GNS + Verbe + Temps + Négation",
+      "exemple": "Bert komt vandaag niet",
+      "phrase_francais": "L'homme est vendredi"
+    },
+    {
+      "phrase": "Zij moet 's ochtends in Nederland niet",
+      "regle": "Règle 4.2: GNS + Verbe + Temps + Lieu + Négation",
+      "exemple": "Zij eten vandaag in het restaurant niet",
+      "phrase_francais": "Elle moet le matin aux Pays-Bas"
+    },
+    {
+      "phrase": "Hij wil om 8 uur naar het station",
+      "regle": "Règle 2.4: GNS + Verbe + Temps + Lieu",
+      "exemple": "Zij is op zondag naar het museum gegaan",
+      "phrase_francais": "Il veut aller à 8 heures vers la gare"
+    },
+    {
+      "phrase": "Zij zien het museum",
+      "regle": "Règle 2.1: GNS + Verbe + COD",
+      "exemple": "Hij kent de hond",
+      "phrase_francais": "Elles voient le musée"
+    },
+    {
+      "phrase": "Wij leren Engels vandaag",
+      "regle": "Règle 2.5: GNS + Verbe + COD + Temps",
+      "exemple": "Hij ziet de vrienden morgen",
+      "phrase_francais": "Nous apprenons l'anglais aujourd'hui"
+    },
+    {
+      "phrase": "Zij rijdt naar Luik",
+      "regle": "Règle 1.3: GNS + Verbe + Lieu",
+      "exemple": "Zij gaan naar Amsterdam",
+      "phrase_francais": "Elle conduit vers Liège"
+    },
+    {
+      "phrase": "Hij geeft het cadeau in het park",
+      "regle": "Règle 2.3: GNS + Verbe + COD + Lieu",
+      "exemple": "Ik wil een reis naar Spanje maken",
+      "phrase_francais": "Il donne le cadeau au parc"
+    },
+    {
+      "phrase": "Zij hebt morgen",
+      "regle": "Règle 1.1: GNS + Verbe + Temps",
+      "exemple": "Bert komt vandaag",
+      "phrase_francais": "Elle est là demain"
+    },
+    {
+      "phrase": "Het kind nam het geld",
+      "regle": "Règle 3.1: Imparfait - GNS + Verbe + COD",
+      "exemple": "Zij zagen de hond",
+      "phrase_francais": "L'enfant prenais l'argent"
+    },
+    {
+      "phrase": "Ik rijd de auto",
+      "regle": "Règle 2.1: GNS + Verbe + COD",
+      "exemple": "Hij kent de hond",
+      "phrase_francais": "Je conduis la voiture"
+    },
+    {
+      "phrase": "De man reist naar Ierland niet",
+      "regle": "Règle 1.4: GNS + Verbe + Lieu + Négation",
+      "exemple": "Peter gaat naar het museum niet",
+      "phrase_francais": "L'homme voyage vers l'Irlande"
+    },
+    {
+      "phrase": "Wij wilden morgen in de stad",
+      "regle": "Règle 3.4: Imparfait - GNS + Verbe + Temps + Lieu",
+      "exemple": "Zij gingen gisterdag naar Amsterdam",
+      "phrase_francais": "Nous voulions demain en ville"
+    },
+    {
+      "phrase": "Jullie moeten gisterdag",
+      "regle": "Règle 1.1: GNS + Verbe + Temps",
+      "exemple": "Bert komt vandaag",
+      "phrase_francais": "Vous deviez hier"
+    },
+    {
+      "phrase": "Ik moest vrijdag",
+      "regle": "Règle 3.2: Imparfait - GNS + Verbe + Temps",
+      "exemple": "Zij kwamen gisterdag",
+      "phrase_francais": "Je moest vendredi"
+    },
+    {
+      "phrase": "Ik leer Frans",
+      "regle": "Règle 2.1: GNS + Verbe + COD",
+      "exemple": "Hij kent de hond",
+      "phrase_francais": "J'apprends le français"
+    },
+    {
+      "phrase": "Jullie wandelen in Spanje",
+      "regle": "Règle 1.3: GNS + Verbe + Lieu",
+      "exemple": "Zij gaan naar Amsterdam",
+      "phrase_francais": "Vous marchez en Espagne"
+    },
+    {
+      "phrase": "Wij geven het cadeau",
+      "regle": "Règle 2.1: GNS + Verbe + COD",
+      "exemple": "Hij kent de hond",
+      "phrase_francais": "Nous donnons le cadeau"
+    },
+    {
+      "phrase": "Hij rekende de getallen",
+      "regle": "Règle 3.1: Imparfait - GNS + Verbe + COD",
+      "exemple": "Zij zagen de hond",
+      "phrase_francais": "Il comptait les nombres"
+    },
+    {
+      "phrase": "Jij speelt 's avonds het spel",
+      "regle": "Règle 2.2: GNS + Verbe + Temps + COD",
+      "exemple": "Ik eet morgen het eten",
+      "phrase_francais": "Tu joue le soir le jeu"
+    },
+    {
+      "phrase": "Zij blijven zaterdag op het plein",
+      "regle": "Règle 2.4: GNS + Verbe + Temps + Lieu",
+      "exemple": "Zij is op zondag naar het museum gegaan",
+      "phrase_francais": "Elles restent samedi sur la place"
+    },
+    {
+      "phrase": "Jij denkt aan de vrienden vrijdag op school",
+      "regle": "Règle 4.3: GNS + Verbe + COD + Temps + Lieu",
+      "exemple": "Ik breng het boek morgen naar het museum",
+      "phrase_francais": "Tu penses à tes amis vendredi à l'école"
+    },
+    {
+      "phrase": "De jongen had vandaag",
+      "regle": "Règle 3.2: Imparfait - GNS + Verbe + Temps",
+      "exemple": "Zij kwamen gisterdag",
+      "phrase_francais": "Le garçon avait quelque chose aujourd'hui"
+    },
+    {
+      "phrase": "Jullie maken in het park niet",
+      "regle": "Règle 1.4: GNS + Verbe + Lieu + Négation",
+      "exemple": "Peter gaat naar het museum niet",
+      "phrase_francais": "Vous ne faites pas au parc"
+    },
+    {
+      "phrase": "De vrouw bleef op het terras",
+      "regle": "Règle 3.3: Imparfait - GNS + Verbe + Lieu",
+      "exemple": "Wij waren in het park",
+      "phrase_francais": "La femme restait sur la terrasse"
+    },
+    {
+      "phrase": "Ik hield naar Ierland",
+      "regle": "Règle 3.3: Imparfait - GNS + Verbe + Lieu",
+      "exemple": "Wij waren in het park",
+      "phrase_francais": "J'aimais vers l'Irlande"
+    },
+    {
+      "phrase": "De jongen speelt de gitaar maandag",
+      "regle": "Règle 2.5: GNS + Verbe + COD + Temps",
+      "exemple": "Hij ziet de vrienden morgen",
+      "phrase_francais": "Le garçon joue la guitare lundi"
+    },
+    {
+      "phrase": "Jij luistert naar Luik",
+      "regle": "Règle 1.3: GNS + Verbe + Lieu",
+      "exemple": "Zij gaan naar Amsterdam",
+      "phrase_francais": "Tu écoutes vers Liège"
+    },
+    {
+      "phrase": "Zij hebt in de nacht in het park",
+      "regle": "Règle 2.4: GNS + Verbe + Temps + Lieu",
+      "exemple": "Zij is op zondag naar het museum gegaan",
+      "phrase_francais": "Elle a quelque chose la nuit au parc"
+    },
+    {
+      "phrase": "Hij hebt om 8 uur in Nederland",
+      "regle": "Règle 2.4: GNS + Verbe + Temps + Lieu",
+      "exemple": "Zij is op zondag naar het museum gegaan",
+      "phrase_francais": "Il a quelque chose à 8 heures aux Pays-Bas"
+    },
+    {
+      "phrase": "De jongen blijft op het plein niet",
+      "regle": "Règle 1.4: GNS + Verbe + Lieu + Négation",
+      "exemple": "Peter gaat naar het museum niet",
+      "phrase_francais": "Le garçon reste sur la place"
+    },
+    {
+      "phrase": "Ik neem gisterdag",
+      "regle": "Règle 1.1: GNS + Verbe + Temps",
+      "exemple": "Bert komt vandaag",
+      "phrase_francais": "Je prends quelque chose hier"
+    },
+    {
+      "phrase": "Jij woont donderdag in de bibliotheek niet",
+      "regle": "Règle 4.2: GNS + Verbe + Temps + Lieu + Négation",
+      "exemple": "Zij eten vandaag in het restaurant niet",
+      "phrase_francais": "Tu habite jeudi à la bibliothèque"
+    },
+    {
+      "phrase": "Wij gingen na het werk",
+      "regle": "Règle 3.2: Imparfait - GNS + Verbe + Temps",
+      "exemple": "Zij kwamen gisterdag",
+      "phrase_francais": "Nous allions après le travail"
+    },
+    {
+      "phrase": "De jongen was in de nacht",
+      "regle": "Règle 3.2: Imparfait - GNS + Verbe + Temps",
+      "exemple": "Zij kwamen gisterdag",
+      "phrase_francais": "Le garçon était la nuit"
+    },
+    {
+      "phrase": "Ik ga in Spanje niet",
+      "regle": "Règle 1.4: GNS + Verbe + Lieu + Négation",
+      "exemple": "Peter gaat naar het museum niet",
+      "phrase_francais": "Je ne vais pas en Espagne"
+    },
+    {
+      "phrase": "De vrouw mag volgende maand in de winkel",
+      "regle": "Règle 2.4: GNS + Verbe + Temps + Lieu",
+      "exemple": "Zij is op zondag naar het museum gegaan",
+      "phrase_francais": "La femme peut aller le mois prochain au magasin"
+    },
+    {
+      "phrase": "Zij speelt 's ochtends op straat niet",
+      "regle": "Règle 4.2: GNS + Verbe + Temps + Lieu + Négation",
+      "exemple": "Zij eten vandaag in het restaurant niet",
+      "phrase_francais": "Elle joue le matin dans la rue"
+    },
+    {
+      "phrase": "Zij denken aan de vrienden dinsdag in het restaurant",
+      "regle": "Règle 4.3: GNS + Verbe + COD + Temps + Lieu",
+      "exemple": "Ik breng het boek morgen naar het museum",
+      "phrase_francais": "Elles pensent à leurs amis mardi au restaurant"
+    },
+    {
+      "phrase": "Zij gaven om 8 uur",
+      "regle": "Règle 3.2: Imparfait - GNS + Verbe + Temps",
+      "exemple": "Zij kwamen gisterdag",
+      "phrase_francais": "Elles donnaient à 8 heures"
+    },
+    {
+      "phrase": "Zij spelen het instrument",
+      "regle": "Règle 2.1: GNS + Verbe + COD",
+      "exemple": "Hij kent de hond",
+      "phrase_francais": "Elles jouent de l'instrument"
+    },
+    {
+      "phrase": "Zij gaf vandaag",
+      "regle": "Règle 3.2: Imparfait - GNS + Verbe + Temps",
+      "exemple": "Zij kwamen gisterdag",
+      "phrase_francais": "Elle donnait aujourd'hui"
+    },
+    {
+      "phrase": "Wij denken aan het werk vandaag",
+      "regle": "Règle 2.5: GNS + Verbe + COD + Temps",
+      "exemple": "Hij ziet de vrienden morgen",
+      "phrase_francais": "Nous pensent aan le travail aujourd'hui"
+    },
+    {
+      "phrase": "Jij praatte om 8 uur in Nederland",
+      "regle": "Règle 3.4: Imparfait - GNS + Verbe + Temps + Lieu",
+      "exemple": "Zij gingen gisterdag naar Amsterdam",
+      "phrase_francais": "Tu parlais à 8 heures aux Pays-Bas"
+    },
+    {
+      "phrase": "De jongen had in de nacht naar het station",
+      "regle": "Règle 3.4: Imparfait - GNS + Verbe + Temps + Lieu",
+      "exemple": "Zij gingen gisterdag naar Amsterdam",
+      "phrase_francais": "Le garçon avait quelque chose la nuit vers la gare"
+    },
+    {
+      "phrase": "Jullie kwamen in de nacht in het park",
+      "regle": "Règle 3.4: Imparfait - GNS + Verbe + Temps + Lieu",
+      "exemple": "Zij gingen gisterdag naar Amsterdam",
+      "phrase_francais": "Vous veniez la nuit au parc"
+    },
+    {
+      "phrase": "Wij gaan 's middags naar het museum",
+      "regle": "Règle 2.4: GNS + Verbe + Temps + Lieu",
+      "exemple": "Zij is op zondag naar het museum gegaan",
+      "phrase_francais": "Nous allons l'après-midi vers le musée"
+    },
+    {
+      "phrase": "Zij zijn morgen op het terras",
+      "regle": "Règle 2.4: GNS + Verbe + Temps + Lieu",
+      "exemple": "Zij is op zondag naar het museum gegaan",
+      "phrase_francais": "Elles sont demain sur la terrasse"
+    },
+    {
+      "phrase": "Jullie gaan volgende week in het restaurant",
+      "regle": "Règle 2.4: GNS + Verbe + Temps + Lieu",
+      "exemple": "Zij is op zondag naar het museum gegaan",
+      "phrase_francais": "Vous allez la semaine prochaine au restaurant"
+    },
+    {
+      "phrase": "Zij wilde 's middags naar het station",
+      "regle": "Règle 3.4: Imparfait - GNS + Verbe + Temps + Lieu",
+      "exemple": "Zij gingen gisterdag naar Amsterdam",
+      "phrase_francais": "Elle voulait l'après-midi vers la gare"
+    },
+    {
+      "phrase": "Hij kon 's middags",
+      "regle": "Règle 3.2: Imparfait - GNS + Verbe + Temps",
+      "exemple": "Zij kwamen gisterdag",
+      "phrase_francais": "Il pouvait l'après-midi"
+    },
+    {
+      "phrase": "De vrouw komt vrijdag in de stad niet",
+      "regle": "Règle 4.2: GNS + Verbe + Temps + Lieu + Négation",
+      "exemple": "Zij eten vandaag in het restaurant niet",
+      "phrase_francais": "La femme vient vendredi en ville"
+    },
+    {
+      "phrase": "De vrouw is 's ochtends in het café niet",
+      "regle": "Règle 4.2: GNS + Verbe + Temps + Lieu + Négation",
+      "exemple": "Zij eten vandaag in het restaurant niet",
+      "phrase_francais": "La femme est le matin au café"
+    },
+    {
+      "phrase": "Jullie luisterden naar Brussel",
+      "regle": "Règle 3.3: Imparfait - GNS + Verbe + Lieu",
+      "exemple": "Wij waren in het park",
+      "phrase_francais": "Vous écoutiez vers Bruxelles"
+    },
+    {
+      "phrase": "Hij neemt morgen in het restaurant niet",
+      "regle": "Règle 4.2: GNS + Verbe + Temps + Lieu + Négation",
+      "exemple": "Zij eten vandaag in het restaurant niet",
+      "phrase_francais": "Il prend demain au restaurant"
+    },
+    {
+      "phrase": "Jullie praten vandaag in het café niet",
+      "regle": "Règle 4.2: GNS + Verbe + Temps + Lieu + Négation",
+      "exemple": "Zij eten vandaag in het restaurant niet",
+      "phrase_francais": "Vous parlent aujourd'hui au café"
+    },
+    {
+      "phrase": "De jongen vraagt voor het eten op het plein niet",
+      "regle": "Règle 4.2: GNS + Verbe + Temps + Lieu + Négation",
+      "exemple": "Zij eten vandaag in het restaurant niet",
+      "phrase_francais": "Le garçon demande avant le repas sur la place"
+    },
+    {
+      "phrase": "Jullie wonen zondag naar Brussel",
+      "regle": "Règle 2.4: GNS + Verbe + Temps + Lieu",
+      "exemple": "Zij is op zondag naar het museum gegaan",
+      "phrase_francais": "Vous habitez dimanche vers Bruxelles"
+    },
+    {
+      "phrase": "Het kind bleef 's ochtends",
+      "regle": "Règle 3.2: Imparfait - GNS + Verbe + Temps",
+      "exemple": "Zij kwamen gisterdag",
+      "phrase_francais": "L'enfant restait le matin"
+    },
+    {
+      "phrase": "De man denkt gisterdag aan de vrienden in de winkel",
+      "regle": "Règle 4.1: GNS + Verbe + Temps + COD + Lieu",
+      "exemple": "Wij brengen het cadeau morgen naar Amsterdam",
+      "phrase_francais": "L'homme pense à ses amis hier au magasin"
+    },
+    {
+      "phrase": "De vrouw speelt de bal",
+      "regle": "Règle 2.1: GNS + Verbe + COD",
+      "exemple": "Hij kent de hond",
+      "phrase_francais": "La femme joue le ballon"
+    },
+    {
+      "phrase": "Zij houdt 's avonds niet",
+      "regle": "Règle 1.2: GNS + Verbe + Temps + Négation",
+      "exemple": "Bert komt vandaag niet",
+      "phrase_francais": "Elle aime le soir"
+    },
+    {
+      "phrase": "Zij luistert woensdag niet",
+      "regle": "Règle 1.2: GNS + Verbe + Temps + Négation",
+      "exemple": "Bert komt vandaag niet",
+      "phrase_francais": "Elle luistert mercredi"
+    },
+    {
+      "phrase": "De vrouw haalde in Spanje",
+      "regle": "Règle 3.3: Imparfait - GNS + Verbe + Lieu",
+      "exemple": "Wij waren in het park",
+      "phrase_francais": "La femme cherchait en Espagne"
+    },
+    {
+      "phrase": "Het kind vraagt in de nacht naar Luik",
+      "regle": "Règle 2.4: GNS + Verbe + Temps + Lieu",
+      "exemple": "Zij is op zondag naar het museum gegaan",
+      "phrase_francais": "L'enfant demande la nuit vers Liège"
+    },
+    {
+      "phrase": "Zij haalden in de nacht",
+      "regle": "Règle 3.2: Imparfait - GNS + Verbe + Temps",
+      "exemple": "Zij kwamen gisterdag",
+      "phrase_francais": "Elles cherchaient la nuit"
+    },
+    {
+      "phrase": "Jij hield van de hond",
+      "regle": "Règle 3.1: Imparfait - GNS + Verbe + COD",
+      "exemple": "Zij zagen de hond",
+      "phrase_francais": "Tu aimais le chien"
+    },
+    {
+      "phrase": "De vrouw ziet 's avonds in Amsterdam",
+      "regle": "Règle 2.4: GNS + Verbe + Temps + Lieu",
+      "exemple": "Zij is op zondag naar het museum gegaan",
+      "phrase_francais": "La femme voit le soir à Amsterdam"
+    },
+    {
+      "phrase": "Hij telt 's middags de dagen",
+      "regle": "Règle 2.2: GNS + Verbe + Temps + COD",
+      "exemple": "Ik eet morgen het eten",
+      "phrase_francais": "Il compte les jours l'après-midi"
+    },
+    {
+      "phrase": "Jij geeft om 8 uur op het plein",
+      "regle": "Règle 2.4: GNS + Verbe + Temps + Lieu",
+      "exemple": "Zij is op zondag naar het museum gegaan",
+      "phrase_francais": "Tu donnes quelque chose à 8 heures sur la place"
+    },
+    {
+      "phrase": "Het kind geeft morgen in het café",
+      "regle": "Règle 2.4: GNS + Verbe + Temps + Lieu",
+      "exemple": "Zij is op zondag naar het museum gegaan",
+      "phrase_francais": "L'enfant donne quelque chose demain au café"
+    },
+    {
+      "phrase": "Jullie praten in Spanje",
+      "regle": "Règle 1.3: GNS + Verbe + Lieu",
+      "exemple": "Zij gaan naar Amsterdam",
+      "phrase_francais": "Vous parlez en Espagne"
+    },
+    {
+      "phrase": "Jij kon 's avonds in de winkel",
+      "regle": "Règle 3.4: Imparfait - GNS + Verbe + Temps + Lieu",
+      "exemple": "Zij gingen gisterdag naar Amsterdam",
+      "phrase_francais": "Tu pouvais le soir au magasin"
+    },
+    {
+      "phrase": "Jij reist van 9 tot 5",
+      "regle": "Règle 1.1: GNS + Verbe + Temps",
+      "exemple": "Bert komt vandaag",
+      "phrase_francais": "Tu voyage de 9 à 17 heures"
+    },
+    {
+      "phrase": "Hij geeft in de nacht",
+      "regle": "Règle 1.1: GNS + Verbe + Temps",
+      "exemple": "Bert komt vandaag",
+      "phrase_francais": "Il donne quelque chose la nuit"
+    },
+    {
+      "phrase": "De vrouw hebt zondag niet",
+      "regle": "Règle 1.2: GNS + Verbe + Temps + Négation",
+      "exemple": "Bert komt vandaag niet",
+      "phrase_francais": "La femme as dimanche"
+    },
+    {
+      "phrase": "De jongen denkt aan de vakantie in de stad",
+      "regle": "Règle 2.3: GNS + Verbe + COD + Lieu",
+      "exemple": "Ik wil een reis naar Spanje maken",
+      "phrase_francais": "Le garçon pense aux vacances en ville"
+    },
+    {
+      "phrase": "De man rijdt het paard",
+      "regle": "Règle 2.1: GNS + Verbe + COD",
+      "exemple": "Hij kent de hond",
+      "phrase_francais": "L'homme conduit le cheval"
+    },
+    {
+      "phrase": "Hij kon in de stad",
+      "regle": "Règle 3.3: Imparfait - GNS + Verbe + Lieu",
+      "exemple": "Wij waren in het park",
+      "phrase_francais": "Il pouvait en ville"
+    },
+    {
+      "phrase": "Jij dacht na het werk",
+      "regle": "Règle 3.2: Imparfait - GNS + Verbe + Temps",
+      "exemple": "Zij kwamen gisterdag",
+      "phrase_francais": "Tu pensais après le travail"
+    },
+    {
+      "phrase": "Het kind haalde 's avonds in Amsterdam",
+      "regle": "Règle 3.4: Imparfait - GNS + Verbe + Temps + Lieu",
+      "exemple": "Zij gingen gisterdag naar Amsterdam",
+      "phrase_francais": "L'enfant cherchait le soir à Amsterdam"
+    },
+    {
+      "phrase": "Het kind was volgende maand",
+      "regle": "Règle 3.2: Imparfait - GNS + Verbe + Temps",
+      "exemple": "Zij kwamen gisterdag",
+      "phrase_francais": "L'enfant était le mois prochain"
+    },
+    {
+      "phrase": "Het kind rekent de nummers",
+      "regle": "Règle 2.1: GNS + Verbe + COD",
+      "exemple": "Hij kent de hond",
+      "phrase_francais": "L'enfant compte les chiffres"
+    },
+    {
+      "phrase": "Jullie kwamen op school",
+      "regle": "Règle 3.3: Imparfait - GNS + Verbe + Lieu",
+      "exemple": "Wij waren in het park",
+      "phrase_francais": "Vous veniez à l'école"
+    },
+    {
+      "phrase": "Jij antwoordt woensdag",
+      "regle": "Règle 1.1: GNS + Verbe + Temps",
+      "exemple": "Bert komt vandaag",
+      "phrase_francais": "Tu réponds mercredi"
+    },
+    {
+      "phrase": "De vrouw moet maandag in het restaurant niet",
+      "regle": "Règle 4.2: GNS + Verbe + Temps + Lieu + Négation",
+      "exemple": "Zij eten vandaag in het restaurant niet",
+      "phrase_francais": "La femme moet lundi au restaurant"
+    },
+    {
+      "phrase": "De jongen leert vrijdag het boek in het park",
+      "regle": "Règle 4.1: GNS + Verbe + Temps + COD + Lieu",
+      "exemple": "Wij brengen het cadeau morgen naar Amsterdam",
+      "phrase_francais": "Le garçon apprend le livre vendredi au parc"
+    },
+    {
+      "phrase": "Ik leerde de les",
+      "regle": "Règle 3.1: Imparfait - GNS + Verbe + COD",
+      "exemple": "Zij zagen de hond",
+      "phrase_francais": "J'apprenais la leçon"
+    },
+    {
+      "phrase": "Zij leert Nederlands gisterdag op het terras",
+      "regle": "Règle 4.3: GNS + Verbe + COD + Temps + Lieu",
+      "exemple": "Ik breng het boek morgen naar het museum",
+      "phrase_francais": "Elle apprend le néerlandais hier sur la terrasse"
+    },
+    {
+      "phrase": "Hij werkt 's ochtends de taak op straat",
+      "regle": "Règle 4.1: GNS + Verbe + Temps + COD + Lieu",
+      "exemple": "Wij brengen het cadeau morgen naar Amsterdam",
+      "phrase_francais": "Il travaille à la tâche le matin dans la rue"
+    },
+    {
+      "phrase": "De jongen kwam maandag",
+      "regle": "Règle 3.2: Imparfait - GNS + Verbe + Temps",
+      "exemple": "Zij kwamen gisterdag",
+      "phrase_francais": "Le garçon venait lundi"
+    },
+    {
+      "phrase": "Hij dacht in het park",
+      "regle": "Règle 3.3: Imparfait - GNS + Verbe + Lieu",
+      "exemple": "Wij waren in het park",
+      "phrase_francais": "Il pensait au parc"
+    },
+    {
+      "phrase": "Jullie luisterden in het café",
+      "regle": "Règle 3.3: Imparfait - GNS + Verbe + Lieu",
+      "exemple": "Wij waren in het park",
+      "phrase_francais": "Vous écoutiez au café"
+    },
+    {
+      "phrase": "Wij werken het plan",
+      "regle": "Règle 2.1: GNS + Verbe + COD",
+      "exemple": "Hij kent de hond",
+      "phrase_francais": "Nous travaillent le plan"
+    },
+    {
+      "phrase": "Wij komen vandaag in de bibliotheek",
+      "regle": "Règle 2.4: GNS + Verbe + Temps + Lieu",
+      "exemple": "Zij is op zondag naar het museum gegaan",
+      "phrase_francais": "Nous venons aujourd'hui à la bibliothèque"
+    },
+    {
+      "phrase": "Het kind rijdt het paard zaterdag in de stad",
+      "regle": "Règle 4.3: GNS + Verbe + COD + Temps + Lieu",
+      "exemple": "Ik breng het boek morgen naar het museum",
+      "phrase_francais": "L'enfant conduit le cheval samedi en ville"
+    },
+    {
+      "phrase": "Jij zet zaterdag in Spanje niet",
+      "regle": "Règle 4.2: GNS + Verbe + Temps + Lieu + Négation",
+      "exemple": "Zij eten vandaag in het restaurant niet",
+      "phrase_francais": "Tu ne mets pas samedi en Espagne"
+    },
+    {
+      "phrase": "Zij blijven na het werk niet",
+      "regle": "Règle 1.2: GNS + Verbe + Temps + Négation",
+      "exemple": "Bert komt vandaag niet",
+      "phrase_francais": "Elle restent après le travail"
+    },
+    {
+      "phrase": "Zij hebt in Nederland",
+      "regle": "Règle 1.3: GNS + Verbe + Lieu",
+      "exemple": "Zij gaan naar Amsterdam",
+      "phrase_francais": "Elle a aux Pays-Bas"
+    },
+    {
+      "phrase": "Ik had 's avonds",
+      "regle": "Règle 3.2: Imparfait - GNS + Verbe + Temps",
+      "exemple": "Zij kwamen gisterdag",
+      "phrase_francais": "J'avais le soir"
+    },
+    {
+      "phrase": "Hij kan in de stad niet",
+      "regle": "Règle 1.4: GNS + Verbe + Lieu + Négation",
+      "exemple": "Peter gaat naar het museum niet",
+      "phrase_francais": "Il peux en ville"
+    },
+    {
+      "phrase": "Wij houden in de nacht in Amsterdam niet",
+      "regle": "Règle 4.2: GNS + Verbe + Temps + Lieu + Négation",
+      "exemple": "Zij eten vandaag in het restaurant niet",
+      "phrase_francais": "Nous aiment la nuit à Amsterdam"
+    },
+    {
+      "phrase": "Zij kookt op straat niet",
+      "regle": "Règle 1.4: GNS + Verbe + Lieu + Négation",
+      "exemple": "Peter gaat naar het museum niet",
+      "phrase_francais": "Elle ne cuisine pas dans la rue"
+    },
+    {
+      "phrase": "De jongen nam in de bibliotheek",
+      "regle": "Règle 3.3: Imparfait - GNS + Verbe + Lieu",
+      "exemple": "Wij waren in het park",
+      "phrase_francais": "Le garçon prenais quelque chose à la bibliothèque"
+    },
+    {
+      "phrase": "De man houdt op het plein",
+      "regle": "Règle 1.3: GNS + Verbe + Lieu",
+      "exemple": "Zij gaan naar Amsterdam",
+      "phrase_francais": "L'homme aime sur la place"
+    },
+    {
+      "phrase": "De man mocht dinsdag op het plein",
+      "regle": "Règle 3.4: Imparfait - GNS + Verbe + Temps + Lieu",
+      "exemple": "Zij gingen gisterdag naar Amsterdam",
+      "phrase_francais": "L'homme pouvait mardi sur la place"
+    },
+    {
+      "phrase": "Ik rijd de fiets 's ochtends in het café",
+      "regle": "Règle 4.3: GNS + Verbe + COD + Temps + Lieu",
+      "exemple": "Ik breng het boek morgen naar het museum",
+      "phrase_francais": "Je vais à vélo le matin au café"
+    },
+    {
+      "phrase": "Ik reisde in het park",
+      "regle": "Règle 3.3: Imparfait - GNS + Verbe + Lieu",
+      "exemple": "Wij waren in het park",
+      "phrase_francais": "Je voyageais au parc"
+    },
+    {
+      "phrase": "De man reist 's ochtends niet",
+      "regle": "Règle 1.2: GNS + Verbe + Temps + Négation",
+      "exemple": "Bert komt vandaag niet",
+      "phrase_francais": "L'homme voyage le matin"
+    }
+  ]
+}
