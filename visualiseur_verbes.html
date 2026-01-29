@@ -679,11 +679,6 @@
         document.getElementById('verbType').addEventListener('change', function() {
             document.getElementById('loadingMessage').style.display = 'block';
             document.getElementById('verbsTable').style.display = 'none';
-            loadVerbs(this.value);
-        });
-        document.addEventListener('DOMContentLoaded', loadVerbs);
-    </script>
-</body>
             // Réinitialiser les masquages
             hiddenColumns.preterite = false;
             hiddenColumns.pastParticiple = false;
@@ -716,3 +711,6 @@
             
             observer.observe(document.querySelector('.table-wrapper'), { childList: true, subtree: true });
         });
+    </script>
+</body>
+</html>
