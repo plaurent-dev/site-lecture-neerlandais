@@ -770,6 +770,7 @@ a:hover {
 
     .navbar-content {
         flex-wrap: wrap;
+        height: auto;
     }
 
     .navbar-buttons {
@@ -802,9 +803,12 @@ a:hover {
         padding: 0 20px;
     }
 
-    .container {
-        padding: 15px;
-        margin: 15px 5px;
+    .navbar-content {
+        flex-direction: column;
+        height: auto;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 12px;
     }
 
     h1 {
@@ -814,6 +818,24 @@ a:hover {
     .navbar-link {
         padding: 8px 12px;
         font-size: 0.85em;
+    }
+
+    .navbar-buttons {
+        width: 100%;
+        margin-top: 0;
+        gap: 8px;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        order: 2;
+    }
+
+    .navbar-buttons > div:first-child {
+        order: 1;
+    }
+
+    .container {
+        padding: 15px;
+        margin: 15px 5px;
     }
 }
 
@@ -1418,7 +1440,8 @@ a:hover {
     }
 
     .navbar-content {
-        height: 60px;
+        height: auto;
+        flex-wrap: wrap;
     }
 
     .navbar h1 {
