@@ -884,15 +884,19 @@
                 }
                 
                 // Obtenir les formes pour ces personnes
-                allAnswers = selectedPersons.map(p => {
+                const answersSet = new Set();
+                selectedPersons.forEach(p => {
+                    let answer;
                     if (timeType === 'present') {
-                        return verb.present[p];
+                        answer = verb.present[p];
                     } else if (timeType === 'preterite') {
-                        return verb.preterite[p];
+                        answer = verb.preterite[p];
                     } else if (timeType === 'past_participle') {
-                        return verb.past_participle_conjugated[p];
+                        answer = verb.past_participle_conjugated[p];
                     }
-                }).sort(() => Math.random() - 0.5);
+                    if (answer) answersSet.add(answer);
+                });
+                allAnswers = Array.from(answersSet).sort(() => Math.random() - 0.5);
             } else {
                 // Mode facile : comme avant
                 const wrongAnswers = [];
