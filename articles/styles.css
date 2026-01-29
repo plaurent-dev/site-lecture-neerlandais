@@ -770,6 +770,21 @@ a:hover {
     .navbar-buttons {
         width: 100%;
         margin-top: 10px;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropdown-menu {
+        display: none !important;
+    }
+
+    .dropdown-item {
+        font-size: 0.9em;
     }
 
     .fiches-grid {
@@ -1367,6 +1382,47 @@ a:hover {
         font-size: 1.2em;
     }
 
+    .navbar-buttons {
+        width: 100%;
+        margin-top: 10px;
+        flex-wrap: wrap;
+    }
+
+    .navbar-link {
+        padding: 8px 12px;
+        font-size: 0.85em;
+        margin: 5px 2px;
+    }
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropdown-menu {
+        position: absolute;
+        left: -30%;
+        top: 110%;
+        background: white;
+        min-width: 220px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+        border-radius: 8px;
+        z-index: 1001;
+        padding: 8px 0;
+        display: none !important;
+    }
+
+    .dropdown-item {
+        color: var(--text-dark);
+        padding: 10px 18px;
+        text-decoration: none;
+        display: block;
+        font-weight: 600;
+        border-radius: 6px;
+        transition: background 0.2s;
+        font-size: 0.9em;
+    }
+
     .fiche-container {
         padding: 20px;
         margin: 20px auto;
@@ -1429,6 +1485,55 @@ a:hover {
     .navbar h1 {
         font-size: 1.1em;
         margin-bottom: 5px;
+    }
+
+    .navbar-buttons {
+        width: 100%;
+        margin-top: 8px;
+        gap: 8px;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .navbar-link {
+        padding: 6px 10px;
+        font-size: 0.8em;
+        border-radius: 6px;
+        margin: 3px;
+    }
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+        width: auto;
+    }
+
+    .dropdown-menu {
+        position: absolute;
+        left: -50%;
+        top: 110%;
+        background: white;
+        min-width: 200px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+        border-radius: 8px;
+        z-index: 1001;
+        padding: 8px 0;
+        display: none !important;
+    }
+
+    .dropdown-item {
+        color: var(--text-dark);
+        padding: 10px 15px;
+        text-decoration: none;
+        display: block;
+        font-weight: 600;
+        border-radius: 6px;
+        transition: background 0.2s;
+        font-size: 0.85em;
+    }
+
+    .dropdown-item:hover {
+        background: var(--bg-light-gray);
     }
 
     .back-btn {

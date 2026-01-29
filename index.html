@@ -630,7 +630,7 @@
             return;
         }
 
-        const fichesRecentes = fiches.slice(0, 6);
+        const fichesRecentes = fiches.slice(0, 1);
 
         container.innerHTML = fichesRecentes.map(fiche => `
             <div class="fiche-card" data-fiche="${fiche.href}">
@@ -837,9 +837,46 @@
         });
     }
 
+    // Gestion des dropdowns sur mobile
+    function setupDropdownHandlers() {
+        const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+        
+        dropdownToggles.forEach(toggle => {
+            toggle.addEventListener('click', function(e) {
+                e.preventDefault();
+                const dropdown = this.closest('.dropdown');
+                const menu = dropdown.querySelector('.dropdown-menu');
+                
+                // Fermer tous les autres dropdowns
+                document.querySelectorAll('.dropdown-menu').forEach(m => {
+                    if (m !== menu) {
+                        m.style.display = 'none';
+                    }
+                });
+                
+                // Basculer le dropdown actuel
+                if (menu.style.display === 'none' || menu.style.display === '') {
+                    menu.style.display = 'block';
+                } else {
+                    menu.style.display = 'none';
+                }
+            });
+        });
+        
+        // Fermer les dropdowns quand on clique ailleurs
+        document.addEventListener('click', function(e) {
+            if (!e.target.closest('.dropdown')) {
+                document.querySelectorAll('.dropdown-menu').forEach(m => {
+                    m.style.display = 'none';
+                });
+            }
+        });
+    }
+
     window.onload = function() {
         updateNavbar();
         afficherFichesRecentes();
+        setupDropdownHandlers();
     };
 
     // Callback function when Google Maps API is loaded
