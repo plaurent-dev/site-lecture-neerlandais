@@ -519,8 +519,8 @@
                 <label>Filtre par Fréquence</label>
                 <div class="filter-group">
                     <button class="filter-btn active" data-frequency="all">Tous les verbes</button>
-                    <button class="filter-btn" data-frequency="very_frequent">⭐ Très fréquent</button>
-                    <button class="filter-btn" data-frequency="frequent">⭐⭐ Fréquent</button>
+                    <button class="filter-btn" data-frequency="very_frequent">⭐⭐ Très fréquent</button>
+                    <button class="filter-btn" data-frequency="frequent">⭐ Fréquent</button>
                 </div>
             </div>
 
@@ -622,7 +622,7 @@
                 } else if (selectedFrequency === 'very_frequent') {
                     return v.frequency === 'very_frequent';
                 } else if (selectedFrequency === 'frequent') {
-                    return v.frequency === 'very_frequent' || v.frequency === 'frequent';
+                    return v.frequency === 'frequent';
                 }
                 return true;
             });

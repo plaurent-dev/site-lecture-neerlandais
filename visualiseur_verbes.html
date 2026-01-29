@@ -329,7 +329,13 @@
                 <option value="irregulier">Verbes Irréguliers</option>
                 <option value="regulier">Verbes Réguliers</option>
             </select>
-            <input type="text" class="search-box" id="searchBox" placeholder="Rechercher un verbe (infinitif ou traduction)..." style="flex: 1; min-width: 250px; max-width: 400px;">
+            <input type="text" class="search-box" id="infinitiveSearch" placeholder="Rechercher par infinitif..." style="flex: 1; min-width: 250px; max-width: 400px;">
+            <select id="frequencyFilter" class="search-box" style="flex: 0 1 200px; max-width: 200px; padding: 10px 15px; font-weight: 600;">
+                <option value="">Tous les verbes</option>
+                <option value="very_frequent">⭐⭐ Très fréquents</option>
+                <option value="frequent">⭐ Fréquents</option>
+                <option value="none">Non classés</option>
+            </select>
             <div class="button-group">
                 <button class="btn-download" onclick="downloadAsHTML()">📥 Télécharger (HTML)</button>
                 <button class="btn-download" onclick="downloadAsCSV()">📥 Télécharger (CSV)</button>
@@ -382,6 +388,14 @@
     <script>
         let allVerbs = [];
         let filteredVerbs = [];
+        let hiddenColumns = {
+            preterite: false,
+            pastParticiple: false
+        };
+        let hideTimers = {
+            preterite: null,
+            pastParticiple: null
+        };
 
         // Charger les verbes
         async function loadVerbs(type = 'irregulier') {
@@ -452,14 +466,51 @@
             document.getElementById('hebben').textContent = stats.haben;
         }
 
-        // Recherche
-        function searchVerbs() {
-            const query = document.getElementById('searchBox').value.toLowerCase();
-            filteredVerbs = allVerbs.filter(v => 
-                v.infinitive.toLowerCase().includes(query) ||
-                v.translation.toLowerCase().includes(query)
-            );
+        // Recherche et filtrage combinés
+        function filterVerbs() {
+            const infinitiveQuery = document.getElementById('infinitiveSearch').value.toLowerCase();
+            const frequencyFilter = document.getElementById('frequencyFilter').value;
+
+            filteredVerbs = allVerbs.filter(v => {
+                // Filtre de recherche sur l'infinitif
+                const matchesInfinitive = v.infinitive.toLowerCase().includes(infinitiveQuery);
+                
+                // Filtre de fréquence
+                let matchesFrequency = true;
+                if (frequencyFilter === 'very_frequent') {
+                    matchesFrequency = v.frequency === 'very_frequent';
+                } else if (frequencyFilter === 'frequent') {
+                    matchesFrequency = v.frequency === 'frequent';
+                } else if (frequencyFilter === 'none') {
+                    matchesFrequency = v.frequency !== 'very_frequent' && v.frequency !== 'frequent';
+                }
+                
+                return matchesInfinitive && matchesFrequency;
+            });
+            
             displayVerbs(filteredVerbs);
+        }
+
+        // Fonction pour masquer/afficher les colonnes pendant 10 secondes
+        function toggleHideColumn(columnName) {
+            // Annuler le timer précédent s'il existe
+            if (hideTimers[columnName]) {
+                clearTimeout(hideTimers[columnName]);
+            }
+            
+            // Inverser l'état
+            hiddenColumns[columnName] = !hiddenColumns[columnName];
+            
+            // Réafficher les verbes avec le nouvel état
+            displayVerbs(filteredVerbs.length > 0 ? filteredVerbs : allVerbs);
+            
+            // Si maintenant caché, programmer l'affichage après 10 secondes
+            if (hiddenColumns[columnName]) {
+                hideTimers[columnName] = setTimeout(() => {
+                    hiddenColumns[columnName] = false;
+                    displayVerbs(filteredVerbs.length > 0 ? filteredVerbs : allVerbs);
+                }, 10000);
+            }
         }
 
         // Télécharger en HTML
@@ -623,7 +674,8 @@
         }
 
         // Initialisation
-        document.getElementById('searchBox').addEventListener('keyup', searchVerbs);
+        document.getElementById('searchBox').addEventListener('keyup', filterVerbs);
+        document.getElementById('infinitiveSearchFilter').addEventListener('change', filterVerbs);
         document.getElementById('verbType').addEventListener('change', function() {
             document.getElementById('loadingMessage').style.display = 'block';
             document.getElementById('verbsTable').style.display = 'none';
@@ -632,4 +684,35 @@
         document.addEventListener('DOMContentLoaded', loadVerbs);
     </script>
 </body>
-</html>
+            // Réinitialiser les masquages
+            hiddenColumns.preterite = false;
+            hiddenColumns.pastParticiple = false;
+            loadVerbs(this.value);
+        });
+        
+        // Ajouter les clics sur les headers pour masquer/afficher
+        document.addEventListener('DOMContentLoaded', function() {
+            loadVerbs();
+            
+            // Observer pour ajouter les event listeners aux headers après chaque chargement
+            const observer = new MutationObserver(() => {
+                const thead = document.querySelector('thead tr');
+                if (thead) {
+                    const headers = thead.querySelectorAll('th');
+                    // Header pour Prétérit (ik) - index 5
+                    if (headers[5]) {
+                        headers[5].style.cursor = 'pointer';
+                        headers[5].title = 'Cliquez pour masquer/afficher (10 sec)';
+                        headers[5].onclick = () => toggleHideColumn('preterite');
+                    }
+                    // Header pour Participe Passé - index 6
+                    if (headers[6]) {
+                        headers[6].style.cursor = 'pointer';
+                        headers[6].title = 'Cliquez pour masquer/afficher (10 sec)';
+                        headers[6].onclick = () => toggleHideColumn('pastParticiple');
+                    }
+                }
+            });
+            
+            observer.observe(document.querySelector('.table-wrapper'), { childList: true, subtree: true });
+        });
