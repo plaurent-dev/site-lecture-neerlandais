@@ -516,8 +516,8 @@
                 <label>Filtre par Fréquence</label>
                 <div class="filter-group">
                     <button class="filter-btn active" data-frequency="all">Tous les verbes</button>
-                    <button class="filter-btn" data-frequency="very_frequent">⭐ Très fréquent</button>
-                    <button class="filter-btn" data-frequency="frequent">⭐⭐ Fréquent</button>
+                    <button class="filter-btn" data-frequency="very_frequent">⭐⭐ Très fréquent</button>
+                    <button class="filter-btn" data-frequency="frequent">⭐ Fréquent</button>
                 </div>
             </div>
 
@@ -528,6 +528,14 @@
                     <button class="filter-btn" data-time="present">Présent</button>
                     <button class="filter-btn" data-time="preterite">Prétérit</button>
                     <button class="filter-btn" data-time="past_participle">Participe Passé</button>
+                </div>
+            </div>
+
+            <div class="config-section">
+                <label>Niveau de Difficulté</label>
+                <div class="filter-group">
+                    <button class="filter-btn active" data-difficulty="easy">Facile</button>
+                    <button class="filter-btn" data-difficulty="medium">Moyen</button>
                 </div>
             </div>
 
@@ -590,6 +598,7 @@
         let filteredVerbes = [];
         let selectedFrequency = 'all';
         let selectedTime = 'all';
+        let selectedDifficulty = 'easy';
         let verbCount = 10;
         let currentQuestionIndex = 0;
         let score = 0;
@@ -619,7 +628,7 @@
                 } else if (selectedFrequency === 'very_frequent') {
                     return v.frequency === 'very_frequent';
                 } else if (selectedFrequency === 'frequent') {
-                    return v.frequency === 'very_frequent' || v.frequency === 'frequent';
+                    return v.frequency === 'frequent';
                 }
                 return true;
             });
@@ -711,6 +720,15 @@
                     this.classList.add('active');
                     selectedTime = this.dataset.time;
                     updateRulesDisplay();
+                });
+            });
+
+            // Événements des filtres difficulté
+            document.querySelectorAll('[data-difficulty]').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    document.querySelectorAll('[data-difficulty]').forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    selectedDifficulty = this.dataset.difficulty;
                 });
             });
 
@@ -851,37 +869,64 @@
 
             console.log(`Bonne réponse: ${correctAnswer}`);
 
-            // Générer 3 mauvaises réponses avec déduplication
-            const wrongAnswers = [];
-            const usedAnswers = new Set([correctAnswer]); // Éviter les doublons
-
-            // Essayer d'abord les différentes personnes du même verbe
-            const availablePersons = ['ik', 'jij', 'hij_zij_het', 'wij', 'jullie', 'zij'].filter(p => p !== person);
+            // Générer les options en fonction de la difficulté
+            let allAnswers = [];
             
-            for (let i = 0; i < availablePersons.length && wrongAnswers.length < 3; i++) {
-                const wrongPerson = availablePersons[i];
-                let wrongAnswer;
-                if (timeType === 'present') {
-                    wrongAnswer = verb.present[wrongPerson];
-                } else if (timeType === 'preterite') {
-                    wrongAnswer = verb.preterite[wrongPerson];
-                } else if (timeType === 'past_participle') {
-                    wrongAnswer = verb.past_participle_conjugated[wrongPerson];
+            if (selectedDifficulty === 'medium') {
+                // Mode moyen : 4 formes différentes du MÊME verbe
+                const allPersons = ['ik', 'jij', 'hij_zij_het', 'wij', 'jullie', 'zij'];
+                const otherPersons = allPersons.filter(p => p !== person);
+                const selectedPersons = [person];
+                
+                // Sélectionner 3 autres personnes aléatoirement
+                for (let i = 0; i < 3 && otherPersons.length > 0; i++) {
+                    const randomIndex = Math.floor(Math.random() * otherPersons.length);
+                    selectedPersons.push(otherPersons[randomIndex]);
+                    otherPersons.splice(randomIndex, 1);
                 }
                 
-                // Ajouter seulement si pas déjà utilisé
-                if (!usedAnswers.has(wrongAnswer)) {
-                    wrongAnswers.push(wrongAnswer);
-                    usedAnswers.add(wrongAnswer);
-                }
-            }
+                // Obtenir les formes pour ces personnes
+                allAnswers = selectedPersons.map(p => {
+                    if (timeType === 'present') {
+                        return verb.present[p];
+                    } else if (timeType === 'preterite') {
+                        return verb.preterite[p];
+                    } else if (timeType === 'past_participle') {
+                        return verb.past_participle_conjugated[p];
+                    }
+                }).sort(() => Math.random() - 0.5);
+            } else {
+                // Mode facile : comme avant
+                const wrongAnswers = [];
+                const usedAnswers = new Set([correctAnswer]); // Éviter les doublons
 
-            // Si on n'a pas assez de réponses uniques du même verbe, en prendre d'autres verbes
-            if (wrongAnswers.length < 3) {
-                const otherVerbs = filteredVerbes.filter(v => v.infinitive !== verb.infinitive);
-                let verbIndex = 0;
+                // Essayer d'abord les différentes personnes du même verbe
+                const availablePersons = ['ik', 'jij', 'hij_zij_het', 'wij', 'jullie', 'zij'].filter(p => p !== person);
                 
-                while (wrongAnswers.length < 3 && verbIndex < otherVerbs.length) {
+                for (let i = 0; i < availablePersons.length && wrongAnswers.length < 3; i++) {
+                    const wrongPerson = availablePersons[i];
+                    let wrongAnswer;
+                    if (timeType === 'present') {
+                        wrongAnswer = verb.present[wrongPerson];
+                    } else if (timeType === 'preterite') {
+                        wrongAnswer = verb.preterite[wrongPerson];
+                    } else if (timeType === 'past_participle') {
+                        wrongAnswer = verb.past_participle_conjugated[wrongPerson];
+                    }
+                    
+                    // Ajouter seulement si pas déjà utilisé
+                    if (!usedAnswers.has(wrongAnswer)) {
+                        wrongAnswers.push(wrongAnswer);
+                        usedAnswers.add(wrongAnswer);
+                    }
+                }
+
+                // Si on n'a pas assez de réponses uniques du même verbe, en prendre d'autres verbes
+                if (wrongAnswers.length < 3) {
+                    const otherVerbs = filteredVerbes.filter(v => v.infinitive !== verb.infinitive);
+                    let verbIndex = 0;
+                    
+                    while (wrongAnswers.length < 3 && verbIndex < otherVerbs.length) {
                     const otherVerb = otherVerbs[verbIndex];
                     const personForOther = ['ik', 'jij', 'hij_zij_het', 'wij', 'jullie', 'zij'][
                         Math.floor(Math.random() * 6)
@@ -903,11 +948,12 @@
                     }
                     
                     verbIndex++;
+                    }
                 }
-            }
 
-            // Mélanger les réponses
-            const allAnswers = [correctAnswer, ...wrongAnswers].sort(() => Math.random() - 0.5);
+                // Mélanger les réponses
+                allAnswers = [correctAnswer, ...wrongAnswers].sort(() => Math.random() - 0.5);
+            }
 
             // Afficher les infos du verbe
             const verbInfElement = document.getElementById('verbInfinitive');
