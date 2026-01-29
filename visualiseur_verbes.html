@@ -674,8 +674,8 @@
         }
 
         // Initialisation
-        document.getElementById('searchBox').addEventListener('keyup', filterVerbs);
-        document.getElementById('infinitiveSearchFilter').addEventListener('change', filterVerbs);
+        document.getElementById('infinitiveSearch').addEventListener('keyup', filterVerbs);
+        document.getElementById('frequencyFilter').addEventListener('change', filterVerbs);
         document.getElementById('verbType').addEventListener('change', function() {
             document.getElementById('loadingMessage').style.display = 'block';
             document.getElementById('verbsTable').style.display = 'none';
