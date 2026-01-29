@@ -372,7 +372,8 @@
                         <th>Traduction</th>
                         <th>Auxiliaire</th>
                         <th>Fréquence</th>
-                        <th>Prétérit (ik)</th>
+                        <th>Prétérit singulier</th>
+                        <th>Prétérit pluriel</th>
                         <th>Participe Passé</th>
                     </tr>
                 </thead>
@@ -429,7 +430,8 @@
 
             verbs.forEach((verb, index) => {
                 const row = document.createElement('tr');
-                const preteriteIk = verb.preterite?.ik || '-';
+                const preteriteSingulier = verb.preterite?.ik || '-';
+                const preteritePluriel = verb.preterite?.wij || '-';
                 const participlePast = verb.past_participle || '-';
                 const frequencyBadgeClass = verb.frequency === 'very_frequent' ? 'frequency-very' : 
                                           verb.frequency === 'frequent' ? 'frequency-freq' : 'frequency-none';
@@ -444,7 +446,8 @@
                     <td class="translation">${verb.translation}</td>
                     <td><span class="badge ${auxiliaryBadgeClass}">${verb.auxiliary === 'both' ? 'hebben/zijn' : verb.auxiliary}</span></td>
                     <td><span class="badge ${frequencyBadgeClass}">${frequencyText}</span></td>
-                    <td>${preteriteIk}</td>
+                    <td>${preteriteSingulier}</td>
+                    <td>${preteritePluriel}</td>
                     <td>${participlePast}</td>
                 `;
                 tbody.appendChild(row);
