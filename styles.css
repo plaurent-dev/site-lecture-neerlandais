@@ -771,6 +771,8 @@ a:hover {
     .navbar-content {
         flex-wrap: wrap;
         height: auto;
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     .navbar-buttons {
@@ -1442,6 +1444,8 @@ a:hover {
     .navbar-content {
         height: auto;
         flex-wrap: wrap;
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     .navbar h1 {
