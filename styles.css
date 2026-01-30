@@ -215,6 +215,54 @@ html {
 }
 
 /* ============================================
+   MOBILE BUTTONS BAR
+   ============================================ */
+.mobile-buttons-bar {
+    display: none;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 10px 15px;
+    box-shadow: 0 2px 8px rgba(59, 130, 246, 0.15);
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    position: sticky;
+    top: 70px;
+    z-index: 99;
+}
+
+.mobile-menu-button {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 0.9em;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+    flex: 1;
+    min-width: 100px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.mobile-menu-button:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+.mobile-menu-button.admin {
+    background: var(--secondary);
+}
+
+.mobile-menu-button.admin:hover {
+    background: var(--secondary-dark);
+}
+
+/* ============================================
    CONTAINERS & SECTIONS
    ============================================ */
 .container {
@@ -747,6 +795,22 @@ a:hover {
    RESPONSIVE DESIGN
    ============================================ */
 @media (max-width: 768px) {
+    /* Afficher le bandeau mobile et masquer la navbar-buttons */
+    .mobile-buttons-bar {
+        display: flex;
+    }
+
+    .navbar-buttons {
+        display: none;
+    }
+
+    .navbar-content {
+        flex-direction: row;
+        height: auto;
+        justify-content: space-between;
+        align-items: center;
+    }
+
     .container {
         padding: 20px;
         margin: 20px 10px;
@@ -805,12 +869,16 @@ a:hover {
         padding: 0 20px;
     }
 
+    .mobile-buttons-bar {
+        display: flex;
+    }
+
     .navbar-content {
-        flex-direction: column;
+        flex-direction: row;
         height: auto;
-        justify-content: flex-start;
-        align-items: flex-start;
-        gap: 12px;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0;
     }
 
     h1 {
@@ -823,6 +891,7 @@ a:hover {
     }
 
     .navbar-buttons {
+        display: none;
         width: 100%;
         margin-top: 0;
         gap: 8px;
@@ -1441,21 +1510,23 @@ a:hover {
         padding: 0 15px;
     }
 
+    .mobile-buttons-bar {
+        display: flex;
+    }
+
+    .navbar-buttons {
+        display: none;
+    }
+
     .navbar-content {
         height: auto;
-        flex-wrap: wrap;
-        flex-direction: column;
-        align-items: flex-start;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
     }
 
     .navbar h1 {
         font-size: 1.2em;
-    }
-
-    .navbar-buttons {
-        width: 100%;
-        margin-top: 10px;
-        flex-wrap: wrap;
     }
 
     .navbar-link {
