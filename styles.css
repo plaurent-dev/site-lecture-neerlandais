@@ -250,6 +250,8 @@ html {
     cursor: pointer;
     padding: 10px;
     transition: all 0.3s ease;
+    z-index: 1001;
+    position: relative;
 }
 
 .hamburger-btn:hover {
@@ -833,11 +835,14 @@ a:hover {
 @media (max-width: 768px) {
     /* Afficher le menu hamburger et masquer la navbar-buttons */
     .mobile-menu-container {
-        display: block;
+        display: block !important;
+        order: -1;
+        flex: 0 0 auto;
+        margin-right: auto;
     }
 
     .hamburger-btn {
-        display: block;
+        display: block !important;
     }
 
     .navbar .navbar-buttons,
@@ -855,8 +860,9 @@ a:hover {
     .navbar-content {
         flex-direction: row;
         height: auto;
-        justify-content: space-between;
+        justify-content: flex-start;
         align-items: center;
+        gap: 10px;
     }
 
     .container {
@@ -918,19 +924,23 @@ a:hover {
     }
 
     .mobile-menu-container {
-        display: block;
+        display: block !important;
+        order: -1;
+        flex: 0 0 auto;
+        margin-right: auto;
     }
 
     .hamburger-btn {
-        display: block;
+        display: block !important;
     }
 
     .navbar-content {
         flex-direction: row;
         height: auto;
-        justify-content: space-between;
+        justify-content: flex-start;
         align-items: center;
-        gap: 0;
+        gap: 10px;
+
     }
 
     h1 {
@@ -1569,11 +1579,14 @@ a:hover {
     }
 
     .mobile-menu-container {
-        display: block;
+        display: block !important;
+        order: -1;
+        flex: 0 0 auto;
+        margin-right: auto;
     }
 
     .hamburger-btn {
-        display: block;
+        display: block !important;
     }
 
     .navbar .navbar-buttons,
