@@ -237,6 +237,8 @@ html {
 .mobile-menu-container {
     display: none;
     position: relative;
+    order: -1;
+    margin-right: auto;
 }
 
 .hamburger-btn {
@@ -258,13 +260,14 @@ html {
     display: none;
     position: absolute;
     top: 100%;
-    right: 0;
+    left: 0;
     background: white;
     border-radius: 8px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
     z-index: 1000;
     min-width: 250px;
     overflow: hidden;
+    margin-top: 5px;
 }
 
 .mobile-menu.active {
