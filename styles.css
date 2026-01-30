@@ -102,6 +102,23 @@ html {
     flex-wrap: wrap;
 }
 
+/* Masquer navbar-buttons sur mobile par défaut */
+@media screen and (max-width: 768px) {
+    .navbar-buttons {
+        display: none !important;
+        visibility: hidden !important;
+        height: 0 !important;
+        width: 0 !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        overflow: hidden !important;
+        flex: none !important;
+        border: none !important;
+        position: absolute !important;
+        left: -9999px !important;
+    }
+}
+
 .navbar-link {
     color: white;
     padding: 10px 20px;
@@ -800,13 +817,16 @@ a:hover {
         display: flex;
     }
 
+    .navbar .navbar-buttons,
     .navbar-buttons {
         display: none !important;
         visibility: hidden !important;
         height: 0 !important;
+        width: 0 !important;
         padding: 0 !important;
         margin: 0 !important;
         overflow: hidden !important;
+        flex: none !important;
     }
 
     .navbar-content {
@@ -899,10 +919,11 @@ a:hover {
         display: none !important;
         visibility: hidden !important;
         height: 0 !important;
+        width: 0 !important;
         padding: 0 !important;
         margin: 0 !important;
         overflow: hidden !important;
-        width: 100%;
+        flex: none !important;
         margin-top: 0;
         gap: 8px;
         flex-wrap: wrap;
@@ -1524,13 +1545,16 @@ a:hover {
         display: flex;
     }
 
+    .navbar .navbar-buttons,
     .navbar-buttons {
         display: none !important;
         visibility: hidden !important;
         height: 0 !important;
+        width: 0 !important;
         padding: 0 !important;
         margin: 0 !important;
         overflow: hidden !important;
+        flex: none !important;
     }
 
     .navbar-content {
