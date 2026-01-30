@@ -565,29 +565,24 @@
     </div>
 </nav>
 
-<!-- Bandeau mobile pour les boutons -->
-<div class="mobile-buttons-bar">
-    <div class="dropdown" style="flex: 1;">
-        <button class="mobile-menu-button dropdown-toggle">🌍 Culture ▼</button>
-        <div class="dropdown-menu">
-            <a href="culture/15miljoenmensen.html" class="dropdown-item">🎬 15 Miljoen Mensen</a>
-        </div>
+<!-- Menu Hamburger Mobile -->
+<div class="mobile-menu-container">
+    <button class="hamburger-btn" id="hamburgerBtn">☰</button>
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="culture/15miljoenmensen.html" class="mobile-menu-item">🌍 Culture - 15 Miljoen Mensen</a>
+        <hr style="border: none; border-top: 1px solid #ddd; margin: 8px 0;">
+        <a href="jeu_mots_melanges.html" class="mobile-menu-item">🎮 Jeu des Mots Mélangés</a>
+        <a href="revision_heures.html" class="mobile-menu-item">⏰ Révision heures</a>
+        <a href="revision_vocabulaire.html" class="mobile-menu-item">📚 Révision vocabulaire</a>
+        <a href="revision_irregulier_verbes.html" class="mobile-menu-item">📖 Verbes irréguliers</a>
+        <a href="revision_regulier_verbes.html" class="mobile-menu-item">📖 Verbes réguliers</a>
+        <a href="revision_positions.html" class="mobile-menu-item">📍 Positions spatiales</a>
+        <a href="revision_prepositions_spatiales.html" class="mobile-menu-item">🗺️ Prépositions spatiales</a>
+        <a href="visualiseur_verbes.html" class="mobile-menu-item">👁️ Tous les verbes</a>
+        <hr style="border: none; border-top: 1px solid #ddd; margin: 8px 0;">
+        <a href="admin.html" class="mobile-menu-item" id="loginBtnMobileMenu">🔐 Connexion</a>
+        <a href="admin.html" class="mobile-menu-item admin" id="adminLinkMobileMenu" style="display: none;">⚙️ Admin</a>
     </div>
-    <div class="dropdown" style="flex: 1;">
-        <button class="mobile-menu-button dropdown-toggle">📖 Exercices ▼</button>
-        <div class="dropdown-menu">
-            <a href="jeu_mots_melanges.html" class="dropdown-item">🎮 Jeu des Mots Mélangés</a>
-            <a href="revision_heures.html" class="dropdown-item">Révision heures</a>
-            <a href="revision_vocabulaire.html" class="dropdown-item">Révision vocabulaire</a>
-            <a href="revision_irregulier_verbes.html" class="dropdown-item">Verbes irréguliers</a>
-            <a href="revision_regulier_verbes.html" class="dropdown-item">Verbes réguliers</a>
-            <a href="revision_positions.html" class="dropdown-item">Positions spatiales</a>
-            <a href="revision_prepositions_spatiales.html" class="dropdown-item">🗺️ Prépositions spatiales</a>
-            <a href="visualiseur_verbes.html" class="dropdown-item">Tous les verbes</a>
-        </div>
-    </div>
-    <a href="admin.html" class="mobile-menu-button" id="loginBtnMobile" style="flex: 1;">🔐 Connexion</a>
-    <a href="admin.html" class="mobile-menu-button admin" id="adminLinkMobile" style="display: none; flex: 1;">⚙️ Admin</a>
 </div>
 
 <div class="container">
@@ -784,9 +779,9 @@
         const logoutBtn = document.getElementById('logoutBtn');
         const userEmailSpan = document.getElementById('userEmail');
 
-        // Buttons mobiles
-        const adminLinkMobile = document.getElementById('adminLinkMobile');
-        const loginBtnMobile = document.getElementById('loginBtnMobile');
+        // Buttons mobiles du menu hamburger
+        const adminLinkMobileMenu = document.getElementById('adminLinkMobileMenu');
+        const loginBtnMobileMenu = document.getElementById('loginBtnMobileMenu');
 
         if (userEmail) {
             loginBtn.style.display = 'none';
@@ -795,18 +790,18 @@
             logoutBtn.style.display = 'inline-block';
             userEmailSpan.textContent = userEmail;
 
-            // Mettre à jour les boutons mobiles
-            loginBtnMobile.style.display = 'none';
-            adminLinkMobile.style.display = 'inline-block';
+            // Mettre à jour les boutons mobiles du menu
+            loginBtnMobileMenu.style.display = 'none';
+            adminLinkMobileMenu.style.display = 'block';
         } else {
             loginBtn.style.display = 'inline-block';
             adminLink.style.display = 'none';
             userDisplay.style.display = 'none';
             logoutBtn.style.display = 'none';
 
-            // Mettre à jour les boutons mobiles
-            loginBtnMobile.style.display = 'inline-block';
-            adminLinkMobile.style.display = 'none';
+            // Mettre à jour les boutons mobiles du menu
+            loginBtnMobileMenu.style.display = 'block';
+            adminLinkMobileMenu.style.display = 'none';
         }
     }
 
@@ -910,10 +905,39 @@
         });
     }
 
+    // Gestion du menu hamburger mobile
+    function setupHamburgerMenu() {
+        const hamburgerBtn = document.getElementById('hamburgerBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        if (hamburgerBtn && mobileMenu) {
+            hamburgerBtn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                mobileMenu.classList.toggle('active');
+            });
+
+            // Fermer le menu quand on clique sur un lien
+            const menuItems = mobileMenu.querySelectorAll('.mobile-menu-item');
+            menuItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    mobileMenu.classList.remove('active');
+                });
+            });
+
+            // Fermer le menu quand on clique ailleurs
+            document.addEventListener('click', function(e) {
+                if (!e.target.closest('.mobile-menu-container')) {
+                    mobileMenu.classList.remove('active');
+                }
+            });
+        }
+    }
+
     window.onload = function() {
         updateNavbar();
         afficherFichesRecentes();
         setupDropdownHandlers();
+        setupHamburgerMenu();
     };
 
     // Callback function when Google Maps API is loaded
