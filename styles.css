@@ -260,12 +260,13 @@ html {
     display: none;
     position: absolute;
     top: 100%;
-    left: 0;
+    left: auto;
+    right: -10px;
     background: white;
     border-radius: 8px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
     z-index: 1000;
-    min-width: 250px;
+    min-width: 280px;
     overflow: hidden;
     margin-top: 5px;
 }
