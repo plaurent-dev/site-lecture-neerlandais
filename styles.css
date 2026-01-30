@@ -239,6 +239,7 @@ html {
     position: relative;
     order: -1;
     margin-right: auto;
+    overflow: visible;
 }
 
 .hamburger-btn {
@@ -260,17 +261,17 @@ html {
 
 .mobile-menu {
     display: none;
-    position: absolute;
-    top: 100%;
-    left: auto;
-    right: -10px;
+    position: fixed;
+    top: 70px;
+    left: 10px;
+    right: 10px;
     background: white;
     border-radius: 8px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
     z-index: 1000;
-    min-width: 280px;
+    max-width: calc(100% - 20px);
     overflow: hidden;
-    margin-top: 5px;
+    margin-top: 0;
 }
 
 .mobile-menu.active {
