@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hoe zou Nederland eruit zien zonder dijken? - Vidéo Culturelle</title>
+<link rel="stylesheet" href="../styles.css?v=1.0.0">
+<script src="../version.js"></script>
+<style>
+  .video-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    background: #f0f0f0;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+  }
+
+  .video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+
+  .video-fullscreen-btn {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    z-index: 10;
+  }
+
+  .video-fullscreen-btn:hover {
+    background: rgba(0, 0, 0, 0.9);
+  }
+
+  .modal-video {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+
+  .modal-video.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .modal-content-video {
+    position: relative;
+    width: 95%;
+    max-width: 1200px;
+    aspect-ratio: 16 / 9;
+  }
+
+  .modal-content-video iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+
+  .close-modal {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    color: white;
+    font-size: 2em;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .close-modal:hover {
+    color: #ccc;
+  }
+
+  .back-btn {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    background: #667eea;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+  }
+
+  .back-btn:hover {
+    background: #5568d3;
+  }
+
+  .collapsible-section {
+    margin: 20px 0;
+  }
+
+  .collapsible-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 15px 20px;
+    cursor: pointer;
+    border-radius: 8px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    user-select: none;
+    transition: all 0.3s ease;
+  }
+
+  .collapsible-header:hover {
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+  }
+
+  .collapsible-icon {
+    font-size: 1.3em;
+    transition: transform 0.3s ease;
+  }
+
+  .collapsible-content {
+    max-height: 1000px;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 0 0 8px 8px;
+  }
+
+  .collapsible-content.collapsed {
+    max-height: 0;
+    padding: 0 20px;
+  }
+
+  .collapsible-icon.collapsed {
+    transform: rotate(-90deg);
+  }
+</style>
+</head>
+<body>
+<div class="fiche-container">
+  <a href="../index.html" class="back-btn">← Retour</a>
+  
+  <div class="fiche-header">
+    <h1 class="fiche-title">🎬 Hoe zou Nederland eruit zien zonder dijken?</h1>
+    <p class="fiche-meta">🇳🇱 Une vidéo sur les digues des Pays-Bas | 🌊 Géographie</p>
+  </div>
+
+  <div id="phase1">
+    <div class="video-container">
+      <div class="video-wrapper">
+        <iframe src="https://www.youtube.com/embed/FjoACGQNxWc?cc_load_policy=1" allowfullscreen="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" loading="lazy"></iframe>
+        <button class="video-fullscreen-btn" onclick="openFullscreenVideo()">🖥️ Plein écran</button>
+      </div>
+    </div>
+
+    <div style="background: #e7f3ff; padding: 15px; border-radius: 8px; margin: 20px 0; border-left: 4px solid #3B82F6;">
+      <p style="margin: 0;"><strong>💡 Conseil :</strong> Les sous-titres sont activés par défaut. Si vous ne les voyez pas, cliquez sur l'icône CC (sous-titres) en bas à droite de la vidéo, ou appuyez sur C pour les afficher.</p>
+    </div>
+
+    <!-- Section Transcription Collapsible -->
+    <div class="collapsible-section">
+      <div class="collapsible-header" onclick="toggleCollapsible(this)">
+        <span>📝 Transcription</span>
+        <span class="collapsible-icon collapsed">▼</span>
+      </div>
+      <div class="collapsible-content collapsed">
+        <p><strong>Hoe zou Nederland eruit zien zonder dijken?</strong> Cette vidéo explore un scénario hypothétique fascinant : qu'adviendrais-il des Pays-Bas si les digues n'existaient pas ? Découvrez l'importance cruciale de ces structures d'ingénierie pour la survie et la prospérité du pays.</p>
+
+        <p>Les Pays-Bas, avec plus d'un quart de sa population vivant sous le niveau de la mer, dépendent entièrement d'un système sophistiqué de digues et de systèmes de gestion de l'eau. Cette vidéo vous montre comment les digues protègent les terres, préviennent les inondations et maintiennent un équilibre délicat entre l'eau et la terre.</p>
+
+        <p>Explorez les régions qui seraient submergées, les communautés affectées et l'impact économique catastrophique d'un tel scénario. Comprenez pourquoi les Néerlandais sont les maîtres de la gestion de l'eau et comment leur ingénierie hydrique est devenue une expertise mondiale.</p>
+
+        <p>Cette vidéo est un excellent moyen d'en apprendre davantage sur la géographie unique des Pays-Bas, l'histoire de sa lutte contre l'eau et l'importance des digues dans la civilisation moderne.</p>
+      </div>
+    </div>
+
+    <!-- Section Traduction Collapsible -->
+    <div class="collapsible-section">
+      <div class="collapsible-header" onclick="toggleCollapsible(this)">
+        <span>🇫🇷 Vocabulaire clé</span>
+        <span class="collapsible-icon collapsed">▼</span>
+      </div>
+      <div class="collapsible-content collapsed">
+        <p style="font-style: italic; color: #666;">Cliquez sur 🔊 pour écouter la prononciation</p>
+        <table class="fiche-table">
+          <thead>
+            <tr>
+              <th>Néerlandais</th>
+              <th>Français</th>
+            </tr>
+          </thead>
+          <tbody id="vocabularyTable">
+            <!-- Rempli par JavaScript -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <button class="btn btn-primary" onclick="goToQuiz()">➡️ Passer au quiz</button>
+  </div>
+
+  <div id="phase2" class="hidden">
+    <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+    <p id="progressText"></p>
+    <div id="quizZone"></div>
+  </div>
+</div>
+
+<!-- Modal pour vidéo plein écran -->
+<div id="videoModal" class="modal-video">
+  <div class="modal-content-video">
+    <span class="close-modal" onclick="closeFullscreenVideo()">&times;</span>
+    <iframe src="https://www.youtube.com/embed/FjoACGQNxWc?cc_load_policy=1" allowfullscreen="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" loading="lazy"></iframe>
+  </div>
+</div>
+
+<script>
+let data = null;
+let questions = [];
+let indexQ = 0;
+
+// Charger les données
+async function loadData() {
+  try {
+    const response = await fetch('./Nederland_zonder_dijken.json');
+    data = await response.json();
+    displayVocabulary();
+    generateQuestions();
+  } catch (error) {
+    console.error('Erreur au chargement des données:', error);
+  }
+}
+
+// Afficher le vocabulaire
+function displayVocabulary() {
+  if (!data || !data.traductions) return;
+  
+  const tbody = document.getElementById('vocabularyTable');
+  tbody.innerHTML = '';
+
+  data.traductions.forEach(item => {
+    const row = `<tr>
+      <td>
+        <button class="btn btn-primary" onclick="pronounce('${item.neerlandais}')" style="background: none; border: none; cursor: pointer; font-size: 1.2em; padding: 0; color: #4ecdc4;">🔊</button>
+        ${item.neerlandais}
+      </td>
+      <td>${item.francais}</td>
+    </tr>`;
+    tbody.innerHTML += row;
+  });
+}
+
+// Générer les questions du quiz
+function generateQuestions() {
+  if (!data || !data.traductions) return;
+  
+  questions = data.traductions.map(item => ({
+    question: `Quel est le sens de "${item.neerlandais}" ?`,
+    reponse: item.francais,
+    mot_neerlandais: item.neerlandais
+  }));
+}
+
+// Prononciation
+function pronounce(word) {
+  if (!window.speechSynthesis) {
+    console.error('Web Speech API non disponible');
+    return;
+  }
+  
+  window.speechSynthesis.cancel();
+  const utterance = new SpeechSynthesisUtterance(word);
+  utterance.lang = 'nl-NL';
+  utterance.rate = 0.8;
+  window.speechSynthesis.speak(utterance);
+}
+
+// Toggle collapsible sections
+function toggleCollapsible(header) {
+  const content = header.nextElementSibling;
+  const icon = header.querySelector('.collapsible-icon');
+  
+  content.classList.toggle('collapsed');
+  icon.classList.toggle('collapsed');
+}
+
+// Encouragement aléatoire
+function getRandomEncouragement() {
+  const encouragements = [
+    '🎉 Excellent !',
+    '👍 Bien joué !',
+    '⭐ Très bon !',
+    '🎯 C\'est ça !',
+    '💪 Bravo !',
+    '✨ Super !',
+    '🌟 Fantastique !',
+    '🔥 Impressionnant !'
+  ];
+  return encouragements[Math.floor(Math.random() * encouragements.length)];
+}
+
+// Mise à jour de la progression
+function updateProgress() {
+  const percent = (indexQ / questions.length) * 100;
+  document.getElementById("progressFill").style.width = percent + "%";
+  document.getElementById("progressText").textContent = "Question " + indexQ + " / " + questions.length;
+}
+
+// Aller au quiz
+function goToQuiz() {
+  document.getElementById("phase1").classList.add("hidden");
+  document.getElementById("phase2").classList.remove("hidden");
+  afficherQuestion();
+}
+
+// Afficher la question
+function afficherQuestion() {
+  const zone = document.getElementById("quizZone");
+  updateProgress();
+  if (indexQ >= questions.length) {
+    zone.innerHTML = '<div class="completion-message"><p>✅ Quiz terminé ! Bravo !</p><p style="font-size: 1.1em; color: #c41e3a;">Goed gedaan! 🎊</p><button class="btn btn-primary" onclick="location.reload()">🔄 Recommencer</button></div>';
+    return;
+  }
+  zone.innerHTML = `
+    <p><strong>Question ${indexQ + 1} / ${questions.length}</strong></p>
+    <p style="font-size: 1.1em; margin: 15px 0;">${questions[indexQ].question}</p>
+    <button class="btn btn-primary" onclick="suivante()">➡️ Voir la réponse</button>
+  `;
+}
+
+// Question suivante
+function suivante() {
+  const zone = document.getElementById("quizZone");
+  const reponseCorrecte = questions[indexQ].reponse;
+  zone.innerHTML += "<div class=\"answer-display\">✅ Réponse : <strong>" + reponseCorrecte + "</strong></div>";
+  zone.innerHTML += "<div class=\"encouragement\">"+ getRandomEncouragement() + "</div>";
+  indexQ++;
+  setTimeout(() => afficherQuestion(), 2000);
+}
+
+// Plein écran vidéo
+function openFullscreenVideo() {
+  document.getElementById('videoModal').classList.add('active');
+}
+
+function closeFullscreenVideo() {
+  document.getElementById('videoModal').classList.remove('active');
+}
+
+// Fermer la modal en cliquant en dehors
+document.addEventListener('DOMContentLoaded', function() {
+  loadData();
+  document.getElementById('videoModal').addEventListener('click', function(e) {
+    if (e.target === this) {
+      closeFullscreenVideo();
+    }
+  }, { passive: true });
+});
+</script>
+</body>
+</html>
