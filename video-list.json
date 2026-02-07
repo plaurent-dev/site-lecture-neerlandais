@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title": "Introduction à la Hollande",
+    "description": "Une introduction aux bases de la vie aux Pays-Bas et à la culture locale.",
+    "duration": "8:45",
+    "type": "local",
+    "src": "videos/exemple_video_1.mp4"
+  },
+  {
+    "id": 2,
+    "title": "Les droits et devoirs du citoyen",
+    "description": "Apprenez vos droits et responsabilités en tant que résident aux Pays-Bas.",
+    "duration": "12:30",
+    "type": "local",
+    "src": "videos/exemple_video_2.mp4"
+  },
+  {
+    "id": 3,
+    "title": "Le système d'education néerlandais",
+    "description": "Comprendre comme le système éducatif fonctionne à l'école et à l'université.",
+    "duration": "10:15",
+    "type": "local",
+    "src": "videos/exemple_video_3.mp4"
+  }
+]
