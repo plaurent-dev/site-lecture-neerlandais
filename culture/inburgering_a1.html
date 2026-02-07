@@ -126,7 +126,8 @@
     display: flex;
     gap: 15px;
     scroll-behavior: smooth;
-    transition: transform 0.3s ease;
+    overflow-x: auto;
+    padding: 5px 0;
   }
 
   .video-card {
@@ -155,13 +156,20 @@
 
   .video-card-title {
     font-weight: 600;
-    margin-bottom: 8px;
-    font-size: 0.95em;
+    margin-bottom: 12px;
+    font-size: 0.9em;
+    line-height: 1.3;
   }
 
   .video-card-duration {
-    font-size: 0.85em;
-    opacity: 0.8;
+    font-size: 2em;
+    font-weight: 700;
+    color: #667eea;
+    opacity: 0.9;
+  }
+
+  .video-card.active .video-card-duration {
+    color: white;
   }
 
   /* Main Video Player */
@@ -387,7 +395,11 @@
     }
 
     .video-card-title {
-      font-size: 0.85em;
+      font-size: 0.8em;
+    }
+
+    .video-card-duration {
+      font-size: 1.6em;
     }
 
     .fiche-title {
@@ -468,7 +480,7 @@
         <p>Cette série de vidéos présente les 25 sessions d'entraînement à l'oral (Spreken) du <strong>Test d'intégration A1</strong>, vous permettant de pratiquer et de vous familiariser avec le format de l'examen.</p>
         <p><strong>Conseils :</strong></p>
         <ul style="margin: 10px 0;">
-          <li>Regardez chaque vidéo au least une fois pour vous familiariser avec le matériel</li>
+          <li>Regardez chaque vidéo au moins une fois pour vous familiariser avec le matériel</li>
           <li>Écoutez attentivement la prononciation et l'intonation</li>
           <li>Essayez de répondre aux questions avant de passer à la vidéo suivante</li>
           <li>Utilisez le mode plein écran pour une meilleure expérience</li>
@@ -510,7 +522,6 @@ let currentVideoIndex = 0;
 // Charger les vidéos
 async function loadVideos() {
   try {
-    // Récupérer la liste des fichiers vidéo
     const response = await fetch('../video-list.json');
     if (response.ok) {
       videos = await response.json();
@@ -519,8 +530,7 @@ async function loadVideos() {
         displayVideo(0);
       }
     } else {
-      // Fallback: créer une liste vide ou une vidéo de démonstration
-      console.log('Fichier video-list.json non trouvé. Utilisez video-list.json pour définir la liste des vidéos.');
+      console.log('Fichier video-list.json non trouvé.');
       showEmptyState();
     }
   } catch (error) {
@@ -534,22 +544,7 @@ function showEmptyState() {
   carousel.innerHTML = '';
   
   const videoWrapper = document.getElementById('videoWrapper');
-  videoWrapper.innerHTML = '<div class="empty-state"><p>Aucune vidéo disponible. Créez un fichier <strong>video-list.json</strong> à la racine du projet.</p></div>';
-  
-  const videoInfo = document.querySelector('.video-info');
-  videoInfo.innerHTML = `
-    <h3>Format du fichier video-list.json</h3>
-    <pre style="background: #f5f5f5; padding: 15px; border-radius: 6px; overflow-x: auto;"><code>[
-  {
-    "id": 1,
-    "title": "Titre de la vidéo",
-    "description": "Description de la vidéo",
-    "duration": "10:30",
-    "type": "local",
-    "src": "videos/nomfichier.mp4"
-  }
-]</code></pre>
-  `;
+  videoWrapper.innerHTML = '<div class="empty-state"><p>Aucune vidéo disponible.</p></div>';
 }
 
 function initializeCarousel() {
@@ -562,7 +557,7 @@ function initializeCarousel() {
     card.onclick = () => selectVideo(index);
     card.innerHTML = `
       <div class="video-card-title">${video.title}</div>
-      <div class="video-card-duration">${video.duration || 'N/A'}</div>
+      <div class="video-card-duration">${video.id}</div>
     `;
     carousel.appendChild(card);
   });
@@ -582,11 +577,9 @@ function displayVideo(index) {
   const mainVideo = document.getElementById('mainVideo');
   const mainIframe = document.getElementById('mainIframe');
   
-  // Mettre à jour les infos
   document.getElementById('videoTitle').textContent = video.title;
   document.getElementById('videoDescription').textContent = video.description || 'Aucune description disponible.';
   
-  // Afficher la vidéo appropriée
   if (video.type === 'local') {
     mainVideo.src = '../' + video.src;
     mainVideo.style.display = 'block';
@@ -640,7 +633,6 @@ function closeFullscreen() {
   document.getElementById('fullscreenIframe').src = '';
 }
 
-// Toggle collapsible sections
 function toggleCollapsible(header) {
   const content = header.nextElementSibling;
   const icon = header.querySelector('.collapsible-icon');
@@ -649,561 +641,18 @@ function toggleCollapsible(header) {
   icon.classList.toggle('collapsed');
 }
 
-// Fermer avec ESC
 document.addEventListener('keydown', function(e) {
   if (e.key === 'Escape') {
     closeFullscreen();
   }
 });
 
-// Fermer en cliquant en dehors
 document.getElementById('videoModal').addEventListener('click', function(e) {
   if (e.target === this) {
     closeFullscreen();
   }
 });
 
-// Charger les vidéos au démarrage
-loadVideos();
-</script>
-</body>
-</html>
-
-  .fiche-header {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    padding: 30px;
-    border-radius: 8px;
-    margin-bottom: 30px;
-  }
-
-  .fiche-title {
-    margin: 0;
-    font-size: 2.2em;
-    font-weight: 700;
-    margin-bottom: 10px;
-  }
-
-  .fiche-meta {
-    margin: 0;
-    font-size: 1.1em;
-    opacity: 0.95;
-  }
-
-  /* Video Carousel */
-  .carousel-container {
-    background: white;
-    border-radius: 12px;
-    padding: 25px;
-    margin-bottom: 30px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  }
-
-  .carousel-section h2 {
-    margin-top: 0;
-    margin-bottom: 20px;
-    color: #333;
-    font-size: 1.5em;
-  }
-
-  .carousel-wrapper {
-    position: relative;
-    display: flex;
-    align-items: center;
-    gap: 15px;
-  }
-
-  .carousel-btn {
-    background: #667eea;
-    color: white;
-    border: none;
-    padding: 12px 16px;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 1.2em;
-    transition: all 0.3s;
-    flex-shrink: 0;
-    min-width: 50px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .carousel-btn:hover {
-    background: #5568d3;
-    transform: scale(1.05);
-  }
-
-  .carousel-btn:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
-  }
-
-  .carousel-content {
-    flex: 1;
-    overflow: hidden;
-  }
-
-  .video-cards {
-    display: flex;
-    gap: 15px;
-    scroll-behavior: smooth;
-    transition: transform 0.3s ease;
-  }
-
-  .video-card {
-    background: #f9f9f9;
-    border: 2px solid #e0e0e0;
-    border-radius: 8px;
-    padding: 15px;
-    cursor: pointer;
-    transition: all 0.3s;
-    text-align: center;
-    min-width: 150px;
-    flex-shrink: 0;
-  }
-
-  .video-card:hover {
-    border-color: #667eea;
-    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
-    transform: translateY(-3px);
-  }
-
-  .video-card.active {
-    background: #667eea;
-    color: white;
-    border-color: #667eea;
-  }
-
-  .video-card-title {
-    font-weight: 600;
-    margin-bottom: 8px;
-    font-size: 0.95em;
-  }
-
-  .video-card-duration {
-    font-size: 0.85em;
-    opacity: 0.8;
-  }
-
-  /* Main Video Player */
-  .video-container {
-    background: white;
-    border-radius: 12px;
-    padding: 25px;
-    margin-bottom: 30px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  }
-
-  .video-player-wrapper {
-    position: relative;
-    width: 100%;
-    max-width: 100%;
-    margin: 0 auto;
-    background: #000;
-    border-radius: 10px;
-    overflow: hidden;
-  }
-
-  .video-wrapper {
-    position: relative;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio */
-    height: 0;
-    overflow: hidden;
-  }
-
-  .video-wrapper video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: none;
-  }
-
-  .video-wrapper iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: none;
-  }
-
-  .video-controls {
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
-    z-index: 10;
-    display: flex;
-    gap: 8px;
-  }
-
-  .video-btn {
-    background: rgba(0, 0, 0, 0.7);
-    color: white;
-    border: none;
-    padding: 8px 14px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 0.9em;
-    transition: all 0.3s;
-    font-weight: 600;
-  }
-
-  .video-btn:hover {
-    background: rgba(0, 0, 0, 0.9);
-  }
-
-  .video-info {
-    padding: 20px;
-    background: #f9f9f9;
-    border-radius: 8px;
-    margin-top: 15px;
-  }
-
-  .video-info h3 {
-    margin-top: 0;
-    margin-bottom: 10px;
-    color: #333;
-  }
-
-  .video-info p {
-    margin: 5px 0;
-    color: #666;
-    font-size: 0.95em;
-  }
-
-  /* Modal Fullscreen */
-  .modal-video {
-    display: none;
-    position: fixed;
-    z-index: 2000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.95);
-  }
-
-  .modal-video.active {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .modal-content-video {
-    position: relative;
-    width: 95%;
-    max-width: 1400px;
-    aspect-ratio: 16 / 9;
-  }
-
-  .modal-content-video video {
-    width: 100%;
-    height: 100%;
-    border: none;
-  }
-
-  .modal-content-video iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
-  }
-
-  .close-modal {
-    position: absolute;
-    top: -40px;
-    right: 0;
-    color: white;
-    font-size: 2em;
-    font-weight: bold;
-    cursor: pointer;
-    transition: color 0.3s;
-  }
-
-  .close-modal:hover {
-    color: #ccc;
-  }
-
-  .keyboard-hint {
-    position: absolute;
-    bottom: -30px;
-    width: 100%;
-    text-align: center;
-    color: white;
-    font-size: 0.9em;
-  }
-
-  /* Empty State */
-  .empty-state {
-    background: #fff3cd;
-    border: 2px solid #ffc107;
-    border-radius: 8px;
-    padding: 30px;
-    text-align: center;
-    color: #856404;
-  }
-
-  .empty-state p {
-    margin: 0;
-    font-size: 1.1em;
-  }
-
-  /* Responsive */
-  @media (max-width: 768px) {
-    .carousel-wrapper {
-      gap: 10px;
-    }
-
-    .video-card {
-      min-width: 120px;
-      padding: 12px;
-    }
-
-    .video-card-title {
-      font-size: 0.85em;
-    }
-
-    .fiche-title {
-      font-size: 1.8em;
-    }
-
-    .close-modal {
-      top: -35px;
-      font-size: 1.5em;
-    }
-
-    .modal-content-video {
-      width: 98%;
-    }
-  }
-
-  /* Info Box */
-  .info-box {
-    background: #e7f3ff;
-    border-left: 4px solid #667eea;
-    padding: 15px;
-    border-radius: 6px;
-    margin-bottom: 20px;
-  }
-
-  .info-box p {
-    margin: 0;
-    color: #333;
-  }
-</style>
-</head>
-<body>
-<div class="page-container">
-  <a href="../index.html" class="back-btn">← Retour</a>
-  
-  <div class="fiche-header">
-    <h1 class="fiche-title">🎬 Inburgering A1 - Vidéos de formation</h1>
-    <p class="fiche-meta">🇳🇱 Programme d'intégration aux Pays-Bas | 📺 Sélectionnez et regardez les vidéos</p>
-  </div>
-
-  <div class="info-box">
-    <p>💡 <strong>Conseil :</strong> Cliquez sur une vidéo dans le carrousel pour l'afficher, puis utilisez le bouton "Plein écran" pour une meilleure expérience de visionnage.</p>
-  </div>
-
-  <!-- Video Carousel Selection -->
-  <div class="carousel-container">
-    <section class="carousel-section">
-      <h2>📹 Sélectionnez une vidéo</h2>
-      <div class="carousel-wrapper">
-        <button class="carousel-btn" id="prevBtn" onclick="scrollCarousel(-1)">‹</button>
-        <div class="carousel-content">
-          <div class="video-cards" id="carouselVideos">
-            <!-- Rempli par JavaScript -->
-          </div>
-        </div>
-        <button class="carousel-btn" id="nextBtn" onclick="scrollCarousel(1)">›</button>
-      </div>
-    </section>
-  </div>
-
-  <!-- Main Video Player -->
-  <div class="video-container">
-    <div class="video-player-wrapper" id="videoPlayerWrapper">
-      <div class="video-wrapper" id="videoWrapper">
-        <video id="mainVideo" controls style="display: none;"></video>
-        <iframe id="mainIframe" style="display: none;"></iframe>
-      </div>
-      <div class="video-controls">
-        <button class="video-btn" onclick="toggleFullscreen()">🖥️ Plein écran</button>
-      </div>
-    </div>
-    <div class="video-info">
-      <h3 id="videoTitle">Sélectionnez une vidéo pour commencer</h3>
-      <p id="videoDescription">Choisissez une vidéo dans le carouse ci-dessus pour la visualiser ici.</p>
-    </div>
-  </div>
-</div>
-
-<!-- Fullscreen Modal -->
-<div class="modal-video" id="videoModal">
-  <div class="modal-content-video">
-    <button class="close-modal" onclick="closeFullscreen()">&times;</button>
-    <video id="fullscreenVideo" controls style="display: none;"></video>
-    <iframe id="fullscreenIframe" style="display: none;"></iframe>
-    <div class="keyboard-hint">Appuyez sur ESC pour quitter le mode plein écran</div>
-  </div>
-</div>
-
-<script>
-let videos = [];
-let currentVideoIndex = 0;
-
-// Charger les vidéos
-async function loadVideos() {
-  try {
-    // Récupérer la liste des fichiers vidéo
-    const response = await fetch('../video-list.json');
-    if (response.ok) {
-      videos = await response.json();
-      initializeCarousel();
-      if (videos.length > 0) {
-        displayVideo(0);
-      }
-    } else {
-      // Fallback: créer une liste vide ou une vidéo de démonstration
-      console.log('Fichier video-list.json non trouvé. Utilisez video-list.json pour définir la liste des vidéos.');
-      showEmptyState();
-    }
-  } catch (error) {
-    console.error('Erreur lors du chargement des vidéos:', error);
-    showEmptyState();
-  }
-}
-
-function showEmptyState() {
-  const carousel = document.getElementById('carouselVideos');
-  carousel.innerHTML = '';
-  
-  const videoWrapper = document.getElementById('videoWrapper');
-  videoWrapper.innerHTML = '<div class="empty-state"><p>Aucune vidéo disponible. Créez un fichier <strong>video-list.json</strong> à la racine du projet.</p></div>';
-  
-  const videoInfo = document.querySelector('.video-info');
-  videoInfo.innerHTML = `
-    <h3>Format du fichier video-list.json</h3>
-    <pre style="background: #f5f5f5; padding: 15px; border-radius: 6px; overflow-x: auto;"><code>[
-  {
-    "id": 1,
-    "title": "Titre de la vidéo",
-    "description": "Description de la vidéo",
-    "duration": "10:30",
-    "type": "local",
-    "src": "videos/nomfichier.mp4"
-  }
-]</code></pre>
-  `;
-}
-
-function initializeCarousel() {
-  const carousel = document.getElementById('carouselVideos');
-  carousel.innerHTML = '';
-  
-  videos.forEach((video, index) => {
-    const card = document.createElement('div');
-    card.className = `video-card ${index === 0 ? 'active' : ''}`;
-    card.onclick = () => selectVideo(index);
-    card.innerHTML = `
-      <div class="video-card-title">${video.title}</div>
-      <div class="video-card-duration">${video.duration || 'N/A'}</div>
-    `;
-    carousel.appendChild(card);
-  });
-}
-
-function selectVideo(index) {
-  currentVideoIndex = index;
-  displayVideo(index);
-  updateCarouselUI();
-}
-
-function displayVideo(index) {
-  if (index < 0 || index >= videos.length) return;
-  
-  const video = videos[index];
-  const videoWrapper = document.getElementById('videoWrapper');
-  const mainVideo = document.getElementById('mainVideo');
-  const mainIframe = document.getElementById('mainIframe');
-  
-  // Mettre à jour les infos
-  document.getElementById('videoTitle').textContent = video.title;
-  document.getElementById('videoDescription').textContent = video.description || 'Aucune description disponible.';
-  
-  // Afficher la vidéo appropriée
-  if (video.type === 'local') {
-    mainVideo.src = '../' + video.src;
-    mainVideo.style.display = 'block';
-    mainIframe.style.display = 'none';
-  } else if (video.type === 'youtube') {
-    mainIframe.src = video.src;
-    mainIframe.style.display = 'block';
-    mainVideo.style.display = 'none';
-  }
-}
-
-function updateCarouselUI() {
-  const cards = document.querySelectorAll('.video-card');
-  cards.forEach((card, index) => {
-    if (index === currentVideoIndex) {
-      card.classList.add('active');
-    } else {
-      card.classList.remove('active');
-    }
-  });
-}
-
-function scrollCarousel(direction) {
-  const carousel = document.getElementById('carouselVideos');
-  const scrollAmount = 200;
-  carousel.scrollLeft += scrollAmount * direction;
-}
-
-function toggleFullscreen() {
-  const video = videos[currentVideoIndex];
-  const fullscreenVideo = document.getElementById('fullscreenVideo');
-  const fullscreenIframe = document.getElementById('fullscreenIframe');
-  const modal = document.getElementById('videoModal');
-  
-  if (video.type === 'local') {
-    fullscreenVideo.src = '../' + video.src;
-    fullscreenVideo.style.display = 'block';
-    fullscreenIframe.style.display = 'none';
-  } else if (video.type === 'youtube') {
-    fullscreenIframe.src = video.src;
-    fullscreenIframe.style.display = 'block';
-    fullscreenVideo.style.display = 'none';
-  }
-  
-  modal.classList.add('active');
-}
-
-function closeFullscreen() {
-  document.getElementById('videoModal').classList.remove('active');
-  document.getElementById('fullscreenVideo').src = '';
-  document.getElementById('fullscreenIframe').src = '';
-}
-
-// Fermer avec ESC
-document.addEventListener('keydown', function(e) {
-  if (e.key === 'Escape') {
-    closeFullscreen();
-  }
-});
-
-// Fermer en cliquant en dehors
-document.getElementById('videoModal').addEventListener('click', function(e) {
-  if (e.target === this) {
-    closeFullscreen();
-  }
-});
-
-// Charger les vidéos au démarrage
 loadVideos();
 </script>
 </body>
