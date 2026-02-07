@@ -42,7 +42,7 @@ def generate_video_list():
     """
     Génère un fichier video-list.json à partir des vidéos du dossier
     """
-    videos_dir = Path('videos')
+    videos_dir = Path('videos/videos')
     
     if not videos_dir.exists():
         print("❌ Le dossier 'videos' n'existe pas!")
@@ -79,7 +79,7 @@ def generate_video_list():
                 "description": f"Leçon {idx} de formation Inburgering A1",
                 "duration": duration,
                 "type": "local",
-                "src": f"videos/{video_path.name}"
+                "src": f"videos/videos/{video_path.name}"
             }
             video_list.append(video_entry)
             print(f"✅ Ajouté: {title} ({duration})")

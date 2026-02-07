@@ -504,7 +504,7 @@ function displayVideo(index) {
   
   // Afficher la vidéo appropriée
   if (video.type === 'local') {
-    mainVideo.src = video.src;
+    mainVideo.src = '../' + video.src;
     mainVideo.style.display = 'block';
     mainIframe.style.display = 'none';
   } else if (video.type === 'youtube') {
@@ -538,7 +538,7 @@ function toggleFullscreen() {
   const modal = document.getElementById('videoModal');
   
   if (video.type === 'local') {
-    fullscreenVideo.src = video.src;
+    fullscreenVideo.src = '../' + video.src;
     fullscreenVideo.style.display = 'block';
     fullscreenIframe.style.display = 'none';
   } else if (video.type === 'youtube') {
