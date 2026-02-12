@@ -513,7 +513,7 @@
 
     <div class="container">
         <h1 style="margin-top: 0;">🗺️ Prépositions spatiales néerlandaises</h1>
-        <p class="subtitle">Maîtrise les prépositions : OP, IN, AAN, BIJ, VOOR, TUSSEN, ACHTER, BINNEN/BUITEN</p>
+        <p class="subtitle">Maîtrise les prépositions : OP, IN, AAN, BIJ, VOOR, TUSSEN, ACHTER, BINNEN/BUITEN, ONDER, NAAST</p>
 
         <!-- Mode Schémas -->
         <div id="schemaMode" class="hidden">
@@ -659,7 +659,9 @@
                     'VOOR': '⬅️',
                     'TUSSEN': '↔️',
                     'ACHTER': '🔙',
-                    'BINNEN / BUITEN': '🚪'
+                    'BINNEN / BUITEN': '🚪',
+                    'ONDER': '⬇️',
+                    'NAAST': '⇔️'
                 };
 
                 const visualMap = {
@@ -702,6 +704,16 @@
                         { icon: '🏠', text: 'Intérieur' },
                         { icon: '🌳', text: 'Extérieur' },
                         { icon: '⏱️', text: 'Délai' }
+                    ],
+                    'ONDER': [
+                        { icon: '⬇️', text: 'En dessous' },
+                        { icon: '🏗️', text: 'Position' },
+                        { icon: '📊', text: 'Hiérarchie' }
+                    ],
+                    'NAAST': [
+                        { icon: '⇔️', text: 'À côté' },
+                        { icon: '➕', text: 'En plus' },
+                        { icon: '👫', text: 'Proximité' }
                     ]
                 };
 
@@ -847,6 +859,8 @@
             if (prepositionName === 'TU') prepositionName = 'TUSSEN';
             if (prepositionName === 'AC') prepositionName = 'ACHTER';
             if (prepositionName === 'BU') prepositionName = 'BUITEN';
+            if (prepositionName === 'ON') prepositionName = 'ONDER';
+            if (prepositionName === 'NA') prepositionName = 'NAAST';
 
             const prep = prepositions.find(p => p.preposition.includes(prepositionName));
             if (prep) {

@@ -8,17 +8,20 @@
       "rules": [
         "Spatial: op de tafel (sur la table), op de muur (sur le mur)",
         "Abstrait: op televisie (à la télévision), op vakantie (en vacances), op tijd (à l'heure)",
-        "Piège: Les îles prennent OP (op Corsica, op Malta)"
+        "Piège: Les îles prennent OP (op Corsica, op Malta). On dit 'een schildderij hangt AAN de muur'."
       ],
       "examples": [
         "op de tafel",
-        "op de muur",
+        "op de muur zitten",
+        "een vogel zit op de muur",
         "op school",
         "op kantoor",
         "op televisie",
         "op internet",
         "op vakantie",
-        "op tijd"
+        "op tijd",
+        "ik zit op Nederlandse les",
+        "op een gegeven"
       ]
     },
     {
@@ -29,7 +32,7 @@
       "rules": [
         "Spatial: Volume fermé ou perçu comme tel (in de kast, in de tuin)",
         "Abstrait: Participation, état, catégorie (in gevaar, in 2024, in het Nederlands)",
-        "Piège: in de trein, in de bus, MAIS op de fiets"
+        "Piège: ik zit in de bus, maar ik ga met de bus"
       ],
       "examples": [
         "in de kast",
@@ -38,8 +41,9 @@
         "in de problemen",
         "in 2024",
         "in het Nederlands",
-        "in de trein",
-        "in de bus"
+        "in de krant",
+        "in het begin",
+        "in dit geval"
       ]
     },
     {
@@ -151,6 +155,46 @@
         "binnen vijf minuten",
         "buiten gevaar",
         "buiten dienst"
+      ]
+    },
+    {
+      "id": 9,
+      "preposition": "ONDER",
+      "color": "#7C3AED",
+      "description": "Sous, en dessous de",
+      "rules": [
+        "Spatial: onder de tafel (sous la table), onder de brug (sous le pont)",
+        "Abstrait: onder druk (sous pression), onder leiding van (sous la direction de)",
+        "Hiérarchie: onder de 18 jaar (moins de 18 ans), onder mij werken (travailler sous mes ordres)"
+      ],
+      "examples": [
+        "onder de tafel",
+        "onder de brug",
+        "onder druk",
+        "onder leiding van",
+        "onder de 18 jaar",
+        "onder water",
+        "onder de grond"
+      ]
+    },
+    {
+      "id": 10,
+      "preposition": "NAAST",
+      "color": "#EC4899",
+      "description": "À côté de, en plus de",
+      "rules": [
+        "Spatial: naast de deur (à côté de la porte), naast het huis (à côté de la maison)",
+        "Abstrait: naast mijn werk (en plus de mon travail), naast elkaar zitten (être assis l'un à côté de l'autre)",
+        "Comparaison: Dit is niets naast dat (Ce n'est rien par rapport à cela)"
+      ],
+      "examples": [
+        "naast de deur",
+        "naast het huis",
+        "naast mijn werk",
+        "naast elkaar",
+        "naast hem zitten",
+        "naast de school",
+        "naast de winkel"
       ]
     }
   ],
@@ -294,6 +338,41 @@
       "options": ["in", "aan", "bij", "op"],
       "correct": 3,
       "explanation": "OP pour les îles (piège important) : op Malta. On ne dit pas 'in Malta'"
+    },
+    {
+      "id": 21,
+      "question": "De kat ligt ___ de tafel",
+      "options": ["op", "in", "onder", "bij"],
+      "correct": 2,
+      "explanation": "ONDER pour la position sous quelque chose : onder de tafel (sous la table)"
+    },
+    {
+      "id": 22,
+      "question": "Het restaurant ligt ___ het hotel",
+      "options": ["aan", "in", "bij", "naast"],
+      "correct": 3,
+      "explanation": "NAAST pour à côté de : naast het hotel (à côté de l'hôtel)"
+    },
+    {
+      "id": 23,
+      "question": "Hij staat ___ druk",
+      "options": ["in", "op", "aan", "onder"],
+      "correct": 3,
+      "explanation": "ONDER pour l'abstrait : onder druk (sous pression)"
+    },
+    {
+      "id": 24,
+      "question": "Zij zit ___ mij in de klas",
+      "options": ["op", "naast", "bij", "aan"],
+      "correct": 1,
+      "explanation": "NAAST pour être assis à côté : naast mij zitten (être assis à côté de moi)"
+    },
+    {
+      "id": 25,
+      "question": "___ mijn werk doe ik ook vrijwilligerswerk",
+      "options": ["bij", "aan", "naast", "met"],
+      "correct": 2,
+      "explanation": "NAAST pour en plus de : naast mijn werk (en plus de mon travail)"
     }
   ]
 }
