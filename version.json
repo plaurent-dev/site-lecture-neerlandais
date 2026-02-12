@@ -1,5 +1,5 @@
 {
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "Version de déploiement pour cache busting",
   "lastUpdated": "2026-01-26",
   "notes": "Incrémenter ce numéro à chaque déploiement majeur"
