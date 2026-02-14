@@ -4,7 +4,12 @@
 
 Votre site utilise maintenant un **système de versioning automatique** qui incrémente la version à chaque commit Git.
 
-### 📋 Workflow
+### � Protection anti-boucle
+
+Le hook est intelligent : il **n'incrémente pas** si seul `version.js` est dans le commit. 
+Cela évite les boucles infinies où le hook se réexécuterait sans cesse.
+
+### �📋 Workflow
 
 ```bash
 # 1. Vous modifiez vos fichiers normalement
