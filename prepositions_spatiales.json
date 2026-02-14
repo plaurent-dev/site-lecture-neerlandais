@@ -122,7 +122,7 @@
         "Spatial: tussen twee huizen (entre deux maisons), tussen de mensen (au milieu des gens)",
         "Abstrait: tussen haakjes (entre parenthèses)",
         "Temps/Période : tussen de 1ste en 2de wereldoorlog (entre la première et la deuxième guerre mondiale)",
-        "❗ Correction d'expression: ❌ tussen ons gezegd, ✔️ onder ons gezegd = entre nous"
+        "❗ Attention, pour information, on ne dit pas : ❌ tussen ons gezegd mais ✔️ onder ons gezegd = entre nous"
       ],
       "examples": [
         "tussen de huizen",
@@ -140,15 +140,13 @@
       "description": "Derrière, en arrière de",
       "rules": [
         "Spatial: achter de deur (derrière la porte)",
-        "Abstrait: Soutien, retard (achter iemand staan)",
-        "Verbe à particule (séparable): achterlopen = avoir du retard (De klok loopt 5 minuten achter)"
+        "Abstrait: Soutien, retard (achter iemand staan)"
       ],
       "examples": [
         "achter de deur",
         "achter het huis",
         "achter iemand staan",
-        "achter in de kamer",
-        "de klok loopt 5 minuten achter"
+        "achter in de kamer"
       ]
     },
     {
