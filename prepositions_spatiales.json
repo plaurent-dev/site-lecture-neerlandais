@@ -6,14 +6,16 @@
       "color": "#3B82F6",
       "description": "Contact + surface + stabilité, ou lieu institutionnel",
       "rules": [
-        "Spatial: op de tafel (sur la table), op de muur (sur le mur)",
-        "Abstrait: op televisie (à la télévision), op vakantie (en vacances), op tijd (à l'heure)",
-        "Piège: Les îles prennent OP (op Corsica, op Malta). On dit 'een schildderij hangt AAN de muur'."
+        "Spatial: Sur (posé sur une surface) - Een vogel zit op de muur (l'oiseau est posé sur le mur), Het boek ligt op de tafel, Ik zit op de stoel",
+        "Temporel: op tijd = à temps, ❗ Mais: om 6 uur, ❗ Et pour les mois: in januari",
+        "Abstrait: op televisie (à la télévision), op vakantie (en vacances), ik zit op Nederlandse les (je suis en cours de néerlandais), op een gegeven moment (à un moment donné)",
+        "Piège: Les îles prennent OP (op Corsica, op Malta). On dit 'een schilderij hangt AAN de muur'."
       ],
       "examples": [
-        "op de tafel",
-        "op de muur zitten",
         "een vogel zit op de muur",
+        "het boek ligt op de tafel",
+        "ik zit op de stoel",
+        "op de muur zitten",
         "op school",
         "op kantoor",
         "op televisie",
@@ -21,7 +23,7 @@
         "op vakantie",
         "op tijd",
         "ik zit op Nederlandse les",
-        "op een gegeven"
+        "op een gegeven moment"
       ]
     },
     {
@@ -50,13 +52,17 @@
       "id": 3,
       "preposition": "AAN",
       "color": "#EF4444",
-      "description": "Contact vertical, bordure, connexion",
+      "description": "Contact, accroché, toucher",
       "rules": [
-        "Spatial: Contact latéral ou vertical (aan de muur, aan tafel zitten)",
+        "Spatial: Contact latéral, vertical ou accroché (Een schilderij hangt aan de muur, aan tafel zitten)",
+        "Toucher: Aan iets zitten = toucher quelque chose (Hij zit aan mijn fiets, Zij zit aan mijn boeken)",
         "Abstrait: Connexion, dépendance (aan iemand denken, aan het werk zijn, aan de telefoon)",
         "Collocations: aan zee (à la mer), aan het strand (au bord de la plage), aan het einde (à la fin)"
       ],
       "examples": [
+        "een schilderij hangt aan de muur",
+        "hij zit aan mijn fiets",
+        "zij zit aan mijn boeken",
         "aan de muur",
         "aan tafel zitten",
         "aan iemand denken",
@@ -78,6 +84,7 @@
         "Abstrait: Appartenance à un groupe (bij de politie, bij de club)"
       ],
       "examples": [
+        "bij mij thuis",
         "bij het station",
         "bij mijn ouders",
         "bij hem werken",
@@ -94,7 +101,7 @@
       "description": "Avant, pour, en faveur de",
       "rules": [
         "Spatial: Devant (voor het huis)",
-        "Temporel: Avant (voor het eten, voor volgende week)",
+        "Temporel: Avant et pendant (voor het eten, voor morgen = avant demain, voor volgende week, voor altijd = pour toujours)",
         "Abstrait: Avantage, destinataire, but (Dit is voor jou, Ik ben voor dit idee)"
       ],
       "examples": [
@@ -113,13 +120,16 @@
       "description": "Entre, au milieu de",
       "rules": [
         "Spatial: tussen twee huizen (entre deux maisons), tussen de mensen (au milieu des gens)",
-        "Abstrait: tussen haakjes (entre parenthèses), tussen ons gezegd (entre nous)"
+        "Abstrait: tussen haakjes (entre parenthèses)",
+        "Temps/Période : tussen de 1ste en 2de wereldoorlog (entre la première et la deuxième guerre mondiale)",
+        "❗ Correction d'expression: ❌ tussen ons gezegd, ✔️ onder ons gezegd = entre nous"
       ],
       "examples": [
+        "tussen de huizen",
         "tussen twee huizen",
         "tussen de mensen",
         "tussen haakjes",
-        "tussen ons gezegd",
+        "tussen de 1ste en 2de wereldoorlog",
         "tussen Amsterdam en Rotterdam"
       ]
     },
@@ -130,29 +140,33 @@
       "description": "Derrière, en arrière de",
       "rules": [
         "Spatial: achter de deur (derrière la porte)",
-        "Abstrait: Soutien, retard (achter iemand staan, achterlopen)"
+        "Abstrait: Soutien, retard (achter iemand staan)",
+        "Verbe à particule (séparable): achterlopen = avoir du retard (De klok loopt 5 minuten achter)"
       ],
       "examples": [
         "achter de deur",
         "achter het huis",
         "achter iemand staan",
-        "achter in de kamer"
+        "achter in de kamer",
+        "de klok loopt 5 minuten achter"
       ]
     },
     {
       "id": 8,
       "preposition": "BINNEN / BUITEN",
       "color": "#0F766E",
-      "description": "Intérieur / Extérieur (abstrait)",
+      "description": "Intérieur / Extérieur",
       "rules": [
         "Spatial: binnen blijven (rester à l'intérieur), buiten spelen (jouer dehors)",
-        "Temporel: binnen vijf minuten (dans cinq minutes), binnen de regels (dans les règles)",
-        "Abstrait: buiten gevaar (hors de danger), buiten dienst (hors service)"
+        "Temporel BINNEN: dans un délai maximum - Ik zie hem binnen 5 minuten (entre maintenant et 5 minutes)",
+        "Comparaison: Ik zie je over 5 minuten (dans 5 minutes, exactement)",
+        "Abstrait: buiten gevaar (hors de danger), buiten dienst (hors service), binnen de regels (dans les règles)"
       ],
       "examples": [
         "binnen het huis",
         "buiten in de tuin",
-        "binnen vijf minuten",
+        "ik zie hem binnen 5 minuten",
+        "ik zie je over 5 minuten",
         "buiten gevaar",
         "buiten dienst"
       ]
@@ -165,7 +179,8 @@
       "rules": [
         "Spatial: onder de tafel (sous la table), onder de brug (sous le pont)",
         "Abstrait: onder druk (sous pression), onder leiding van (sous la direction de)",
-        "Hiérarchie: onder de 18 jaar (moins de 18 ans), onder mij werken (travailler sous mes ordres)"
+        "Hiérarchie: onder de 18 jaar (moins de 18 ans), onder mij werken (travailler sous mes ordres)",
+        "Expression: onder de mensen komen = se mêler aux gens, onder ons gezegd = entre nous"
       ],
       "examples": [
         "onder de tafel",
@@ -174,7 +189,9 @@
         "onder leiding van",
         "onder de 18 jaar",
         "onder water",
-        "onder de grond"
+        "onder de grond",
+        "onder de mensen komen",
+        "onder ons gezegd"
       ]
     },
     {
@@ -204,7 +221,7 @@
       "question": "De foto hangt ___ de muur",
       "options": ["in", "op", "aan", "bij"],
       "correct": 2,
-      "explanation": "AAN pour le contact vertical : aan de muur (accroché au mur)"
+      "explanation": "AAN pour le contact vertical ou toucher quelque chose : aan de muur (accroché au mur) ou aan iets zitten"
     },
     {
       "id": 2,
@@ -229,10 +246,10 @@
     },
     {
       "id": 5,
-      "question": "Ik kijk naar het voetbal ___ televisie",
+      "question": "Ik kijk voetbal ___ de televisie",
       "options": ["aan", "in", "op", "bij"],
       "correct": 2,
-      "explanation": "OP pour l'abstrait : op televisie (à la télévision)"
+      "explanation": "OP pour l'abstrait : op de televisie (à la télévision)"
     },
     {
       "id": 6,
@@ -244,16 +261,16 @@
     {
       "id": 7,
       "question": "Ik ga ___ zee",
-      "options": ["op", "in", "aan", "bij"],
-      "correct": 2,
-      "explanation": "AAN collocation obligatoire : aan zee (à la mer)"
+      "options": ["naar", "in", "aan", "bij"],
+      "correct": 0,
+      "explanation": "NAAR pour la destination : Ik ga naar zee (je vais à la mer, destination). ❗ Ik ga in zee = je rentres dans la mer (pour te baigner)"
     },
     {
       "id": 8,
       "question": "Zij werkt ___ het station",
       "options": ["bij", "op", "aan", "in"],
-      "correct": 0,
-      "explanation": "BIJ pour la proximité : bij het station (près de la gare)"
+      "correct": 1,
+      "explanation": "OP pour le lieu de travail : Zij werkt op het station (son lieu de travail est la gare). ❗ Zij werkt bij het station = près de la gare"
     },
     {
       "id": 9,
@@ -278,7 +295,7 @@
     },
     {
       "id": 12,
-      "question": "Ik kom bij jou ___ morgen",
+      "question": "Ik kom ___ morgen bij jou",
       "options": ["op", "in", "aan", "voor"],
       "correct": 3,
       "explanation": "VOOR pour le temporel : voor morgen (avant/pour demain)"
@@ -309,7 +326,7 @@
       "question": "Ik zit ___ de fiets",
       "options": ["in", "aan", "op", "bij"],
       "correct": 2,
-      "explanation": "OP pour le vélo : op de fiets (le piège est que on dit in de trein mais op de fiets)"
+      "explanation": "OP pour être sur le vélo : op de fiets. ❗ bij de fiets = près du vélo, aan de fiets = toucher le vélo (Kom niet aan mijn fiets = ne touche pas à mon vélo)"
     },
     {
       "id": 17,
@@ -344,14 +361,14 @@
       "question": "De kat ligt ___ de tafel",
       "options": ["op", "in", "onder", "bij"],
       "correct": 2,
-      "explanation": "ONDER pour la position sous quelque chose : onder de tafel (sous la table)"
+      "explanation": "ONDER pour la position sous quelque chose : onder de tafel (sous la table). ✔️ Réponses possibles : De kat ligt op of onder de tafel"
     },
     {
       "id": 22,
       "question": "Het restaurant ligt ___ het hotel",
       "options": ["aan", "in", "bij", "naast"],
       "correct": 3,
-      "explanation": "NAAST pour à côté de : naast het hotel (à côté de l'hôtel)"
+      "explanation": "NAAST pour à côté de : naast het hotel (à côté de l'hôtel). ✔️ Réponses possibles : Het restaurant ligt bij of naast het hotel"
     },
     {
       "id": 23,
@@ -373,6 +390,13 @@
       "options": ["bij", "aan", "naast", "met"],
       "correct": 2,
       "explanation": "NAAST pour en plus de : naast mijn werk (en plus de mon travail)"
+    },
+    {
+      "id": 26,
+      "question": "Hij zit ___ mijn fiets",
+      "options": ["op", "in", "aan", "bij"],
+      "correct": 2,
+      "explanation": "AAN Toucher quelque chose : Zij zit aan mijn boeken."
     }
   ]
 }
