@@ -1,5 +1,5 @@
 // Configuration de version centralisée
-const APP_VERSION = '1.0.14';
+const APP_VERSION = '1.0.15';
 
 // Remplacer automatiquement la version dans les liens CSS au chargement
 document.addEventListener('DOMContentLoaded', function() {
