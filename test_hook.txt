@@ -1,2 +1,0 @@
-Test du pre-commit hook corrigé
-Ce fichier teste que le hook n'incrémente plus en boucle
