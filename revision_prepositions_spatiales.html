@@ -819,13 +819,27 @@
             const question = questions[currentQuestionIndex];
             const buttons = document.querySelectorAll('.answer-btn');
 
-            if (index === question.correct) {
+            // Vérifier si plusieurs réponses sont acceptées
+            const acceptedAnswers = question.acceptedAnswers || [question.correct];
+            const isCorrect = acceptedAnswers.includes(index);
+
+            if (isCorrect) {
                 buttons[index].classList.add('correct');
+                // Mettre en vert toutes les autres réponses acceptées
+                acceptedAnswers.forEach(answerIndex => {
+                    if (answerIndex !== index) {
+                        buttons[answerIndex].classList.add('correct');
+                        buttons[answerIndex].style.opacity = '0.6';
+                    }
+                });
                 score++;
                 afficherFeedback(true, question.explanation);
             } else {
                 buttons[index].classList.add('incorrect');
-                buttons[question.correct].classList.add('correct');
+                // Afficher toutes les bonnes réponses
+                acceptedAnswers.forEach(answerIndex => {
+                    buttons[answerIndex].classList.add('correct');
+                });
                 afficherFeedback(false, question.explanation);
             }
 

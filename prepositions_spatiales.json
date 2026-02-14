@@ -324,7 +324,7 @@
       "question": "Ik zit ___ de fiets",
       "options": ["in", "aan", "op", "bij"],
       "correct": 2,
-      "explanation": "OP pour être sur le vélo : op de fiets. ❗ bij de fiets = près du vélo, aan de fiets = toucher le vélo (Kom niet aan mijn fiets = ne touche pas à mon vélo)"
+      "explanation": "OP pour être sur le vélo : op de fiets. Possible également : bij de fiets = près du vélo, aan de fiets = toucher le vélo (Kom niet aan mijn fiets = ne touche pas à mon vélo)"
     },
     {
       "id": 17,
@@ -359,14 +359,16 @@
       "question": "De kat ligt ___ de tafel",
       "options": ["op", "in", "onder", "bij"],
       "correct": 2,
-      "explanation": "ONDER pour la position sous quelque chose : onder de tafel (sous la table). ✔️ Réponses possibles : De kat ligt op of onder de tafel"
+      "acceptedAnswers": [0, 2],
+      "explanation": "✔️ Deux réponses possibles : OP (sur la table) ou ONDER (sous la table). Les deux positions sont correctes selon où se trouve le chat !"
     },
     {
       "id": 22,
       "question": "Het restaurant ligt ___ het hotel",
       "options": ["aan", "in", "bij", "naast"],
       "correct": 3,
-      "explanation": "NAAST pour à côté de : naast het hotel (à côté de l'hôtel). ✔️ Réponses possibles : Het restaurant ligt bij of naast het hotel"
+      "acceptedAnswers": [2, 3],
+      "explanation": "✔️ Deux réponses possibles : BIJ (près de l'hôtel) ou NAAST (à côté de l'hôtel). Les deux prépositions conviennent pour la proximité !"
     },
     {
       "id": 23,
